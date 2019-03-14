@@ -1,25 +1,26 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+
+import searchBar from "./components/searchBar"
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
           <p>
-            Edit <code>src/App.js</code> and save to reload.
+            Search for suburb
           </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+          <searchBar />
         </header>
+        <body>
+          Search here:
+        </body>
+        <searchBar
+          value={this.state.value}
+          placeholder="yes"
+          onChange={this.onChange}
+        />
       </div>
     );
   }
