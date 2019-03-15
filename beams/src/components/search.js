@@ -5,6 +5,8 @@ import React, { Component } from 'react';
 // Import React Scrit Libraray to load Google object
 import Script from 'react-load-script';
 
+//
+
 class Search extends Component {
   // Define Constructor
   constructor(props) {
