@@ -1,21 +1,29 @@
+
+// Imports
 import React, { Component } from 'react';
 
+// Import React Scrit Libraray to load Google object
 import Script from 'react-load-script';
 
 class Search extends Component {
+  // Define Constructor
   constructor(props) {
     super(props);
+
+    // Declare State
     this.state = {
       city: '',
       query: ''
     };
 
+    // Bind Functions
     this.handleScriptLoad = this.handleScriptLoad.bind(this);
     this.handlePlaceSelect = this.handlePlaceSelect.bind(this);
+
   }
 
   handleScriptLoad() {
-    // Declare Options For Autocomplete
+    var input = document.getElementById('autocomplete');
     var options = {
       types: ['(cities)'],
     };
@@ -23,7 +31,7 @@ class Search extends Component {
     // Initialize Google Autocomplete
     /*global google*/ // To disable any eslint 'google not defined' errors
     this.autocomplete = new google.maps.places.Autocomplete(
-      document.getElementById('autocomplete'),
+      input,
       options,
     );
 
@@ -56,8 +64,8 @@ class Search extends Component {
           url="https://maps.googleapis.com/maps/api/js?key=AIzaSyDIMGCB2qSD9qIB0mrZu0uGEmZlc9e8m-Y&libraries=places"
           onLoad={this.handleScriptLoad}
         />
-        <input id="search-bar" placeholder="Search for suburb by name" value={this.state.query}
-        />
+        <input type="text" placeholder="Search by suburb name" value={this.state.query}
+         />
       </div>
     );
   }
