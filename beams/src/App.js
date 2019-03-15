@@ -1,26 +1,19 @@
 import React, { Component } from 'react';
 import './App.css';
 
-import searchBar from "./components/searchBar"
+import Search from "./components/searchBar"
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <p>
-            Search for suburb
-          </p>
-          <searchBar />
+          BEAMS
         </header>
         <body>
-          Search here:
+        <p> Search for suburb </p>
+          <Search />
         </body>
-        <searchBar
-          value={this.state.value}
-          placeholder="yes"
-          onChange={this.onChange}
-        />
       </div>
     );
   }

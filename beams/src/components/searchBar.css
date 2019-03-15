@@ -1,5 +1,7 @@
 .search-bar {
-    display: inline;
+    border-radius: 5px;
+    border: 1px solid #000;
+    width: 2000px;
 }
   
 .search-field {
