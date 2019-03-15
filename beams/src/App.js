@@ -10,6 +10,7 @@ class App extends Component {
       <div className="App">
         <body className = "App">
         <SearchIcon /><Search />
+        <button>Search</button>
         </body>
       </div>
     );

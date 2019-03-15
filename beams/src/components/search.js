@@ -20,6 +20,9 @@ class Search extends Component {
     this.handleScriptLoad = this.handleScriptLoad.bind(this);
     this.handlePlaceSelect = this.handlePlaceSelect.bind(this);
 
+    // Binding function for onChange
+    this.handleInputChange = this.handleInputChange.bind(this);
+
   }
 
   handleScriptLoad() {
@@ -28,8 +31,7 @@ class Search extends Component {
       types: ['(cities)'],
     };
 
-    // Initialize Google Autocomplete
-    /*global google*/ // To disable any eslint 'google not defined' errors
+    /*global google*/
     this.autocomplete = new google.maps.places.Autocomplete(
       input,
       options,
@@ -57,6 +59,10 @@ class Search extends Component {
     }
   }
 
+  handleInputChange(event) {
+    this.setState({ query: event.target.query });
+  }
+
   render() {
     return (
       <div>
@@ -64,7 +70,11 @@ class Search extends Component {
           url="https://maps.googleapis.com/maps/api/js?key=AIzaSyDIMGCB2qSD9qIB0mrZu0uGEmZlc9e8m-Y&libraries=places"
           onLoad={this.handleScriptLoad}
         />
-        <input type="text" placeholder="Search by suburb name" value={this.state.query}
+        <input 
+          type="text" 
+          placeholder="Search by suburb name" 
+          value={this.state.query} 
+          onChange={this.handleInputChange}
          />
       </div>
     );
