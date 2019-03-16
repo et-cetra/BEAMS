@@ -1,17 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
-import SearchIcon from "@material-ui/icons/Search";
 
-import Search from "./components/search"
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <body className = "App">
-        <SearchIcon /><Search />
-        <button>Search</button>
-        </body>
+        <h1>BEAMS</h1>
+        {this.props.children}
       </div>
     );
   }
