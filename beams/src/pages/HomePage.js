@@ -8,8 +8,7 @@ class HomePage extends React.Component {
     render() {
       return (
         <div className="HomePage">
-          <SearchIcon />
-          <Search onSelect={this.props.onSelect} />
+          <SearchIcon /><Search onSelect={this.props.onSelect} />
         </div>
       );
     }

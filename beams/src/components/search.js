@@ -1,11 +1,12 @@
-
-// Imports
 import React, { Component } from 'react';
+import './search.css';
 
 import PlacesAutocomplete, {
   geocodeByAddress,
   getLatLng,
 } from 'react-places-autocomplete';
+
+
 
 
 class Search extends Component {
@@ -19,52 +20,6 @@ class Search extends Component {
       query: '',
       address: ''
     };
-
-    // Bind Functions
-    this.handleScriptLoad = this.handleScriptLoad.bind(this);
-    this.handlePlaceSelect = this.handlePlaceSelect.bind(this);
-
-    // Binding function for onChange
-    this.handleInputChange = this.handleInputChange.bind(this);
-
-  }
-
-  handleScriptLoad() {
-    var input = document.getElementById('autocomplete');
-    var options = {
-      types: ['(cities)'],
-    };
-
-    /*global google*/
-    this.autocomplete = new google.maps.places.Autocomplete(
-      input,
-      options,
-    );
-
-    // Fire Event when a suggested name is selected
-    this.autocomplete.addListener('place_changed', this.handlePlaceSelect);
-  }
-  
-  handlePlaceSelect() {
-
-    // Extract City From Address Object
-    let addressObject = this.autocomplete.getPlace();
-    let address = addressObject.address_components;
-
-    // Check if address is valid
-    if (address) {
-      // Set State
-      this.setState(
-        {
-          city: address[0].long_name,
-          query: addressObject.formatted_address,
-        }
-      );
-    }
-  }
-
-  handleInputChange(event) {
-    this.setState({ query: event.target.query });
   }
 
   handleChange = address => {
@@ -92,14 +47,15 @@ class Search extends Component {
       >
         {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
           <div>
-            <input
+            <input size="100"
               {...getInputProps({
-                placeholder: 'Search Places ...',
+                placeholder: 'Search for suburbs by name',
                 className: 'location-search-input',
               })}
             />
+            <button class="button">Search</button>
             <div className="autocomplete-dropdown-container">
-              {loading && <div>Loading...</div>}
+              {loading && <div class="loading"> Loading </div>}
               {suggestions.map(suggestion => {
                 const className = suggestion.active
                   ? 'suggestion-item--active'
@@ -122,7 +78,9 @@ class Search extends Component {
             </div>
           </div>
         )}
-      </PlacesAutocomplete><button>Search</button>
+      </PlacesAutocomplete>
+      &nbsp;
+      
       </div>
     );
   }
