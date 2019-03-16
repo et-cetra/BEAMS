@@ -7,9 +7,9 @@ import Search from "../components/search"
 class HomePage extends React.Component {
     render() {
       return (
-        <div className="App">
+        <div className="HomePage">
           <SearchIcon />
-          <Search />
+          <Search onSelect={this.props.onSelect} />
         </div>
       );
     }

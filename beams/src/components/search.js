@@ -72,6 +72,8 @@ class Search extends Component {
   };
 
   handleSelect = address => {
+    console.log('Address:', address);
+    this.props.onSelect(address);
     geocodeByAddress(address)
       .then(results => getLatLng(results[0]))
       .then(latLng => console.log('Success', latLng))
@@ -120,8 +122,7 @@ class Search extends Component {
             </div>
           </div>
         )}
-      </PlacesAutocomplete>
-      <button>Search</button>
+      </PlacesAutocomplete><button>Search</button>
       </div>
     );
   }
