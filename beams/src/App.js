@@ -19,6 +19,11 @@ class App extends Component {
     this.setState(() => ({ suburb: city, route: '/suburb' }));
   };
 
+  onStartOver = () => {
+    console.log('Start over!');
+    this.setState(() => ({ suburb: null, route: '/' }));
+  };
+
   render() {
     const redirect = this.state.route;
     return (
@@ -26,8 +31,8 @@ class App extends Component {
         <h1>BEAMS</h1>
         <BrowserRouter>
           <Switch>
-            <Route exact path="/" render={() => (redirect ? <Redirect to="/suburb" /> : <HomePage onSelect={this.onSuburbSelect} />)} />
-            <Route exact path="/suburb" component={() => <SuburbPage suburb={this.state.suburb} />} />
+            <Route exact path="/" render={() => (redirect && redirect !== "/" ? <Redirect to={redirect} /> : <HomePage onSelect={this.onSuburbSelect} />)} />
+            <Route exact path="/suburb" render={() => (redirect && redirect !== "/suburb" ? <Redirect to={redirect} /> : <SuburbPage suburb={this.state.suburb} onStartOver={this.onStartOver} />)} />
           </Switch>
         </BrowserRouter>
       </div>
