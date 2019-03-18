@@ -7,12 +7,14 @@ class SuburbPage extends React.Component {
       return (
         <div className="App">
           <h4>Here is the suburb page for {suburb}!</h4>
+          <p>
             <iframe
                 width="600"
                 height="450"
                 frameborder="0"
                 src={url} allowfullscreen>
             </iframe>
+            </p>
           <button onClick={this.props.onStartOver}>Home</button>
         </div>
       );
