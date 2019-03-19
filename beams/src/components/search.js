@@ -7,8 +7,6 @@ import PlacesAutocomplete, {
 } from 'react-places-autocomplete';
 
 
-
-
 class Search extends Component {
   // Define Constructor
   constructor(props) {

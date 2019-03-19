@@ -1,4 +1,5 @@
 import React from 'react';
+import '../App.css';
 
 class SuburbPage extends React.Component {
     render() {
@@ -15,7 +16,7 @@ class SuburbPage extends React.Component {
                 src={url} allowfullscreen>
             </iframe>
             </p>
-          <button onClick={this.props.onStartOver}>Home</button>
+          <button class="button" onClick={this.props.onStartOver}>Home</button>
         </div>
       );
     }
