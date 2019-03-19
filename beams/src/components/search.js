@@ -45,7 +45,7 @@ class Search extends Component {
       >
         {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
           <div>
-            <input size="100"
+            <input size="150"
               {...getInputProps({
                 placeholder: 'Search for suburbs by name',
                 className: 'location-search-input',
