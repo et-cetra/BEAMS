@@ -51,9 +51,9 @@ class Search extends Component {
                 className: 'location-search-input',
               })}
             />
-            <button class="button">Search</button>
+            <button className="button">Search</button>
             <div className="autocomplete-dropdown-container">
-              {loading && <div class="loading"> Loading </div>}
+              {loading && <div className="loading"> Loading </div>}
               {suggestions.map(suggestion => {
                 const className = suggestion.active
                   ? 'suggestion-item--active'

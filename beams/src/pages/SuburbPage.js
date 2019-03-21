@@ -1,5 +1,6 @@
 import React from 'react';
 import '../App.css';
+import Demographics from '../components/demographics'
 
 class SuburbPage extends React.Component {
     render() {
@@ -13,10 +14,11 @@ class SuburbPage extends React.Component {
                 width="600"
                 height="450"
                 frameborder="0"
-                src={url} allowfullscreen>
+                src={url} allowFullScreen>
             </iframe>
             </p>
-          <button class="button" onClick={this.props.onStartOver}>Home</button>
+          <button className="button" onClick={this.props.onStartOver}>Home</button>
+          <Demographics>Demographics = </Demographics>
         </div>
       );
     }
