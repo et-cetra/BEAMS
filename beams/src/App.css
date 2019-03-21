@@ -1,5 +1,40 @@
-.App {
-  text-align: center;
+.xd-just-a-reference{
+  --colMain:#04091E;
+  --colMain2:#333F48;
+  --colAcc:#E62927;
+  --colAcc2:#EE6A15;
+  --colPlain:#FFFFFF;
+}
+
+.QuickSearchBox{
+  background-color: #E62927;
+}
+
+.ContentHolderMain{
+  padding: 24px;
+}
+
+.LogoContainer{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding-right: 24px;
+  padding-bottom: 0px;
+}
+
+.HeadingContainer {
+  padding-left : 6px;
+  width: 100%;
+}
+
+.HeadingBox {
+  padding-top: 24px;
+}
+
+.SubHeadingBox {
+  padding-top: 4px;
+  padding-bottom: 10px;
+  
 }
 
 .App-header {
