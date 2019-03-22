@@ -1,0 +1,41 @@
+.xd-just-a-reference{
+  --colMain:#04091E;
+  --colMain2:#333F48;
+  --colAcc:#E62927;
+  --colAcc2:#EE6A15;
+  --colPlain:#FFFFFF;
+}
+
+/* -> For main content grid */
+.ContentHolderMain{
+  padding: 24px;
+}
+
+.LogoContainer{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding-right: 24px;
+  padding-bottom: 0px;
+}
+
+.HeadingContainer {
+  padding-left : 6px;
+}
+
+.HeadingBox {
+  padding-top: 24px;
+  padding-left: 28px;
+}
+
+.SubHeadingBox {
+  padding-top: 4px;
+  padding-left: 28px;
+  padding-bottom: 10px;
+}
+
+.PinIcon{
+  position: absolute;
+  padding-top: 30px;
+  margin-left: -16px;
+}

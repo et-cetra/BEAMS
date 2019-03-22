@@ -1,0 +1,40 @@
+.HomeSearchBox{
+    background-image: linear-gradient(to right,#EE6A15 0%,#E62927 100%);
+    background-blend-mode: normal;
+    padding: 10px;
+    width: 700px;
+  }
+  
+  .HomeSearchIcon{
+    padding-top: 4px;
+    padding-left: 12px;
+  }
+
+  .HomeContainer{
+    padding-top: 140px;
+  }
+  
+  .HomeSearch{
+    flex-grow: 1;
+    width: 600px;
+  }
+
+  .SearchResultsHome{
+    color: #04091E;
+  }
+  
+  .HomeSearch input{
+    color: #04091E;
+    padding-right: 12px;
+    padding-left: 26px;
+    font-size: 20px;
+  }
+
+  .AutocompleteCardHome{
+    align-content: center;
+    margin-top: 20px;
+    position: absolute;
+    color: #04091E;
+    width: 600px;
+  }
+  
