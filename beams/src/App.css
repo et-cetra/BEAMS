@@ -7,9 +7,24 @@
 }
 
 .QuickSearchBox{
-  background-color: #E62927;
+  background-image: linear-gradient(to right,#04091E 0%,#04091E 100%);
+  background-blend-mode: normal;
+  border: 2px solid;
+  border-image: linear-gradient(to right,#E62927 0%,#EE6A15 100%) 10 stretch;
+  padding: 5px;
 }
 
+.QuickSearchIcon{
+  padding-top: 4px;
+  padding-left: 2px;
+}
+
+.QuickSearch input{
+  color: #FFFFFF;
+  padding-right: 12px;
+}
+
+/* -> For main content */
 .ContentHolderMain{
   padding: 24px;
 }
@@ -24,7 +39,6 @@
 
 .HeadingContainer {
   padding-left : 6px;
-  width: 100%;
 }
 
 .HeadingBox {
@@ -34,7 +48,6 @@
 .SubHeadingBox {
   padding-top: 4px;
   padding-bottom: 10px;
-  
 }
 
 .App-header {
@@ -59,15 +72,4 @@
   to {
     transform: rotate(360deg);
   }
-}
-
-.button {
-  background-color: #4CAF50; /* Green */
-  border: none;
-  color: white;
-  padding: 4px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 12px;
 }

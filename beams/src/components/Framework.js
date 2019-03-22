@@ -54,18 +54,22 @@ class Framework extends React.Component {
           alignItems="center"
           className="LogoContainer">
 
-            <Grid item className="QuickSearchBox">
-            <Grid container
+            <Paper className="QuickSearchBox">
+            <Grid>
+              <Grid container
                 spacing={24}
                 direction="row"
-                justify="flex-end"
                 alignItems="center">
-                  <SearchIcon fontSize="large"/>
-                  <div flexGrow="1" />
-                  <InputBase placeholder="Search…"/>
+                  <Grid item xs={2}>
+                    <SearchIcon className="QuickSearchIcon" fontSize="large" color="inherit"/>
+                  </Grid>
+                  <Grid item>
+                    <InputBase className="QuickSearch" placeholder="Search for Suburb, Postcode..."/>
+                  </Grid>
               </Grid>
             </Grid>
- 
+            </Paper>
+
             <Grid item>
               <img src={mBannerSm} width="140" height="97"/>
             </Grid>
