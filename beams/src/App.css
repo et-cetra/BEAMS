@@ -6,24 +6,6 @@
   --colPlain:#FFFFFF;
 }
 
-.QuickSearchBox{
-  background-image: linear-gradient(to right,#04091E 0%,#04091E 100%);
-  background-blend-mode: normal;
-  border: 2px solid;
-  border-image: linear-gradient(to right,#E62927 0%,#EE6A15 100%) 10 stretch;
-  padding: 5px;
-}
-
-.QuickSearchIcon{
-  padding-top: 4px;
-  padding-left: 2px;
-}
-
-.QuickSearch input{
-  color: #FFFFFF;
-  padding-right: 12px;
-}
-
 /* -> For main content */
 .ContentHolderMain{
   padding: 24px;

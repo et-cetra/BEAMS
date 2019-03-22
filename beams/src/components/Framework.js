@@ -1,11 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Grid, Paper, AppBar, Toolbar, IconButton, Typography, createMuiTheme, MuiThemeProvider, Divider, InputBase, Fade } from '@material-ui/core';
-import SearchIcon from '@material-ui/icons/Search';
-import createTypography from '@material-ui/core/styles/createTypography';
 import 'typeface-roboto';
-import mLogo from '../assets/ic_logo_white.png'
+import SuburbPage from '../pages/SuburbPage';
 import mBannerSm from '../assets/ic_banner_small.png'
-import Search from "./search"
+import QuickSearch from "./QuickSearch"
+import HomePage from '../pages/HomePage';
 
 
 const theme = createMuiTheme({
@@ -27,6 +26,26 @@ const theme = createMuiTheme({
 
 class Framework extends React.Component {
   
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      suburb: null,
+      route: null
+    };
+  }
+
+  onSuburbSelect = (city) => {
+    this.setState(() => ({ suburb: city, route: '/suburb' }));
+  };
+
+  onStartOver = () => {
+    console.log('Start over!');
+    this.setState(() => {
+      return ({ suburb: null, route: '/' });
+    });
+  };
+
   render() {
     return (
 
@@ -47,33 +66,13 @@ class Framework extends React.Component {
           </Typography>
           </Grid>
 
-          <Grid container
-          spacing={24}
-          direction="row"
-          justify="flex-end"
-          alignItems="center"
-          className="LogoContainer">
-
-            <Paper className="QuickSearchBox">
-            <Grid>
-              <Grid container
-                spacing={24}
-                direction="row"
-                alignItems="center">
-                  <Grid item xs={2}>
-                    <SearchIcon className="QuickSearchIcon" fontSize="large" color="inherit"/>
-                  </Grid>
-                  <Grid item>
-                    <InputBase className="QuickSearch" placeholder="Search for Suburb, Postcode..."/>
-                  </Grid>
+            <Grid container spacing={12} direction="row" justify="flex-end"
+            alignItems="center" className="LogoContainer">
+              <QuickSearch onSelect={this.props.onSelect}></QuickSearch>
+              <Grid item>
+                <img src={mBannerSm} width="168" height="97"/>
               </Grid>
             </Grid>
-            </Paper>
-
-            <Grid item>
-              <img src={mBannerSm} width="140" height="97"/>
-            </Grid>
-          </Grid>
 
           <Grid className="SubHeadingBox">
           <Typography variant="overline" color="inherit">
@@ -84,9 +83,9 @@ class Framework extends React.Component {
         </Grid>
         </Toolbar>
       </AppBar>
-
-
       </MuiThemeProvider>
+
+      
 
     );
   }

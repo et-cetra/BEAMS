@@ -1,14 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './search.css';
 
-import PlacesAutocomplete, {
-  geocodeByAddress,
-  getLatLng,
-} from 'react-places-autocomplete';
+import PlacesAutocomplete, {geocodeByAddress, getLatLng} from 'react-places-autocomplete';
 import { InputBase } from '@material-ui/core';
 
 
-class Search extends Component {
+class Search extends React.Component {
   // Define Constructor
   constructor(props) {
     super(props);
@@ -44,14 +41,12 @@ class Search extends Component {
         onSelect={this.handleSelect}
         searchOptions={{types: ['(cities)'], componentRestrictions: {country: 'au'}}}>
 
-        {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
+        {({ getInputProps, suggestions, getSuggestionItemProps }) => (
           <div>
-            <InputBase size="300"
-              {...getInputProps({
+            <InputBase size="300" {...getInputProps({
                 placeholder: 'Search for suburbs by name',
                 className: 'Searchbar',
-              })}
-            />
+              })}/>
             <div className="AutocompleteContainer">
               {suggestions.map(suggestion => {
                 const className = suggestion.active

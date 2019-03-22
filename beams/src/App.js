@@ -56,25 +56,26 @@ class App extends Component {
   render() {
     const redirect = this.state.route;
     return (
-      <div>      
-        <Framework/>
-        <Grid container
-        direction="column"
-        justify="flex-start"
-        alignItems="center">
-          <Grid item className="ContentHolderMain">
-          Content goes here
+      <div>
+      <Framework onSelect={this.onSuburbSelect}/>
+      <Grid container
+      direction="column"
+      justify="flex-start"
+      alignItems="center">
+        <Grid item className="ContentHolderMain">
+        Content goes here
 
-            <div className="QuickSearch">
-              <BrowserRouter>
-                <Switch>
-                  <Route exact path="/" render={() => (redirect && redirect !== "/" ? <Redirect to={redirect} /> : <HomePage onSelect={this.onSuburbSelect} />)} />
-                  <Route exact path="/suburb" render={() => (redirect && redirect !== "/suburb" ? <Redirect to={redirect} /> : <SuburbPage suburb={this.state.suburb} onStartOver={this.onStartOver} />)} />
-                </Switch>
-              </BrowserRouter>
-            </div>
-          </Grid>
-      </Grid>
+          <div className="QuickSearch">
+            <BrowserRouter>
+              <Switch>
+                <Route exact path="/" render={() => (redirect && redirect !== "/" ? <Redirect to={redirect} /> : <HomePage onSelect={this.onSuburbSelect} />)} />
+                <Route exact path="/suburb" render={() => (redirect && redirect !== "/suburb" ? <Redirect to={redirect} /> : <SuburbPage suburb={this.state.suburb} onStartOver={this.onStartOver} />)} />
+              </Switch>
+            </BrowserRouter>
+          </div>
+        </Grid>
+        
+    </Grid>
     </div>
     );
   }
