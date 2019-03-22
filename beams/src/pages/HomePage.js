@@ -1,19 +1,22 @@
 import React from 'react';
 
-import SearchIcon from "@material-ui/icons/Search";
-import Search from "../components/search"
-import { Grid, Icon } from '@material-ui/core';
-import QuickSearch from '../components/QuickSearch';
+import { Grid, Icon, Typography } from '@material-ui/core';
+import HomeSearch from '../components/HomeSearch';
 
 
 class HomePage extends React.Component {
     render() {
       return (
-        <div className="QuickSearchContainer">
-        <Grid container spacing={12} direction="row" justify="flex-start" alignItems="stretch">
-          <Grid item xs={2}><Icon className="SearchIcon"><SearchIcon/></Icon></Grid>
-          <Grid item xs={10}><QuickSearch className="Searchbar" onSelect={this.props.onSelect}/></Grid>
+        <div className='HomeContainer'>
+        <Grid container direction="column" justify="space-evenly" alignItems="center">
+          <Grid item>
+          <Typography style={{ fontSize: 30 }} variant='overline' align='center'>
+            Some text here that will make us sound very sophisticated xd
+          </Typography>
+          </Grid>
+          <Grid item><HomeSearch onSelect={this.props.onSelect}/></Grid>
         </Grid>
+        <br></br><br></br>probs need a bg or it gona look dry af too
         </div>
       );
     }

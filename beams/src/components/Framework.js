@@ -1,11 +1,10 @@
+//Uses 'App.css' for style
 import React from 'react';
-import { Grid, Paper, AppBar, Toolbar, IconButton, Typography, createMuiTheme, MuiThemeProvider, Divider, InputBase, Fade } from '@material-ui/core';
+import { Grid, AppBar, Toolbar, Typography, createMuiTheme, MuiThemeProvider } from '@material-ui/core';
 import 'typeface-roboto';
-import SuburbPage from '../pages/SuburbPage';
 import mBannerSm from '../assets/ic_banner_small.png'
 import QuickSearch from "./QuickSearch"
-import HomePage from '../pages/HomePage';
-
+import PinIcon from '@material-ui/icons/LocationOn'
 
 const theme = createMuiTheme({
   //shadows: ["none"],
@@ -19,33 +18,12 @@ const theme = createMuiTheme({
       // dark: will be calculated from palette.secondary.main,
       contrastText: '#ffffff',
     },
-    // error: will use the default color
+    // error: will use default color
   },
 });
 
 
 class Framework extends React.Component {
-  
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      suburb: null,
-      route: null
-    };
-  }
-
-  onSuburbSelect = (city) => {
-    this.setState(() => ({ suburb: city, route: '/suburb' }));
-  };
-
-  onStartOver = () => {
-    console.log('Start over!');
-    this.setState(() => {
-      return ({ suburb: null, route: '/' });
-    });
-  };
-
   render() {
     return (
 
@@ -60,25 +38,29 @@ class Framework extends React.Component {
       <AppBar position="static" className="AppBar" color="primary">
         <Toolbar className="Toolbar">
         <Grid className="HeadingContainer">
-          <Grid className="HeadingBox">
+        
+        <PinIcon fontSize="large" className="PinIcon"></PinIcon>
+
+          <Grid item className="HeadingBox">
           <Typography style={{ fontSize: 30 }} className="HeadingMain" variant="h1" color="inherit" noWrap>
             BEAMS
           </Typography>
           </Grid>
-
-            <Grid container spacing={12} direction="row" justify="flex-end"
-            alignItems="center" className="LogoContainer">
-              <QuickSearch onSelect={this.props.onSelect}></QuickSearch>
-              <Grid item>
-                <img src={mBannerSm} width="168" height="97"/>
-              </Grid>
-            </Grid>
-
-          <Grid className="SubHeadingBox">
+          
+          <Grid item className="SubHeadingBox">
           <Typography variant="overline" color="inherit">
             Property and suburb analysis
           </Typography>
           </Grid>
+
+          <Grid container spacing={12} direction="row" justify="flex-end"
+          alignItems="center" className="LogoContainer">
+            <QuickSearch onSelect={this.props.onSelect}></QuickSearch>
+            <Grid item>
+              <img src={mBannerSm} width="168" height="97"/>
+            </Grid>
+          </Grid>
+
           
         </Grid>
         </Toolbar>

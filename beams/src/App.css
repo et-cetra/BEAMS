@@ -6,7 +6,7 @@
   --colPlain:#FFFFFF;
 }
 
-/* -> For main content */
+/* -> For main content grid */
 .ContentHolderMain{
   padding: 24px;
 }
@@ -25,33 +25,17 @@
 
 .HeadingBox {
   padding-top: 24px;
+  padding-left: 28px;
 }
 
 .SubHeadingBox {
   padding-top: 4px;
+  padding-left: 28px;
   padding-bottom: 10px;
 }
 
-.App-header {
-  background-color: whitesmoke;
-  min-height: 10vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: black;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.PinIcon{
+  position: absolute;
+  padding-top: 30px;
+  margin-left: -16px;
 }

@@ -1,10 +1,10 @@
 import React from 'react';
 import SearchIcon from "@material-ui/icons/Search";
-import { Grid, Paper, InputBase, Card, ListItem } from '@material-ui/core';
-import './QuickSearch.css'
+import { Grid, Paper, InputBase, Card, ListItem, Divider } from '@material-ui/core';
+import './HomeSearch.css'
 import PlacesAutocomplete, {geocodeByAddress, getLatLng} from 'react-places-autocomplete';
 
-class QuickSearch extends React.Component {
+class HomeSearch extends React.Component {
 
     constructor(props) {
         super(props);
@@ -27,10 +27,10 @@ class QuickSearch extends React.Component {
 
     render() {
       return (
-        <Paper className="QuickSearchBox">
+        <Paper className="HomeSearchBox">
         <Grid container direction="row" alignItems="center">
             <Grid item xs={1}>
-                <SearchIcon className="QuickSearchIcon" fontSize="large" color="inherit"/>
+                <SearchIcon className="HomeSearchIcon" fontSize="large" color="inherit"/>
             </Grid>
             <PlacesAutocomplete
             value={this.state.address}
@@ -41,17 +41,20 @@ class QuickSearch extends React.Component {
                 <div>
                 <InputBase {...getInputProps({
                     placeholder: 'Search for Suburb, Postcode...',
-                    className: 'QuickSearch',
+                    className: 'HomeSearch',
                   })}/>
-                <Card className="AutocompleteCard">
+                <Card className="AutocompleteCardHome">
                     {suggestions.map(suggestion => {
                     const className = suggestion.active ? 'suggestion-item--active' : 'suggestion-item';
                     const style = suggestion.active ? 
-                    { backgroundColor: '#EE6A15', cursor: 'pointer' } : { backgroundColor: '#04091E', cursor: 'pointer' };
+                    { backgroundColor: '#fca064', cursor: 'pointer' } : { backgroundColor: '#FFFFFF', cursor: 'pointer' };
                     return (
-                    <ListItem className="SearchResultsQuick" {...getSuggestionItemProps(suggestion, { className, style })}>
-                        <span>{suggestion.description}</span>
-                    </ListItem>
+                    <div>
+                        <ListItem className="SearchResultsHome" {...getSuggestionItemProps(suggestion, { className, style })}>
+                            <span>{suggestion.description}</span>
+                        </ListItem>
+                        <Divider></Divider>
+                    </div>
                     );
                 })}
                 </Card>                  
@@ -63,5 +66,5 @@ class QuickSearch extends React.Component {
     }
   }
 
-export default QuickSearch;
+export default HomeSearch;
 

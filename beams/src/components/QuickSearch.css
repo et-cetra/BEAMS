@@ -26,5 +26,6 @@
   .AutocompleteCard{
     position: absolute;
     color: #FFFFFF;
+    margin-left: 10px;
   }
   
