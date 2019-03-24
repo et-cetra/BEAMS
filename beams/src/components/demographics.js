@@ -18,7 +18,7 @@ class Demographics extends React.Component{
     componentDidMount() {
         fetch('https://api.domain.com.au/v1/demographics?level=Suburb&id=27512&types=AgeGroupOfPopulation&year=2016', {
             headers: new Headers({
-                'Authorization': "Bearer c5c060649d48d8f0cc4796449225714a"
+                'Authorization': "Bearer d9df4786fdd30dd7810d1f05c441836a"
               })
         })
             .then(res => res.json())
@@ -49,11 +49,14 @@ class Demographics extends React.Component{
         } else {
             return (
                 <ul>
-                    {contents.map(content => (
-                    <li key={content.items}>
-                        {content.label} {content.value}
-                    </li>
-                    ))}
+                    {contents.map(
+                        content => (
+                        content.items.map((item, i) => (
+                        <li key={`item-${i}`}>
+                            {item.label}: {item.value}
+                        </li>))
+                    ))
+                    }
                 </ul>
             );
         }
