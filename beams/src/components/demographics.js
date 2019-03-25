@@ -18,33 +18,25 @@ class Demographics extends React.Component {
     async componentDidMount() {
         const hood_id = await Demographics.getSuburbID(this.props.suburb, this.props.suburb_state);
         console.log("hoodid", hood_id);
-            fetch(`https://api.domain.com.au/v1/demographics?level=Suburb&id=${hood_id}&types=AgeGroupOfPopulation&year=2016`, {
-                headers: new Headers({
-                    'Authorization': "Bearer d2c27dd919c9c14e22e81b079238b62a"
-                })
+        const res = await fetch(`https://api.domain.com.au/v1/demographics?level=Suburb&id=${hood_id}&types=AgeGroupOfPopulation&year=2016`, {
+            headers: new Headers({
+                'Authorization': "Bearer d2c27dd919c9c14e22e81b079238b62a"
             })
-                .then(res => res.json())
-                .then(
-                    (result) => {
-                        console.log("result", result);
-                        this.setState({
-                            isLoaded: true,
-                            contents: result.demographics
-                        });
-                    },
-                    (error) => {
-                        this.setState({
-                            isLoaded: true,
-                            error
-                        });
-                    }
-                )
+        });
+        const result = await res.json();
+        console.log("result", result);
+        this.setState({
+            isLoaded: true,
+            contents: result.demographics
+        });
+
+
     }
 
     static getSuburbID = async (suburb, suburb_state) => {
         console.log("demo sub", suburb);
         console.log("demo state", suburb_state);
-        const res = await fetch(`https://api.domain.com.au/v1/addressLocators?searchLevel=Suburb&suburb=${suburb.trim()}&state=${suburb_state.trim()}`, {
+        const res = await fetch(`https://api.domain.com.au/v1/addressLocators?searchLevel=Suburb&suburb=${suburb}&state=${suburb_state}`, {
             headers: new Headers({
                 'Authorization': "Bearer b733a9ad77600df583ad204717eb23e3"
             })
