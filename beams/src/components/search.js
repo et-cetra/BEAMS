@@ -15,7 +15,6 @@ class Search extends Component {
     // Declare State
     this.state = {
       city: '',
-      query: '',
       address: ''
     };
   }
@@ -78,7 +77,7 @@ class Search extends Component {
         )}
       </PlacesAutocomplete>
       &nbsp;
-      
+
       </div>
     );
   }

@@ -3,40 +3,55 @@ import '../App.css';
 
 // Request for Population Ages in Maroubra: https://api.domain.com.au/v1/demographics?level=Suburb&id=27512&types=AgeGroupOfPopulation&year=2016 
 
-// 1. Need to change suburb name to ID
 
-class Demographics extends React.Component{
+class Demographics extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-          error: null,
-          isLoaded: false,
-          contents: []
+            error: null,
+            isLoaded: false,
+            contents: []
         };
-      }
+    }
 
-    componentDidMount() {
-        fetch('https://api.domain.com.au/v1/demographics?level=Suburb&id=27512&types=AgeGroupOfPopulation&year=2016', {
+
+    async componentDidMount() {
+        const hood_id = await Demographics.getSuburbID(this.props.suburb, this.props.suburb_state);
+        console.log("hoodid", hood_id);
+            fetch(`https://api.domain.com.au/v1/demographics?level=Suburb&id=${hood_id}&types=AgeGroupOfPopulation&year=2016`, {
+                headers: new Headers({
+                    'Authorization': "Bearer d2c27dd919c9c14e22e81b079238b62a"
+                })
+            })
+                .then(res => res.json())
+                .then(
+                    (result) => {
+                        console.log("result", result);
+                        this.setState({
+                            isLoaded: true,
+                            contents: result.demographics
+                        });
+                    },
+                    (error) => {
+                        this.setState({
+                            isLoaded: true,
+                            error
+                        });
+                    }
+                )
+    }
+
+    static getSuburbID = async (suburb, suburb_state) => {
+        console.log("demo sub", suburb);
+        console.log("demo state", suburb_state);
+        const res = await fetch(`https://api.domain.com.au/v1/addressLocators?searchLevel=Suburb&suburb=${suburb.trim()}&state=${suburb_state.trim()}`, {
             headers: new Headers({
-                'Authorization': "Bearer d9df4786fdd30dd7810d1f05c441836a"
-              })
-        })
-            .then(res => res.json())
-            .then(
-            (result) => {
-                console.log("result", result);
-                this.setState({
-                isLoaded: true,
-                contents: result.demographics
-                });
-            },
-            (error) => {
-                this.setState({
-                isLoaded: true,
-                error
-                });
-            }
-        )
+                'Authorization': "Bearer b733a9ad77600df583ad204717eb23e3"
+            })
+        });
+        const result = await res.json();
+        console.log("address comps", result);
+        return result[0].ids[0].id;
     }
 
     render() {
@@ -48,16 +63,17 @@ class Demographics extends React.Component{
             return <div>Loading...</div>;
         } else {
             return (
-                <ul>
+                <div>
+                    Age groups of this Suburb from most common to least!
                     {contents.map(
                         content => (
-                        content.items.map((item, i) => (
-                        <li key={`item-${i}`}>
-                            {item.label}: {item.value}
+                            content.items.map((item, i) => (
+                                <li key={`item-${i}`}>
+                                    <b>{item.label}:</b> {item.value} persons
                         </li>))
-                    ))
+                        ))
                     }
-                </ul>
+                </div>
             );
         }
     }

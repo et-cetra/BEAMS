@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {BrowserRouter, Route, Switch, Redirect} from "react-router-dom";
+import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 import HomePage from "./pages/HomePage"
 import SuburbPage from "./pages/SuburbPage";
 import './App.css';
@@ -11,16 +11,21 @@ class App extends Component {
 
     this.state = {
       suburb: null,
-      route: null
+      suburb_state: null,
+      route: null,
     };
   }
-  
+
   onSuburbSelect = (city) => {
-    this.setState(() => ({ suburb: city, route: '/suburb' }));
+    var suburb = city.split(" ")[0];
+    var suburb_state = city.split(" ")[1];
+    suburb_state = suburb_state.slice(0, -1);
+    console.log("suburb", suburb);
+    console.log("State", suburb_state);
+    this.setState(() => ({ suburb: suburb, suburb_state: suburb_state, route: '/suburb' }));
   };
 
   onStartOver = () => {
-    console.log('Start over!');
     this.setState(() => ({ suburb: null, route: '/' }));
   };
 
@@ -32,7 +37,7 @@ class App extends Component {
         <BrowserRouter>
           <Switch>
             <Route exact path="/" render={() => (redirect && redirect !== "/" ? <Redirect to={redirect} /> : <HomePage onSelect={this.onSuburbSelect} />)} />
-            <Route exact path="/suburb" render={() => (redirect && redirect !== "/suburb" ? <Redirect to={redirect} /> : <SuburbPage suburb={this.state.suburb} onStartOver={this.onStartOver} />)} />
+            <Route exact path="/suburb" render={() => (redirect && redirect !== "/suburb" ? <Redirect to={redirect} /> : <SuburbPage suburb={this.state.suburb} suburb_state={this.state.suburb_state} onStartOver={this.onStartOver} />)} />
           </Switch>
         </BrowserRouter>
       </div>

@@ -5,6 +5,7 @@ import Demographics from '../components/demographics'
 class SuburbPage extends React.Component {
     render() {
         const suburb = this.props.suburb;
+        const suburb_state = this.props.suburb_state;
         const url = `https://www.google.com/maps/embed/v1/place?key=AIzaSyDIMGCB2qSD9qIB0mrZu0uGEmZlc9e8m-Y&q=${suburb}`;
       return (
         <div className="App">
@@ -18,7 +19,7 @@ class SuburbPage extends React.Component {
             </iframe>
             </p>
           <button className="button" onClick={this.props.onStartOver}>Home</button>
-          <Demographics>Demographics = </Demographics>
+          <Demographics suburb_state={suburb_state} suburb={suburb}/>
         </div>
       );
     }
