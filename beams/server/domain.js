@@ -43,12 +43,12 @@ getSuburbId = async (token, suburb, state) => {
     }
 }
 
-getDemographics = async (token, hood_id) => {
+getDemographics = async (token, hood_id, type) => {
     const headers = {
         'Authorization': `Bearer ${token}`
     };
     try {
-        const res = await axios.get(`https://api.domain.com.au/v1/demographics?level=Suburb&id=${hood_id}&types=AgeGroupOfPopulation&year=2016`, {
+        const res = await axios.get(`https://api.domain.com.au/v1/demographics?level=Suburb&id=${hood_id}&types=${type}&year=2016`, {
             headers: headers
         });
         await res;
@@ -58,24 +58,8 @@ getDemographics = async (token, hood_id) => {
     }
 }
 
-getMaritalStatus = async (token, hood_id) => {
-    const headers = {
-        'Authorization': `Bearer ${token}`
-    };
-    try {
-        const res = await axios.get(`https://api.domain.com.au/v1/demographics?level=Suburb&id=${hood_id}&types=MaritalStatus&year=2016`, {
-            headers: headers
-        });
-        await res;
-        return res.data;
-    } catch (err) {
-        console.log("getMaritalStatus FAILED:", err);
-    }
-}
-
 module.exports = {
     getAccessToken: getAccessToken,
     getSuburbId: getSuburbId,
     getDemographics: getDemographics,
-    getMaritalStatus: getMaritalStatus
 };

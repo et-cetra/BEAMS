@@ -15,7 +15,7 @@ class Demographics extends React.Component {
     }
 
     async componentDidMount() {
-        const suburbInfo = await getDemographics(this.props.suburb, this.props.suburb_state);
+        const suburbInfo = await getDemographics(this.props.suburb, this.props.suburb_state, "AgeGroupOfPopulation");
         console.log("Demographics suburbInfo", suburbInfo);
 
         this.setState({

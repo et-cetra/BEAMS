@@ -1,6 +1,6 @@
 import React from 'react';
 import '../App.css';
-import {getMaritalStatus} from '../utils.js'
+import { getDemographics } from '../utils.js'
 
 // Request for Population Ages in Maroubra: https://api.domain.com.au/v1/demographics?level=Suburb&id=27512&types=AgeGroupOfPopulation&year=2016
 
@@ -15,7 +15,7 @@ class MaritalStatus extends React.Component {
     }
 
     async componentDidMount() {
-        const suburbInfo = await getMaritalStatus(this.props.suburb, this.props.suburb_state);
+        const suburbInfo = await getDemographics(this.props.suburb, this.props.suburb_state, "MaritalStatus");
         console.log("Marital suburbInfo", suburbInfo);
 
         this.setState({

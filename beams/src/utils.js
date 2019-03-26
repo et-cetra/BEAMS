@@ -9,16 +9,9 @@ export const getSuburbId = async (suburb, suburb_state) => {
     return result[0].ids[0].id;
 }
 
-export const getDemographics = async (suburb, suburb_state) => {
-    // const res = await fetch(`http://b3ams.com.au:5000/demographics/${suburb}/${suburb_state}`);
-    const res = await fetch(`http://localhost:5000/demographics/${suburb}/${suburb_state}`);
-    const result = await res.json();
-    return result;
-}
-
-export const getMaritalStatus = async (suburb, suburb_state) => {
-    // const res = await fetch(`http://b3ams.com.au:5000/maritalstatus/${suburb}/${suburb_state}`);
-    const res = await fetch(`http://localhost:5000/maritalstatus/${suburb}/${suburb_state}`);
+export const getDemographics = async (suburb, suburb_state, type) => {
+    // const res = await fetch(`http://b3ams.com.au:5000/${type}/${suburb}/${suburb_state}`);
+    const res = await fetch(`http://localhost:5000/${type}/${suburb}/${suburb_state}`);
     const result = await res.json();
     return result;
 }
