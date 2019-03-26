@@ -3,7 +3,7 @@ import '../App.css';
 
 // Request for Population Ages in Maroubra: https://api.domain.com.au/v1/demographics?level=Suburb&id=27512&types=AgeGroupOfPopulation&year=2016 
 
-class Demographics extends React.Component {
+class MaritalStatus extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -15,9 +15,9 @@ class Demographics extends React.Component {
 
 
     async componentDidMount() {
-        const hood_id = await Demographics.getSuburbID(this.props.suburb, this.props.suburb_state);
+        const hood_id = await MaritalStatus.getSuburbID(this.props.suburb, this.props.suburb_state);
         console.log("hood id", hood_id);
-        const res = await fetch(`https://api.domain.com.au/v1/demographics?level=Suburb&id=${hood_id}&types=AgeGroupOfPopulation&year=2016`, {
+        const res = await fetch(`https://api.domain.com.au/v1/demographics?level=Suburb&id=${hood_id}&types=MaritalStatus&year=2016`, {
             headers: new Headers({
                 'Authorization': "Bearer b740a6f697d0ed25a66db5423ca760d7"
             })
@@ -32,8 +32,8 @@ class Demographics extends React.Component {
     }
 
     static getSuburbID = async (suburb, suburb_state) => {
-        // console.log("demo sub", suburb);
-        // console.log("demo state", suburb_state);
+        console.log("demo sub", suburb);
+        console.log("demo state", suburb_state);
         const res = await fetch(`https://api.domain.com.au/v1/addressLocators?searchLevel=Suburb&suburb=${suburb}&state=${suburb_state}`, {
             headers: new Headers({
                 'Authorization': "Bearer cdb2721e13e363a91ac94b78128f154c"
@@ -54,7 +54,7 @@ class Demographics extends React.Component {
         } else {
             return (
                 <div>
-                    Age groups of this Suburb from most common to least!
+                   Marital Status of this Suburb from most common to least!
                     {contents.map(
                         content => (
                             content.items.map((item, i) => (
@@ -69,4 +69,4 @@ class Demographics extends React.Component {
     }
 }
 
-export default Demographics;
+export default MaritalStatus;
