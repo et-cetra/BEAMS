@@ -20,8 +20,8 @@ class App extends Component {
     var suburb = city.split(" ")[0];
     var suburb_state = city.split(" ")[1];
     suburb_state = suburb_state.slice(0, -1);
-    console.log("suburb", suburb);
-    console.log("State", suburb_state);
+    // console.log("suburb", suburb);
+    // console.log("State", suburb_state);
     this.setState(() => ({ suburb: suburb, suburb_state: suburb_state, route: '/suburb' }));
   };
 

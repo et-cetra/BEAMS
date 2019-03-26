@@ -16,7 +16,7 @@ class Demographics extends React.Component {
 
     async componentDidMount() {
         const suburbInfo = await getDemographics(this.props.suburb, this.props.suburb_state);
-        console.log("suburbInfo", suburbInfo);
+        console.log("Demographics suburbInfo", suburbInfo);
 
         this.setState({
             isLoaded: true,
@@ -27,7 +27,7 @@ class Demographics extends React.Component {
 
     render() {
         const { error, isLoaded, contents } = this.state;
-        console.log("contents are", contents);
+        console.log("Demographics contents are", contents);
         if (error) {
             return <div>Error: {error.message}</div>;
         } else if (!isLoaded) {
