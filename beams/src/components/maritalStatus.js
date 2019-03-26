@@ -1,6 +1,6 @@
 import React from 'react';
 import '../App.css';
-import {getSuburbID} from '../utils.js'
+import {getSuburbId} from '../utils.js'
 
 // Request for Population Ages in Maroubra: https://api.domain.com.au/v1/demographics?level=Suburb&id=27512&types=AgeGroupOfPopulation&year=2016 
 
@@ -16,7 +16,7 @@ class MaritalStatus extends React.Component {
 
 
     async componentDidMount() {
-        const hood_id = await getSuburbID(this.props.suburb, this.props.suburb_state);
+        const hood_id = await getSuburbId(this.props.suburb, this.props.suburb_state);
         console.log("hood id", hood_id);
         const res = await fetch(`https://api.domain.com.au/v1/demographics?level=Suburb&id=${hood_id}&types=MaritalStatus&year=2016`, {
             headers: new Headers({

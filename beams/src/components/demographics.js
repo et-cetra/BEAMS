@@ -1,8 +1,8 @@
 import React from 'react';
 import '../App.css';
-import {getSuburbID} from '../utils.js'
+import {getDemographics} from '../utils.js'
 
-// Request for Population Ages in Maroubra: https://api.domain.com.au/v1/demographics?level=Suburb&id=27512&types=AgeGroupOfPopulation&year=2016 
+// Request for Population Ages in Maroubra: https://api.domain.com.au/v1/demographics?level=Suburb&id=27512&types=AgeGroupOfPopulation&year=2016
 
 class Demographics extends React.Component {
     constructor(props) {
@@ -15,18 +15,12 @@ class Demographics extends React.Component {
     }
 
     async componentDidMount() {
-        const hood_id = await getSuburbID(this.props.suburb, this.props.suburb_state);
-        console.log("hood id", hood_id);
-        const res = await fetch(`https://api.domain.com.au/v1/demographics?level=Suburb&id=${hood_id}&types=AgeGroupOfPopulation&year=2016`, {
-            headers: new Headers({
-                'Authorization': "Bearer b740a6f697d0ed25a66db5423ca760d7"
-            })
-        });
-        const result = await res.json();
-        console.log("result", result);
+        const suburbInfo = await getDemographics(this.props.suburb, this.props.suburb_state);
+        console.log("suburbInfo", suburbInfo);
+
         this.setState({
             isLoaded: true,
-            contents: result.demographics
+            contents: suburbInfo.demographics
         });
 
     }
