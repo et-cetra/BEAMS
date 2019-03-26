@@ -42,4 +42,6 @@ app.get('/maritalstatus/:suburb/:state', async (req, res) =>
     res.json(result)
 })
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+app.listen(port, () => console.log(`App listening on port ${port}!`))
+
+// If editting files in server folder, make sure to restart server by running node app.js
