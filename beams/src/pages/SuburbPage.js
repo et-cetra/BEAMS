@@ -24,11 +24,9 @@ class SuburbPage extends React.Component {
           <p>
           <Demographics suburb_state={suburb_state} suburb={suburb}/>
           </p>
-        {/*
           <p>
           <MaritalStatus suburb_state={suburb_state} suburb={suburb}/>
           </p>
-        */}
           <p>
 
           </p>

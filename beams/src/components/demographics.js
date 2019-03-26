@@ -1,5 +1,6 @@
 import React from 'react';
 import '../App.css';
+import {getSuburbID} from '../utils.js'
 
 // Request for Population Ages in Maroubra: https://api.domain.com.au/v1/demographics?level=Suburb&id=27512&types=AgeGroupOfPopulation&year=2016 
 
@@ -13,9 +14,8 @@ class Demographics extends React.Component {
         };
     }
 
-
     async componentDidMount() {
-        const hood_id = await Demographics.getSuburbID(this.props.suburb, this.props.suburb_state);
+        const hood_id = await getSuburbID(this.props.suburb, this.props.suburb_state);
         console.log("hood id", hood_id);
         const res = await fetch(`https://api.domain.com.au/v1/demographics?level=Suburb&id=${hood_id}&types=AgeGroupOfPopulation&year=2016`, {
             headers: new Headers({
@@ -29,19 +29,6 @@ class Demographics extends React.Component {
             contents: result.demographics
         });
 
-    }
-
-    static getSuburbID = async (suburb, suburb_state) => {
-        // console.log("demo sub", suburb);
-        // console.log("demo state", suburb_state);
-        const res = await fetch(`https://api.domain.com.au/v1/addressLocators?searchLevel=Suburb&suburb=${suburb}&state=${suburb_state}`, {
-            headers: new Headers({
-                'Authorization': "Bearer cdb2721e13e363a91ac94b78128f154c"
-            })
-        });
-        const result = await res.json();
-        console.log("address comps", result);
-        return result[0].ids[0].id;
     }
 
     render() {
