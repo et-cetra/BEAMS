@@ -2,9 +2,7 @@ import React from 'react';
 import '../App.css';
 import {getDemographics} from '../utils.js'
 
-// Request for Population Ages in Maroubra: https://api.domain.com.au/v1/demographics?level=Suburb&id=27512&types=AgeGroupOfPopulation&year=2016
-
-class Demographics extends React.Component {
+class CountryOfBirth extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -15,7 +13,7 @@ class Demographics extends React.Component {
     }
 
     async componentDidMount() {
-        const suburbInfo = await getDemographics(this.props.suburb, this.props.suburb_state, "AgeGroupOfPopulation");
+        const suburbInfo = await getDemographics(this.props.suburb, this.props.suburb_state, "CountryOfBirth");
         console.log("Demographics suburbInfo", suburbInfo);
 
         this.setState({
@@ -35,7 +33,7 @@ class Demographics extends React.Component {
         } else {
             return (
                 <div>
-                    Age groups of this Suburb from most common to least!
+                    CountryOfBirth of this Suburb from most common to least!
                     {contents.map(
                         content => (
                             content.items.map((item, i) => (
@@ -50,4 +48,4 @@ class Demographics extends React.Component {
     }
 }
 
-export default Demographics;
+export default CountryOfBirth;

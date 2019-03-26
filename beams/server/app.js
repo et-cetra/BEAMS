@@ -42,6 +42,16 @@ app.get('/MaritalStatus/:suburb/:state', async (req, res) =>
     res.json(result)
 })
 
+app.get('/CountryOfBirth/:suburb/:state', async (req, res) =>
+{
+    await getToken()
+    const suburbInfo = await domain.getSuburbId(token, req.params.suburb, req.params.state)
+    const result = await domain.getDemographics(token, suburbInfo[0].ids[0].id, "CountryOfBirth")
+    console.log("CountryOfBirth Results app.js", result);
+    res.json(result)
+})
+
+
 app.listen(port, () => console.log(`App listening on port ${port}!`))
 
 // If editting files in server folder, make sure to restart server by running node app.js

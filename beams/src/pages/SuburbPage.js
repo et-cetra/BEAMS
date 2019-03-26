@@ -1,7 +1,8 @@
 import React from 'react';
 import '../App.css';
-import Demographics from '../components/demographics'
+import AgeGroupOfPop from '../components/ageGroupOfPop'
 import MaritalStatus from '../components/maritalStatus'
+import CountryOfBirth from '../components/countryOfBirth';
 
 class SuburbPage extends React.Component {
     render() {
@@ -20,16 +21,11 @@ class SuburbPage extends React.Component {
                 src={url} allowFullScreen>
             </iframe>
             </p>
+          <p><AgeGroupOfPop suburb_state={suburb_state} suburb={suburb}/></p>
+          <p><MaritalStatus suburb_state={suburb_state} suburb={suburb}/></p>
+          <p><CountryOfBirth suburb_state={suburb_state} suburb={suburb}/></p>
           <button className="button" onClick={this.props.onStartOver}>Home</button>
-          <p>
-          <Demographics suburb_state={suburb_state} suburb={suburb}/>
-          </p>
-          <p>
-          <MaritalStatus suburb_state={suburb_state} suburb={suburb}/>
-          </p>
-          <p>
-
-          </p>
+          <p></p>
         </div>
       );
     } else {
