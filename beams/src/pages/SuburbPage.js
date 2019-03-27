@@ -1,8 +1,8 @@
 import React from 'react';
 import '../App.css';
-import AgeGroupOfPop from '../components/ageGroupOfPop'
-import MaritalStatus from '../components/maritalStatus'
-import CountryOfBirth from '../components/countryOfBirth';
+import AgeGroupOfPop from '../components/AgeGroupOfPop'
+import MaritalStatus from '../components/MaritalStatus'
+import CountryOfBirth from '../components/CountryOfBirth';
 
 class SuburbPage extends React.Component {
     render() {
