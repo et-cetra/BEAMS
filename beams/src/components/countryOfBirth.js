@@ -33,7 +33,7 @@ class CountryOfBirth extends React.Component {
         } else {
             return (
                 <div>
-                    CountryOfBirth of this Suburb from most common to least!
+                    Country Of Birth of this Suburb from most common to least!
                     {contents.map(
                         content => (
                             content.items.map((item, i) => (
