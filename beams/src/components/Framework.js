@@ -29,7 +29,7 @@ class Framework extends React.Component {
 
     /*
     //
-    //Materials Framework
+    // Materials Framework
     //
     */
 
@@ -57,7 +57,7 @@ class Framework extends React.Component {
           alignItems="center" className="LogoContainer">
             <QuickSearch onSelect={this.props.onSelect}></QuickSearch>
             <Grid item>
-              <img src={mBannerSm} width="168" height="97"/>
+              <img src={mBannerSm} width="160" height="97"/>
             </Grid>
           </Grid>
 

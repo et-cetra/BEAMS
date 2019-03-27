@@ -6,6 +6,7 @@
     "@devexpress/dx-react-grid-material-ui": "^1.10.4",
     "@material-ui/core": "^3.9.2",
     "@material-ui/icons": "^3.0.2",
+    "animate.css": "^3.7.0",
     "braces": "^2.3.2",
     "material-ui-search-bar": "^0.4.2",
     "prop-types": "^15.7.2",
@@ -16,6 +17,7 @@
     "react-places-autocomplete": "^7.2.1",
     "react-router-dom": "^4.3.1",
     "react-scripts": "^2.1.8",
+    "react-transition-group": "^2.7.0",
     "typeface-roboto": "0.0.54"
   },
   "scripts": {

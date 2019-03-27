@@ -30,7 +30,7 @@ class HomeSearch extends React.Component {
         <Paper className="HomeSearchBox">
         <Grid container direction="row" alignItems="center">
             <Grid item xs={1}>
-                <SearchIcon className="HomeSearchIcon" fontSize="large" color="inherit"/>
+                <SearchIcon className="HomeSearchIcon" fontSize="large"/>
             </Grid>
             <PlacesAutocomplete
             value={this.state.address}
