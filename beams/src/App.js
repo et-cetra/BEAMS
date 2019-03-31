@@ -20,10 +20,20 @@ class App extends Component {
   }
 
   onSuburbSelect = (city) => {
-    var suburb = city.split(" ")[0];
-    var suburb_state = city.split(" ")[1];
-    suburb_state = suburb_state.slice(0, -1);
-    // console.log("suburb", suburb);
+
+    // Parsing city string into suburb and suburb_state
+    var suburb = null;
+    var suburb_state = null;
+    var subTokens = city.split(" ");
+    if (subTokens.length > 3) {
+      suburb = subTokens[0] + " " + subTokens[1];
+      suburb_state = subTokens[2].slice(0, -1);
+    } else {
+      suburb = subTokens[0];
+      suburb_state = subTokens[1].slice(0, -1);
+    }
+
+    // console.log("Suburb", suburb);
     // console.log("State", suburb_state);
     this.setState(() => ({ suburb: suburb, suburb_state: suburb_state, route: '/suburb' }));
   };
