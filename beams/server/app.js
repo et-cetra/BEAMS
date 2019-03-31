@@ -27,9 +27,8 @@ app.get('/AgeGroupOfPopulation/:suburb/:state', async (req, res) =>
 {
     await getToken()
     const suburbInfo = await domain.getSuburbId(token, req.params.suburb, req.params.state)
-    console.log("Suburb Info Age Group", suburbInfo)
+    // console.log("Suburb Info Age Group", suburbInfo)
     const result = await domain.getDemographics(token, suburbInfo[0].ids[0].id, "AgeGroupOfPopulation")
-
     res.json(result)
 })
 
@@ -38,7 +37,7 @@ app.get('/MaritalStatus/:suburb/:state', async (req, res) =>
     await getToken()
     const suburbInfo = await domain.getSuburbId(token, req.params.suburb, req.params.state)
     const result = await domain.getDemographics(token, suburbInfo[0].ids[0].id, "MaritalStatus")
-    console.log("Marital Results app.js", result);
+    // console.log("Marital Results app.js", result);
     res.json(result)
 })
 
@@ -47,7 +46,16 @@ app.get('/CountryOfBirth/:suburb/:state', async (req, res) =>
     await getToken()
     const suburbInfo = await domain.getSuburbId(token, req.params.suburb, req.params.state)
     const result = await domain.getDemographics(token, suburbInfo[0].ids[0].id, "CountryOfBirth")
-    console.log("CountryOfBirth Results app.js", result);
+    // console.log("CountryOfBirth Results app.js", result);
+    res.json(result)
+})
+
+app.get('/NatureOfOccupancy/:suburb/:state', async (req, res) =>
+{
+    await getToken()
+    const suburbInfo = await domain.getSuburbId(token, req.params.suburb, req.params.state)
+    const result = await domain.getDemographics(token, suburbInfo[0].ids[0].id, "NatureOfOccupancy")
+    // console.log("NatureOfOccupancy Results app.js", result);
     res.json(result)
 })
 

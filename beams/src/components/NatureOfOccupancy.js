@@ -2,9 +2,7 @@ import React from 'react';
 import '../App.css';
 import { getDemographics } from '../utils.js'
 
-// Request for Population Ages in Maroubra: https://api.domain.com.au/v1/demographics?level=Suburb&id=27512&types=AgeGroupOfPopulation&year=2016
-
-class MaritalStatus extends React.Component {
+class NatureOfOccupancy extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -15,8 +13,8 @@ class MaritalStatus extends React.Component {
     }
 
     async componentDidMount() {
-        const suburbInfo = await getDemographics(this.props.suburb, this.props.suburb_state, "MaritalStatus");
-        console.log("Marital suburbInfo", suburbInfo);
+        const suburbInfo = await getDemographics(this.props.suburb, this.props.suburb_state, "NatureOfOccupancy");
+        console.log("Nature Of Occupancy suburbInfo", suburbInfo);
 
         this.setState({
             isLoaded: true,
@@ -35,7 +33,7 @@ class MaritalStatus extends React.Component {
         } else {
             return (
                 <div>
-                   <h4>Marital status:</h4>
+                   <h4>Nature Of Occupancy:</h4>
                     {contents.map(
                         content => (
                             content.items.map((item, i) => (
@@ -50,4 +48,4 @@ class MaritalStatus extends React.Component {
     }
 }
 
-export default MaritalStatus;
+export default NatureOfOccupancy;

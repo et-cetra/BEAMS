@@ -3,6 +3,7 @@ import '../App.css';
 import AgeGroupOfPop from '../components/AgeGroupOfPop'
 import MaritalStatus from '../components/MaritalStatus'
 import CountryOfBirth from '../components/CountryOfBirth';
+import NatureOfOccupancy from '../components/NatureOfOccupancy';
 
 class SuburbPage extends React.Component {
     render() {
@@ -25,6 +26,7 @@ class SuburbPage extends React.Component {
           <p><AgeGroupOfPop suburb_state={suburb_state} suburb={suburb}/></p>
           <p><MaritalStatus suburb_state={suburb_state} suburb={suburb}/></p>
           <p><CountryOfBirth suburb_state={suburb_state} suburb={suburb}/></p>
+          <p><NatureOfOccupancy suburb_state={suburb_state} suburb={suburb}/></p>
           <button className="button" onClick={this.props.onStartOver}>Home</button>
           <p></p>
         </div>
