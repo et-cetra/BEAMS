@@ -20,11 +20,10 @@ class App extends Component {
   }
 
   onSuburbSelect = (city) => {
-    var suburb = city.split(" ")[0];
-    var suburb_state = city.split(" ")[1];
-    suburb_state = suburb_state.slice(0, -1);
-    // console.log("suburb", suburb);
-    // console.log("State", suburb_state);
+    let re = /[A-Z]{3}|[A-Z]{2}/;
+    var suburb_state = city.match(re);
+    var suburb = city.split(re)[0];
+
     this.setState(() => ({ suburb: suburb, suburb_state: suburb_state, route: '/suburb' }));
   };
 

@@ -15,3 +15,13 @@ export const getDemographics = async (suburb, suburb_state, type) => {
     const result = await res.json();
     return result;
 }
+
+export const getCoords = async (suburb, suburb_state) => {
+    const res = await fetch(`https://geocoder.api.here.com/6.2/geocode.json?
+    app_id=vUpVkzX0ApdBiPkUSO8Z&app_code=cQiI_V1cbk4G0ley5IsGNg
+    &city=${suburb}+${suburb_state}&country=australia`);
+    const result = await res.json();
+    console.log("!!! " + suburb + suburb_state, result);
+
+    return result;
+}

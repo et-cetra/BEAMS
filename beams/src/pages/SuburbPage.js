@@ -3,6 +3,7 @@ import '../App.css';
 import AgeGroupOfPop from '../components/AgeGroupOfPop'
 import MaritalStatus from '../components/MaritalStatus'
 import CountryOfBirth from '../components/CountryOfBirth';
+import Schools from '../components/Schools';
 
 class SuburbPage extends React.Component {
     render() {
@@ -21,6 +22,8 @@ class SuburbPage extends React.Component {
                 src={url} allowFullScreen>
             </iframe>
             </p>
+
+          <p><Schools suburb_state={suburb_state} suburb={suburb}/></p>
           <p><AgeGroupOfPop suburb_state={suburb_state} suburb={suburb}/></p>
           <p><MaritalStatus suburb_state={suburb_state} suburb={suburb}/></p>
           <p><CountryOfBirth suburb_state={suburb_state} suburb={suburb}/></p>
