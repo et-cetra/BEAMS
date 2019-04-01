@@ -17,11 +17,16 @@ export const getDemographics = async (suburb, suburb_state, type) => {
 }
 
 export const getCoords = async (suburb, suburb_state) => {
-    const res = await fetch(`https://geocoder.api.here.com/6.2/geocode.json?
-    app_id=vUpVkzX0ApdBiPkUSO8Z&app_code=cQiI_V1cbk4G0ley5IsGNg
-    &city=${suburb}+${suburb_state}&country=australia`);
+    const res = await fetch(`https://api.opencagedata.com/geocode/v1/json?
+    q=${suburb}+${suburb_state}&countrycode=au&key=faed9c880db04cb38409b2074687c62e`);
     const result = await res.json();
-    console.log("!!! " + suburb + suburb_state, result);
+    return result;
+}
 
+export const getSchools = async (coords) => {
+    const res = await fetch(`https://api.domain.com.au/v1/locations/schools/
+    ?coordinate=${coords}`);
+    const result = await res.json();
+    //get just schools here
     return result;
 }
