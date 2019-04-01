@@ -15,3 +15,12 @@ export const getDemographics = async (suburb, suburb_state, type) => {
     const result = await res.json();
     return result;
 }
+
+export const getNews = async (suburb, suburb_state) => {
+    //Use suburb and suburb state somewhere xd idk
+    //   'q=' + this.props.suburb + '&' 
+    const url = 'https://newsapi.org/v2/top-headlines?'+'country=au&'+'apiKey=bf2f2f717b5144da9abca234ee7f31c7'
+    const res = await fetch(url);
+    const result = await res.json();
+    return result;
+}
