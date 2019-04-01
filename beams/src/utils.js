@@ -19,7 +19,8 @@ export const getDemographics = async (suburb, suburb_state, type) => {
 export const getNews = async (suburb, suburb_state) => {
     //Use suburb and suburb state somewhere xd idk
     //   'q=' + this.props.suburb + '&' 
-    const url = 'https://newsapi.org/v2/top-headlines?'+'country=au&'+'apiKey=bf2f2f717b5144da9abca234ee7f31c7'
+    const url = 'https://newsapi.org/v2/everything?'+'q='+suburb+'&apiKey=bf2f2f717b5144da9abca234ee7f31c7'
+    console.log("NEWS URL IS", url);
     const res = await fetch(url);
     const result = await res.json();
     return result;

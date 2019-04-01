@@ -39,3 +39,22 @@
   padding-top: 30px;
   margin-left: -16px;
 }
+
+.vertical-menu {
+  width: 600px;
+  height: 400px;
+  overflow-y: auto;
+}
+
+.vertical-menu a {
+  background-color: #eee;
+  color: black;
+  display: block;
+  padding: 12px;
+  text-decoration: none;
+}
+
+.vertical-menu a.header {
+ background-color: #04091E;
+ color: #FFFFFF;
+}

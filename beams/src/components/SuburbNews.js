@@ -31,12 +31,22 @@ class SuburbNews extends React.Component {
         if (!this.state.isLoaded) {
             return <div>Loading...</div>
         } else {
-            return (
-                //map ure content into div using array articles
-                //reference utils.js for fetch function
-                
-                <div>
-                 
+            return (                
+                <div class="vertical-menu">
+                    <a class="header">Local News:</a>
+                    {articles.articles.map(
+                        article => <div><a href={article.url} key={article.id}>
+                        <img 
+                        height="150"
+                        width="150"
+                        src={article.urlToImage}
+                        align="right">
+                        </img>
+                        </a>
+                        <p><b>{article.title}</b></p>
+                        <p>{article.description}</p><br></br><br></br>                        
+                        </div>
+                    )}
                 </div>
             );
         }
