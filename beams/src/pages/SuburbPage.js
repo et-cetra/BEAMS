@@ -4,6 +4,12 @@ import AgeGroupOfPop from '../components/AgeGroupOfPop'
 import MaritalStatus from '../components/MaritalStatus'
 import CountryOfBirth from '../components/CountryOfBirth';
 
+// for graph
+import { Bar } from 'britecharts-react';
+const barData = require('../components/bar/barChart.fixtures.js').default;
+const withResponsiveness = require('../components/helpers/withResponsiveness.js').default;
+const ResponsiveBarChart = withResponsiveness(Bar);
+
 class SuburbPage extends React.Component {
     render() {
       if (this.props.suburb != null) {
@@ -26,6 +32,9 @@ class SuburbPage extends React.Component {
           <p><CountryOfBirth suburb_state={suburb_state} suburb={suburb}/></p>
           <button className="button" onClick={this.props.onStartOver}>Home</button>
           <p></p>
+          <ResponsiveBarChart
+              data={barData.withLetters()}
+          />
         </div>
       );
     } else {

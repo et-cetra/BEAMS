@@ -1,8 +1,6 @@
 import React from 'react';
-
 import { Grid, Icon, Typography, Slide, Grow } from '@material-ui/core';
 import HomeSearch from '../components/HomeSearch';
-
 
 class HomePage extends React.Component {
     render() {
@@ -24,4 +22,3 @@ class HomePage extends React.Component {
   }
 
 export default HomePage;
-
