@@ -1,6 +1,6 @@
 import React from 'react';
 import '../App.css';
-import { getLocation, getSchools } from '../utils';
+import { getLocation, getSchools } from '../utils.js';
 
 class Schools extends React.Component {
     constructor(props) {
@@ -14,8 +14,7 @@ class Schools extends React.Component {
     async componentDidMount() {
         const gLocation = await getLocation(this.props.suburb, this.props.suburb_state); 
         const coords = gLocation.results[0].locations[0].latLng;
-        const gSchools = await getSchools(coords);
-        console.log("TTT ", gSchools);
+        const gSchools = await getSchools(coords.lat, coords.lng);
 
         this.setState({
             isLoading: true,

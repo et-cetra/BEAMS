@@ -22,8 +22,8 @@ export const getLocation = async (suburb, suburb_state) => {
     return result;
 }
 
-export const getSchools = async (coords) => {
-    const res = await fetch(`http://localhost:5000/${coords}`);
+export const getSchools = async (lat, lng) => {
+    const res = await fetch(`http://localhost:5000/Coords/${lat}/${lng}`);
     const result = await res.json();
     return result;
 }

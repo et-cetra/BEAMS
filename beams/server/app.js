@@ -14,7 +14,7 @@ app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     next();
-  });
+});
 
 app.get('/suburb/:suburb/:state', async (req, res) =>
 {
@@ -49,6 +49,13 @@ app.get('/CountryOfBirth/:suburb/:state', async (req, res) =>
     const result = await domain.getDemographics(token, suburbInfo[0].ids[0].id, "CountryOfBirth")
     console.log("CountryOfBirth Results app.js", result);
     res.json(result)
+})
+
+app.get('/Coords/:lat/:lng', async (req, res) =>
+{
+    await getToken();
+    const result = await domain.getSchools(token, req.params.lat, req.params.lng);
+    res.json(result);
 })
 
 
