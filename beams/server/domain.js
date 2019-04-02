@@ -4,7 +4,7 @@ const querystring = require('querystring')
 async function getAccessToken(clientId, secret) {
     var data = querystring.stringify({
         grant_type: 'client_credentials',
-        scope: 'api_demographics_read api_addresslocators_read'
+        scope: 'api_demographics_read api_addresslocators_read api_locations_read'
     });
     console.log("**** TOKEN REQUEST ****");
     const result = await axios.post('https://auth.domain.com.au/v1/connect/token', data, {
@@ -67,6 +67,8 @@ getSchools = async (token, lat, lng) => {
             headers: headers
         });
         await res;
+        console.log("Schools lat", lat);
+        console.log("Schools long", lng);
         return res.data;
     } catch (err) {
         console.log("getSchools FAILED:", err);
