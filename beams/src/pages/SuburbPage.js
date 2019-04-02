@@ -4,6 +4,7 @@ import AgeGroupOfPop from '../components/AgeGroupOfPop'
 import MaritalStatus from '../components/MaritalStatus'
 import CountryOfBirth from '../components/CountryOfBirth';
 import Schools from '../components/Schools';
+import NatureOfOccupancy from '../components/NatureOfOccupancy';
 
 class SuburbPage extends React.Component {
     render() {
@@ -13,7 +14,7 @@ class SuburbPage extends React.Component {
         const url = `https://www.google.com/maps/embed/v1/place?key=AIzaSyDIMGCB2qSD9qIB0mrZu0uGEmZlc9e8m-Y&q=${suburb}`;
       return (
         <div className="App">
-          <h4>Here is the suburb page for {suburb}!</h4>
+          <h2>Here is the suburb page for {suburb}!</h2>
           <p>
             <iframe
                 width="600"
@@ -24,9 +25,11 @@ class SuburbPage extends React.Component {
             </p>
 
           <p><Schools suburb_state={suburb_state} suburb={suburb}/></p>
+          <h3>Demographics of {suburb}:</h3>
           <p><AgeGroupOfPop suburb_state={suburb_state} suburb={suburb}/></p>
           <p><MaritalStatus suburb_state={suburb_state} suburb={suburb}/></p>
           <p><CountryOfBirth suburb_state={suburb_state} suburb={suburb}/></p>
+          <p><NatureOfOccupancy suburb_state={suburb_state} suburb={suburb}/></p>
           <button className="button" onClick={this.props.onStartOver}>Home</button>
           <p></p>
         </div>

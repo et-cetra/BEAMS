@@ -33,7 +33,7 @@ class AgeGroupOfPop extends React.Component {
         } else {
             return (
                 <div>
-                    Age groups of this Suburb from most common to least!
+                    <h4>Age group split:</h4>
                     {contents.map(
                         content => (
                             content.items.map((item, i) => (

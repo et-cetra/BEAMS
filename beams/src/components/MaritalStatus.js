@@ -35,7 +35,7 @@ class MaritalStatus extends React.Component {
         } else {
             return (
                 <div>
-                   Marital Status of this Suburb from most common to least!
+                   <h4>Marital status:</h4>
                     {contents.map(
                         content => (
                             content.items.map((item, i) => (
