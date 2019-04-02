@@ -16,18 +16,14 @@ export const getDemographics = async (suburb, suburb_state, type) => {
     return result;
 }
 
-export const getCoords = async (suburb, suburb_state) => {
-    
-    const res = await fetch(`https://api.opencagedata.com/geocode/v1/json?
-    q=${suburb}+${suburb_state}&key=faed9c880db04cb38409b2074687c62e`);
+export const getLocation = async (suburb, suburb_state) => {
+    const res = await fetch(`http://open.mapquestapi.com/geocoding/v1/address?key=RLok66AiiE73bgmFH5KWI2FvKWqj7AiM&outFormat=json&location=${suburb}+${suburb_state}`);
     const result = await res.json();
     return result;
 }
 
 export const getSchools = async (coords) => {
-    const res = await fetch(`https://api.domain.com.au/v1/locations/schools/
-    ?coordinate=${coords}`);
+    const res = await fetch(`http://localhost:5000/${coords}`);
     const result = await res.json();
-    //get just schools here
     return result;
 }

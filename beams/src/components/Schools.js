@@ -1,25 +1,24 @@
 import React from 'react';
 import '../App.css';
-import { getCoords, getSchools } from '../utils';
+import { getLocation, getSchools } from '../utils';
 
 class Schools extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             isLoaded: false,
-            coords: [],
             schoolData: [],
         };
     }
 
     async componentDidMount() {
-        const gCoords = await getCoords(this.props.suburb, this.props.suburb_state);        
-        const gSchools = await getSchools(gCoords);
-
+        const gLocation = await getLocation(this.props.suburb, this.props.suburb_state); 
+        const coords = gLocation.results[0].locations[0].latLng;
+        const gSchools = await getSchools(coords);
+        console.log("TTT ", gSchools);
 
         this.setState({
             isLoading: true,
-            coords: gCoords,
             schoolData: gSchools,
         });
     }
@@ -27,7 +26,6 @@ class Schools extends React.Component {
     render() {
         console.log(this.props.suburb);
         console.log(this.props.suburb_state);
-        console.log("xd ", this.state.coords);
         console.log("&&&& ", this.state.schoolData);
 
         if (!this.state.isLoaded) {

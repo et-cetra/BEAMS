@@ -58,8 +58,25 @@ getDemographics = async (token, hood_id, type) => {
     }
 }
 
+getSchools = async (token, coords) => {
+    const headers = {
+        'Authorization': `Bearer ${token}`
+    };
+    try {
+        const res = await axios.get(`https://api.domain.com.au/v1/locations/schools/?coordinate=${coords.lat},${coords.lng}`, {
+            headers: headers
+        });
+        await res;
+        console.log("!!!!!", res.data);
+        return res.data;
+    } catch (err) {
+        console.log("getSchools FAILED:", err);
+    }
+}
+
 module.exports = {
     getAccessToken: getAccessToken,
     getSuburbId: getSuburbId,
     getDemographics: getDemographics,
+    getSchools: getSchools,
 };
