@@ -32,10 +32,17 @@ class Schools extends React.Component {
 
         } else {
             return (
-                <div className="Schools">
-                    <h1>Educational Facilities around</h1>
-                    <ul>
-                    </ul>
+                <div>
+                    Marital Status of this Suburb from most common to least!
+                    <li>
+                        School 1
+                    </li>
+                    <li>
+                        School 2
+                    </li>
+                    <li>
+                        School 3
+                    </li>
                 </div>
             );
         }
