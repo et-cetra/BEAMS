@@ -2,8 +2,6 @@ import React from 'react';
 import '../App.css';
 import {getDemographics} from '../utils.js'
 
-// Request for Population Ages in Maroubra: https://api.domain.com.au/v1/demographics?level=Suburb&id=27512&types=AgeGroupOfPopulation&year=2016
-
 class AgeGroupOfPop extends React.Component {
     constructor(props) {
         super(props);
@@ -16,7 +14,7 @@ class AgeGroupOfPop extends React.Component {
 
     async componentDidMount() {
         const suburbInfo = await getDemographics(this.props.suburb, this.props.suburb_state, "AgeGroupOfPopulation");
-        console.log("Demographics suburbInfo", suburbInfo);
+        // console.log("Demographics suburbInfo", suburbInfo);
 
         this.setState({
             isLoaded: true,
