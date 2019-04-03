@@ -31,13 +31,14 @@ class SuburbNews extends React.Component {
         if (!this.state.isLoaded) {
             return <div>Loading...</div>
         } else {
-            return (                
+            return (
                 <div class="vertical-menu">
                     <a class="header">Local News:</a>
                     {articles.articles.map(
                         article => <div><a href={article.url} key={article.id}>
                             <p><b>{article.title}</b></p>
-                            <p>{article.description}</p><br></br><br></br>                        
+                            <p>{article.description}</p><br></br>
+                            <i>{article.publishedAt}</i><br></br>
                         </a>
                         </div>
                     )}
