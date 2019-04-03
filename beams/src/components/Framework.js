@@ -38,7 +38,7 @@ class Framework extends React.Component {
       <AppBar position="static" className="AppBar" color="primary">
         <Toolbar className="Toolbar">
         <Grid className="HeadingContainer">
-        
+
         <PinIcon fontSize="large" className="PinIcon"></PinIcon>
 
           <Grid item className="HeadingBox">
@@ -46,7 +46,7 @@ class Framework extends React.Component {
               BEAMS
             </Typography>
           </Grid>
-          
+
           <Grid item className="SubHeadingBox">
           <Typography variant="overline" color="inherit">
             Suburb analysis
@@ -55,19 +55,19 @@ class Framework extends React.Component {
 
           <Grid container spacing={12} direction="row" justify="flex-end"
           alignItems="center" className="LogoContainer">
-            <QuickSearch onSelect={this.props.onSelect}></QuickSearch>
+            <QuickSearch onSelect={this.props.onSelect}/>
             <Grid item>
               <img src={mBannerSm} width="160" height="97"/>
             </Grid>
           </Grid>
 
-          
+
         </Grid>
         </Toolbar>
       </AppBar>
       </MuiThemeProvider>
 
-      
+
 
     );
   }
