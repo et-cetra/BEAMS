@@ -26,7 +26,7 @@ class SuburbPage extends React.Component {
           {suburb}
         </Typography>
         <br></br>
-        <Divider variant="fullWidth" className="DividerMain"></Divider>
+        <Divider variant="fullWidth"></Divider>
         <br></br>
         <Grid className="SuburbContainer"
         container spacing={12} 
