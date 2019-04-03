@@ -27,3 +27,12 @@ export const getSchools = async (lat, lng) => {
     const result = await res.json();
     return result;
 }
+
+export const getNews = async (suburb, suburb_state) => {
+
+    const url = 'https://newsapi.org/v2/everything?'+'q='+suburb+' australia'+'&language=en'+'&sortBy=popularity'+'&apiKey=bf2f2f717b5144da9abca234ee7f31c7'
+    console.log("NEWS URL IS", url);
+    const res = await fetch(url);
+    const result = await res.json();
+    return result;
+}

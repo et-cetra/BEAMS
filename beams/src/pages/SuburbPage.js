@@ -5,9 +5,11 @@ import MaritalStatus from '../components/MaritalStatus'
 import CountryOfBirth from '../components/CountryOfBirth';
 import Schools from '../components/Schools';
 import NatureOfOccupancy from '../components/NatureOfOccupancy';
-import { Grid, Typography, Divider } from '@material-ui/core';
+import { Grow, Grid, Typography, Divider } from '@material-ui/core';
+import SuburbNews from '../components/SuburbNews';
 import mMap from '../assets/ic_map.png'
 import mTerrain from '../assets/ic_terrain.png'
+import mNews from '../assets/ic_news.png'
 
 
 class SuburbPage extends React.Component {
@@ -56,11 +58,14 @@ class SuburbPage extends React.Component {
                 <Typography align="inherit" inline="true" className="SideText" style={{ fontSize: 26 }} variant="h1" color="inherit">
                   Maps
                 </Typography>
-                  <iframe className="GMaps"
-
-                      frameborder="0"
-                      src={url} allowFullScreen>
-                  </iframe>
+                <iframe className="GMapsMain" frameborder="0" src={url} allowFullScreen></iframe>
+                <img src={mNews} className="IconDef"/>
+                <Typography align="inherit" inline="true" className="SideText" style={{ fontSize: 26 }} variant="h1" color="inherit">
+                  Local News
+                </Typography>
+                <div className="NewsMain">
+                  <SuburbNews suburb={suburb}/>
+                </div>
                 </Grid>
             </Grid>
           </Grid>
