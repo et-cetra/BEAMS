@@ -1,0 +1,65 @@
+.SuburbContainer{
+
+}
+
+.LeftContainer{
+
+}
+
+.SchoolsContainer{
+
+}
+
+.DemographicsContainer{
+
+}
+
+.RightContainer{
+
+}
+
+.MapsContainer{
+
+}
+
+.ParentContainer{
+  padding-top: 10px;
+  padding-left: 48px;
+  padding-right: 48px;
+}
+
+.DividerMain{
+  
+}
+
+.IconMain{
+  width: 70px;
+  height: 70px;
+}
+
+.GMapsMain{
+  width: 100%;
+  height: 450px;
+  padding-bottom: 36px;
+  padding-top: 12px;
+}
+
+.NewsMain{
+  padding-top: 12px;
+}
+
+.IconDef{
+  width: 48px;
+  height: 48px;
+}
+
+.SideText{
+  vertical-align: 15px;
+  padding-left: 5px;
+}
+
+.MainText{
+  vertical-align: 20px;
+  padding-left: 14px;
+  color: #E62927;
+}
