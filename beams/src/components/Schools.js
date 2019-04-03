@@ -36,8 +36,10 @@ class Schools extends React.Component {
                 Schools of this Suburb
                 {schoolData.map(
                     (item, i) => (
-                            <li key={`item-${i}`}>
-                                <b>{item.name}</b> | <b>Type:</b> {item.type}, <b>Education Level:</b> {item.educationLevel}, <b>Gender:</b> {item.gender}
+                    <li key={`item-${i}`}>
+                        <b>{item.name}</b>
+                        <br></br>
+                        <b>Type:</b> {item.type}, <b>Education Level:</b> {item.educationLevel}, <b>Gender:</b> {item.gender}
                     </li>))
                 }
             </div>

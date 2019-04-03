@@ -11,10 +11,6 @@
     color: #FFFFFF;
   }
 
-  .HomeContainer{
-    padding-top: 140px;
-  }
-  
   .HomeSearch{
     flex-grow: 1;
     width: 600px;

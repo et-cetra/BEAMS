@@ -1,10 +1,14 @@
 import React from 'react';
-import '../App.css';
+import './SuburbPage.css'
 import AgeGroupOfPop from '../components/AgeGroupOfPop'
 import MaritalStatus from '../components/MaritalStatus'
 import CountryOfBirth from '../components/CountryOfBirth';
 import Schools from '../components/Schools';
 import NatureOfOccupancy from '../components/NatureOfOccupancy';
+import { Grid, Typography, Divider } from '@material-ui/core';
+import mMap from '../assets/ic_map.png'
+import mTerrain from '../assets/ic_terrain.png'
+
 
 class SuburbPage extends React.Component {
     render() {
@@ -13,25 +17,54 @@ class SuburbPage extends React.Component {
         const suburb_state = this.props.suburb_state;
         const url = `https://www.google.com/maps/embed/v1/place?key=AIzaSyDIMGCB2qSD9qIB0mrZu0uGEmZlc9e8m-Y&q=${suburb}`;
       return (
-        <div className="App">
-          <h2>Here is the suburb page for {suburb}!</h2>
-          <p>
-            <iframe
-                width="600"
-                height="450"
-                frameborder="0"
-                src={url} allowFullScreen>
-            </iframe>
-            </p>
+        <div className="ParentContainer">
+        {/*Top items (suburb text, icon)*/}
+        <img src={mTerrain} className="IconMain"/>
+        <Typography align="inherit" inline="true" className="MainText" style={{ fontSize: 40 }} variant="h1" color="inherit">
+          {suburb}
+        </Typography>
+        <br></br>
+        <Divider className="DividerMain"></Divider>
+        <br></br>
+        <Grid className="SuburbContainer"
+        container spacing={12} 
+        direction="row" 
+        justify="flex-start"
+        alignItems="left" >
+         
+          {/*LHS grid item*/}
+          <Grid item xs={6}>
+          {/*LHS grid container*/}
+            <Grid className="LeftContainer" alignItems="left">
+              <Grid item className="DemographicsContainer">
+              <p><AgeGroupOfPop suburb_state={suburb_state} suburb={suburb}/></p>
+              <p><MaritalStatus suburb_state={suburb_state} suburb={suburb}/></p>
+              <p><CountryOfBirth suburb_state={suburb_state} suburb={suburb}/></p>
+              <p><NatureOfOccupancy suburb_state={suburb_state} suburb={suburb}/></p>
+              <p><Schools suburb_state={suburb_state} suburb={suburb}/></p>
+              </Grid>
+              <button className="button" onClick={this.props.onStartOver}>Home</button>
+            </Grid>
+          </Grid>
 
-          <p><Schools suburb_state={suburb_state} suburb={suburb}/></p>
-          <h3>Demographics of {suburb}:</h3>
-          <p><AgeGroupOfPop suburb_state={suburb_state} suburb={suburb}/></p>
-          <p><MaritalStatus suburb_state={suburb_state} suburb={suburb}/></p>
-          <p><CountryOfBirth suburb_state={suburb_state} suburb={suburb}/></p>
-          <p><NatureOfOccupancy suburb_state={suburb_state} suburb={suburb}/></p>
-          <button className="button" onClick={this.props.onStartOver}>Home</button>
-          <p></p>
+          {/*RHS grid item*/}
+          <Grid item xs={5}>
+          {/*RHS grid container*/}
+            <Grid className="RightContainer">
+                <Grid item className="MapsContainer">
+                <img src={mMap} className="IconDef"/>
+                <Typography align="inherit" inline="true" className="SideText" style={{ fontSize: 26 }} variant="h1" color="inherit">
+                  Maps
+                </Typography>
+                  <iframe className="GMaps"
+
+                      frameborder="0"
+                      src={url} allowFullScreen>
+                  </iframe>
+                </Grid>
+            </Grid>
+          </Grid>
+        </Grid>
         </div>
       );
     } else {

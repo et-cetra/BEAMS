@@ -42,14 +42,14 @@ class Framework extends React.Component {
         <PinIcon fontSize="large" className="PinIcon"></PinIcon>
 
           <Grid item className="HeadingBox">
-          <Typography style={{ fontSize: 30 }} className="HeadingMain" variant="h1" color="inherit" noWrap>
-            BEAMS
-          </Typography>
+            <Typography style={{ fontSize: 30 }} className="HeadingMain" variant="h1" color="inherit" noWrap>
+              BEAMS
+            </Typography>
           </Grid>
           
           <Grid item className="SubHeadingBox">
           <Typography variant="overline" color="inherit">
-            Property and suburb analysis
+            Suburb analysis
           </Typography>
           </Grid>
 

@@ -36,13 +36,13 @@ class App extends Component {
     const redirect = this.state.route;
     return (
       <div>
-      <Framework onSelect={this.onSuburbSelect}/>
-      <Grid container className="ContentHolderMain" direction="column" justify="center" alignItems="center">
+      <Framework onSelect={this.onSuburbSelect} onStartOver={this.onStartOver}/>
+      <Grid container className="ContentHolderMain" direction="column" justify="stretch" alignItems="center">
           <Grid item>
               <BrowserRouter>
                 <Switch>
                   <Route exact path="/" render={() => (redirect && redirect !== "/" ? <Redirect to={redirect} /> : <HomePage onSelect={this.onSuburbSelect}/>)} />
-                  <Route exact path="/suburb" render={() => (redirect && redirect !== "/suburb" ? <Redirect to={redirect} /> : <SuburbPage suburb={this.state.suburb} suburb_state={this.state.suburb_state} onStartOver={this.onStartOver} />)} />
+                  <Route exact path="/suburb" render={() => (redirect && redirect !== "/suburb" ? <Redirect to={redirect} /> : <SuburbPage suburb={this.state.suburb} suburb_state={this.state.suburb_state} onStartOver={this.onStartOver}/>)} />
                 </Switch>
               </BrowserRouter>
           </Grid>
