@@ -18,6 +18,7 @@ class QuickSearch extends React.Component {
     handleSelect = address => {
         console.log('Address:', address);
         this.props.onSelect(address);
+        this.setState({ address: '' })
         geocodeByAddress(address)
             .then(results => getLatLng(results[0]))
             .then(latLng => console.log('Success', latLng))
@@ -46,7 +47,7 @@ class QuickSearch extends React.Component {
                 <Card className="AutocompleteCard">
                     {suggestions.map(suggestion => {
                     const className = suggestion.active ? 'suggestion-item--active' : 'suggestion-item';
-                    const style = suggestion.active ? 
+                    const style = suggestion.active ?
                     { backgroundColor: '#EE6A15', cursor: 'pointer' } : { backgroundColor: '#04091E', cursor: 'pointer' };
                     return (
                     <ListItem className="SearchResultsQuick" {...getSuggestionItemProps(suggestion, { className, style })}>
@@ -54,7 +55,7 @@ class QuickSearch extends React.Component {
                     </ListItem>
                     );
                 })}
-                </Card>                  
+                </Card>
                 </div>
             )}</PlacesAutocomplete>
         </Grid>
