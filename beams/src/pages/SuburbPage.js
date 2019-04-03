@@ -35,7 +35,7 @@ class SuburbPage extends React.Component {
         alignItems="left" >
          
           {/*LHS grid item*/}
-          <Grid item xs={6}>
+          <Grid item xs={7}>
           {/*LHS grid container*/}
             <Grid className="LeftContainer" alignItems="left">
               <Grid item className="DemographicsContainer">
