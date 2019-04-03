@@ -36,15 +36,9 @@ class SuburbNews extends React.Component {
                     <a class="header">Local News:</a>
                     {articles.articles.map(
                         article => <div><a href={article.url} key={article.id}>
-                        <img 
-                        height="150"
-                        width="150"
-                        src={article.urlToImage}
-                        align="right">
-                        </img>
+                            <p><b>{article.title}</b></p>
+                            <p>{article.description}</p><br></br><br></br>                        
                         </a>
-                        <p><b>{article.title}</b></p>
-                        <p>{article.description}</p><br></br><br></br>                        
                         </div>
                     )}
                 </div>
