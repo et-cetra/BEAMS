@@ -27,11 +27,6 @@
   padding-left: 48px;
   padding-right: 48px;
 }
-
-.DividerMain{
-  
-}
-
 .IconMain{
   width: 70px;
   height: 70px;
@@ -42,6 +37,9 @@
   height: 450px;
   padding-bottom: 36px;
   padding-top: 12px;
+}
+
+.PieChart{
 }
 
 .NewsMain{

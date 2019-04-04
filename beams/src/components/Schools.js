@@ -46,6 +46,7 @@ class Schools extends React.Component {
             );
         }
     }
+    
 
 }
 
