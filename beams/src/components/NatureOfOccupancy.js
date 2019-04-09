@@ -50,7 +50,7 @@ class NatureOfOccupancy extends React.Component {
                 <Tooltip/>
             </PieChart>
 
-                   <h4>Nature Of Occupancy:</h4>
+                   <b>Nature Of Occupancy:</b>
                     {contents.map(
                         content => (
                             content.items.map((item, i) => (

@@ -53,7 +53,7 @@ class Framework extends React.Component {
           </Typography>
           </Grid>
 
-          <Grid container spacing={12} direction="row" justify="flex-end"
+          <Grid container spacing={16} direction="row" justify="flex-end"
           alignItems="center" className="LogoContainer">
             <QuickSearch onSelect={this.props.onSelect}/>
             <Grid item>

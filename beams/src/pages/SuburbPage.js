@@ -30,7 +30,7 @@ class SuburbPage extends React.Component {
         <Divider variant="fullWidth"></Divider>
         <br></br>
         <Grid className="SuburbContainer"
-        container spacing={12}
+        container spacing={16}
         direction="row"
         justify="flex-start"
         alignItems="left" >
@@ -40,11 +40,11 @@ class SuburbPage extends React.Component {
           {/*LHS grid container*/}
             <Grid className="LeftContainer" alignItems="left">
               <Grid item className="DemographicsContainer">
-              <p><AgeGroupOfPop suburb_state={suburb_state} suburb={suburb} key={suburb+suburb_state}/></p>
-              <p><MaritalStatus suburb_state={suburb_state} suburb={suburb} key={suburb+suburb_state}/></p>
-              <p><CountryOfBirth suburb_state={suburb_state} suburb={suburb} key={suburb+suburb_state}/></p>
-              <p><NatureOfOccupancy suburb_state={suburb_state} suburb={suburb} key={suburb+suburb_state}/></p>
-              <p><Schools suburb_state={suburb_state} suburb={suburb} key={suburb+suburb_state}/></p>
+              <p><AgeGroupOfPop suburb_state={suburb_state} suburb={suburb} key={suburb+suburb_state+'AgeGroupOfPop'}/></p>
+              <p><MaritalStatus suburb_state={suburb_state} suburb={suburb} key={suburb+suburb_state+'MaritalStatus'}/></p>
+              <p><CountryOfBirth suburb_state={suburb_state} suburb={suburb} key={suburb+suburb_state+'CountryOfBirth'}/></p>
+              <p><NatureOfOccupancy suburb_state={suburb_state} suburb={suburb} key={suburb+suburb_state+'NatureOfOccupancy'}/></p>
+              <p><Schools suburb_state={suburb_state} suburb={suburb} key={suburb+suburb_state+'Schools'}/></p>
               </Grid>
               <button className="button" onClick={this.props.onStartOver}>Home</button>
             </Grid>

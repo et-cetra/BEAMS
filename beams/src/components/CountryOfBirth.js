@@ -48,7 +48,7 @@ class CountryOfBirth extends React.Component {
                 </Pie>
                 <Tooltip/>
             </PieChart>
-                    <h4>Birth Country:</h4>
+                    <b>Birth Country:</b>
                     {contents.map(
                         content => (
                             content.items.slice(0,5).map((item, i) => (

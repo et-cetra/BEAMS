@@ -6,7 +6,6 @@ import HomeSearch from '../components/HomeSearch';
 class HomePage extends React.Component {
     render() {
       return (
-        
         <div className='HomeContainer'>
         <Grow in={this.props.onSelect} timeout={750}>
         <Grid container direction="column" justify="space-evenly" alignItems="center">

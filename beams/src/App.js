@@ -37,7 +37,7 @@ class App extends Component {
     return (
       <div>
       <Framework onSelect={this.onSuburbSelect} onStartOver={this.onStartOver}/>
-      <Grid container className="ContentHolderMain" direction="column" justify="stretch" alignItems="center">
+      <Grid container className="ContentHolderMain" direction="column" justify="center" alignItems="center">
           <Grid item>
               <BrowserRouter>
                 <Switch>

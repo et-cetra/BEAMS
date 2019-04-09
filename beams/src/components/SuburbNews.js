@@ -29,7 +29,7 @@ class SuburbNews extends React.Component {
             return <div>Loading...</div>
         } else {
             return (
-                <div class="vertical-menu">
+                <div className="vertical-menu">
                     {articles.articles.map(
                         article =>
                         <div>
