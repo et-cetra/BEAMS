@@ -10,6 +10,7 @@
     "braces": "^2.3.2",
     "britecharts-react": "^0.5.1",
     "material-ui-search-bar": "^0.4.2",
+    "node-cache": "^4.2.0",
     "node-fetch": "^2.3.0",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",

@@ -15,8 +15,6 @@ class CountryOfBirth extends React.Component {
 
     async componentDidMount() {
         const suburbInfo = await getDemographics(this.props.suburb, this.props.suburb_state, "CountryOfBirth");
-        console.log("Demographics suburbInfo", suburbInfo);
-
         this.setState({
             isLoaded: true,
             contents: suburbInfo.demographics
@@ -32,7 +30,6 @@ class CountryOfBirth extends React.Component {
             chartData.push({name: item.label, value: item.value, color: COLORS[i]})
         ))));
 
-          
         if (error) {
             return <div>Error: {error.message}</div>;
         } else if (!isLoaded) {
@@ -45,7 +42,7 @@ class CountryOfBirth extends React.Component {
             className="PieChart" onMouseEnter={this.onPieEnter}>
                 <Pie data={chartData} innerRadius={60} outerRadius={80}
                 fill="#8884d8" paddingAngle={4} dataKey="value" label>
-                {chartData.map((entry, index) => 
+                {chartData.map((entry, index) =>
                     <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]}/>
                 )}
                 </Pie>

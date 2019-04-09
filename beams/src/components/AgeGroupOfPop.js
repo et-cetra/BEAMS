@@ -15,8 +15,6 @@ class AgeGroupOfPop extends React.Component {
 
     async componentDidMount() {
         const suburbInfo = await getDemographics(this.props.suburb, this.props.suburb_state, "AgeGroupOfPopulation");
-        // console.log("Demographics suburbInfo", suburbInfo);
-
         this.setState({
             isLoaded: true,
             contents: suburbInfo.demographics
@@ -24,18 +22,15 @@ class AgeGroupOfPop extends React.Component {
 
     }
 
-    
-
     render() {
         const { error, isLoaded, contents } = this.state;
-
         const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', '#000000', '#000000'];
         const chartData = [];
         contents.map(content => (content.items.map((item, i) => (
             chartData.push({name: item.label, value: item.value, color: COLORS[i]})
         ))));
 
-          
+
         if (error) {
             return <div>Error: {error.message}</div>;
         } else if (!isLoaded) {
@@ -48,7 +43,7 @@ class AgeGroupOfPop extends React.Component {
             className="PieChart" onMouseEnter={this.onPieEnter}>
                 <Pie data={chartData} innerRadius={60} outerRadius={80}
                 fill="#8884d8" paddingAngle={4} dataKey="value" label>
-                {chartData.map((entry, index) => 
+                {chartData.map((entry, index) =>
                     <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]}/>
                 )}
                 </Pie>

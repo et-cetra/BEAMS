@@ -14,6 +14,7 @@ import mNews from '../assets/ic_news.png'
 
 class SuburbPage extends React.Component {
     render() {
+      console.log("Suburb page", this.props);
       if (this.props.suburb != null) {
         const suburb = this.props.suburb;
         const suburb_state = this.props.suburb_state;
@@ -29,21 +30,21 @@ class SuburbPage extends React.Component {
         <Divider variant="fullWidth"></Divider>
         <br></br>
         <Grid className="SuburbContainer"
-        container spacing={12} 
-        direction="row" 
+        container spacing={12}
+        direction="row"
         justify="flex-start"
         alignItems="left" >
-         
+
           {/*LHS grid item*/}
           <Grid item xs={7}>
           {/*LHS grid container*/}
             <Grid className="LeftContainer" alignItems="left">
               <Grid item className="DemographicsContainer">
-              <p><AgeGroupOfPop suburb_state={suburb_state} suburb={suburb}/></p>
-              <p><MaritalStatus suburb_state={suburb_state} suburb={suburb}/></p>
-              <p><CountryOfBirth suburb_state={suburb_state} suburb={suburb}/></p>
-              <p><NatureOfOccupancy suburb_state={suburb_state} suburb={suburb}/></p>
-              <p><Schools suburb_state={suburb_state} suburb={suburb}/></p>
+              <p><AgeGroupOfPop suburb_state={suburb_state} suburb={suburb} key={suburb+suburb_state}/></p>
+              <p><MaritalStatus suburb_state={suburb_state} suburb={suburb} key={suburb+suburb_state}/></p>
+              <p><CountryOfBirth suburb_state={suburb_state} suburb={suburb} key={suburb+suburb_state}/></p>
+              <p><NatureOfOccupancy suburb_state={suburb_state} suburb={suburb} key={suburb+suburb_state}/></p>
+              <p><Schools suburb_state={suburb_state} suburb={suburb} key={suburb+suburb_state}/></p>
               </Grid>
               <button className="button" onClick={this.props.onStartOver}>Home</button>
             </Grid>

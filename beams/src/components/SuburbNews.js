@@ -3,8 +3,6 @@ import '../components/SuburbNews.css'
 import { getNews } from '../utils';
 import { Paper, Divider } from '@material-ui/core';
 
-// Request for Population Ages in Maroubra: https://api.domain.com.au/v1/demographics?level=Suburb&id=27512&types=AgeGroupOfPopulation&year=2016
-
 class SuburbNews extends React.Component {
     constructor(props) {
         super(props);
@@ -27,15 +25,13 @@ class SuburbNews extends React.Component {
 
     render() {
         let articles = this.state.articles;
-        console.log("!&@!#%* ", articles);
-
         if (!this.state.isLoaded) {
             return <div>Loading...</div>
         } else {
             return (
                 <div class="vertical-menu">
                     {articles.articles.map(
-                        article => 
+                        article =>
                         <div>
                         <Paper className="PaperBox">
                         <a href={article.url} key={article.id} target="_blank">

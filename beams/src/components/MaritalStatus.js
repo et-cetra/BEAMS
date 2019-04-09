@@ -3,8 +3,6 @@ import '../App.css';
 import { getDemographics } from '../utils.js'
 import { PieChart, Pie, Sector, Cell, Tooltip, Legend } from 'recharts';
 
-// Request for Population Ages in Maroubra: https://api.domain.com.au/v1/demographics?level=Suburb&id=27512&types=AgeGroupOfPopulation&year=2016
-
 class MaritalStatus extends React.Component {
     constructor(props) {
         super(props);
@@ -17,8 +15,6 @@ class MaritalStatus extends React.Component {
 
     async componentDidMount() {
         const suburbInfo = await getDemographics(this.props.suburb, this.props.suburb_state, "MaritalStatus");
-        console.log("Marital suburbInfo", suburbInfo);
-
         this.setState({
             isLoaded: true,
             contents: suburbInfo.demographics
@@ -35,7 +31,7 @@ class MaritalStatus extends React.Component {
             chartData.push({name: item.label, value: item.value, color: COLORS[i]})
         ))));
 
-          
+
         if (error) {
             return <div>Error: {error.message}</div>;
         } else if (!isLoaded) {
@@ -48,7 +44,7 @@ class MaritalStatus extends React.Component {
             className="PieChart" onMouseEnter={this.onPieEnter}>
                 <Pie data={chartData} innerRadius={60} outerRadius={80}
                 fill="#8884d8" paddingAngle={4} dataKey="value" label>
-                {chartData.map((entry, index) => 
+                {chartData.map((entry, index) =>
                     <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]}/>
                 )}
                 </Pie>

@@ -25,7 +25,6 @@ class Schools extends React.Component {
 
     render() {
         const { error, isLoaded, schoolData } = this.state;
-        console.log("School Data", schoolData);
         if (error) {
             return <div>Error: {error.message}</div>;
         } else if (!isLoaded) {
@@ -46,8 +45,6 @@ class Schools extends React.Component {
             );
         }
     }
-    
-
 }
 
 export default Schools;

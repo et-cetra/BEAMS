@@ -1,5 +1,9 @@
 const axios = require('axios')
 const querystring = require('querystring')
+const {Cache} = require('./cache.js')
+
+const ttl = 60 * 60 * 1; // cache for 1 Hour
+const cache = new Cache(ttl); // Create a new cache service instance
 
 async function getAccessToken(clientId, secret) {
     var data = querystring.stringify({
@@ -15,7 +19,6 @@ async function getAccessToken(clientId, secret) {
     });
     // await result;
     const { access_token } = result.data;
-    console.log("Connect: ", result.data);
     return access_token;
 }
 
@@ -24,19 +27,19 @@ function base64(str) {
 }
 
 getSuburbId = async (token, suburb, state) => {
-    console.log("demo sub", suburb);
-    console.log("demo state", state);
-    console.log("token", token);
+    const key = suburb+state;
+    return cache.get(key, () => getSuburbIdRaw(token, suburb, state));
+}
+
+getSuburbIdRaw = async (token, suburb, state) => {
     const headers = {
         'Authorization': `Bearer ${token}`
     };
-    console.log("headers", headers);
     try {
         const res = await axios.get(`https://api.domain.com.au/v1/addressLocators?searchLevel=Suburb&suburb=${suburb}&state=${state}`, {
             headers: headers
         });
         await res;
-        console.log("address comps", res.data);
         return res.data;
     } catch (err) {
         console.log("getSuburbId FAILED:", err);
@@ -44,6 +47,11 @@ getSuburbId = async (token, suburb, state) => {
 }
 
 getDemographics = async (token, hood_id, type) => {
+    const key = hood_id + type;
+    return cache.get(key, () => getDemographicsRaw(token, hood_id, type));
+}
+
+getDemographicsRaw = async (token, hood_id, type) => {
     const headers = {
         'Authorization': `Bearer ${token}`
     };
@@ -59,6 +67,11 @@ getDemographics = async (token, hood_id, type) => {
 }
 
 getSchools = async (token, lat, lng) => {
+    const key = lat + lng;
+    return cache.get(key, () => getSchoolsRaw(token, lat, lng));
+}
+
+getSchoolsRaw = async (token, lat, lng) => {
     const headers = {
         'Authorization': `Bearer ${token}`
     };
@@ -67,8 +80,6 @@ getSchools = async (token, lat, lng) => {
             headers: headers
         });
         await res;
-        console.log("Schools lat", lat);
-        console.log("Schools long", lng);
         return res.data;
     } catch (err) {
         console.log("getSchools FAILED:", err);
