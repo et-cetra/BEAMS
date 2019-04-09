@@ -51,7 +51,7 @@ class MaritalStatus extends React.Component {
                 <Tooltip/>
             </PieChart>
 
-                   <h4>Marital status:</h4>
+                   <b>Marital status:</b>
                     {contents.map(
                         content => (
                             content.items.map((item, i) => (

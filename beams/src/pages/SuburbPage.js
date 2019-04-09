@@ -32,19 +32,19 @@ class SuburbPage extends React.Component {
         <Grid className="SuburbContainer"
         container spacing={16}
         direction="row"
-        justify="flex-start"
-        alignItems="left" >
+        justify="center"
+        alignItems="flex-start" >
 
           {/*LHS grid item*/}
           <Grid item xs={7}>
           {/*LHS grid container*/}
             <Grid className="LeftContainer" alignItems="left">
               <Grid item className="DemographicsContainer">
-              <p><AgeGroupOfPop suburb_state={suburb_state} suburb={suburb} key={suburb+suburb_state+'AgeGroupOfPop'}/></p>
-              <p><MaritalStatus suburb_state={suburb_state} suburb={suburb} key={suburb+suburb_state+'MaritalStatus'}/></p>
-              <p><CountryOfBirth suburb_state={suburb_state} suburb={suburb} key={suburb+suburb_state+'CountryOfBirth'}/></p>
-              <p><NatureOfOccupancy suburb_state={suburb_state} suburb={suburb} key={suburb+suburb_state+'NatureOfOccupancy'}/></p>
-              <p><Schools suburb_state={suburb_state} suburb={suburb} key={suburb+suburb_state+'Schools'}/></p>
+              <div><AgeGroupOfPop suburb_state={suburb_state} suburb={suburb} key={suburb+suburb_state+'AgeGroupOfPop'}/></div>
+              <div><MaritalStatus suburb_state={suburb_state} suburb={suburb} key={suburb+suburb_state+'MaritalStatus'}/></div>
+              <div><CountryOfBirth suburb_state={suburb_state} suburb={suburb} key={suburb+suburb_state+'CountryOfBirth'}/></div>
+              <div><NatureOfOccupancy suburb_state={suburb_state} suburb={suburb} key={suburb+suburb_state+'NatureOfOccupancy'}/></div>
+              <div><Schools suburb_state={suburb_state} suburb={suburb} key={suburb+suburb_state+'Schools'}/></div>
               </Grid>
               <button className="button" onClick={this.props.onStartOver}>Home</button>
             </Grid>
@@ -59,7 +59,7 @@ class SuburbPage extends React.Component {
                 <Typography align="inherit" inline="true" className="SideText" style={{ fontSize: 26 }} variant="h1" color="inherit">
                   Maps
                 </Typography>
-                <iframe className="GMapsMain" frameborder="0" src={url} allowFullScreen></iframe>
+                <iframe className="GMapsMain" frameBorder="0" src={url} allowFullScreen></iframe>
                 <img src={mNews} className="IconDef"/>
                 <Typography align="inherit" inline="true" className="SideText" style={{ fontSize: 26 }} variant="h1" color="inherit">
                   Local News

@@ -50,7 +50,7 @@ class AgeGroupOfPop extends React.Component {
                 <Tooltip/>
             </PieChart>
 
-            <h4>Age Distribution</h4>
+            <b>Age Distribution</b>
             {contents.map(content => (content.items.map((item, i) => (
                 <li key={`item-${i}`}>
                     <b>{item.label}:</b> {item.value} persons
