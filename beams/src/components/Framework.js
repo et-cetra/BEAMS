@@ -1,6 +1,6 @@
 //Uses 'App.css' for style
 import React from 'react';
-import { Grid, AppBar, Toolbar, Typography, createMuiTheme, MuiThemeProvider } from '@material-ui/core';
+import { Grid, AppBar, Toolbar, Typography, createMuiTheme, MuiThemeProvider, Link } from '@material-ui/core';
 import 'typeface-roboto';
 import mBannerSm from '../assets/ic_banner_small.png'
 import QuickSearch from "./QuickSearch"
@@ -42,9 +42,7 @@ class Framework extends React.Component {
         <PinIcon fontSize="large" className="PinIcon"></PinIcon>
 
           <Grid item className="HeadingBox">
-            <Typography style={{ fontSize: 30 }} className="HeadingMain" variant="h1" color="inherit" noWrap>
-              BEAMS
-            </Typography>
+            <Link to="/" onClick={this.props.onStartOver}> <Typography style={{ fontSize: 30, color: 'white'}} className="HeadingMain" variant="h1" noWrap> BEAMS </Typography></Link>
           </Grid>
 
           <Grid item className="SubHeadingBox">

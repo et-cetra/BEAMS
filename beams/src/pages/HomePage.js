@@ -1,6 +1,6 @@
 import React from 'react';
 import './HomePage.css'
-import { Grid, Icon, Typography, Slide, Grow } from '@material-ui/core';
+import { Grid, Link, Typography, Slide, Grow } from '@material-ui/core';
 import HomeSearch from '../components/HomeSearch';
 
 class HomePage extends React.Component {
