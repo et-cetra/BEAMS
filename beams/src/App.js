@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 import HomePage from "./pages/HomePage"
 import SuburbPage from "./pages/SuburbPage";
 import './App.css';
+import './pages/SuburbPage.css'
 import { Grid } from '@material-ui/core';
 import 'typeface-roboto';
 import Framework from './components/Framework';

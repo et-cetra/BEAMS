@@ -39,3 +39,8 @@
   padding-top: 30px;
   margin-left: -16px;
 }
+
+.RightAlign{
+  position: absolute;
+  text-align: right;
+}

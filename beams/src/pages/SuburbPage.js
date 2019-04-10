@@ -1,7 +1,6 @@
 import React from 'react';
 import './SuburbPage.css'
 import AgeGroupOfPop from '../components/AgeGroupOfPop'
-import MaritalStatus from '../components/MaritalStatus'
 import CountryOfBirth from '../components/CountryOfBirth';
 import Schools from '../components/Schools';
 import NatureOfOccupancy from '../components/NatureOfOccupancy';
@@ -41,7 +40,6 @@ class SuburbPage extends React.Component {
             <Grid className="LeftContainer" alignItems="left">
               <Grid item className="DemographicsContainer">
               <div><AgeGroupOfPop suburb_state={suburb_state} suburb={suburb} key={suburb+suburb_state+'AgeGroupOfPop'}/></div>
-              <div><MaritalStatus suburb_state={suburb_state} suburb={suburb} key={suburb+suburb_state+'MaritalStatus'}/></div>
               <div><CountryOfBirth suburb_state={suburb_state} suburb={suburb} key={suburb+suburb_state+'CountryOfBirth'}/></div>
               <div><NatureOfOccupancy suburb_state={suburb_state} suburb={suburb} key={suburb+suburb_state+'NatureOfOccupancy'}/></div>
               <div><Schools suburb_state={suburb_state} suburb={suburb} key={suburb+suburb_state+'Schools'}/></div>

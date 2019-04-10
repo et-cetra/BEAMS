@@ -1,6 +1,10 @@
 import React from 'react';
 import '../App.css';
+import '../pages/SuburbPage.css';
 import { getLocation, getSchools } from '../utils.js';
+import { ExpansionPanel, ExpansionPanelSummary, ExpansionPanelDetails, Typography } from '@material-ui/core';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import mSchools from '../assets/ic_schools.png'
 
 class Schools extends React.Component {
     constructor(props) {
@@ -31,17 +35,38 @@ class Schools extends React.Component {
             return <div>Loading...</div>;
         } else {
             return (
-                <div>
-                Schools of this Suburb
-                {schoolData.map(
-                    (item, i) => (
-                    <li key={`item-${i}`}>
-                        <b>{item.name}</b>
-                        <br></br>
-                        <b>Type:</b> {item.type}, <b>Education Level:</b> {item.educationLevel}, <b>Gender:</b> {item.gender}
-                    </li>))
+                <ExpansionPanel style={{boxShadow: 'none'}}>
+                <ExpansionPanelSummary expandIcon={<ExpandMoreIcon/>}>
+                    <img src={mSchools} className="IconDef"/>
+                    <Typography align="inherit" inline="true" className="SchoolsText" 
+                    style={{ fontSize: 24 }} variant="h1" color="inherit">
+                        Local Schools
+                    </Typography>
+                    <br/>
+                    <br/>
+                    <Typography align="inherit" inline="true" className="SchoolsTextSub" 
+                    style={{ fontSize: 16 }} variant="h1" color="#333F48">
+                        {Object.keys(schoolData).length} schools nearby
+                    </Typography>
+                </ExpansionPanelSummary>
+                <div className="ScrollMenu">
+                    {schoolData.map(
+                        (item, i) => (
+                        <ExpansionPanel>
+                        <ExpansionPanelSummary expandIcon={<ExpandMoreIcon/>}>
+                            <Typography>{item.name}</Typography>
+                        </ExpansionPanelSummary>
+                        <ExpansionPanelDetails>
+                            <Typography>
+                            <b>Type</b> {item.type} <br/>
+                            <b>Education Level</b> {item.educationLevel} <br/>
+                            <b>Gender</b> {item.gender}
+                            </Typography>
+                        </ExpansionPanelDetails>                       
+                        </ExpansionPanel>))
                 }
-            </div>
+                </div>
+                </ExpansionPanel>
             );
         }
     }
