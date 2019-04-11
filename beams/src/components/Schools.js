@@ -35,8 +35,8 @@ class Schools extends React.Component {
             return <div>Loading...</div>;
         } else {
             return (
-                <ExpansionPanel style={{boxShadow: 'none'}}>
-                <ExpansionPanelSummary expandIcon={<ExpandMoreIcon/>}>
+                <ExpansionPanel style={{boxShadow: 'none', width: "100%"}}>
+                <ExpansionPanelSummary style={{marginLeft: '-24px'}} expandIcon={<ExpandMoreIcon/>}>
                     <img src={mSchools} className="IconDef"/>
                     <Typography align="inherit" inline="true" className="SchoolsText" 
                     style={{ fontSize: 24 }} variant="h1" color="inherit">

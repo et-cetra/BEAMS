@@ -3,14 +3,26 @@
 }
 
 .LeftContainer{
+  padding-right: 15px;
+}
 
+.GraphLegend{
+  
 }
 
 .SchoolsContainer{
-
+  padding-top: 20px;
 }
 
-.DemographicsContainer{
+.DGContainer{
+  padding-top: 20px;
+}
+
+.DemographicsInfoContainer{
+  margin-top: 20px;
+}
+
+.DemographicsGraph{
 
 }
 
@@ -27,6 +39,7 @@
   padding-left: 48px;
   padding-right: 48px;
 }
+
 .IconMain{
   width: 70px;
   height: 70px;
@@ -40,6 +53,8 @@
 }
 
 .PieChart{
+  width: 80px;
+  height: 80px;
 }
 
 .NewsMain{
@@ -71,7 +86,7 @@
   width: 100%;
   max-height: 500px;
   overflow-y: auto;
-  padding: 10px;
+  padding: 2px;
 }
 
 .MainText{

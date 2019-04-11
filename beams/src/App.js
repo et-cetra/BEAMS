@@ -42,8 +42,10 @@ class App extends Component {
           <Grid item>
               <BrowserRouter>
                 <Switch>
-                  <Route exact path="/" render={() => (redirect && redirect !== "/" ? <Redirect to={redirect} /> : <HomePage onSelect={this.onSuburbSelect}/>)} />
-                  <Route exact path="/suburb" render={() => (redirect && redirect !== "/suburb" ? <Redirect to={redirect} /> : <SuburbPage suburb={this.state.suburb} suburb_state={this.state.suburb_state} onStartOver={this.onStartOver}/>)} />
+                  <Route exact path="/" render={() => (redirect && redirect !== "/" ? <Redirect to={redirect} /> : 
+                      <HomePage onSelect={this.onSuburbSelect}/>)} />
+                  <Route exact path="/suburb" render={() => (redirect && redirect !== "/suburb" ? <Redirect to={redirect} /> : 
+                      <SuburbPage suburb={this.state.suburb} suburb_state={this.state.suburb_state} onStartOver={this.onStartOver}/>)} />
                 </Switch>
               </BrowserRouter>
           </Grid>
