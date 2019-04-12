@@ -4,7 +4,7 @@
 }
 
 .LeftContainer{
-  width: 100%;
+  width: 96%;
   padding-right: 15px;
 }
 
@@ -32,7 +32,6 @@
 }
 
 .RightContainer{
-
 }
 
 .MapsContainer{
@@ -81,6 +80,12 @@
   padding-left: 20px;
 }
 
+.SchoolPanel{
+  padding-top: 12px;
+  width: 100%;
+  box-shadow: none;
+}
+
 .SchoolsTextSub{
   position: absolute;
   padding-top: 30px;
@@ -89,7 +94,7 @@
 
 .ScrollMenu{
   width: 98%;
-  max-height: 500px;
+  max-height: 450px;
   overflow-y: auto;
   padding: 3px;
 }

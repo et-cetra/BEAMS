@@ -1,7 +1,6 @@
 import React from 'react';
 import './SuburbPage.css'
 import AgeGroupOfPop from '../components/demographics/AgeGroupOfPop'
-import SwipeableViews from 'react-swipeable-views';
 import CountryOfBirth from '../components/demographics/CountryOfBirth';
 import Schools from '../components/Schools';
 import NatureOfOccupancy from '../components/demographics/NatureOfOccupancy';
@@ -14,6 +13,7 @@ import mDG from '../assets/ic_demographics.png'
 import FaceIcon from '@material-ui/icons/Face'
 import HomeIcon from '@material-ui/icons/Home'
 import { HumanMaleBoy } from 'mdi-material-ui'
+
 
 class SuburbPage extends React.Component {
   state = {
@@ -63,18 +63,19 @@ class SuburbPage extends React.Component {
 
             <div className="DGContainer" >
             <Paper square>
-            <Tabs value={value} onChange={this.handleChange} centered
-            indicatorColor="primary" textColor="primary" variant="fullWidth">
-              <Tab icon={<HumanMaleBoy/>} label="Age Distribution" />
-              <Tab icon={<FaceIcon/>}label="Cultural Diversity" />
-              <Tab icon={<HomeIcon/>} label="Property Occupancy" />
-            </Tabs>
+              <Tabs value={value} onChange={this.handleChange} centered
+              indicatorColor="primary" textColor="primary" variant="fullWidth">
+                <Tab icon={<HumanMaleBoy/>} label="Age Distribution" />
+                <Tab icon={<FaceIcon/>}label="Cultural Diversity" />
+                <Tab icon={<HomeIcon/>} label="Property Occupancy" />
+              </Tabs>
             </Paper>
-            </div>
-
             {value === 0 && <AgeGroupOfPop COLORS={COLORS} suburb_state={suburb_state} suburb={suburb} key={suburb+suburb_state+'AgeGroupOfPop'}/>}
             {value === 1 && <CountryOfBirth COLORS={COLORS} suburb_state={suburb_state} suburb={suburb} key={suburb+suburb_state+'CountryOfBirth'}/>}
             {value === 2 && <NatureOfOccupancy COLORS={COLORS} suburb_state={suburb_state} suburb={suburb} key={suburb+suburb_state+'NatureOfOccupancy'}/>}
+            </div>
+
+            
             <div className="SchoolsContainer">
               <Schools suburb_state={suburb_state} suburb={suburb} key={suburb+suburb_state+'Schools'}/>
             </div> 
