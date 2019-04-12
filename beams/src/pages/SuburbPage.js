@@ -10,6 +10,9 @@ import mMap from '../assets/ic_map.png'
 import mTerrain from '../assets/ic_terrain.png'
 import mNews from '../assets/ic_news.png'
 import mDG from '../assets/ic_demographics.png'
+import FaceIcon from '@material-ui/icons/Face'
+import HomeIcon from '@material-ui/icons/Home'
+import { HumanMaleBoy } from 'mdi-material-ui'
 
 class SuburbPage extends React.Component {
   state = {
@@ -56,11 +59,11 @@ class SuburbPage extends React.Component {
             </Typography>
             <div className="DGContainer">
             <Paper square>
-            <Tabs value={value} onChange={this.handleChange} 
+            <Tabs value={value} onChange={this.handleChange} centered
             indicatorColor="primary" textColor="primary" variant="fullWidth">
-              <Tab label="Age Distribution" />
-              <Tab label="Cultural Diversity" />
-              <Tab label="Property Occupancy" />
+              <Tab icon={<HumanMaleBoy/>} label="Age Distribution" />
+              <Tab icon={<FaceIcon/>}label="Cultural Diversity" />
+              <Tab icon={<HomeIcon/>} label="Property Occupancy" />
             </Tabs>
             </Paper>
             </div>

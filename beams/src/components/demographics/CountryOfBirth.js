@@ -33,11 +33,15 @@ class CountryOfBirth extends React.Component {
         if (error) {
             return <div>Error: {error.message}</div>;
         } else if (!isLoaded) {
-            return <div/>;
+            return (
+            <div>
+                <DGSection loading={1} COLORS={COLORS} chartData={[]}/>
+            </div>
+            );
         } else {
             return (
             <div>
-                <DGSection COLORS={COLORS} chartData={chartData}/>
+                <DGSection loading={0} COLORS={COLORS} chartData={chartData}/>
             </div>
             );
         }

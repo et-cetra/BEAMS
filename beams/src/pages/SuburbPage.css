@@ -1,5 +1,5 @@
 .SuburbContainer{
-
+  height: 320px;
 }
 
 .LeftContainer{
@@ -83,10 +83,10 @@
 }
 
 .ScrollMenu{
-  width: 100%;
+  width: 98%;
   max-height: 500px;
   overflow-y: auto;
-  padding: 2px;
+  padding: 3px;
 }
 
 .MainText{
