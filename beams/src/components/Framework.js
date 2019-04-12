@@ -8,6 +8,9 @@ import PinIcon from '@material-ui/icons/LocationOn'
 
 const theme = createMuiTheme({
   //shadows: ["none"],
+  typography: {
+    useNextVariants: true,
+  },
   palette: {
     primary: {
       main: '#04091E',
@@ -15,8 +18,11 @@ const theme = createMuiTheme({
     secondary: {
       light: '#EE6A15',
       main: '#E62927',
-      // dark: will be calculated from palette.secondary.main,
       contrastText: '#ffffff',
+    },
+    textSecondary: {
+      light: '#FFFFFF',
+      main: '#333F48',
     },
     // error: will use default color
   },
@@ -60,7 +66,7 @@ class Framework extends React.Component {
           alignItems="center" className="LogoContainer">
             <QuickSearch onSelect={this.props.onSelect}/>
             <Grid item>
-              <img src={mBannerSm} width="160" height="97"/>
+              <img src={mBannerSm} width="160" height="97" alt="banner"/>
             </Grid>
           </Grid>
 

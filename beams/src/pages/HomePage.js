@@ -1,13 +1,13 @@
 import React from 'react';
 import './HomePage.css'
-import { Grid, Link, Typography, Slide, Grow } from '@material-ui/core';
+import { Grid, Typography, Grow } from '@material-ui/core';
 import HomeSearch from '../components/HomeSearch';
 
 class HomePage extends React.Component {
     render() {
       return (
         <div className='HomeContainer'>
-        <Grow in={this.props.onSelect} timeout={750}>
+        <Grow in timeout={750}>
         <Grid container direction="column" justify="space-evenly" alignItems="center">
           <Grid item>
           <Typography style={{ fontSize: 30 }} variant='overline' align='center'>

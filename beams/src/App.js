@@ -21,12 +21,15 @@ class App extends Component {
   }
 
   onSuburbSelect = (city) => {
-    let re = /[A-Z]{3}|[A-Z]{2}/;
-    var suburb_state = city.match(re)[0];
-    var suburb = city.split(re)[0];
-    suburb = suburb.slice(0, -1);
-
-    this.setState(() => ({ suburb: suburb, suburb_state: suburb_state, route: "/suburb"}));
+      
+      console.log(city);
+      let re = /[A-Z]{3}|[A-Z]{2}/;
+      var suburb_state = city.match(re)[0];
+      var suburb = city.split(re)[0];
+      suburb = suburb.slice(0, -1);
+  
+      this.setState(() => ({ suburb: suburb, suburb_state: suburb_state, route: "/suburb"}));
+    
   };
 
   onStartOver = () => {

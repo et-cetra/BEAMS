@@ -1,7 +1,7 @@
 import React from 'react';
 import '../components/SuburbNews.css'
 import { getNews } from '../utils';
-import { Paper, Divider } from '@material-ui/core';
+import { Paper } from '@material-ui/core';
 
 class SuburbNews extends React.Component {
     constructor(props) {
@@ -30,11 +30,10 @@ class SuburbNews extends React.Component {
         } else {
             return (
                 <div className="vertical-menu">
-                    {articles.articles.map(
-                        article =>
-                        <div>
+                    {articles.articles.map((article, i) =>
+                        <div key={i}>
                         <Paper className="PaperBox">
-                        <a href={article.url} key={article.id} target="_blank">
+                        <a href={article.url} key={article.id} target="_blank" rel="noopener noreferrer">
                             <b className="Title">{article.title}</b>
                             <br/>
                         </a>

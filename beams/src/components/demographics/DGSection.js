@@ -4,10 +4,6 @@ import { PieChart, Pie, Cell, Tooltip, Legend } from 'recharts';
 import { Grid, Card, Paper, CircularProgress, Fade } from '@material-ui/core';
 
 class DGSection extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
     render() {
       const COLORS = this.props.COLORS;
       const chartData = this.props.chartData;
@@ -32,7 +28,7 @@ class DGSection extends React.Component {
         return (
           <div>
             <Paper square>
-            <Grid className="SuburbContainer" container spacing={12} direction="row"
+            <Grid className="SuburbContainer" container spacing={16} direction="row"
             justify="center" alignItems="center">
               <Grid item><CircularProgress size={60} color="secondary"/></Grid>
             </Grid>
@@ -44,7 +40,7 @@ class DGSection extends React.Component {
         return (
           <div>
             <Paper square>
-            <Grid className="SuburbContainer" container spacing={12} direction="row"
+            <Grid className="SuburbContainer" container spacing={16} direction="row"
             justify="flex-start" alignItems="flex-start">
             <Fade in timeout={600}>
             <Grid item xs={7}>

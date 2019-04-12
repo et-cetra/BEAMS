@@ -37,22 +37,22 @@ class Schools extends React.Component {
             return (
                 <ExpansionPanel style={{boxShadow: 'none', width: "100%"}}>
                 <ExpansionPanelSummary style={{marginLeft: '-24px'}} expandIcon={<ExpandMoreIcon/>}>
-                    <img src={mSchools} className="IconDef"/>
-                    <Typography align="inherit" inline="true" className="SchoolsText" 
+                    <img src={mSchools} className="IconDef" alt="ic_school"/>
+                    <Typography align="inherit" inline className="SchoolsText" 
                     style={{ fontSize: 24 }} variant="h1" color="inherit">
                         Local Schools
                     </Typography>
                     <br/>
                     <br/>
-                    <Typography align="inherit" inline="true" className="SchoolsTextSub" 
-                    style={{ fontSize: 16 }} variant="h1" color="#333F48">
+                    <Typography align="inherit" inline className="SchoolsTextSub" 
+                    style={{ fontSize: 16 }} variant="h1" color="textSecondary">
                         {Object.keys(schoolData).length} schools nearby
                     </Typography>
                 </ExpansionPanelSummary>
                 <div className="ScrollMenu">
                     {schoolData.map(
                         (item, i) => (
-                        <ExpansionPanel>
+                        <ExpansionPanel key={item.id}>
                         <ExpansionPanelSummary expandIcon={<ExpandMoreIcon/>}>
                             <Typography>{item.name}</Typography>
                         </ExpansionPanelSummary>

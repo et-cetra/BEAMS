@@ -4,7 +4,7 @@ import AgeGroupOfPop from '../components/demographics/AgeGroupOfPop'
 import CountryOfBirth from '../components/demographics/CountryOfBirth';
 import Schools from '../components/Schools';
 import NatureOfOccupancy from '../components/demographics/NatureOfOccupancy';
-import { Grid, Typography, Divider, Tabs, Tab, Paper, Slide, Fade } from '@material-ui/core';
+import { Grid, Typography, Divider, Tabs, Tab, Paper, Fade } from '@material-ui/core';
 import SuburbNews from '../components/SuburbNews';
 import mMap from '../assets/ic_map.png'
 import mTerrain from '../assets/ic_terrain.png'
@@ -33,11 +33,10 @@ class SuburbPage extends React.Component {
       const suburb_state = this.props.suburb_state;
       const url = `https://www.google.com/maps/embed/v1/place?key=AIzaSyDIMGCB2qSD9qIB0mrZu0uGEmZlc9e8m-Y&q=${suburb}`;
     return (
-      
       <div className="ParentContainer">
       {/*Top items (suburb text, icon)*/}
-      <img src={mTerrain} className="IconMain"/>
-      <Typography align="inherit" inline="true" className="MainText" style={{ fontSize: 40 }} variant="h1" color="inherit">
+      <img src={mTerrain} className="IconMain" alt="terrain"/>
+      <Typography align="inherit" inline className="MainText" style={{ fontSize: 40 }} variant="h1" color="inherit">
         {suburb}
       </Typography>
       <br></br>
@@ -54,9 +53,9 @@ class SuburbPage extends React.Component {
         {/*LHS grid item*/}
         <Grid item xs={7}>
         {/*LHS grid container*/}
-          <Grid className="LeftContainer" alignItems="left">
-            <img src={mDG} className="IconDef"/>
-            <Typography align="inherit" inline="true" className="SideText"
+          <Grid container className="LeftContainer" alignItems="flex-start">
+            <img src={mDG} className="IconDef" alt="demographics"/>
+            <Typography align="inherit" inline className="SideText"
             style={{ fontSize: 26 }} variant="h1" color="inherit">
                 Demographics
             </Typography>
@@ -82,13 +81,13 @@ class SuburbPage extends React.Component {
         {/*RHS grid container*/}
           <Grid className="RightContainer">
               <Grid item className="MapsContainer">
-              <img src={mMap} className="IconDef"/>
-              <Typography align="inherit" inline="true" className="SideText" style={{ fontSize: 26 }} variant="h1" color="inherit">
+              <img src={mMap} className="IconDef" alt="map"/>
+              <Typography align="inherit" inline className="SideText" style={{ fontSize: 26 }} variant="h1" color="inherit">
                 Maps
               </Typography>
-              <iframe className="GMapsMain" frameBorder="0" src={url} allowFullScreen></iframe>
-              <img src={mNews} className="IconDef"/>
-              <Typography align="inherit" inline="true" className="SideText" style={{ fontSize: 26 }} variant="h1" color="inherit">
+              <iframe className="GMapsMain" frameBorder="0" src={url} allowFullScreen title="GMaps"/>
+              <img src={mNews} className="IconDef" alt="news"/>
+              <Typography align="inherit" inline className="SideText" style={{ fontSize: 26 }} variant="h1" color="inherit">
                 Local News
               </Typography>
               <div className="NewsMain">

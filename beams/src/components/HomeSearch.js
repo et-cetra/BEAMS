@@ -24,7 +24,6 @@ class HomeSearch extends React.Component {
             .catch(error => console.error('Error', error));
     };
 
-
     render() {
       return (
         <Paper className="HomeSearchBox">
@@ -37,7 +36,7 @@ class HomeSearch extends React.Component {
             onChange={this.handleChange}
             onSelect={this.handleSelect}
             searchOptions={{types: ['(cities)'], componentRestrictions: {country: 'au'}}}>
-                {({ getInputProps, suggestions, getSuggestionItemProps }) => (
+                {({ getInputProps, suggestions, getSuggestionItemProps, i }) => (
                 <div>
                 <InputBase {...getInputProps({
                     placeholder: 'Search for Suburb, Postcode...',
@@ -48,8 +47,9 @@ class HomeSearch extends React.Component {
                     const className = suggestion.active ? 'suggestion-item--active' : 'suggestion-item';
                     const style = suggestion.active ? 
                     { backgroundColor: '#fca064', cursor: 'pointer' } : { backgroundColor: '#FFFFFF', cursor: 'pointer' };
+                    
                     return (
-                    <div>
+                    <div key={suggestion.id}>
                         <ListItem className="SearchResultsHome" {...getSuggestionItemProps(suggestion, { className, style })}>
                             <span>{suggestion.description}</span>
                         </ListItem>
