@@ -26,7 +26,7 @@ class DGSection extends React.Component {
       
       if(this.props.loading){
         return (
-          <div>
+          <div className="DGTab">
             <Paper square>
             <Grid className="SuburbContainer" container spacing={16} direction="row"
             justify="center" alignItems="center">
@@ -38,7 +38,7 @@ class DGSection extends React.Component {
       }
       else{
         return (
-          <div>
+          <div className="DGTab">
             <Paper square>
             <Grid className="SuburbContainer" container spacing={16} direction="row"
             justify="flex-start" alignItems="flex-start">

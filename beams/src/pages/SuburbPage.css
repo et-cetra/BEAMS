@@ -12,6 +12,10 @@
   
 }
 
+.DGTab{
+  padding-top: 7px;
+}
+
 .SchoolsContainer{
   padding-top: 20px;
 }
@@ -21,7 +25,6 @@
 }
 
 .DemographicsInfoContainer{
-  margin-top: 20px;
 }
 
 .DemographicsGraph{

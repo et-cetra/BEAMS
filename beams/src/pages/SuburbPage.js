@@ -1,6 +1,7 @@
 import React from 'react';
 import './SuburbPage.css'
 import AgeGroupOfPop from '../components/demographics/AgeGroupOfPop'
+import SwipeableViews from 'react-swipeable-views';
 import CountryOfBirth from '../components/demographics/CountryOfBirth';
 import Schools from '../components/Schools';
 import NatureOfOccupancy from '../components/demographics/NatureOfOccupancy';
@@ -53,13 +54,14 @@ class SuburbPage extends React.Component {
         {/*LHS grid item*/}
         <Grid item xs={7}>
         {/*LHS grid container*/}
-          <Grid container className="LeftContainer" alignItems="flex-start">
+          <Grid className="LeftContainer">
             <img src={mDG} className="IconDef" alt="demographics"/>
             <Typography align="inherit" inline className="SideText"
             style={{ fontSize: 26 }} variant="h1" color="inherit">
                 Demographics
             </Typography>
-            <div className="DGContainer">
+
+            <div className="DGContainer" >
             <Paper square>
             <Tabs value={value} onChange={this.handleChange} centered
             indicatorColor="primary" textColor="primary" variant="fullWidth">
@@ -69,10 +71,13 @@ class SuburbPage extends React.Component {
             </Tabs>
             </Paper>
             </div>
+
             {value === 0 && <AgeGroupOfPop COLORS={COLORS} suburb_state={suburb_state} suburb={suburb} key={suburb+suburb_state+'AgeGroupOfPop'}/>}
             {value === 1 && <CountryOfBirth COLORS={COLORS} suburb_state={suburb_state} suburb={suburb} key={suburb+suburb_state+'CountryOfBirth'}/>}
             {value === 2 && <NatureOfOccupancy COLORS={COLORS} suburb_state={suburb_state} suburb={suburb} key={suburb+suburb_state+'NatureOfOccupancy'}/>}
-            <div className="SchoolsContainer"><Schools suburb_state={suburb_state} suburb={suburb} key={suburb+suburb_state+'Schools'}/></div> 
+            <div className="SchoolsContainer">
+              <Schools suburb_state={suburb_state} suburb={suburb} key={suburb+suburb_state+'Schools'}/>
+            </div> 
           </Grid>
         </Grid>
 
