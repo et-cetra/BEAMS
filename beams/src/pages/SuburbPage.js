@@ -4,7 +4,7 @@ import AgeGroupOfPop from '../components/demographics/AgeGroupOfPop'
 import CountryOfBirth from '../components/demographics/CountryOfBirth';
 import Schools from '../components/Schools';
 import NatureOfOccupancy from '../components/demographics/NatureOfOccupancy';
-import { Grid, Typography, Divider, Tabs, Tab, Paper } from '@material-ui/core';
+import { Grid, Typography, Divider, Tabs, Tab, Paper, Slide, Fade } from '@material-ui/core';
 import SuburbNews from '../components/SuburbNews';
 import mMap from '../assets/ic_map.png'
 import mTerrain from '../assets/ic_terrain.png'
@@ -33,6 +33,7 @@ class SuburbPage extends React.Component {
       const suburb_state = this.props.suburb_state;
       const url = `https://www.google.com/maps/embed/v1/place?key=AIzaSyDIMGCB2qSD9qIB0mrZu0uGEmZlc9e8m-Y&q=${suburb}`;
     return (
+      
       <div className="ParentContainer">
       {/*Top items (suburb text, icon)*/}
       <img src={mTerrain} className="IconMain"/>
@@ -42,6 +43,8 @@ class SuburbPage extends React.Component {
       <br></br>
       <Divider variant="fullWidth"></Divider>
       <br></br>
+
+      <Fade in timeout={750}>
       <Grid className="SuburbContainer"
       container spacing={16}
       direction="row"
@@ -71,7 +74,6 @@ class SuburbPage extends React.Component {
             {value === 1 && <CountryOfBirth COLORS={COLORS} suburb_state={suburb_state} suburb={suburb} key={suburb+suburb_state+'CountryOfBirth'}/>}
             {value === 2 && <NatureOfOccupancy COLORS={COLORS} suburb_state={suburb_state} suburb={suburb} key={suburb+suburb_state+'NatureOfOccupancy'}/>}
             <div className="SchoolsContainer"><Schools suburb_state={suburb_state} suburb={suburb} key={suburb+suburb_state+'Schools'}/></div> 
-            <button className="button" onClick={this.props.onStartOver}>Home</button>
           </Grid>
         </Grid>
 
@@ -96,6 +98,7 @@ class SuburbPage extends React.Component {
           </Grid>
         </Grid>
       </Grid>
+      </Fade>
       </div>
     );
   } else {

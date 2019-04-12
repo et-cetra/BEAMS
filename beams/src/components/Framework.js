@@ -42,7 +42,12 @@ class Framework extends React.Component {
         <PinIcon fontSize="large" className="PinIcon"></PinIcon>
 
           <Grid item className="HeadingBox">
-            <Link to="/" onClick={this.props.onStartOver}> <Typography style={{ fontSize: 30, color: 'white'}} className="HeadingMain" variant="h1" noWrap> BEAMS </Typography></Link>
+            {/* This text is invisible, but is used as a mask to go back to home */}
+            <Link to="/" onClick={this.props.onStartOver}> <Typography style={{ fontSize: 30, color: 'white'}} 
+            className="HeadingMain" variant="h1" noWrap> BEAMS </Typography></Link>
+            
+            <Typography style={{ fontSize: 30, color: 'white'}} 
+            variant="h1" noWrap> BEAMS </Typography>
           </Grid>
 
           <Grid item className="SubHeadingBox">

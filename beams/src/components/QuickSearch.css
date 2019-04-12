@@ -5,6 +5,7 @@
     border-image: linear-gradient(to right,#E62927 0%,#EE6A15 100%) 10 stretch;
     padding: 4px;
     width: 400px;
+    z-index: 10;
   }
   
   .QuickSearchIcon{

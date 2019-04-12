@@ -50,7 +50,7 @@ class DGSection extends React.Component {
             <Grid item xs={7}>
             <PieChart width={500} height={320}
             className="PieChart" onMouseEnter={this.onPieEnter}>
-                <Pie cx={130} data={chartData} innerRadius={67} outerRadius={90} animationBegin={0} animationDuration={50}
+                <Pie cx={150} data={chartData} innerRadius={67} outerRadius={90} animationBegin={0} animationDuration={50}
                 fill="#8884d8" paddingAngle={4} dataKey="value" label={renderCustomizedLabel} labelLine={false} animationEasing="ease">
                 {chartData.map((entry, index) =>
                     <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]}/>

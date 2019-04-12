@@ -28,6 +28,13 @@
   padding-left: 28px;
 }
 
+.HeadingMain{
+  cursor: pointer;
+  opacity: 0;
+  position: absolute;
+  z-index: 20; 
+}
+
 .SubHeadingBox {
   padding-top: 4px;
   padding-left: 28px;
@@ -43,4 +50,9 @@
 .RightAlign{
   position: absolute;
   text-align: right;
+}
+
+.button{
+  position: absolute;
+  z-index: 20;
 }

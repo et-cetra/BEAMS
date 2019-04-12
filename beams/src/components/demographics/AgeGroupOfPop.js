@@ -2,7 +2,6 @@ import React from 'react';
 import '../../pages/SuburbPage.css'
 import { getDemographics } from '../../utils.js'
 import DGSection from './DGSection';
-import { Fade } from '@material-ui/core';
 
 class AgeGroupOfPop extends React.Component {
     constructor(props) {

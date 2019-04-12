@@ -26,7 +26,7 @@ class App extends Component {
     var suburb = city.split(re)[0];
     suburb = suburb.slice(0, -1);
 
-    this.setState(() => ({ suburb: suburb, suburb_state: suburb_state, route: '/suburb' }));
+    this.setState(() => ({ suburb: suburb, suburb_state: suburb_state, route: "/suburb"}));
   };
 
   onStartOver = () => {
@@ -35,6 +35,7 @@ class App extends Component {
 
   render() {
     const redirect = this.state.route;
+
     return (
       <div>
       <Framework onSelect={this.onSuburbSelect} onStartOver={this.onStartOver}/>
