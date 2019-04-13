@@ -71,12 +71,12 @@ getStats = async (token, hood_id, state, type) => {
     return cache.get(key, () => getStatsRaw(token, hood_id, state, type));
 }
 
-getStatsRaw = async (token, hood_id, state, type) => {
+getStatsRaw = async (token, hood_id, state) => {
     const headers = {
         'Authorization': `Bearer ${token}`
     };
     try {
-        const res = await axios.get(`https://api.domain.com.au/v1/suburbPerformanceStatistics?state=${state}&suburbId=${hood_id}&propertyCategory=house&chronologicalSpan=3&tPlusFrom=1&tPlusTo=8&values=${type}`, {
+        const res = await axios.get(`https://api.domain.com.au/v1/suburbPerformanceStatistics?state=${state}&suburbId=${hood_id}&propertyCategory=house&chronologicalSpan=3&tPlusFrom=1&tPlusTo=8`, {
             headers: headers
         });
         await res;

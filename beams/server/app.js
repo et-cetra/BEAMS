@@ -55,11 +55,11 @@ app.get('/NatureOfOccupancy/:suburb/:state', async (req, res) =>
     res.json(result)
 })
 
-app.get('/MedianRentListingPrice/:suburb/:state', async (req, res) =>
+app.get('/AllStats/:suburb/:state', async (req, res) =>
 {
     await getToken();
     const suburbInfo = await domain.getSuburbId(token, req.params.suburb, req.params.state);
-    const result = await domain.getStats(token, suburbInfo[0].ids[0].id, req.params.state, "MedianRentListingPrice");
+    const result = await domain.getStats(token, suburbInfo[0].ids[0].id, req.params.state);
     res.json(result);
 })
 

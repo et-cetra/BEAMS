@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../pages/SuburbPage.css'
 import { PieChart, Pie, Cell, Tooltip, Legend, ResponsiveContainer } from 'recharts';
-import { Grid, Card, Paper, CircularProgress, Fade } from '@material-ui/core';
+import { Grid, Paper, CircularProgress, Fade } from '@material-ui/core';
 
 class DGSection extends React.Component {
     render() {
@@ -60,7 +60,7 @@ class DGSection extends React.Component {
                     <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]}/>
                 )}
                 </Pie>
-                <Legend align="center" width="100%" layout="horizontal"
+                <Legend align="center" layout="horizontal"
                 verticalAlign="bottom" iconType="circle" iconSize={8}/>
                 <Tooltip/>
             </PieChart>
@@ -70,7 +70,8 @@ class DGSection extends React.Component {
             </Fade>
             <Fade in timeout={600}>
             <Grid className="DGInfoContainer" item xs={5}>
-            <Card>This is where info goes</Card>
+            <br/><br/>
+            info goes here (no css yet)
             </Grid>
             </Fade>
             </Grid>

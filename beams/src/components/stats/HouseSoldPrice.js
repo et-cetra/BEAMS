@@ -3,7 +3,7 @@ import '../../pages/SuburbPage.css'
 import { getStats } from '../../utils.js'
 import StatsSection from './StatsSection';
 
-class MedianRent extends React.Component {
+class HouseSoldPrice extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -30,9 +30,9 @@ class MedianRent extends React.Component {
         contents.forEach(item => {
             var monthSection = Math.ceil(item.month/3).toString();
             chartData.push({name: item.year.toString() + " Q" + monthSection, 
-                Median: item.values["medianRentListingPrice"], 
-                Lowest: item.values["lowestRentListingPrice"],
-                Highest: item.values["highestRentListingPrice"],
+                Median: item.values["medianSoldPrice"], 
+                Lowest: item.values["lowestSoldPrice"],
+                Highest: item.values["highestSoldPrice"],
             });
         });
 
@@ -54,4 +54,4 @@ class MedianRent extends React.Component {
     }
 }
 
-export default MedianRent;
+export default HouseSoldPrice;

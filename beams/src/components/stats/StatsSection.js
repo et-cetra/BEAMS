@@ -1,7 +1,31 @@
-import React from 'react';
+import  React  from 'react';
 import '../../pages/SuburbPage.css'
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
-import { Grid, Card, CircularProgress, Fade } from '@material-ui/core';
+import { Grid, CircularProgress, Fade } from '@material-ui/core';
+
+class AxisTickX extends React.Component {
+  render() {
+    const {
+      x, y, payload,
+    } = this.props;
+
+    return (
+      <text style={{fontSize: 14}} x={x} y={y} dy={16} textAnchor="middle" fill="#666">{payload.value}</text>
+    );
+  }
+}
+
+class AxisTickY extends React.Component {
+  render() {
+    const {
+      x, y, payload,
+    } = this.props;
+
+    return (
+      <text style={{fontSize: 14}} x={x} y={y} textAnchor="end" fill="#666">{payload.value}</text>
+    );
+  }
+}
 
 class StatsSection extends React.Component {
     render() {
@@ -11,7 +35,7 @@ class StatsSection extends React.Component {
       if(this.props.loading){
         return (
           <div className="StatsTab">
-            <Grid className="StatsGridContainer" container spacing={16} direction="row"
+            <Grid className="StatsGridContainer" container  direction="column"
             justify="center" alignItems="center">
               <Grid item><CircularProgress size={60} color="secondary"/></Grid>
             </Grid>
@@ -30,11 +54,13 @@ class StatsSection extends React.Component {
             <LineChart className="LineChart"
             data={chartData} margin={{top: 40, right: 20, left: 20, bottom: 10}}>
               <CartesianGrid strokeDasharray="3 3"/>
-              <XAxis dataKey="name" />
-              <YAxis />
+              <XAxis dataKey="name" tick={<AxisTickX/>} tickLine={false}/>
+              <YAxis tick={<AxisTickY/>} tickLine={false}/>
               <Tooltip />
-              <Legend />
-              <Line type="monotone" dataKey="value" stroke="#E62927" activeDot={{ r: 8 }} />
+              <Legend verticalAlign="bottom" iconType="circle" iconSize={8}/>
+              <Line type="monotone" dataKey="Highest" stroke={COLORS[0]} strokeDasharray="3 3"/>
+              <Line type="monotone" dataKey="Median" stroke={COLORS[2]}/>
+              <Line type="monotone" dataKey="Lowest" stroke={COLORS[1]} strokeDasharray="3 3"/>
             </LineChart>
             </ResponsiveContainer>
 
@@ -42,7 +68,7 @@ class StatsSection extends React.Component {
             </Fade>
             <Fade in timeout={600}>
             <Grid className="StatsInfoContainer">
-            <Card>This is where info goes</Card>
+            info goes here (no css yet)
             </Grid>
             </Fade>
             </Grid>

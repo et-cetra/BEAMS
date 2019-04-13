@@ -25,10 +25,13 @@ class NatureOfOccupancy extends React.Component {
         const { error, isLoaded, contents } = this.state;
         const COLORS = this.props.COLORS;
         
-        const chartData = [];
+        var chartData = [];
         contents.map(content => (content.items.map((item) => (
             chartData.push({name: item.label, value: item.value})
         ))));
+
+        //Only keep top 3 to maintain simplicity
+        chartData = chartData.slice(0,3);
 
         if (error) {
             return <div>Error: {error.message}</div>;

@@ -5,11 +5,13 @@ import CountryOfBirth from '../components/demographics/CountryOfBirth';
 import Schools from '../components/Schools';
 import NatureOfOccupancy from '../components/demographics/NatureOfOccupancy';
 import MedianRent from '../components/stats/MedianRent';
+import HouseSoldPrice from '../components/stats/HouseSoldPrice';
 import { Grid, Typography, Divider, Tabs, Tab, Paper, Fade } from '@material-ui/core';
 import SuburbNews from '../components/SuburbNews';
+
 import FaceIcon from '@material-ui/icons/Face'
 import HomeIcon from '@material-ui/icons/Home'
-import { HumanMaleBoy, HomeCity } from 'mdi-material-ui'
+import { HumanMaleBoy, HomeCity, HomeGroup } from 'mdi-material-ui'
 import mMap from '../assets/ic_map.png'
 import mTerrain from '../assets/ic_terrain.png'
 import mNews from '../assets/ic_news.png'
@@ -36,7 +38,7 @@ class SuburbPage extends React.Component {
     var { value } = this.state;
     var { value2 } = this.state;
 
-    const COLORS = ['#E62927', '#EE6A15', '#333F48', '#04091E', '#000000', '#000000'];
+    const COLORS = ['#E62927', '#EE6A15', '#213084', '#333F48', '#04091E'];
 
     if (this.props.suburb != null) {
       const suburb = this.props.suburb;
@@ -75,12 +77,12 @@ class SuburbPage extends React.Component {
             </div>
 
             <Paper>
-              {value2 === 0 && <MedianRent COLORS={COLORS} suburb_state={suburb_state} suburb={suburb} key={suburb+suburb_state+'MedianRentListingPrice'}/>}
-              {value2 === 1 && <MedianRent COLORS={COLORS} suburb_state={suburb_state} suburb={suburb} key={suburb+suburb_state+'MedianRentListingPrice'}/>}
+              {value2 === 0 && <MedianRent COLORS={COLORS} suburb_state={suburb_state} suburb={suburb} key={suburb+suburb_state}/>}
+              {value2 === 1 && <HouseSoldPrice COLORS={COLORS} suburb_state={suburb_state} suburb={suburb} key={suburb+suburb_state}/>}
               <Tabs value={value2} onChange={this.handleChange2} centered
               indicatorColor="primary" textColor="primary" variant="fullWidth">
-                <Tab icon={<HomeCity/>} label="Median House Rent" />
-                <Tab icon={<FaceIcon/>} label="Median Rent" />
+                <Tab icon={<HomeCity/>} label="Rent Listing Prices" />
+                <Tab icon={<HomeGroup/>} label="Sold Property Prices" />
               </Tabs>
             </Paper>
          
