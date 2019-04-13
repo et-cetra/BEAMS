@@ -1,6 +1,6 @@
 .DGGridContainer{
   width: 100%;
-  height: 320px;
+  height: 380px;
 }
 
 .StatsGridContainer{
@@ -18,6 +18,10 @@
 
 .DGTab{
   padding-top: 8px;
+}
+
+.StatsTab{
+
 }
 
 .SubheadingContainer{
@@ -66,8 +70,7 @@
 }
 
 .PieChart{
-  width: 80px;
-  height: 80px;
+
 }
 
 .LineChart{

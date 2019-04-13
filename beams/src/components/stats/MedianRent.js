@@ -26,15 +26,12 @@ class MedianRent extends React.Component {
         const COLORS = this.props.COLORS;
 
         const chartData = [];
-        console.log("!!! CONTENTS", contents);
 
         contents.forEach(item => {
             var monthSection = Math.ceil(item.month/3).toString();
             chartData.push({name: item.year.toString() + " Q" + monthSection, 
                 value: item.values["medianRentListingPrice"]});
         });
-
-        console.log("!!! CHARTDATA", chartData);
 
         if (error) {
             return <div>Error: {error.message}</div>;

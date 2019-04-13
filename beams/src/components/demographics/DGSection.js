@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../pages/SuburbPage.css'
-import { PieChart, Pie, Cell, Tooltip, Legend } from 'recharts';
+import { PieChart, Pie, Cell, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import { Grid, Card, Paper, CircularProgress, Fade } from '@material-ui/core';
 
 class DGSection extends React.Component {
@@ -8,17 +8,22 @@ class DGSection extends React.Component {
       const COLORS = this.props.COLORS;
       const chartData = this.props.chartData;
 
+      const renderTextSize = ({value, entry, index}) => {        
+        return <span style={{ textSize: 10 }}>{value}</span>;
+      };
+
       const renderCustomizedLabel = ({
         cx, cy, midAngle, innerRadius, outerRadius, percent, index,
       }) => {
 
         const RADIAN = Math.PI / 180;
-        const radius = innerRadius + (outerRadius - innerRadius) * 0.5 + 25;
+        const radius = innerRadius + (outerRadius - innerRadius) * 1.5;
         const x = cx + radius * Math.cos(-midAngle * RADIAN);
         const y = cy + radius * Math.sin(-midAngle * RADIAN);
       
         return (
-          <text x={x} y={y} fill={COLORS[index % COLORS.length]} textAnchor={x > cx ? 'start' : 'end'} dominantBaseline="central">
+          <text x={x} y={y} fill={COLORS[index % COLORS.length]} 
+          textAnchor={x > cx ? 'start' : 'end'} dominantBaseline="central">
             {`${(percent * 100).toFixed(0)}%`}
           </text>
         );
@@ -45,18 +50,21 @@ class DGSection extends React.Component {
             <Fade in timeout={600}>
             <Grid item xs={7}>
 
-            <PieChart width={500} height={320}
-            className="PieChart" onMouseEnter={this.onPieEnter}>
-                <Pie cx={150} data={chartData} innerRadius={67} outerRadius={90} animationBegin={0} animationDuration={50}
-                fill="#8884d8" paddingAngle={4} dataKey="value" label={renderCustomizedLabel} labelLine={false} animationEasing="ease">
+            <ResponsiveContainer height={350} width="100%">
+            <PieChart className="PieChart" 
+            onMouseEnter={this.onPieEnter}>
+                <Pie data={chartData} innerRadius="55%" outerRadius="70%" cx="48%"  
+                animationBegin={0} animationDuration={50} fill="#8884d8" paddingAngle={4}
+                dataKey="value" label={renderCustomizedLabel} labelLine={false}>
                 {chartData.map((entry, index) =>
                     <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]}/>
                 )}
                 </Pie>
-                <Legend cy={400} width={200} height={100} align="right"
-                layout="vertical" verticalAlign="middle" iconType="circle" iconSize={10}/>
+                <Legend align="center" width="100%" layout="horizontal"
+                verticalAlign="bottom" iconType="circle" iconSize={8}/>
                 <Tooltip/>
             </PieChart>
+            </ResponsiveContainer>
 
             </Grid>
             </Fade>

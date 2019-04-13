@@ -9,7 +9,7 @@ import { Grid, Typography, Divider, Tabs, Tab, Paper, Fade } from '@material-ui/
 import SuburbNews from '../components/SuburbNews';
 import FaceIcon from '@material-ui/icons/Face'
 import HomeIcon from '@material-ui/icons/Home'
-import { HumanMaleBoy } from 'mdi-material-ui'
+import { HumanMaleBoy, HomeCity } from 'mdi-material-ui'
 import mMap from '../assets/ic_map.png'
 import mTerrain from '../assets/ic_terrain.png'
 import mNews from '../assets/ic_news.png'
@@ -79,7 +79,7 @@ class SuburbPage extends React.Component {
               {value2 === 1 && <MedianRent COLORS={COLORS} suburb_state={suburb_state} suburb={suburb} key={suburb+suburb_state+'MedianRentListingPrice'}/>}
               <Tabs value={value2} onChange={this.handleChange2} centered
               indicatorColor="primary" textColor="primary" variant="fullWidth">
-                <Tab icon={<HumanMaleBoy/>} label="Median Rent" />
+                <Tab icon={<HomeCity/>} label="Median House Rent" />
                 <Tab icon={<FaceIcon/>} label="Median Rent" />
               </Tabs>
             </Paper>
