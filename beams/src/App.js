@@ -17,6 +17,7 @@ class App extends Component {
       suburb: null,
       suburb_state: null,
       route: null,
+      reset: false,
     };
   }
 
@@ -28,12 +29,13 @@ class App extends Component {
       var suburb = city.split(re)[0];
       suburb = suburb.slice(0, -1);
   
-      this.setState(() => ({ suburb: suburb, suburb_state: suburb_state, route: "/suburb"}));
-    
+      this.setState(() => ({ suburb: suburb, suburb_state: suburb_state, route: "/suburb",
+        reset: true}));
+
   };
 
   onStartOver = () => {
-    this.setState(() => ({ suburb: null, route: '/' }));
+    this.setState(() => ({ suburb: null, route: '/', reset: false }));
   };
 
   render() {
@@ -47,9 +49,9 @@ class App extends Component {
               <BrowserRouter>
                 <Switch>
                   <Route exact path="/" render={() => (redirect && redirect !== "/" ? <Redirect to={redirect} /> : 
-                      <HomePage onSelect={this.onSuburbSelect}/>)} />
+                      <HomePage reset={this.state.reset} onSelect={this.onSuburbSelect}/>)} />
                   <Route exact path="/suburb" render={() => (redirect && redirect !== "/suburb" ? <Redirect to={redirect} /> : 
-                      <SuburbPage suburb={this.state.suburb} suburb_state={this.state.suburb_state} onStartOver={this.onStartOver}/>)} />
+                      <SuburbPage reset={this.state.reset} suburb={this.state.suburb} suburb_state={this.state.suburb_state} onStartOver={this.onStartOver}/>)} />
                 </Switch>
               </BrowserRouter>
           </Grid>

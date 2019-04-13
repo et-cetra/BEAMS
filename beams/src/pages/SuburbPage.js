@@ -6,7 +6,7 @@ import Schools from '../components/Schools';
 import NatureOfOccupancy from '../components/demographics/NatureOfOccupancy';
 import MedianRent from '../components/stats/MedianRent';
 import HouseSoldPrice from '../components/stats/HouseSoldPrice';
-import { Grid, Typography, Divider, Tabs, Tab, Paper, Fade } from '@material-ui/core';
+import { Grid, Typography, Divider, Tabs, Tab, Paper, Fade, Slide } from '@material-ui/core';
 import SuburbNews from '../components/SuburbNews';
 
 import FaceIcon from '@material-ui/icons/Face'
@@ -47,6 +47,7 @@ class SuburbPage extends React.Component {
     return (
       <div className="ParentContainer">
       {/*Top items (suburb text, icon)*/}
+      <div>
       <img src={mTerrain} className="IconMain" alt="terrain"/>
       <Typography align="inherit" inline className="MainText" style={{ fontSize: 40 }} variant="h1" color="inherit">
         {suburb}
@@ -54,6 +55,7 @@ class SuburbPage extends React.Component {
       <br></br>
       <Divider variant="fullWidth"></Divider>
       <br></br>
+      </div>
 
       <Fade in timeout={750}>
       <Grid className="SuburbContainer"
@@ -63,6 +65,7 @@ class SuburbPage extends React.Component {
       alignItems="flex-start" >
 
         {/*LHS grid item*/}
+        <Slide direction="up" in={this.props.reset} timeout={800}>
         <Grid item xs={7}>
         {/*LHS grid container*/}
           <Grid className="LeftContainer">
@@ -72,7 +75,7 @@ class SuburbPage extends React.Component {
               <img src={mChart} className="IconDef" alt="stats"/>
               <Typography align="inherit" inline className="SideText"
               style={{ fontSize: 26 }} variant="h1" color="inherit">
-                  Property Stats
+                  Property Trends
               </Typography>
             </div>
 
@@ -81,7 +84,7 @@ class SuburbPage extends React.Component {
               {value2 === 1 && <HouseSoldPrice COLORS={COLORS} suburb_state={suburb_state} suburb={suburb} key={suburb+suburb_state}/>}
               <Tabs value={value2} onChange={this.handleChange2} centered
               indicatorColor="primary" textColor="primary" variant="fullWidth">
-                <Tab icon={<HomeCity/>} label="Rent Listing Prices" />
+                <Tab icon={<HomeCity/>} label="Weekly Rent Prices" />
                 <Tab icon={<HomeGroup/>} label="Sold Property Prices" />
               </Tabs>
             </Paper>
@@ -116,8 +119,10 @@ class SuburbPage extends React.Component {
 
           </Grid>
         </Grid>
+        </Slide>
 
         {/*RHS grid item*/}
+        <Slide direction="up" in timeout={1000}>
         <Grid item xs={5}>
         {/*RHS grid container*/}
           <Grid className="RightContainer">
@@ -137,6 +142,7 @@ class SuburbPage extends React.Component {
               </Grid>
           </Grid>
         </Grid>
+        </Slide>
       </Grid>
       </Fade>
       </div>
