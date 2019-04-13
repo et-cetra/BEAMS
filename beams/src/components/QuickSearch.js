@@ -23,8 +23,6 @@ class QuickSearch extends React.Component {
             .then(results => getLatLng(results[0]))
             .then(latLng => console.log('Success', latLng))
             .catch(error => console.error('Error', error));
-        
-        
     };
 
     render() {

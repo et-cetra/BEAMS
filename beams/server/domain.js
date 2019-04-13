@@ -56,7 +56,7 @@ getDemographicsRaw = async (token, hood_id, type) => {
         'Authorization': `Bearer ${token}`
     };
     try {
-        const res = await axios.get(`https://api.domain.com.au/v1/demographics?level=Suburb&id=${hood_id}&types=${type}&year=2016`, {
+        const res = await axios.get(`https://api.domain.com.au/v1/demographics?level=Suburb&id=${hood_id}&types=${type}&year=2018`, {
             headers: headers
         });
         await res;

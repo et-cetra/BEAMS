@@ -2,8 +2,9 @@ import React from 'react';
 import './SuburbPage.css'
 import AgeGroupOfPop from '../components/demographics/AgeGroupOfPop'
 import CountryOfBirth from '../components/demographics/CountryOfBirth';
-import Schools from '../components/Schools';
+import Schools from '../components/demographics/Schools';
 import NatureOfOccupancy from '../components/demographics/NatureOfOccupancy';
+import TransportToWork from '../components/demographics/TransportToWork';
 import MedianRent from '../components/stats/MedianRent';
 import HouseSoldPrice from '../components/stats/HouseSoldPrice';
 import { Grid, Typography, Divider, Tabs, Tab, Paper, Fade, Slide } from '@material-ui/core';
@@ -11,6 +12,7 @@ import SuburbNews from '../components/SuburbNews';
 
 import FaceIcon from '@material-ui/icons/Face'
 import HomeIcon from '@material-ui/icons/Home'
+import CommuteIcon from '@material-ui/icons/Commute'
 import { HumanMaleBoy, HomeCity, HomeGroup } from 'mdi-material-ui'
 import mMap from '../assets/ic_map.png'
 import mTerrain from '../assets/ic_terrain.png'
@@ -106,11 +108,13 @@ class SuburbPage extends React.Component {
                 <Tab icon={<HumanMaleBoy/>} label="Age Distribution" />
                 <Tab icon={<FaceIcon/>}label="Cultural Diversity" />
                 <Tab icon={<HomeIcon/>} label="Property Occupancy" />
+                <Tab icon={<CommuteIcon/>} label="Commute Methods" />
               </Tabs>
             </Paper>
             {value === 0 && <AgeGroupOfPop COLORS={COLORS} suburb_state={suburb_state} suburb={suburb} key={suburb+suburb_state+'AgeGroupOfPop'}/>}
             {value === 1 && <CountryOfBirth COLORS={COLORS} suburb_state={suburb_state} suburb={suburb} key={suburb+suburb_state+'CountryOfBirth'}/>}
             {value === 2 && <NatureOfOccupancy COLORS={COLORS} suburb_state={suburb_state} suburb={suburb} key={suburb+suburb_state+'NatureOfOccupancy'}/>}
+            {value === 3 && <TransportToWork COLORS={COLORS} suburb_state={suburb_state} suburb={suburb} key={suburb+suburb_state+'TransportToWork'}/>}
             </Grid>
 
             <Grid item className="SchoolsContainer">

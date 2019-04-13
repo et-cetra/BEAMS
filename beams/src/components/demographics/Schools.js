@@ -1,10 +1,10 @@
 import React from 'react';
-import '../App.css';
-import '../pages/SuburbPage.css';
-import { getLocation, getSchools } from '../utils.js';
+import '../../App.css';
+import '../../pages/SuburbPage.css';
+import { getLocation, getSchools } from '../../utils.js';
 import { ExpansionPanel, ExpansionPanelSummary, ExpansionPanelDetails, Typography } from '@material-ui/core';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import mSchools from '../assets/ic_schools.png'
+import mSchools from '../../assets/ic_schools.png'
 
 class Schools extends React.Component {
     constructor(props) {

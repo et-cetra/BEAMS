@@ -3,7 +3,7 @@ import '../../pages/SuburbPage.css'
 import { getDemographics } from '../../utils.js'
 import DGSection from './DGSection';
 
-class AgeGroupOfPop extends React.Component {
+class Transport extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -14,7 +14,7 @@ class AgeGroupOfPop extends React.Component {
     }
 
     async componentDidMount() {
-        const suburbInfo = await getDemographics(this.props.suburb, this.props.suburb_state, "AgeGroupOfPopulation");
+        const suburbInfo = await getDemographics(this.props.suburb, this.props.suburb_state, "TransportToWork");
         this.setState({
             isLoaded: true,
             contents: suburbInfo.demographics
@@ -29,6 +29,22 @@ class AgeGroupOfPop extends React.Component {
         contents.map(content => (content.items.map((item) => (
             chartData.push({name: item.label, value: item.value})
         ))));
+
+        chartData.forEach((item) => {
+            if(item.name == "Car (driver)"){
+                item.name = "Car";
+            }
+
+            if(item.name == "Walked only"){
+                item.name = "Walked";
+            }
+        });
+
+        chartData = chartData.filter(item => item.name !== 'Did not go to work');
+        chartData = chartData.filter(item => item.name !== 'Car (Pas.)');
+        chartData = chartData.filter(item => item.name !== 'Worked at home');
+
+        chartData = chartData.splice(0,3);
 
         if (error) {
             return <div>Error: {error.message}</div>;
@@ -48,4 +64,4 @@ class AgeGroupOfPop extends React.Component {
     }
 }
 
-export default AgeGroupOfPop;
+export default Transport;
