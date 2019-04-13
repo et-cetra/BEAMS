@@ -9,7 +9,7 @@
 }
 
 .GraphLegend{
-  
+
 }
 
 .DGTab{
@@ -68,6 +68,12 @@
 .IconDef{
   width: 48px;
   height: 48px;
+}
+
+.InfoDef{
+  width: 18px;
+  height: 18px;
+  padding: 4px;
 }
 
 .SideText{

@@ -10,14 +10,54 @@ import mMap from '../assets/ic_map.png'
 import mTerrain from '../assets/ic_terrain.png'
 import mNews from '../assets/ic_news.png'
 import mDG from '../assets/ic_demographics.png'
+import mInfo from '../assets/ic_info.png'
 import FaceIcon from '@material-ui/icons/Face'
 import HomeIcon from '@material-ui/icons/Home'
 import { HumanMaleBoy } from 'mdi-material-ui'
+import IconButton from '@material-ui/core/IconButton';
+import Snackbar from '@material-ui/core/Snackbar';
 
 
 class SuburbPage extends React.Component {
   state = {
-    value: 0
+    value: 0,
+    open: false,
+    messageInfo: {},
+  };
+
+  queue = [];
+
+  handleClick = message => () => {
+    this.queue.push({
+      message,
+      key: new Date().getTime(),
+    });
+
+    if (this.state.open) {
+      this.setState({ open: false });
+    } else {
+      this.processQueue();
+    }
+  };
+
+  processQueue = () => {
+    if (this.queue.length > 0) {
+      this.setState({
+        messageInfo: this.queue.shift(),
+        open: true,
+      });
+    }
+  };
+
+  handleClose = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+    this.setState({ open: false });
+  };
+
+  handleExited = () => {
+    this.processQueue();
   };
 
   handleChange = (event, value) => {
@@ -28,6 +68,7 @@ class SuburbPage extends React.Component {
     console.log("Suburb page", this.props);
     var { value } = this.state;
     const COLORS = ['#E62927', '#EE6A15', '#333F48', '#04091E', '#000000', '#000000'];
+    const { messageInfo } = this.state;
 
     if (this.props.suburb != null) {
       const suburb = this.props.suburb;
@@ -75,10 +116,25 @@ class SuburbPage extends React.Component {
             {value === 2 && <NatureOfOccupancy COLORS={COLORS} suburb_state={suburb_state} suburb={suburb} key={suburb+suburb_state+'NatureOfOccupancy'}/>}
             </div>
 
-            
             <div className="SchoolsContainer">
               <Schools suburb_state={suburb_state} suburb={suburb} key={suburb+suburb_state+'Schools'}/>
-            </div> 
+            </div>
+            <IconButton onClick={this.handleClick('Data sourced from Domain.com')}><img src={mInfo} className="InfoDef"/></IconButton>
+            <Snackbar
+                key={messageInfo.key}
+                anchorOrigin={{
+                    vertical: 'bottom',
+                    horizontal: 'left',
+                }}
+                open={this.state.open}
+                autoHideDuration={6000}
+                onClose={this.handleClose}
+                onExited={this.handleExited}
+                ContentProps={{
+                    'aria-describedby': 'message-id',
+                }}
+                message={<span id="message-id">{messageInfo.message}</span>}
+            />
           </Grid>
         </Grid>
 
@@ -99,6 +155,22 @@ class SuburbPage extends React.Component {
               <div className="NewsMain">
                 <SuburbNews suburb={suburb}/>
               </div>
+              <IconButton onClick={this.handleClick('Data sourced from ABC News')}><img src={mInfo} className="InfoDef"/></IconButton>
+              <Snackbar
+                  key={messageInfo.key}
+                  anchorOrigin={{
+                      vertical: 'bottom',
+                      horizontal: 'left',
+                  }}
+                  open={this.state.open}
+                  autoHideDuration={6000}
+                  onClose={this.handleClose}
+                  onExited={this.handleExited}
+                  ContentProps={{
+                      'aria-describedby': 'message-id',
+                  }}
+                  message={<span id="message-id">{messageInfo.message}</span>}
+              />
               </Grid>
           </Grid>
         </Grid>
