@@ -8,7 +8,7 @@ const cache = new Cache(ttl); // Create a new cache service instance
 async function getAccessToken(clientId, secret) {
     var data = querystring.stringify({
         grant_type: 'client_credentials',
-        scope: 'api_demographics_read api_addresslocators_read api_locations_read'
+        scope: 'api_demographics_read api_addresslocators_read api_locations_read api_suburbperformance_read'
     });
     console.log("**** TOKEN REQUEST ****");
     const result = await axios.post('https://auth.domain.com.au/v1/connect/token', data, {
@@ -66,6 +66,26 @@ getDemographicsRaw = async (token, hood_id, type) => {
     }
 }
 
+getStats = async (token, hood_id, state, type) => {
+    const key = hood_id + state + type;
+    return cache.get(key, () => getStatsRaw(token, hood_id, state, type));
+}
+
+getStatsRaw = async (token, hood_id, state, type) => {
+    const headers = {
+        'Authorization': `Bearer ${token}`
+    };
+    try {
+        const res = await axios.get(`https://api.domain.com.au/v1/suburbPerformanceStatistics?state=${state}&suburbId=${hood_id}&propertyCategory=house&chronologicalSpan=3&tPlusFrom=1&tPlusTo=8&values=${type}`, {
+            headers: headers
+        });
+        await res;
+        return res.data;
+    } catch (err) {
+        console.log("getStats FAILED:", err);
+    }
+}
+
 getSchools = async (token, lat, lng) => {
     const key = lat + lng;
     return cache.get(key, () => getSchoolsRaw(token, lat, lng));
@@ -90,5 +110,6 @@ module.exports = {
     getAccessToken: getAccessToken,
     getSuburbId: getSuburbId,
     getDemographics: getDemographics,
+    getStats: getStats,
     getSchools: getSchools,
 };

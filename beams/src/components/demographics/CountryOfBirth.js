@@ -26,8 +26,8 @@ class CountryOfBirth extends React.Component {
         const COLORS = this.props.COLORS;
         
         const chartData = [];
-        contents.map(content => (content.items.slice(0,5).map((item, i) => (
-            chartData.push({name: item.label, value: item.value, color: COLORS[i]})
+        contents.map(content => (content.items.slice(0,5).map((item) => (
+            chartData.push({name: item.label, value: item.value})
         ))));
 
         if (error) {

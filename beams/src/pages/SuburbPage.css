@@ -1,6 +1,11 @@
-.SuburbContainer{
+.DGGridContainer{
   width: 100%;
   height: 320px;
+}
+
+.StatsGridContainer{
+  width: 100%;
+  height: 500px;
 }
 
 .LeftContainer{
@@ -8,12 +13,15 @@
   padding-right: 15px;
 }
 
-.GraphLegend{
-  
+.RightContainer{
 }
 
 .DGTab{
-  padding-top: 7px;
+  padding-top: 8px;
+}
+
+.SubheadingContainer{
+  padding-bottom: 20px;
 }
 
 .SchoolsContainer{
@@ -24,15 +32,16 @@
   padding-top: 20px;
 }
 
-.DemographicsInfoContainer{
+.StatsContainer{
+  padding-bottom: 15px;
 }
 
-.DemographicsGraph{
-
+.DGInfoContainer{
 }
 
-.RightContainer{
+.StatsInfoContainer{
 }
+
 
 .MapsContainer{
 
@@ -59,6 +68,10 @@
 .PieChart{
   width: 80px;
   height: 80px;
+}
+
+.LineChart{
+
 }
 
 .NewsMain{

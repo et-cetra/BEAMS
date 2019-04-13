@@ -1,0 +1,19 @@
+#!/bin/bash
+if [ "$1" == "kill" ]; then
+    echo "--> Killing..."
+	taskkill -f -im node.exe
+elif [ "$1" == "server" ]; then
+	echo "--> Restarting Server.."
+	clear
+	cd server
+	node app.js
+else
+	clear
+	echo "--> Running..."
+	cd server
+	node app.js &
+	cd ../
+	npm start 
+fi
+
+

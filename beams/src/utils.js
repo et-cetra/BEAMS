@@ -12,6 +12,13 @@ export const getDemographics = async (suburb, suburb_state, type) => {
     return result;
 }
 
+export const getStats = async (suburb, suburb_state, type) => {
+    // const res = await fetch(`http://b3ams.com.au:5000/${type}/${suburb}/${suburb_state}`);
+    const res = await fetch(`http://localhost:5000/${type}/${suburb}/${suburb_state}`);
+    const result = await res.json();
+    return result;
+}
+
 export const getLocation = async (suburb, suburb_state) => {
     const res = await fetch(`http://open.mapquestapi.com/geocoding/v1/address?key=RLok66AiiE73bgmFH5KWI2FvKWqj7AiM&outFormat=json&location=${suburb}+${suburb_state}`);
     const result = await res.json();

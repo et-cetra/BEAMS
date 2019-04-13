@@ -28,7 +28,7 @@ class DGSection extends React.Component {
         return (
           <div className="DGTab">
             <Paper square>
-            <Grid className="SuburbContainer" container spacing={16} direction="row"
+            <Grid className="DGGridContainer" container spacing={16} direction="row"
             justify="center" alignItems="center">
               <Grid item><CircularProgress size={60} color="secondary"/></Grid>
             </Grid>
@@ -40,10 +40,11 @@ class DGSection extends React.Component {
         return (
           <div className="DGTab">
             <Paper square>
-            <Grid className="SuburbContainer" container spacing={16} direction="row"
+            <Grid className="DGGridContainer" container spacing={16} direction="row"
             justify="flex-start" alignItems="flex-start">
             <Fade in timeout={600}>
             <Grid item xs={7}>
+
             <PieChart width={500} height={320}
             className="PieChart" onMouseEnter={this.onPieEnter}>
                 <Pie cx={150} data={chartData} innerRadius={67} outerRadius={90} animationBegin={0} animationDuration={50}
@@ -56,11 +57,11 @@ class DGSection extends React.Component {
                 layout="vertical" verticalAlign="middle" iconType="circle" iconSize={10}/>
                 <Tooltip/>
             </PieChart>
+
             </Grid>
             </Fade>
-            
             <Fade in timeout={600}>
-            <Grid className="DemographicsInfoContainer" item xs={5}>
+            <Grid className="DGInfoContainer" item xs={5}>
             <Card>This is where info goes</Card>
             </Grid>
             </Fade>

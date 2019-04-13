@@ -1,12 +1,12 @@
-const domain = require("./domain")
-const express = require('express')
-const app = express()
-const port = 5000
-var token = null
+const domain = require("./domain");
+const express = require('express');
+const app = express();
+const port = 5000;
+var token = null;
 
 const getToken = async () => {
     if (!token) {
-        token = await domain.getAccessToken("client_be2ab801ecb44fce8c876a3e90561be9", "secret_1bc0240f29867097dfd68d770ba92cba")
+        token = await domain.getAccessToken("client_be2ab801ecb44fce8c876a3e90561be9", "secret_1bc0240f29867097dfd68d770ba92cba");
     }
 }
 
@@ -53,6 +53,14 @@ app.get('/NatureOfOccupancy/:suburb/:state', async (req, res) =>
     const suburbInfo = await domain.getSuburbId(token, req.params.suburb, req.params.state)
     const result = await domain.getDemographics(token, suburbInfo[0].ids[0].id, "NatureOfOccupancy")
     res.json(result)
+})
+
+app.get('/MedianRentListingPrice/:suburb/:state', async (req, res) =>
+{
+    await getToken();
+    const suburbInfo = await domain.getSuburbId(token, req.params.suburb, req.params.state);
+    const result = await domain.getStats(token, suburbInfo[0].ids[0].id, req.params.state, "MedianRentListingPrice");
+    res.json(result);
 })
 
 app.get('/Coords/:lat/:lng', async (req, res) =>
