@@ -27,9 +27,11 @@ class Demographics extends React.Component {
 
     render() {
         const { value } = this.state;
-        const COLORS = this.props.COLORS;
         const suburb = this.props.suburb;
         const suburb_state = this.props.suburb_state;
+
+        const COLORS = ['#E62927', '#EE6A15', '#213084', '#333F48', '#04091E'];
+
         return (
             <Grid item className="DGContainer" >
                 <div className="SubheadingContainer">

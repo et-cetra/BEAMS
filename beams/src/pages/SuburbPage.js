@@ -111,7 +111,7 @@ class SuburbPage extends React.Component {
 
             </Grid>
 
-            <Demographics value={value} COLORS={COLORS} suburb_state={suburb_state} suburb={suburb}/>
+            <Demographics suburb_state={suburb_state} suburb={suburb}/>
 
             <Grid item className="SchoolsContainer">
               <Schools suburb_state={suburb_state} suburb={suburb} key={suburb+suburb_state+'Schools'}/>
