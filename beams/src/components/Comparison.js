@@ -5,7 +5,7 @@ import SuburbPage from "../pages/SuburbPage";
 
 class Comparison extends React.Component {
     render() {
-
+      console.log("comparison sub", this.props.suburbs);
       if (this.props.suburbs.length === 1) {
         return (
           <SuburbPage suburb={this.props.suburbs[0]} reset={this.props.reset} onStartOver={this.props.onStartOver}/>

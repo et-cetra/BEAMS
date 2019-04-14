@@ -31,13 +31,17 @@ class App extends Component {
       var suburb = city.split(re)[0];
       suburb = suburb.slice(0, -1);
 
-      this.setState(() => ({ suburb: suburb, suburb_state: suburb_state, route: "/suburb",
-        reset: true}));
-
+      // Make copy of this.state.suburbs
+      let suburbs = [...this.state.suburbs];
+      // Change it
+      suburbs[0].suburb = suburb;
+      suburbs[0].suburb_state = suburb_state;
+      // Upload it
+      this.setState(() => ({ suburbs: suburbs, route: "/suburb", reset: true}));
   };
 
   onStartOver = () => {
-    this.setState(() => ({ suburb: null, route: '/', reset: false }));
+    this.setState(() => ({ suburbs: [{ suburb: null, suburb_state: null }], route: '/', reset: false }));
   };
 
   render() {
