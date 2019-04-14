@@ -17,18 +17,13 @@ import { HumanMaleBoy, HomeCity, HomeGroup } from 'mdi-material-ui'
 import mMap from '../assets/ic_map.png'
 import mTerrain from '../assets/ic_terrain.png'
 import mNews from '../assets/ic_news.png'
-import mDG from '../assets/ic_demographics.png'
 import mChart from '../assets/ic_chart.png'
+import Demographics from '../components/Demographics';
 
 
 class SuburbPage extends React.Component {
   state = {
-    value: 0,
     value2: 0
-  };
-
-  handleChange = (event, value) => {
-      this.setState({ value });
   };
 
   handleChange2 = (event, value2) => {
@@ -116,29 +111,7 @@ class SuburbPage extends React.Component {
 
             </Grid>
 
-            <Grid item className="DGContainer" >
-            <div className="SubheadingContainer">
-              <img src={mDG} className="IconDef" alt="demographics"/>
-              <Typography align="inherit" inline className="SideText"
-              style={{ fontSize: 26 }} variant="h1" color="inherit">
-                  Demographics
-              </Typography>
-            </div>
-
-            <Paper square>
-              <Tabs value={value} onChange={this.handleChange} centered
-              indicatorColor="primary" textColor="primary" variant="fullWidth">
-                <Tab icon={<HumanMaleBoy/>} label="Age Distribution" />
-                <Tab icon={<FaceIcon/>}label="Cultural Diversity" />
-                <Tab icon={<HomeIcon/>} label="Property Occupancy" />
-                <Tab icon={<CommuteIcon/>} label="Commute Methods" />
-              </Tabs>
-            </Paper>
-            {value === 0 && <AgeGroupOfPop COLORS={COLORS} suburb_state={suburb_state} suburb={suburb} key={suburb+suburb_state+'AgeGroupOfPop'}/>}
-            {value === 1 && <CountryOfBirth COLORS={COLORS} suburb_state={suburb_state} suburb={suburb} key={suburb+suburb_state+'CountryOfBirth'}/>}
-            {value === 2 && <NatureOfOccupancy COLORS={COLORS} suburb_state={suburb_state} suburb={suburb} key={suburb+suburb_state+'NatureOfOccupancy'}/>}
-            {value === 3 && <TransportToWork COLORS={COLORS} suburb_state={suburb_state} suburb={suburb} key={suburb+suburb_state+'TransportToWork'}/>}
-            </Grid>
+            <Demographics value={value} COLORS={COLORS} suburb_state={suburb_state} suburb={suburb}/>
 
             <Grid item className="SchoolsContainer">
               <Schools suburb_state={suburb_state} suburb={suburb} key={suburb+suburb_state+'Schools'}/>
