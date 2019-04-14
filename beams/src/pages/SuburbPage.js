@@ -52,7 +52,6 @@ class SuburbPage extends React.Component {
   }
 
   render() {
-    console.log("Suburb page", this.props);
     var { value } = this.state;
     var { value2 } = this.state;
 
@@ -111,7 +110,7 @@ class SuburbPage extends React.Component {
 
             </Grid>
 
-            <Demographics suburb_state={suburb_state} suburb={suburb}/>
+            <Demographics suburb={suburb} suburb_state={suburb_state}/>
 
             <Grid item className="SchoolsContainer">
               <Schools suburb_state={suburb_state} suburb={suburb} key={suburb+suburb_state+'Schools'}/>
