@@ -24,12 +24,7 @@ class App extends Component {
   }
 
   onSuburbSelect = (city) => {
-
-      console.log(city);
-      let re = /[A-Z]{3}|[A-Z]{2}/;
-      var suburb_state = city.match(re)[0];
-      var suburb = city.split(re)[0];
-      suburb = suburb.slice(0, -1);
+      var { suburb, suburb_state } = this.parseCity(city);
 
       // Make copy of this.state.suburbs
       let suburbs = [...this.state.suburbs];
@@ -40,9 +35,23 @@ class App extends Component {
       this.setState(() => ({ suburbs: suburbs, route: "/suburb", reset: true}));
   };
 
+  onSuburbCompare = (city) => {
+    var { suburb, suburb_state } = this.parseCity(city);
+    let suburbs = [this.state.suburbs[0], { suburb, suburb_state }];
+    this.setState(() => ({ suburbs: suburbs, route: "/suburb", reset: true}));
+  }
+
   onStartOver = () => {
     this.setState(() => ({ suburbs: [{ suburb: null, suburb_state: null }], route: '/', reset: false }));
   };
+
+  parseCity(city) {
+    let re = /[A-Z]{3}|[A-Z]{2}/;
+    var suburb_state = city.match(re)[0];
+    var suburb = city.split(re)[0];
+    suburb = suburb.slice(0, -1);
+    return { suburb, suburb_state };
+  }
 
   render() {
     const redirect = this.state.route;
@@ -58,7 +67,7 @@ class App extends Component {
                   <Route exact path="/" render={() => (redirect && redirect !== "/" ? <Redirect to={redirect} /> :
                       <HomePage reset={this.state.reset} onSelect={this.onSuburbSelect}/>)} />
                   <Route exact path="/suburb" render={() => (redirect && redirect !== "/suburb" ? <Redirect to={redirect} /> :
-                      <Comparison suburbs={this.state.suburbs} reset={this.state.reset} onStartOver={this.onStartOver}/>)} />
+                      <Comparison suburbs={this.state.suburbs} reset={this.state.reset} onStartOver={this.onStartOver} onSuburbCompare={this.onSuburbCompare}/>)} />
                 </Switch>
               </BrowserRouter>
           </Grid>

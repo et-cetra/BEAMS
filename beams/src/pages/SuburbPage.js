@@ -35,12 +35,35 @@ class SuburbPage extends React.Component {
     this.setState({ value2 });
   };
 
+  getRightContainer = (mMap, mNews, url, suburb) => {
+    return (
+      <Grid className="RightContainer">
+        <Grid item className="MapsContainer">
+          <img src={mMap} className="IconDef" alt="map" />
+          <Typography align="inherit" inline className="SideText" style={{ fontSize: 26 }} variant="h1" color="inherit">
+            Maps
+      </Typography>
+          <iframe className="GMapsMain" frameBorder="0" src={url} allowFullScreen title="GMaps" />
+          <img src={mNews} className="IconDef" alt="news" />
+          <Typography align="inherit" inline className="SideText" style={{ fontSize: 26 }} variant="h1" color="inherit">
+            Local News
+      </Typography>
+          <div className="NewsMain">
+            <SuburbNews suburb={suburb} />
+          </div>
+        </Grid>
+      </Grid>
+    )
+  }
+
   render() {
     console.log("Suburb page", this.props);
     var { value } = this.state;
     var { value2 } = this.state;
 
     const COLORS = ['#E62927', '#EE6A15', '#213084', '#333F48', '#04091E'];
+
+    const isWideMode = this.props.wideMode;
 
     if (this.props.suburb.suburb != null) {
       const suburb = this.props.suburb.suburb;
@@ -129,22 +152,7 @@ class SuburbPage extends React.Component {
         <Slide direction="up" in timeout={1000}>
         <Grid item xs={5}>
         {/*RHS grid container*/}
-          <Grid className="RightContainer">
-              <Grid item className="MapsContainer">
-              <img src={mMap} className="IconDef" alt="map"/>
-              <Typography align="inherit" inline className="SideText" style={{ fontSize: 26 }} variant="h1" color="inherit">
-                Maps
-              </Typography>
-              <iframe className="GMapsMain" frameBorder="0" src={url} allowFullScreen title="GMaps"/>
-              <img src={mNews} className="IconDef" alt="news"/>
-              <Typography align="inherit" inline className="SideText" style={{ fontSize: 26 }} variant="h1" color="inherit">
-                Local News
-              </Typography>
-              <div className="NewsMain">
-                <SuburbNews suburb={suburb}/>
-              </div>
-              </Grid>
-          </Grid>
+        {isWideMode && this.getRightContainer(mMap, mNews, url, suburb)}
         </Grid>
         </Slide>
       </Grid>

@@ -2,13 +2,17 @@ import React from 'react';
 import '../pages/HomePage.css'
 import { Grid, Grow } from '@material-ui/core';
 import SuburbPage from "../pages/SuburbPage";
+import QuickSearch from "./QuickSearch"
 
 class Comparison extends React.Component {
     render() {
       console.log("comparison sub", this.props.suburbs);
       if (this.props.suburbs.length === 1) {
         return (
-          <SuburbPage suburb={this.props.suburbs[0]} reset={this.props.reset} onStartOver={this.props.onStartOver}/>
+          <div>
+            <QuickSearch onSelect={this.props.onSuburbCompare}/>
+            <SuburbPage suburb={this.props.suburbs[0]} reset={this.props.reset} onStartOver={this.props.onStartOver} wideMode={true}/>
+          </div>
         )
       } else {
         return (
