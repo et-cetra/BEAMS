@@ -90,8 +90,8 @@ class SuburbPage extends React.Component {
                 <Tab icon={<HomeGroup/>} label="Sold Property Prices" />
               </Tabs>
             </Paper>
-         
-            </Grid>  
+
+            </Grid>
 
             <Grid item className="DGContainer" >
             <div className="SubheadingContainer">
@@ -119,7 +119,7 @@ class SuburbPage extends React.Component {
 
             <Grid item className="SchoolsContainer">
               <Schools suburb_state={suburb_state} suburb={suburb} key={suburb+suburb_state+'Schools'}/>
-            </Grid> 
+            </Grid>
 
           </Grid>
         </Grid>
