@@ -43,8 +43,8 @@ class SuburbPage extends React.Component {
     const COLORS = ['#E62927', '#EE6A15', '#213084', '#333F48', '#04091E'];
 
     if (this.props.suburb != null) {
-      const suburb = this.props.suburb;
-      const suburb_state = this.props.suburb_state;
+      const suburb = this.props.suburb.suburb;
+      const suburb_state = this.props.suburb.suburb_state;
       const url = `https://www.google.com/maps/embed/v1/place?key=AIzaSyDIMGCB2qSD9qIB0mrZu0uGEmZlc9e8m-Y&q=${suburb}`;
     return (
       <div className="ParentContainer">

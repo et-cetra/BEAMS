@@ -17,8 +17,7 @@ class App extends Component {
     super(props);
 
     this.state = {
-      suburb: null,
-      suburb_state: null,
+      suburbs: [{ suburb: null, suburb_state: null }],
       route: null,
       reset: false,
     };
@@ -55,7 +54,7 @@ class App extends Component {
                   <Route exact path="/" render={() => (redirect && redirect !== "/" ? <Redirect to={redirect} /> :
                       <HomePage reset={this.state.reset} onSelect={this.onSuburbSelect}/>)} />
                   <Route exact path="/suburb" render={() => (redirect && redirect !== "/suburb" ? <Redirect to={redirect} /> :
-                      <Comparison suburb={this.state.suburb} suburb_state={this.state.suburb_state} reset={this.state.reset} onStartOver={this.onStartOver}/>)} />
+                      <Comparison suburbs={this.state.suburbs} reset={this.state.reset} onStartOver={this.onStartOver}/>)} />
                 </Switch>
               </BrowserRouter>
           </Grid>
