@@ -7,6 +7,7 @@ import NatureOfOccupancy from '../components/demographics/NatureOfOccupancy';
 import TransportToWork from '../components/demographics/TransportToWork';
 import MedianRent from '../components/stats/MedianRent';
 import HouseSoldPrice from '../components/stats/HouseSoldPrice';
+import Highlights from '../components/Highlights';
 import { Grid, Typography, Divider, Tabs, Tab, Paper, Fade, Slide } from '@material-ui/core';
 import SuburbNews from '../components/SuburbNews';
 
@@ -90,8 +91,8 @@ class SuburbPage extends React.Component {
                 <Tab icon={<HomeGroup/>} label="Sold Property Prices" />
               </Tabs>
             </Paper>
-         
-            </Grid>  
+
+            </Grid>
 
             <Grid item className="DGContainer" >
             <div className="SubheadingContainer">
@@ -119,7 +120,7 @@ class SuburbPage extends React.Component {
 
             <Grid item className="SchoolsContainer">
               <Schools suburb_state={suburb_state} suburb={suburb} key={suburb+suburb_state+'Schools'}/>
-            </Grid> 
+            </Grid>
 
           </Grid>
         </Grid>
@@ -149,6 +150,9 @@ class SuburbPage extends React.Component {
         </Slide>
       </Grid>
       </Fade>
+
+      <Highlights suburb={this.props.suburb} suburb_state={this.props.suburb_state}/>
+
       </div>
     );
   } else {
