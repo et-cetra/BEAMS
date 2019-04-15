@@ -151,7 +151,7 @@ class SuburbPage extends React.Component {
       </Grid>
       </Fade>
 
-      <Highlights suburb={this.props.suburb} suburb_state={this.props.suburb_state}/>
+      <Highlights suburb={this.props.suburb} suburb_state={this.props.suburb_state} key={suburb+suburb_state+'Highlights'}/>
 
       </div>
     );

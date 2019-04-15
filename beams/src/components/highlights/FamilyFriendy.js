@@ -2,6 +2,9 @@ import React from 'react';
 import { getDemographics } from '../../utils.js'
 
 class FamilyFriendly extends React.Component {
+    state = {
+        isFamilyFriendly: false
+      };
 
     // If above 0-4 is above 5% give tag 'Family Friendly'
 
@@ -25,10 +28,23 @@ class FamilyFriendly extends React.Component {
         }
     }
 
+    async componentDidMount() {
+        const result = await this.isFamilyFriendly();
+        this.setState({
+            isFamilyFriendly: result
+        });
+    }
+
     render() {
-        return (
-            <div></div>
-        );
+        if (this.state.isFamilyFriendly) {
+            return (
+                <div>Family Friendly!</div>
+            );
+        } else {
+            return (
+                <div></div>
+            )
+        }
     }
 }
 

@@ -22,13 +22,11 @@ class App extends Component {
   }
 
   onSuburbSelect = (city) => {
-      
       console.log(city);
       let re = /[A-Z]{3}|[A-Z]{2}/;
       var suburb_state = city.match(re)[0];
       var suburb = city.split(re)[0];
       suburb = suburb.slice(0, -1);
-  
       this.setState(() => ({ suburb: suburb, suburb_state: suburb_state, route: "/suburb",
         reset: true}));
 
@@ -48,9 +46,9 @@ class App extends Component {
           <Grid item>
               <BrowserRouter>
                 <Switch>
-                  <Route exact path="/" render={() => (redirect && redirect !== "/" ? <Redirect to={redirect} /> : 
+                  <Route exact path="/" render={() => (redirect && redirect !== "/" ? <Redirect to={redirect} /> :
                       <HomePage reset={this.state.reset} onSelect={this.onSuburbSelect}/>)} />
-                  <Route exact path="/suburb" render={() => (redirect && redirect !== "/suburb" ? <Redirect to={redirect} /> : 
+                  <Route exact path="/suburb" render={() => (redirect && redirect !== "/suburb" ? <Redirect to={redirect} /> :
                       <SuburbPage reset={this.state.reset} suburb={this.state.suburb} suburb_state={this.state.suburb_state} onStartOver={this.onStartOver}/>)} />
                 </Switch>
               </BrowserRouter>
