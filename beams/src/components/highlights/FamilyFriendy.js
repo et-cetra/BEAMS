@@ -38,7 +38,7 @@ class FamilyFriendly extends React.Component {
     render() {
         if (this.state.isFamilyFriendly) {
             return (
-                <div>Family Friendly!</div>
+                <div>Family Friendly</div>
             );
         } else {
             return (

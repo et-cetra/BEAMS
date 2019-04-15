@@ -58,6 +58,15 @@ class SuburbPage extends React.Component {
       <br></br>
       <Divider variant="fullWidth"></Divider>
       <br></br>
+
+      {/* Highlights */}
+      <Typography align="inherit" inline style={{ fontSize: 26 }} variant="h1" color="inherit">
+          <Highlights suburb={this.props.suburb} suburb_state={this.props.suburb_state} key={suburb+suburb_state+'Highlights'}/>
+      </Typography>
+      <br></br>
+      <Divider variant="fullWidth"></Divider>
+      <br></br>
+
       </div>
 
       <Fade in timeout={750}>
@@ -150,8 +159,6 @@ class SuburbPage extends React.Component {
         </Slide>
       </Grid>
       </Fade>
-
-      <Highlights suburb={this.props.suburb} suburb_state={this.props.suburb_state} key={suburb+suburb_state+'Highlights'}/>
 
       </div>
     );
