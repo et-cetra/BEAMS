@@ -8,6 +8,7 @@
     "@material-ui/icons": "^3.0.2",
     "axios": "^0.18.0",
     "braces": "^2.3.2",
+    "deepai": "^1.0.0",
     "material-ui-search-bar": "^0.4.2",
     "node-fetch": "^2.3.0",
     "react": "^16.8.4",
