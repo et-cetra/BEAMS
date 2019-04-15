@@ -1,5 +1,6 @@
 import React from 'react';
 import FamilyFriendly from './highlights/FamilyFriendy';
+import HospitalFriendly from './highlights/HospitalFriendly';
 
 class Highlights extends React.Component {
 
@@ -17,6 +18,7 @@ class Highlights extends React.Component {
         return (
             <div>
                 <FamilyFriendly suburb={this.props.suburb} suburb_state={this.props.suburb_state}/>
+                <HospitalFriendly suburb={this.props.suburb} suburb_state={this.props.suburb_state}/>
             </div>
         );
     }
