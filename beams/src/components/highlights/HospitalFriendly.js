@@ -1,5 +1,6 @@
 import React from 'react';
 import { jsonHospitalResponse } from '../../data/HospitalsData';
+import Chip from '@material-ui/core/Chip';
 
 class HospitalFriendly extends React.Component {
 
@@ -25,7 +26,7 @@ class HospitalFriendly extends React.Component {
     render() {
         if (this.isHospitalFriendly) {
             return (
-                <div>Health Care Friendly</div>
+                <Chip label="Health Care Friendly"/>
             );
         } else {
             return (
