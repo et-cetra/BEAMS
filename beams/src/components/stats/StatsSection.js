@@ -51,9 +51,47 @@ class AxisTickY extends React.Component {
 }
 
 class StatsSection extends React.Component {
+    singleChart = (chartData, COLORS) => {
+      return(
+        <ResponsiveContainer height={450} width="95%">
+        <LineChart className="LineChart"
+        data={chartData} margin={{top: 40, right: 20, left: 20, bottom: 10}}>
+          <CartesianGrid strokeDasharray="3 3"/>
+          <XAxis dataKey="name" tick={<AxisTickX/>} tickLine={false}/>
+          <YAxis tick={<AxisTickY/>} tickLine={false}/>
+          <Tooltip />
+          <Legend verticalAlign="bottom" iconType="circle" iconSize={8}/>
+          <Line type="monotone" dataKey="Highest" stroke={COLORS[0]} strokeDasharray="3 3"/>
+          <Line type="monotone" dataKey="Median" stroke={COLORS[2]}/>
+          <Line type="monotone" dataKey="Lowest" stroke={COLORS[1]} strokeDasharray="3 3"/>
+        </LineChart>
+        </ResponsiveContainer>
+      );
+    }
+
+    multiChart = (chartData, COLORS) => {
+      const s1Name = `Median (${this.props.suburbs[0].suburb})`
+      const s2Name = `Median (${this.props.suburbs[1].suburb})`
+      return(
+        <ResponsiveContainer height={450} width="95%">
+        <LineChart className="LineChart"
+        data={chartData} margin={{top: 40, right: 20, left: 20, bottom: 10}}>
+          <CartesianGrid strokeDasharray="3 3"/>
+          <XAxis dataKey="name" tick={<AxisTickX/>} tickLine={false}/>
+          <YAxis tick={<AxisTickY/>} tickLine={false}/>
+          <Tooltip />
+          <Legend verticalAlign="bottom" iconType="circle" iconSize={8}/>
+          <Line type="monotone" dataKey={s1Name} stroke={COLORS[2]}/>
+          <Line type="monotone" dataKey={s2Name} stroke={COLORS[1]}/>
+        </LineChart>
+        </ResponsiveContainer>
+      );
+    }
+
     render() {
       const COLORS = this.props.COLORS;
       const chartData = this.props.chartData;
+      const isCompare = this.props.isCompare;
       
       if(this.props.loading){
         return (
@@ -72,21 +110,7 @@ class StatsSection extends React.Component {
             justify="center" alignItems="stretch">
             <Fade in timeout={600}>
             <Grid>
-
-            <ResponsiveContainer height={450} width="95%">
-            <LineChart className="LineChart"
-            data={chartData} margin={{top: 40, right: 20, left: 20, bottom: 10}}>
-              <CartesianGrid strokeDasharray="3 3"/>
-              <XAxis dataKey="name" tick={<AxisTickX/>} tickLine={false}/>
-              <YAxis tick={<AxisTickY/>} tickLine={false}/>
-              <Tooltip />
-              <Legend verticalAlign="bottom" iconType="circle" iconSize={8}/>
-              <Line type="monotone" dataKey="Highest" stroke={COLORS[0]} strokeDasharray="3 3"/>
-              <Line type="monotone" dataKey="Median" stroke={COLORS[2]}/>
-              <Line type="monotone" dataKey="Lowest" stroke={COLORS[1]} strokeDasharray="3 3"/>
-            </LineChart>
-            </ResponsiveContainer>
-
+              {isCompare ? this.multiChart(chartData, COLORS) : this.singleChart(chartData, COLORS)}
             </Grid>
             </Fade>
             <Fade in timeout={600}>

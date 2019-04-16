@@ -31,11 +31,11 @@ class Transport extends React.Component {
         ))));
 
         chartData.forEach((item) => {
-            if(item.name == "Car (driver)"){
+            if(item.name === "Car (driver)"){
                 item.name = "Car";
             }
 
-            if(item.name == "Walked only"){
+            if(item.name === "Walked only"){
                 item.name = "Walked";
             }
         });

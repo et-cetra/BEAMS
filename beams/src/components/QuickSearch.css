@@ -28,5 +28,41 @@
     position: absolute;
     color: #FFFFFF;
     margin-left: 10px;
+    z-index: 20;
+  }
+
+  /* For suburb page search: */
+  
+  .SubQuickSearchBox{
+    border-left: 6px solid red;
+    background-image: linear-gradient(to right, #f9f9f9 0%, #f9f9f9 100%);
+    background-blend-mode: normal;
+    padding: 4px;
+    width: 400px;
+    z-index: 10;
+  }
+  
+  .SubQuickSearchIcon{
+    padding-top: 4px;
+    padding-left: 4px;
+  }
+  
+  .SubQuickSearch{
+    flex-grow: 1;
+    width: 350px;
+  }
+  
+  .SubQuickSearch input{
+    color: #333F48;
+    padding-right: 12px;
+    padding-left: 12px;
+    font-size: 1vw;
+  }
+
+  .SubAutocompleteCard{
+    position: absolute;
+    color: #333F48;
+    margin-left: 10px;
+    z-index: 20;
   }
   

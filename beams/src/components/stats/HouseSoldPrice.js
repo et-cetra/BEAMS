@@ -14,43 +14,74 @@ class HouseSoldPrice extends React.Component {
     }
 
     async componentDidMount() {
-        const rentStats = await getStats(this.props.suburb, this.props.suburb_state);
+      const rentStats = await getStats(this.props.suburbs[0].suburb, this.props.suburbs[0].suburb_state);
+
+      if(this.props.isCompare){
+        const rentStats2 = await getStats(this.props.suburbs[1].suburb, this.props.suburbs[1].suburb_state);
+        this.setState({
+          isLoaded: true,
+          contents: rentStats.series.seriesInfo,
+          contents2: rentStats2.series.seriesInfo,
+      });
+      } else {
         this.setState({
             isLoaded: true,
             contents: rentStats.series.seriesInfo,
         });
+      }
     }
 
     render() {
-        const { error, isLoaded, contents } = this.state;
-        const COLORS = this.props.COLORS;
+      const { error, isLoaded, contents, contents2 } = this.state;
+      const COLORS = this.props.COLORS;
+      const suburbs = this.props.suburbs;
+      const isCompare = this.props.isCompare;
+      const chartData = [];
+      var s1Name, s2Name;
+      
+      if(isCompare)
+      {
+        s1Name = `Median (${suburbs[0].suburb})`
+        s2Name = `Median (${suburbs[1].suburb})`
+      }
 
-        const chartData = [];
+      for(var i = 0; i < contents.length; i++)
+      {
+        var item = contents[i];
+        var monthSection = Math.ceil(item.month/3).toString();
 
-        contents.forEach(item => {
-            var monthSection = Math.ceil(item.month/3).toString();
-            chartData.push({name: item.year.toString() + " Q" + monthSection, 
-                Median: item.values["medianSoldPrice"], 
-                Lowest: item.values["lowestSoldPrice"],
-                Highest: item.values["highestSoldPrice"],
-            });
-        });
-
-        if (error) {
-            return <div>Error: {error.message}</div>;
-        } else if (!isLoaded) {
-            return (
-            <div>
-                <StatsSection loading={1} COLORS={COLORS} chartData={[]}/>
-            </div>
-            );
+        if(isCompare)
+        {
+          var item2 = contents2[i];
+          chartData.push({name: item.year.toString() + " Q" + monthSection, 
+              [s1Name] : item.values["medianSoldPrice"], 
+              [s2Name] : item2.values["medianSoldPrice"], 
+          });
         } else {
-            return (
-            <div>
-                <StatsSection loading={0} COLORS={COLORS} chartData={chartData}/>
-            </div>
-            );
-        }
+          chartData.push({name: item.year.toString() + " Q" + monthSection, 
+              Median: item.values["medianSoldPrice"], 
+              Lowest: item.values["lowestSoldPrice"],
+              Highest: item.values["highestSoldPrice"],
+          });
+        }       
+      }
+
+      if (error) {
+          return <div>Error: {error.message}</div>;
+      } else if (!isLoaded) {
+          return (
+          <div>
+              <StatsSection loading={1} COLORS={COLORS} chartData={[]}/>
+          </div>
+          );
+      } else {
+          return (
+          <div>
+              <StatsSection loading={0} COLORS={COLORS} chartData={chartData} isCompare={isCompare}
+              suburbs={suburbs}/>
+          </div>
+          );
+      }
     }
 }
 

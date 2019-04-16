@@ -1,8 +1,9 @@
 import React from 'react';
 import SearchIcon from "@material-ui/icons/Search";
+import AddLocationIcon from "@material-ui/icons/AddLocation";
 import { Grid, Paper, InputBase, Card, ListItem } from '@material-ui/core';
 import './QuickSearch.css'
-import PlacesAutocomplete, {geocodeByAddress, getLatLng} from 'react-places-autocomplete';
+import PlacesAutocomplete, { geocodeByAddress, getLatLng } from 'react-places-autocomplete';
 
 class QuickSearch extends React.Component {
 
@@ -25,12 +26,44 @@ class QuickSearch extends React.Component {
             .catch(error => console.error('Error', error));
     };
 
+    searchIcon = (QuickSearchIcon) => {
+      return <SearchIcon className={QuickSearchIcon} fontSize="large" color="inherit"/>
+    };
+
+    addIcon = (QuickSearchIcon) => {
+      return <AddLocationIcon className={QuickSearchIcon} fontSize="large" color="inherit"/>
+    };
+
     render() {
+      const isSuburbPage = this.props.isSuburbPage;
+      var QuickSearch, QuickSearchBox, QuickSearchIcon, AutocompleteCard, 
+        SearchResultsQuick, bg1, bg2, textDummy;
+
+      if(!isSuburbPage){
+        QuickSearch = "QuickSearch";
+        QuickSearchBox = "QuickSearchBox";
+        QuickSearchIcon = "QuickSearchIcon";
+        AutocompleteCard = "AutocompleteCard";
+        SearchResultsQuick = "SearchResultsQuick";
+        bg1 = '#EE6A15';
+        bg2 = '#04091E';
+        textDummy = 'Search for Suburb, Postcode...';
+      } else {
+        QuickSearch = "SubQuickSearch";
+        QuickSearchBox = "SubQuickSearchBox";
+        QuickSearchIcon = "SubQuickSearchIcon";
+        AutocompleteCard = "SubAutocompleteCard";
+        SearchResultsQuick = "SubSearchResultsQuick";
+        bg1 = '#EE6A15';
+        bg2 = '#FFFFFF';
+        textDummy = `Compare ${this.props.suburb} with another suburb...`;
+      }
+
       return (
-        <Paper className="QuickSearchBox">
+        <Paper elevation={0} className={QuickSearchBox}>
         <Grid container direction="row" alignItems="center">
             <Grid item xs={1}>
-                <SearchIcon className="QuickSearchIcon" fontSize="large" color="inherit"/>
+              {isSuburbPage ? this.addIcon(QuickSearchIcon) : this.searchIcon(QuickSearchIcon)}
             </Grid>
             <PlacesAutocomplete
             value={this.state.address}
@@ -40,16 +73,16 @@ class QuickSearch extends React.Component {
                 {({ getInputProps, suggestions, getSuggestionItemProps }) => (
                 <div>
                 <InputBase {...getInputProps({
-                    placeholder: 'Search for Suburb, Postcode...',
-                    className: 'QuickSearch',
+                    placeholder: textDummy,
+                    className: QuickSearch,
                   })}/>
-                <Card className="AutocompleteCard">
+                <Card className={AutocompleteCard}>
                     {suggestions.map(suggestion => {
                     const className = suggestion.active ? 'suggestion-item--active' : 'suggestion-item';
                     const style = suggestion.active ?
-                    { backgroundColor: '#EE6A15', cursor: 'pointer' } : { backgroundColor: '#04091E', cursor: 'pointer' };
+                    { backgroundColor: bg1, cursor: 'pointer' } : { backgroundColor: bg2, cursor: 'pointer' };
                     return (
-                    <ListItem className="SearchResultsQuick" {...getSuggestionItemProps(suggestion, { className, style })}>
+                    <ListItem className={SearchResultsQuick} {...getSuggestionItemProps(suggestion, { className, style })}>
                         <span>{suggestion.description}</span>
                     </ListItem>
                     );
