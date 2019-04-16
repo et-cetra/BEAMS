@@ -39,7 +39,7 @@ class FamilyFriendly extends React.Component {
     render() {
         if (this.state.isFamilyFriendly) {
             return (
-                <Chip label="Family Friendly"/>
+                <Chip label="Family Friendly" className="ChipsHighlight"/>
             );
         } else {
             return (
