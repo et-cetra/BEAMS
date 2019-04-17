@@ -15,7 +15,7 @@ class WrapperHeader extends React.Component {
       <div>
           <img src={mTerrain} className="IconMain" alt="terrain"/>
           <Typography align="left" inline className="MainText" 
-          style={{ fontSize: 36 }} variant="overline" color="inherit">
+          style={{ fontSize: 34 }} variant="overline" color="inherit">
             {`${suburbs[0].suburb}, ${suburbs[0].suburb_state}`}
           </Typography>
           {!isCompare ? 
@@ -24,11 +24,11 @@ class WrapperHeader extends React.Component {
             </div>
             : 
             <div className="HeadingR">
-              <Typography align="right" className="MainTextR" 
-              style={{ fontSize: 36 }} variant="overline" color="inherit">
+              <Typography align="right" inline className="MainTextR" 
+              style={{ fontSize: 34 }} variant="overline" color="inherit">
                 {`${suburbs[1].suburb}, ${suburbs[1].suburb_state}`}
               </Typography>
-              <img src={mTerrain} className="IconMain" alt="terrain"/>
+              <img src={mTerrain} className="IconMainR" alt="terrain"/>
             </div>
             }
           
