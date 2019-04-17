@@ -10,12 +10,10 @@ import mMap from '../assets/ic_map.png'
 import mTerrain from '../assets/ic_terrain.png'
 import mNews from '../assets/ic_news.png'
 import mDG from '../assets/ic_demographics.png'
-import mInfo from '../assets/ic_info.png'
 import FaceIcon from '@material-ui/icons/Face'
 import HomeIcon from '@material-ui/icons/Home'
 import { HumanMaleBoy } from 'mdi-material-ui'
-import IconButton from '@material-ui/core/IconButton';
-import Snackbar from '@material-ui/core/Snackbar';
+import InfoButton from '../components/InfoButton';
 
 
 class SuburbPage extends React.Component {
@@ -23,41 +21,6 @@ class SuburbPage extends React.Component {
     value: 0,
     open: false,
     messageInfo: {},
-  };
-
-  queue = [];
-
-  handleClick = message => () => {
-    this.queue.push({
-      message,
-      key: new Date().getTime(),
-    });
-
-    if (this.state.open) {
-      this.setState({ open: false });
-    } else {
-      this.processQueue();
-    }
-  };
-
-  processQueue = () => {
-    if (this.queue.length > 0) {
-      this.setState({
-        messageInfo: this.queue.shift(),
-        open: true,
-      });
-    }
-  };
-
-  handleClose = (event, reason) => {
-    if (reason === 'clickaway') {
-      return;
-    }
-    this.setState({ open: false });
-  };
-
-  handleExited = () => {
-    this.processQueue();
   };
 
   handleChange = (event, value) => {
@@ -139,22 +102,10 @@ class SuburbPage extends React.Component {
               <div className="NewsMain">
                 <SuburbNews suburb={suburb}/>
               </div>
-              <IconButton style={{float: "right"}}onClick={this.handleClick('Data sourced from ABC News, Domain, and Google Maps')}><img src={mInfo} className="InfoDef"/></IconButton>
-              <Snackbar
-                  key={messageInfo.key}
-                  anchorOrigin={{
-                      vertical: 'bottom',
-                      horizontal: 'left',
-                  }}
-                  open={this.state.open}
-                  autoHideDuration={3000}
-                  onClose={this.handleClose}
-                  onExited={this.handleExited}
-                  ContentProps={{
-                      'aria-describedby': 'message-id',
-                  }}
-                  message={<span id="message-id">{messageInfo.message}</span>}
-              />
+
+            <InfoButton message={'Data sourced from ABC News, Domain, and Google Maps'}/>
+
+
               </Grid>
           </Grid>
         </Grid>
