@@ -1,11 +1,11 @@
 .DGGridContainer{
   width: 100%;
-  min-height: 380px;
+  height: 450px;
 }
 
 .StatsGridContainer{
   width: 100%;
-  min-height: 500px;
+  height: 500px;
 }
 
 .LeftContainer{
@@ -114,4 +114,21 @@
   float: right;
   z-index: 20;
   padding-top: 8px;
+}
+
+.CompareDGText{
+ margin-top: 20px;
+}
+
+.CompareDGTextL{
+  margin-left: 20px;
+}
+
+.CompareDGTextR{
+  margin-right: 25px;
+  float: right;
+}
+
+.CompareDGContainer{
+  height: 500px;
 }

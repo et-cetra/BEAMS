@@ -1,34 +1,91 @@
 import React from 'react';
 import '../../pages/SuburbPage.css'
 import { PieChart, Pie, Cell, Tooltip, Legend, ResponsiveContainer } from 'recharts';
-import { Grid, Paper, CircularProgress, Fade } from '@material-ui/core';
+import { Grid, Paper, CircularProgress, Fade, Chip } from '@material-ui/core';
 
 class DGSection extends React.Component {
+    
+    getLegend = (value, entry, index) => {
+      const COLORS = this.props.COLORS;
+      if(index >= this.props.chartData.length) return;
+      else 
+        return <Chip variant="outlined" label={value} color="inherit"
+          style={{color: COLORS[index], marginTop: "3px", marginBottom: "3px"}}/>;
+    }
+
+    singlePie = (chartData, COLORS) => {
+      return(
+        <ResponsiveContainer height={400} width="100%">
+        <PieChart className="PieChart" onMouseEnter={this.onPieEnter}>
+            <Pie data={chartData} innerRadius="55%" outerRadius="72%" cx="50%"  
+            animationBegin={0} animationDuration={50} fill="#8884d8" paddingAngle={4}
+            dataKey="value" label={this.renderCustomizedLabel} labelLine={false}>
+            {chartData.map((entry, index) =>
+                <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]}/>
+            )}
+            </Pie>
+            <Legend align="center" layout="horizontal" formatter={this.getLegend}
+            verticalAlign="bottom" iconSize={0}/>
+            <Tooltip/>
+        </PieChart>
+        </ResponsiveContainer>
+      );
+    }
+
+    multiPie = (chartData, COLORS, suburbs) => {
+
+      return(
+       
+        <ResponsiveContainer height={400} width="100%">
+          <PieChart className="PieChart" onMouseEnter={this.onPieEnter}>
+            <Pie data={chartData} innerRadius="55%" outerRadius="72%" cx="50%" 
+            animationBegin={0} animationDuration={50} fill="#8884d8" paddingAngle={4}
+            dataKey="value" label={this.renderCustomizedLabel} labelLine={false}
+            startAngle={80} endAngle={-80}>
+            {chartData.map((_entry, index) =>
+                <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]}/>
+            )}
+            </Pie>
+            <Pie data={chartData} innerRadius="55%" outerRadius="72%" cx="50%" 
+              animationBegin={0} animationDuration={50} fill="#8884d8" paddingAngle={4}
+              dataKey="value2" label={this.renderCustomizedLabel} labelLine={false}
+              startAngle={100} endAngle={260}>
+              {chartData.map((_entry, index) =>
+                  <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]}/>
+              )}
+            </Pie>
+            <Tooltip/>
+            <Legend align="center" layout="horizontal" formatter={this.getLegend}
+            verticalAlign="bottom" iconSize={0}/>
+          </PieChart>          
+        </ResponsiveContainer>
+      );
+    }
+
+    renderCustomizedLabel = ({
+      cx, cy, midAngle, innerRadius, outerRadius, percent, index,
+    }) => {
+
+      const COLORS = this.props.COLORS;
+      const RADIAN = Math.PI / 180;
+      var radius = innerRadius + (outerRadius - innerRadius) * 1.5;
+      const x = cx + radius * Math.cos(-midAngle * RADIAN);
+      const y = cy + radius * Math.sin(-midAngle * RADIAN);
+    
+      return (
+        <text x={x} y={y} fill={COLORS[index % COLORS.length]} 
+        textAnchor={x > cx ? 'start' : 'end'} dominantBaseline="central">
+          {`${(percent * 100).toFixed(0)}%`}
+        </text>
+      );
+    }
+
     render() {
       const COLORS = this.props.COLORS;
       const chartData = this.props.chartData;
+      const isCompare = this.props.isCompare;
+      const suburbs = this.props.suburbs;
 
-      const renderTextSize = ({value, entry, index}) => {        
-        return <span style={{ textSize: 10 }}>{value}</span>;
-      };
-
-      const renderCustomizedLabel = ({
-        cx, cy, midAngle, innerRadius, outerRadius, percent, index,
-      }) => {
-
-        const RADIAN = Math.PI / 180;
-        const radius = innerRadius + (outerRadius - innerRadius) * 1.5;
-        const x = cx + radius * Math.cos(-midAngle * RADIAN);
-        const y = cy + radius * Math.sin(-midAngle * RADIAN);
-      
-        return (
-          <text x={x} y={y} fill={COLORS[index % COLORS.length]} 
-          textAnchor={x > cx ? 'start' : 'end'} dominantBaseline="central">
-            {`${(percent * 100).toFixed(0)}%`}
-          </text>
-        );
-      };
-      
       if(this.props.loading){
         return (
           <div className="DGTab">
@@ -42,34 +99,25 @@ class DGSection extends React.Component {
         );
       }
       else{
+        console.log(chartData);
         return (
           <div className="DGTab">
             <Paper square>
             <Grid className="DGGridContainer" container spacing={16} direction="row"
             justify="flex-start" alignItems="flex-start">
             <Fade in timeout={600}>
-            <Grid item xs={7}>
+            <Grid item xs={9}>
 
-            <ResponsiveContainer height={350} width="100%">
-            <PieChart className="PieChart" 
-            onMouseEnter={this.onPieEnter}>
-                <Pie data={chartData} innerRadius="55%" outerRadius="70%" cx="48%"  
-                animationBegin={0} animationDuration={50} fill="#8884d8" paddingAngle={4}
-                dataKey="value" label={renderCustomizedLabel} labelLine={false}>
-                {chartData.map((entry, index) =>
-                    <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]}/>
-                )}
-                </Pie>
-                <Legend align="center" layout="horizontal"
-                verticalAlign="bottom" iconType="circle" iconSize={8}/>
-                <Tooltip/>
-            </PieChart>
-            </ResponsiveContainer>
+             
+
+              {isCompare ? this.multiPie(chartData, COLORS, suburbs) 
+                : this.singlePie(chartData, COLORS)}
 
             </Grid>
             </Fade>
             <Fade in timeout={600}>
-            <Grid className="DGInfoContainer" item xs={5}>
+
+            <Grid className="DGInfoContainer" item xs={0}>
             <br/><br/>
             info goes here (no css yet)
             </Grid>
