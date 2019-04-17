@@ -36,8 +36,8 @@ class DGSection extends React.Component {
       return(
         <div style={{width: "100%"}}>
         <div className="CompareDGText">
-            <Chip className="CompareDGTextL" label={suburbs[0].suburb}/>
-            <Chip className="CompareDGTextR" label={suburbs[1].suburb}/>
+            <Chip className="CompareDGTextL" color="primary" label={suburbs[0].suburb}/>
+            <Chip className="CompareDGTextR" color="secondary" label={suburbs[1].suburb}/>
         </div>
         <ResponsiveContainer height={375} width="100%">
           <PieChart className="PieChart" onMouseEnter={this.onPieEnter}>

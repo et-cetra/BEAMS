@@ -13,7 +13,7 @@ import WrapperSchools from '../components/wrappers/WrapperSchools'
 
 class SuburbPage extends React.Component {
   /* Color scheme, used for graphs */
-  COLORS = () => {return(['#E62927', '#EE6A15', '#213084', '#333F48', '#04091E'])}
+  COLORS = () => {return(['#E62927', '#213084', '#EE6A15', '#333F48', '#04091E'])}
 
   getSingleSuburb = (suburbs, onSuburbCompare) => {
     const COLORS = this.COLORS();

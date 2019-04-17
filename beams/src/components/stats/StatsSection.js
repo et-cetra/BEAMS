@@ -1,7 +1,7 @@
 import  React  from 'react';
 import '../../pages/SuburbPage.css'
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
-import { Grid, CircularProgress, Fade } from '@material-ui/core';
+import { Grid, CircularProgress, Fade, Chip } from '@material-ui/core';
 
 class AxisTickX extends React.Component {
   render() {
@@ -51,6 +51,14 @@ class AxisTickY extends React.Component {
 }
 
 class StatsSection extends React.Component {
+    getLegend = (value, entry, index) => {
+      var COLORS = this.props.COLORS;
+      //Swap colours so graph syncs
+     
+      return <Chip variant="outlined" label={value} color="default"
+        style={{color: COLORS[index], marginTop: "3px", marginBottom: "3px"}}/>;
+    }
+
     singleChart = (chartData, COLORS) => {
       return(
         <ResponsiveContainer height={450} width="95%">
@@ -60,10 +68,10 @@ class StatsSection extends React.Component {
           <XAxis dataKey="name" tick={<AxisTickX/>} tickLine={false}/>
           <YAxis tick={<AxisTickY/>} tickLine={false}/>
           <Tooltip />
-          <Legend verticalAlign="bottom" iconType="circle" iconSize={8}/>
+          <Legend verticalAlign="bottom" align="center" iconSize={0} formatter={this.getLegend}/>
           <Line type="monotone" dataKey="Highest" stroke={COLORS[0]} strokeDasharray="3 3"/>
-          <Line type="monotone" dataKey="Median" stroke={COLORS[2]}/>
-          <Line type="monotone" dataKey="Lowest" stroke={COLORS[1]} strokeDasharray="3 3"/>
+          <Line type="monotone" dataKey="Median" stroke={COLORS[1]}/>
+          <Line type="monotone" dataKey="Lowest" stroke={COLORS[2]} strokeDasharray="3 3"/>
         </LineChart>
         </ResponsiveContainer>
       );
@@ -80,8 +88,8 @@ class StatsSection extends React.Component {
           <XAxis dataKey="name" tick={<AxisTickX/>} tickLine={false}/>
           <YAxis tick={<AxisTickY/>} tickLine={false}/>
           <Tooltip />
-          <Legend verticalAlign="bottom" iconType="circle" iconSize={8}/>
-          <Line type="monotone" dataKey={s1Name} stroke={COLORS[2]}/>
+          <Legend verticalAlign="bottom" align="center" iconSize={0} formatter={this.getLegend}/>
+          <Line type="monotone" dataKey={s1Name} stroke={COLORS[0]}/>
           <Line type="monotone" dataKey={s2Name} stroke={COLORS[1]}/>
         </LineChart>
         </ResponsiveContainer>
