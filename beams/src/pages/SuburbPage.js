@@ -19,8 +19,6 @@ import InfoButton from '../components/InfoButton';
 class SuburbPage extends React.Component {
   state = {
     value: 0,
-    open: false,
-    messageInfo: {},
   };
 
   handleChange = (event, value) => {
@@ -31,7 +29,6 @@ class SuburbPage extends React.Component {
     console.log("Suburb page", this.props);
     var { value } = this.state;
     const COLORS = ['#E62927', '#EE6A15', '#333F48', '#04091E', '#000000', '#000000'];
-    const { messageInfo } = this.state;
 
     if (this.props.suburb != null) {
       const suburb = this.props.suburb;
@@ -104,7 +101,6 @@ class SuburbPage extends React.Component {
               </div>
 
             <InfoButton message={'Data sourced from ABC News, Domain, and Google Maps'}/>
-
 
               </Grid>
           </Grid>
