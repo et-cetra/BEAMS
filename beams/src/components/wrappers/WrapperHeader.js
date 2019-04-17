@@ -8,18 +8,30 @@ import mTerrain from '../../assets/ic_terrain.png'
 
 class WrapperHeader extends React.Component {
     render() {
-      const suburb = this.props.suburb;
+      const suburbs = this.props.suburbs;
       const onSuburbCompare = this.props.onSuburbCompare;
+      const isCompare = this.props.isCompare;
       return (
       <div>
-
           <img src={mTerrain} className="IconMain" alt="terrain"/>
-          <Typography align="inherit" inline className="MainText" style={{ fontSize: 40 }} variant="h1" color="inherit">
-            {suburb}
+          <Typography align="left" inline className="MainText" 
+          style={{ fontSize: 36 }} variant="overline" color="inherit">
+            {`${suburbs[0].suburb}, ${suburbs[0].suburb_state}`}
           </Typography>
-          <div className="CompareSearchContainer">
-            <QuickSearch suburb={suburb} isSuburbPage={true} onSelect={onSuburbCompare}/>
-          </div>
+          {!isCompare ? 
+            <div className="CompareSearchContainer">
+              <QuickSearch suburb={suburbs[0].suburb} isSuburbPage={true} onSelect={onSuburbCompare}/>
+            </div>
+            : 
+            <div className="HeadingR">
+              <Typography align="right" className="MainTextR" 
+              style={{ fontSize: 36 }} variant="overline" color="inherit">
+                {`${suburbs[1].suburb}, ${suburbs[1].suburb_state}`}
+              </Typography>
+              <img src={mTerrain} className="IconMain" alt="terrain"/>
+            </div>
+            }
+          
 
           <br></br>
           <Divider variant="fullWidth"/>

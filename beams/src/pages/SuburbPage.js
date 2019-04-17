@@ -9,6 +9,7 @@ import WrapperStats from '../components/wrappers/WrapperStats'
 import WrapperMaps from '../components/wrappers/WrapperMaps'
 import WrapperNews from '../components/wrappers/WrapperNews'
 import QuickSearch from '../components/QuickSearch.js'
+import Schools from '../components/demographics/Schools';
 
 
 class SuburbPage extends React.Component {
@@ -19,12 +20,12 @@ class SuburbPage extends React.Component {
     const COLORS = this.COLORS();
 
     return (
-      <div>
-      <WrapperHeader suburb={suburbs[0].suburb} onSuburbCompare={onSuburbCompare}/>
+      <div className="SingleWholeContainer">
+      <WrapperHeader isCompare={false} suburbs={suburbs} onSuburbCompare={onSuburbCompare}/>
       <Fade in timeout={750}>
       <Grid container spacing={16}
       direction="row"
-      justify="center"
+      justify="flex-start"
       alignItems="flex-start">
 
         <Slide direction="up" in timeout={800}>
@@ -35,8 +36,7 @@ class SuburbPage extends React.Component {
           <WrapperStats suburbs={suburbs} COLORS={COLORS}/>
           <WrapperDG suburbs={suburbs} COLORS={COLORS}/>
           <Grid item className="SchoolsContainer">
-            {/*<Schools suburb_state={suburbs[0].suburb_state} suburb={suburbs[0].suburb}/>
-            <Schools suburb_state={suburbs[1].suburb_state} suburb={suburbs[1].suburb}/>*/}
+            <Schools suburb_state={suburbs[0].suburb_state} suburb={suburbs[0].suburb}/>
           </Grid>
         </Grid>
         </Grid>
@@ -65,15 +65,18 @@ class SuburbPage extends React.Component {
     const COLORS = this.COLORS();
 
     return(
-      <div>
-      <WrapperHeader suburb={suburbs[0].suburb}/>
+      <div className="MultiWholeContainer" >
+      <WrapperHeader isCompare={true} suburbs={suburbs}/>
       <Grow in timeout={750}>
-        <Grid className="CenterContainer" container spacing={16} direction="column" justify="center" alignItems="stretch">
+        <Grid container spacing={16} direction="column" justify="flex-start" alignItems="stretch">
           <Grid item>
             <WrapperStats isCompare={true} suburbs={suburbs} COLORS={COLORS}/>
           </Grid>
           <Grid item>
             <WrapperDG isCompare={true} suburbs={suburbs} COLORS={COLORS}/>
+          </Grid>
+          <Grid item>
+            <Schools suburb_state={suburbs[1].suburb_state} suburb={suburbs[1].suburb}/>
           </Grid>
         </Grid>
       </Grow>
