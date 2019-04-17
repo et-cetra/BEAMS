@@ -60,9 +60,7 @@ class SuburbPage extends React.Component {
       <br></br>
 
       {/* Highlights */}
-      <Typography align="inherit" inline style={{ fontSize: 26 }} variant="h1" color="inherit">
-          <Highlights suburb={this.props.suburb} suburb_state={this.props.suburb_state} key={suburb+suburb_state+'Highlights'}/>
-      </Typography>
+      <Highlights suburb={this.props.suburb} suburb_state={this.props.suburb_state} key={suburb+suburb_state+'Highlights'}/>
       <br></br>
       <Divider variant="fullWidth"></Divider>
       <br></br>
@@ -120,15 +118,15 @@ class SuburbPage extends React.Component {
                 <Tab icon={<HomeIcon/>} label="Property Occupancy" />
                 <Tab icon={<CommuteIcon/>} label="Commute Methods" />
               </Tabs>
-            </Paper>{/*
-            {value === 0 && <AgeGroupOfPop COLORS={COLORS} suburb_state={suburb_state} suburb={suburb} key={suburb+suburb_state+'AgeGroupOfPop'}/>}
+            </Paper>
+            {/*{value === 0 && <AgeGroupOfPop COLORS={COLORS} suburb_state={suburb_state} suburb={suburb} key={suburb+suburb_state+'AgeGroupOfPop'}/>}
             {value === 1 && <CountryOfBirth COLORS={COLORS} suburb_state={suburb_state} suburb={suburb} key={suburb+suburb_state+'CountryOfBirth'}/>}
             {value === 2 && <NatureOfOccupancy COLORS={COLORS} suburb_state={suburb_state} suburb={suburb} key={suburb+suburb_state+'NatureOfOccupancy'}/>}
             {value === 3 && <TransportToWork COLORS={COLORS} suburb_state={suburb_state} suburb={suburb} key={suburb+suburb_state+'TransportToWork'}/>}
             */}</Grid>
 
             <Grid item className="SchoolsContainer">
-              {/*<Schools suburb_state={suburb_state} suburb={suburb} key={suburb+suburb_state+'Schools'}/>*/}
+              <Schools suburb_state={suburb_state} suburb={suburb} key={suburb+suburb_state+'Schools'}/>
             </Grid>
 
           </Grid>

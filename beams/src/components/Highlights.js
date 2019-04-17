@@ -3,10 +3,11 @@ import FamilyFriendly from './highlights/FamilyFriendy';
 import HospitalFriendly from './highlights/HospitalFriendly';
 import CulturallyDiverse from './highlights/CulturallyDiverse';
 import ConvenientTransport from './highlights/ConvenientTransport';
+import PrimaryFriendly from './highlights/PrimaryFriendly';
+import SecondaryFriendly from './highlights/SecondaryFriendly';
 import './Highlights.css'
 
 class Highlights extends React.Component {
-
 
     // If above 0-4 is above 5% give tag 'Family Friendly'
     // If more than 40% of transport is not walking or car give tag 'Convenient Transport'
@@ -16,7 +17,6 @@ class Highlights extends React.Component {
 
     // Main component to hold small highlight components together
 
-
     render() {
         return (
             <div>
@@ -24,7 +24,8 @@ class Highlights extends React.Component {
                 <HospitalFriendly suburb={this.props.suburb} suburb_state={this.props.suburb_state}/>
                 <CulturallyDiverse suburb={this.props.suburb} suburb_state={this.props.suburb_state}/>
                 <ConvenientTransport suburb={this.props.suburb} suburb_state={this.props.suburb_state}/>
-
+                <PrimaryFriendly suburb={this.props.suburb} suburb_state={this.props.suburb_state}/>
+                <SecondaryFriendly suburb={this.props.suburb} suburb_state={this.props.suburb_state}/>
             </div>
         );
     }

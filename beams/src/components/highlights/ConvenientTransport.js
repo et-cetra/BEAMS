@@ -13,12 +13,10 @@ class ConvenientTransport extends React.Component {
         const suburbInfo = await getDemographics(this.props.suburb, this.props.suburb_state, "TransportToWork");
         var commuteArray = suburbInfo.demographics[0].items;
         var arrayLength = commuteArray.length;
-        console.log("car + walking")
         for (var i = 0; i < arrayLength; i++) {
             if (commuteArray[i].label == "Car (driver)" || commuteArray[i].label == "Walked only") {
                 const carAndWalk = commuteArray[i].value;
                 const total = suburbInfo.demographics[0].total;
-                console.log("percentage car + walking", carAndWalk / total);
                 if ((carAndWalk / total) <= 0.4) {
                     return true;
                 } else {

@@ -17,7 +17,6 @@ class CulturallyDiverse extends React.Component {
             if (cobArray[i].label == "Australia") {
                 const aus = cobArray[i].value;
                 const total = suburbInfo.demographics[0].total;
-                console.log("percentage", aus / total);
                 if ((aus / total) <= 0.4) {
                     return true;
                 } else {
