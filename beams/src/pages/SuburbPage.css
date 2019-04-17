@@ -16,7 +16,7 @@
 /* These determine width size; disables scaling */
 .SingleWholeContainer{
   max-width: 1200px;
-  min-width: 1100px;
+  min-width: 1150px;
 }
 
 .MultiWholeContainer{
