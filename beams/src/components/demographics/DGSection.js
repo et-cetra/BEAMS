@@ -33,12 +33,16 @@ class DGSection extends React.Component {
     }
 
     multiPie = (chartData, COLORS, suburbs) => {
-
+      const cxR = "50%";
       return(
-       
+        <div>
+        <div className="CompareDGText">
+            <Chip className="CompareDGTextL" label={suburbs[0].suburb}/>
+            <Chip className="CompareDGTextR" label={suburbs[1].suburb}/>
+        </div>
         <ResponsiveContainer height={400} width="100%">
           <PieChart className="PieChart" onMouseEnter={this.onPieEnter}>
-            <Pie data={chartData} innerRadius="55%" outerRadius="72%" cx="50%" 
+            <Pie data={chartData} innerRadius="55%" outerRadius="72%" cx={cxR} 
             animationBegin={0} animationDuration={50} fill="#8884d8" paddingAngle={4}
             dataKey="value" label={this.renderCustomizedLabel} labelLine={false}
             startAngle={80} endAngle={-80}>
@@ -46,7 +50,7 @@ class DGSection extends React.Component {
                 <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]}/>
             )}
             </Pie>
-            <Pie data={chartData} innerRadius="55%" outerRadius="72%" cx="50%" 
+            <Pie data={chartData} innerRadius="55%" outerRadius="72%" cx={cxR}
               animationBegin={0} animationDuration={50} fill="#8884d8" paddingAngle={4}
               dataKey="value2" label={this.renderCustomizedLabel} labelLine={false}
               startAngle={100} endAngle={260}>
@@ -55,10 +59,11 @@ class DGSection extends React.Component {
               )}
             </Pie>
             <Tooltip/>
-            <Legend align="center" layout="horizontal" formatter={this.getLegend}
+            <Legend cx={20} wrapperStyle={{marginLeft: "4%"}} align="center" layout="horizontal" formatter={this.getLegend}
             verticalAlign="bottom" iconSize={0}/>
           </PieChart>          
         </ResponsiveContainer>
+        </div>
       );
     }
 
@@ -90,7 +95,7 @@ class DGSection extends React.Component {
         return (
           <div className="DGTab">
             <Paper square>
-            <Grid className="DGGridContainer" container spacing={16} direction="row"
+            <Grid className="DGGridContainer" container spacing={12} direction="row"
             justify="center" alignItems="center">
               <Grid item><CircularProgress size={60} color="secondary"/></Grid>
             </Grid>
@@ -117,7 +122,7 @@ class DGSection extends React.Component {
             </Fade>
             <Fade in timeout={600}>
 
-            <Grid className="DGInfoContainer" item xs={0}>
+            <Grid className="DGInfoContainer" item xs={2}>
             <br/><br/>
             info goes here (no css yet)
             </Grid>
