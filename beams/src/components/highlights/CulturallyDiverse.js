@@ -12,17 +12,11 @@ class CulturallyDiverse extends React.Component {
     async isCulturallyDiverse() {
         const suburbInfo = await getDemographics(this.props.suburb, this.props.suburb_state, "CountryOfBirth");
         var cobArray = suburbInfo.demographics[0].items;
-        var arrayLength = cobArray.length;
-        for (var i = 0; i < arrayLength; i++) {
-            if (cobArray[i].label == "Australia") {
-                const aus = cobArray[i].value;
-                const total = suburbInfo.demographics[0].total;
-                if ((aus / total) <= 0.4) {
-                    return true;
-                } else {
-                    return false;
-                }
-            }
+        const total = suburbInfo.demographics[0].total;
+        if ((cobArray[0].value / total) <= 0.4) {
+            return true;
+        } else {
+            return false;
         }
     }
 
