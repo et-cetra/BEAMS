@@ -69,8 +69,8 @@ class StatsSection extends React.Component {
           <YAxis tick={<AxisTickY/>} tickLine={false}/>
           <Tooltip />
           <Legend verticalAlign="bottom" align="center" iconSize={0} formatter={this.getLegend}/>
-          <Line type="monotone" dataKey="Highest" stroke={COLORS[0]} strokeDasharray="3 3"/>
-          <Line type="monotone" dataKey="Median" stroke={COLORS[1]}/>
+          <Line type="monotone" dataKey="Highest" stroke={COLORS[1]} strokeDasharray="3 3"/>
+          <Line type="monotone" dataKey="Median" stroke={COLORS[0]}/>
           <Line type="monotone" dataKey="Lowest" stroke={COLORS[2]} strokeDasharray="3 3"/>
         </LineChart>
         </ResponsiveContainer>

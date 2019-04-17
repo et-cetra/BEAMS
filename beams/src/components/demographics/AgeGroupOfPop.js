@@ -36,18 +36,7 @@ class AgeGroupOfPop extends React.Component {
     const COLORS = this.props.COLORS;
     const isCompare = this.props.isCompare;
 
-    var chartData = [];
-
-    //Dont add if not loaded
-    if(isCompare && contents2[0] != null) {
-      contents.map(content => (content.items.map((item, i) => (
-        chartData.push({name: item.label, value: item.value, value2: contents2[0].items[i].value})
-      ))));
-    } else {
-      contents.map(content => (content.items.map((item) => (
-        chartData.push({name: item.label, value: item.value, value2: null})
-      ))));  
-    }
+    const { chartData, chartData2 } = this.newMethod(isCompare, contents2, contents);
 
     if (error) {
       return <div>Error: {error.message}</div>;
@@ -61,10 +50,21 @@ class AgeGroupOfPop extends React.Component {
       return (
       <div>
           <DGSection isCompare={isCompare} suburbs={this.props.suburbs} 
-            loading={0} COLORS={COLORS} chartData={chartData}/>
+            loading={0} COLORS={COLORS} chartData={chartData} chartData2={chartData2}/>
       </div>
       );
     }
+  }
+
+  newMethod(isCompare, contents2, contents) {
+    var chartData = [];
+    var chartData2 = [];
+    //Dont add if not loaded
+    if (isCompare && contents2[0] != null) {
+      contents2.map(content => (content.items.map((item) => (chartData2.push({ name: item.label, value: item.value })))));
+    }
+    contents.map(content => (content.items.map((item) => (chartData.push({ name: item.label, value: item.value })))));
+    return { chartData, chartData2 };
   }
 }
 
