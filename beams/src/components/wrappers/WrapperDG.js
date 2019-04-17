@@ -32,7 +32,6 @@ class WrapperDG extends React.Component {
       const isCompare = this.props.isCompare;
 
       return (
-        <div>
         <Grid item className="DGContainer" >
           <div className="SubheadingContainer">
             <img src={mDG} className="IconDef" alt="demographics" />
@@ -41,7 +40,6 @@ class WrapperDG extends React.Component {
               Demographics
             </Typography>
           </div>
-
           <Paper square>
             <Tabs value={value} onChange={this.handleChange} centered
               indicatorColor="primary" textColor="primary" variant="fullWidth">
@@ -56,11 +54,6 @@ class WrapperDG extends React.Component {
           {value === 2 && <NatureOfOccupancy COLORS={COLORS} suburbs={suburbs} isCompare={isCompare}/>}
           {value === 3 && <TransportToWork COLORS={COLORS} suburbs={suburbs} isCompare={isCompare}/>}
         </Grid>
-        <Grid item className="SchoolsContainer">
-          <Schools suburb_state={suburbs[0].suburb_state} suburb={suburbs[0].suburb}/>
-          {/*<Schools suburb_state={suburbs[1].suburb_state} suburb={suburbs[1].suburb}/>*/}
-        </Grid>
-        </div>
       );
     }
 }

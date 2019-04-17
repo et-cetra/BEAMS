@@ -34,6 +34,10 @@ class SuburbPage extends React.Component {
         <Grid className="LeftContainer">
           <WrapperStats suburbs={suburbs} COLORS={COLORS}/>
           <WrapperDG suburbs={suburbs} COLORS={COLORS}/>
+          <Grid item className="SchoolsContainer">
+            {/*<Schools suburb_state={suburbs[0].suburb_state} suburb={suburbs[0].suburb}/>
+            <Schools suburb_state={suburbs[1].suburb_state} suburb={suburbs[1].suburb}/>*/}
+          </Grid>
         </Grid>
         </Grid>
         </Slide>
@@ -61,16 +65,19 @@ class SuburbPage extends React.Component {
     const COLORS = this.COLORS();
 
     return(
-    <Grow in timeout={750}>
-      <Grid container spacing={16} direction="column" justify="flex-start" alignItems="stretch">
-        <Grid item>
-          <WrapperStats isCompare={true} suburbs={suburbs} COLORS={COLORS}/>
+      <div>
+      <WrapperHeader suburb={suburbs[0].suburb}/>
+      <Grow in timeout={750}>
+        <Grid className="CenterContainer" container spacing={16} direction="column" justify="center" alignItems="stretch">
+          <Grid item>
+            <WrapperStats isCompare={true} suburbs={suburbs} COLORS={COLORS}/>
+          </Grid>
+          <Grid item>
+            <WrapperDG isCompare={true} suburbs={suburbs} COLORS={COLORS}/>
+          </Grid>
         </Grid>
-        <Grid item>
-          <WrapperDG isCompare={true} suburbs={suburbs} COLORS={COLORS}/>
-        </Grid>
-      </Grid>
-    </Grow>
+      </Grow>
+      </div>
     )
   }
 
