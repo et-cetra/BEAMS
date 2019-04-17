@@ -110,31 +110,15 @@ class SuburbPage extends React.Component {
                 <Tab icon={<FaceIcon/>}label="Cultural Diversity" />
                 <Tab icon={<HomeIcon/>} label="Property Occupancy" />
               </Tabs>
-            </Paper>
+            </Paper>{/*
             {value === 0 && <AgeGroupOfPop COLORS={COLORS} suburb_state={suburb_state} suburb={suburb} key={suburb+suburb_state+'AgeGroupOfPop'}/>}
             {value === 1 && <CountryOfBirth COLORS={COLORS} suburb_state={suburb_state} suburb={suburb} key={suburb+suburb_state+'CountryOfBirth'}/>}
             {value === 2 && <NatureOfOccupancy COLORS={COLORS} suburb_state={suburb_state} suburb={suburb} key={suburb+suburb_state+'NatureOfOccupancy'}/>}
-            </div>
+            */}</div>
 
             <div className="SchoolsContainer">
               <Schools suburb_state={suburb_state} suburb={suburb} key={suburb+suburb_state+'Schools'}/>
             </div>
-            <IconButton onClick={this.handleClick('Data sourced from Domain.com')}><img src={mInfo} className="InfoDef"/></IconButton>
-            <Snackbar
-                key={messageInfo.key}
-                anchorOrigin={{
-                    vertical: 'bottom',
-                    horizontal: 'left',
-                }}
-                open={this.state.open}
-                autoHideDuration={6000}
-                onClose={this.handleClose}
-                onExited={this.handleExited}
-                ContentProps={{
-                    'aria-describedby': 'message-id',
-                }}
-                message={<span id="message-id">{messageInfo.message}</span>}
-            />
           </Grid>
         </Grid>
 
@@ -155,7 +139,7 @@ class SuburbPage extends React.Component {
               <div className="NewsMain">
                 <SuburbNews suburb={suburb}/>
               </div>
-              <IconButton onClick={this.handleClick('Data sourced from ABC News')}><img src={mInfo} className="InfoDef"/></IconButton>
+              <IconButton style={{float: "right"}}onClick={this.handleClick('Data sourced from ABC News, Domain, and Google Maps')}><img src={mInfo} className="InfoDef"/></IconButton>
               <Snackbar
                   key={messageInfo.key}
                   anchorOrigin={{
@@ -163,7 +147,7 @@ class SuburbPage extends React.Component {
                       horizontal: 'left',
                   }}
                   open={this.state.open}
-                  autoHideDuration={6000}
+                  autoHideDuration={3000}
                   onClose={this.handleClose}
                   onExited={this.handleExited}
                   ContentProps={{
