@@ -8,8 +8,7 @@ import WrapperDG from '../components/wrappers/WrapperDG'
 import WrapperStats from '../components/wrappers/WrapperStats'
 import WrapperMaps from '../components/wrappers/WrapperMaps'
 import WrapperNews from '../components/wrappers/WrapperNews'
-import QuickSearch from '../components/QuickSearch.js'
-import Schools from '../components/demographics/Schools';
+import WrapperSchools from '../components/wrappers/WrapperSchools'
 
 
 class SuburbPage extends React.Component {
@@ -36,7 +35,7 @@ class SuburbPage extends React.Component {
           <WrapperStats suburbs={suburbs} COLORS={COLORS}/>
           <WrapperDG suburbs={suburbs} COLORS={COLORS}/>
           <Grid item className="SchoolsContainer">
-            <Schools suburb_state={suburbs[0].suburb_state} suburb={suburbs[0].suburb}/>
+            <WrapperSchools suburbs={suburbs} isCompare={false}/>
           </Grid>
         </Grid>
         </Grid>
@@ -76,7 +75,7 @@ class SuburbPage extends React.Component {
             <WrapperDG isCompare={true} suburbs={suburbs} COLORS={COLORS}/>
           </Grid>
           <Grid item>
-            <Schools suburb_state={suburbs[1].suburb_state} suburb={suburbs[1].suburb}/>
+            <WrapperSchools suburbs={suburbs} isCompare={true}/>
           </Grid>
         </Grid>
       </Grow>

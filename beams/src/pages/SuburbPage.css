@@ -15,11 +15,13 @@
 
 /* These determine width size; disables scaling */
 .SingleWholeContainer{
-  width: 1200px;
+  max-width: 1200px;
+  min-width: 1100px;
 }
 
 .MultiWholeContainer{
-  width: 1000px;
+  max-width: 1000px;
+  min-width: 900px;
 }
 
 /* -- END -- */
@@ -153,4 +155,15 @@
 
 .CompareDGTextR{
   float: right;
+}
+
+.SchoolsListText{
+  vertical-align: 5px;
+}
+
+.SchoolsListChip{
+  position: absolute;
+  right: 0;
+  margin-top: -6px;
+  margin-right: 46px;
 }
