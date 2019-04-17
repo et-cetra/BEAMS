@@ -1,6 +1,8 @@
 import React from 'react';
 import { getDemographics } from '../../utils.js'
 import Chip from '@material-ui/core/Chip';
+import Avatar from '@material-ui/core/Avatar';
+import FaceIcon from '@material-ui/icons/Face';
 
 class CulturallyDiverse extends React.Component {
     state = {
@@ -30,7 +32,7 @@ class CulturallyDiverse extends React.Component {
     render() {
         if (this.state.isCulturallyDiverse) {
             return (
-                <Chip label="Culturally Diverse" className="ChipsHighlight"/>
+                <Chip avatar={<Avatar><FaceIcon/></Avatar>} label="Culturally Diverse" className="ChipsHighlight"/>
             );
         } else {
             return (

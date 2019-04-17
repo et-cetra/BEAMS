@@ -1,6 +1,8 @@
 import React from 'react';
 import { getDemographics } from '../../utils.js'
 import Chip from '@material-ui/core/Chip';
+import Avatar from '@material-ui/core/Avatar';
+import Train from '@material-ui/icons/Train';
 
 class ConvenientTransport extends React.Component {
     state = {
@@ -36,7 +38,7 @@ class ConvenientTransport extends React.Component {
     render() {
         if (this.state.isConvenient) {
             return (
-                <Chip label="Convenient Transport" className="ChipsHighlight"/>
+                <Chip avatar={<Avatar><Train/></Avatar>} label="Convenient Transport" className="ChipsHighlight"/>
             );
         } else {
             return (

@@ -1,6 +1,8 @@
 import React from 'react';
 import { getDemographics } from '../../utils.js'
 import Chip from '@material-ui/core/Chip';
+import Avatar from '@material-ui/core/Avatar';
+import ChildFriendly from '@material-ui/icons/ChildFriendly'
 
 class FamilyFriendly extends React.Component {
     state = {
@@ -36,7 +38,7 @@ class FamilyFriendly extends React.Component {
     render() {
         if (this.state.isFamilyFriendly) {
             return (
-                <Chip label="Family Friendly" className="ChipsHighlight"/>
+                <Chip avatar={<Avatar><ChildFriendly/></Avatar>} label="Family Friendly" className="ChipsHighlight"/>
             );
         } else {
             return (

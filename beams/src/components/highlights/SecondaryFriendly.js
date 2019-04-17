@@ -2,6 +2,8 @@ import React from 'react';
 import { getLocation, getSchools } from '../../utils.js';
 import Chip from '@material-ui/core/Chip';
 import Schools from '../demographics/Schools';
+import Avatar from '@material-ui/core/Avatar';
+import SchoolIcon from '@material-ui/icons/School'
 
 class SecondaryFriendly extends React.Component {
     state = {
@@ -37,7 +39,7 @@ class SecondaryFriendly extends React.Component {
     render() {
         if (this.state.isSecondaryFriendly) {
             return (
-                <Chip label="Secondary Education Friendly" className="ChipsHighlight"/>
+                <Chip avatar={<Avatar><SchoolIcon/></Avatar>} label="Secondary Education Friendly" className="ChipsHighlight"/>
             );
         } else {
             return (
