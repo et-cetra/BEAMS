@@ -8,10 +8,11 @@ class WrapperSchools extends React.Component {
     render() {
       const suburbs = this.props.suburbs;
       const isCompare = this.props.isCompare;
+      const suburb = suburbs[0].suburb;
 
       return (
         <div>
-          <Schools isCompare={isCompare} suburbs={suburbs}/>
+          <Schools isCompare={isCompare} suburbs={suburbs} key={'Schools'+suburb}/>
         </div>
       );
     }

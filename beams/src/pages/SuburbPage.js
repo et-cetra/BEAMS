@@ -90,9 +90,9 @@ class SuburbPage extends React.Component {
     if (suburbs[0].suburb != null) {
       const onSuburbCompare = this.props.onSuburbCompare;
       return (
-        <div className="ParentContainer">        
+        <div className="ParentContainer">
           {/*Single vs Multi Suburb Display*/}
-          {isCompare ? this.getMultiSuburb(suburbs) : this.getSingleSuburb(suburbs, onSuburbCompare)}     
+          {isCompare ? this.getMultiSuburb(suburbs) : this.getSingleSuburb(suburbs, onSuburbCompare)}
         </div>
       );
   } else {
