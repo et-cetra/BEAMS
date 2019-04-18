@@ -22,9 +22,13 @@ class App extends Component {
       route: null,
       reset: false,
     };
+
+    this.onSuburbSelect = this.onSuburbSelect.bind(this);
+
   }
 
   onSuburbSelect = (city) => {
+    console.log("the city is", city);
     var { suburb, suburb_state } = this.parseCity(city);
 
     // Make copy of this.state.suburbs
@@ -40,7 +44,7 @@ class App extends Component {
   onSuburbCompare = (city) => {
     var { suburb, suburb_state } = this.parseCity(city);
     let suburbs = [this.state.suburbs[0], { suburb, suburb_state }];
-    const route = "/suburb/" + this.state.suburbs[0].suburb + "/" + this.state.suburbs[0].suburb_state;
+    const route = "/compare/" + this.state.suburbs[0].suburb + "/" + this.state.suburbs[0].suburb_state + "/" + suburb + "/" + suburb_state;
     this.setState(() => ({ suburbs: suburbs, route: route}));
   }
 
@@ -56,13 +60,18 @@ class App extends Component {
     return { suburb, suburb_state };
   }
 
+  onLinkBack = (suburb, suburb_state) => {
+    const route = "/suburb/" + this.state.suburbs[0].suburb + "/" + this.state.suburbs[0].suburb_state;
+    this.setState(() => ({ suburbs: [{ suburb: suburb, suburb_state: suburb_state }], route: route}));
+  };
+
   render() {
     const redirect = this.state.route;
     console.log("app state", this.state);
 
     return (
      <div>
-      <Framework onSelect={this.onSuburbSelect} onStartOver={this.onStartOver}/>
+      <Framework onSuburbSelect={this.onSuburbSelect} onStartOver={this.onStartOver}/>
       <Grid container className="ContentHolderMain" direction="column" justify="center" alignItems="center">
         <Grid item>
           <BrowserRouter>
@@ -70,7 +79,7 @@ class App extends Component {
             <Route exact path="/" render={() => (redirect && redirect !== "/" ? <Redirect to={redirect} /> :
               <HomePage onSelect={this.onSuburbSelect}/>)} />
             <Route matches path="/suburb" render={() => (redirect && redirect !== "/suburb/" + this.state.suburbs[0].suburb + "/" + this.state.suburbs[0].suburb_state ? <Redirect to={redirect} /> :
-              <CompareController suburbs={this.state.suburbs} onStartOver={this.onStartOver} onSuburbCompare={this.onSuburbCompare}/>)} />
+              <CompareController suburbs={this.state.suburbs} onStartOver={this.onStartOver} onSuburbCompare={this.onSuburbCompare} onSuburbSelect={this.onSuburbSelect}/>)} />
             </Switch>
           </BrowserRouter>
         </Grid>

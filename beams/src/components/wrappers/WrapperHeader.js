@@ -9,11 +9,13 @@ import mTerrain1 from '../../assets/ic_terrain_1.png'
 import mTerrain2 from '../../assets/ic_terrain_2.png'
 
 class WrapperHeader extends React.Component {
+
     render() {
       const suburbs = this.props.suburbs;
       const onSuburbCompare = this.props.onSuburbCompare;
       const isCompare = this.props.isCompare;
       const subOneRoute = "/suburb/" + suburbs[0].suburb + "/" + suburbs[0].suburb_state;
+      const city = suburbs[0].suburb + " " + suburbs[0].suburb_state + " Australia";
       return (
       <div>
           {!isCompare ?
@@ -21,7 +23,7 @@ class WrapperHeader extends React.Component {
             :
             <img src={mTerrain1} className="IconMain" alt="terrain"/>
           }
-          <Link to={subOneRoute} onClick={this.props.onStartOver}><Typography align="left" inline className="MainText"
+          <Link to={subOneRoute} onClick={() => this.props.onSuburbSelect(city)}><Typography align="left" inline className="MainText"
           style={{ fontSize: 34 }} variant="overline" color="inherit">
             {`${suburbs[0].suburb}, ${suburbs[0].suburb_state}`}
           </Typography></Link>
