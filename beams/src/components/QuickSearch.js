@@ -18,7 +18,7 @@ class QuickSearch extends React.Component {
 
     handleSelect = address => {
         console.log('Address:', address);
-        this.props.onSelect(address);
+        this.props.onSuburbSelect(address);
         this.setState({ address: '' })
         geocodeByAddress(address)
             .then(results => getLatLng(results[0]))
@@ -36,7 +36,7 @@ class QuickSearch extends React.Component {
 
     render() {
       const isSuburbPage = this.props.isSuburbPage;
-      var QuickSearch, QuickSearchBox, QuickSearchIcon, AutocompleteCard, 
+      var QuickSearch, QuickSearchBox, QuickSearchIcon, AutocompleteCard,
         SearchResultsQuick, bg1, bg2, textDummy;
 
       if(!isSuburbPage){

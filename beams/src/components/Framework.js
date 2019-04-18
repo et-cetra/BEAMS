@@ -64,7 +64,7 @@ class Framework extends React.Component {
 
           <Grid container direction="row" justify="flex-end"
           alignItems="center" className="LogoContainer">
-            <QuickSearch onSelect={this.props.onSelect}/>
+            <QuickSearch onSuburbSelect={this.props.onSuburbSelect}/>
             <Grid item>
               <img src={mBannerSm} width={160*0.9} height={97*0.9} alt="banner"
               style={{paddingRight: "4px"}}/>
