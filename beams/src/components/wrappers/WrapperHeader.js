@@ -15,7 +15,12 @@ class WrapperHeader extends React.Component {
       const onSuburbCompare = this.props.onSuburbCompare;
       const isCompare = this.props.isCompare;
       const subOneRoute = "/suburb/" + suburbs[0].suburb + "/" + suburbs[0].suburb_state;
-      const city = suburbs[0].suburb + " " + suburbs[0].suburb_state + " Australia";
+      const city = (idx) => suburbs[idx].suburb + " " + suburbs[idx].suburb_state + " Australia";
+      var subTwoRoute = null;
+      if (suburbs.length !== 1) {
+        subTwoRoute = "/suburb/" + suburbs[1].suburb + "/" + suburbs[1].suburb_state;
+      }
+
       return (
       <div>
           {!isCompare ?
@@ -23,20 +28,33 @@ class WrapperHeader extends React.Component {
             :
             <img src={mTerrain1} className="IconMain" alt="terrain"/>
           }
-          <Link to={subOneRoute} onClick={() => this.props.onSuburbSelect(city)}><Typography align="left" inline className="MainText"
-          style={{ fontSize: 34 }} variant="overline" color="inherit">
-            {`${suburbs[0].suburb}, ${suburbs[0].suburb_state}`}
-          </Typography></Link>
+
+          {!isCompare ?
+            <Typography align="left" inline className="MainText"
+              style={{ fontSize: 34 }} variant="overline" color="inherit">
+              {`${suburbs[0].suburb}, ${suburbs[0].suburb_state}`}
+            </Typography>
+            :
+            <Link to={subOneRoute} onClick={() => this.props.onSuburbSelect(city(0))}>
+              <Typography align="left" inline className="MainText"
+                style={{ fontSize: 34 }} variant="overline" color="inherit">
+                {`${suburbs[0].suburb}, ${suburbs[0].suburb_state}`}
+              </Typography>
+            </Link>
+          }
+
           {!isCompare ?
             <div className="CompareSearchContainer">
               <QuickSearch suburb={suburbs[0].suburb} isSuburbPage={true} onSelect={onSuburbCompare}/>
             </div>
             :
             <div className="HeadingR">
-              <Typography align="right" inline className="MainTextR"
-              style={{ fontSize: 34 }} variant="overline" color="inherit">
-                {`${suburbs[1].suburb}, ${suburbs[1].suburb_state}`}
-              </Typography>
+              <Link to={subTwoRoute} onClick={() => this.props.onSuburbSelect(city(1))}>
+                <Typography align="right" inline className="MainTextR"
+                style={{ fontSize: 34 }} variant="overline" color="inherit">
+                  {`${suburbs[1].suburb}, ${suburbs[1].suburb_state}`}
+                </Typography>
+              </Link>
               <img src={mTerrain2} className="IconMainR" alt="terrain"/>
             </div>
             }

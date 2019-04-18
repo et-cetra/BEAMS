@@ -9,6 +9,8 @@ import { Grid } from '@material-ui/core';
 import Framework from './components/Framework';
 import HomePage from "./pages/HomePage"
 import CompareController from './components/CompareController';
+import { Router } from 'react-router';
+import createBrowserHistory from 'history/createBrowserHistory';
 
 // export const BeamsContext = React.createContext({ suburb: null, suburb_state: null });
 
@@ -18,38 +20,35 @@ class App extends Component {
     super(props);
 
     this.state = {
-      suburbs: [{ suburb: null, suburb_state: null }],
-      route: null,
-      reset: false,
+      suburbs: [{ suburb: null, suburb_state: null }]
     };
 
     this.onSuburbSelect = this.onSuburbSelect.bind(this);
 
+    this.history = createBrowserHistory();
   }
 
   onSuburbSelect = (city) => {
-    console.log("the city is", city);
+    console.log(`onSuburbSelect ${city}`);
     var { suburb, suburb_state } = this.parseCity(city);
 
-    // Make copy of this.state.suburbs
-    let suburbs = [...this.state.suburbs];
-    // Change it
-    suburbs[0].suburb = suburb;
-    suburbs[0].suburb_state = suburb_state;
+    let suburbs = [{ suburb: suburb, suburb_state: suburb_state}];
     // Upload it
     const route = "/suburb/" + suburb + "/" + suburb_state;
-    this.setState(() => ({ suburbs: suburbs, route: route}));
+    console.log("The route is", route);
+    this.setState(() => ({ suburbs: suburbs}), () => this.history.push(route));
   };
 
   onSuburbCompare = (city) => {
     var { suburb, suburb_state } = this.parseCity(city);
     let suburbs = [this.state.suburbs[0], { suburb, suburb_state }];
     const route = "/compare/" + this.state.suburbs[0].suburb + "/" + this.state.suburbs[0].suburb_state + "/" + suburb + "/" + suburb_state;
-    this.setState(() => ({ suburbs: suburbs, route: route}));
+    console.log("route on compare is", route);
+    this.setState(() => ({ suburbs: suburbs}), () => this.history.push(route));
   }
 
   onStartOver = () => {
-    this.setState(() => ({ suburbs: [{ suburb: null, suburb_state: null }], route: '/', reset: false }));
+    this.setState(() => ({ suburbs: [{ suburb: null, suburb_state: null }] }), this.history.push("/"));
   };
 
   parseCity(city) {
@@ -60,33 +59,26 @@ class App extends Component {
     return { suburb, suburb_state };
   }
 
-  onLinkBack = (suburb, suburb_state) => {
-    const route = "/suburb/" + this.state.suburbs[0].suburb + "/" + this.state.suburbs[0].suburb_state;
-    this.setState(() => ({ suburbs: [{ suburb: suburb, suburb_state: suburb_state }], route: route}));
-  };
-
   render() {
-    const redirect = this.state.route;
     console.log("app state", this.state);
-
     return (
-     <div>
-      <Framework onSuburbSelect={this.onSuburbSelect} onStartOver={this.onStartOver}/>
-      <Grid container className="ContentHolderMain" direction="column" justify="center" alignItems="center">
-        <Grid item>
-          <BrowserRouter>
-            <Switch>
-            <Route exact path="/" render={() => (redirect && redirect !== "/" ? <Redirect to={redirect} /> :
-              <HomePage onSelect={this.onSuburbSelect}/>)} />
-            <Route matches path="/suburb" render={() => (redirect && redirect !== "/suburb/" + this.state.suburbs[0].suburb + "/" + this.state.suburbs[0].suburb_state ? <Redirect to={redirect} /> :
-              <CompareController suburbs={this.state.suburbs} onStartOver={this.onStartOver} onSuburbCompare={this.onSuburbCompare} onSuburbSelect={this.onSuburbSelect}/>)} />
-            </Switch>
-          </BrowserRouter>
+      <div>
+        <Framework onSuburbSelect={this.onSuburbSelect} onStartOver={this.onStartOver} />
+        <Grid container className="ContentHolderMain" direction="column" justify="center" alignItems="center">
+          <Grid item>
+            <Router history={this.history}>
+              <Switch>
+                <Route exact path="/" render={() => <HomePage onSelect={this.onSuburbSelect} />} />
+                <Route matches path="/suburb" render={() => <CompareController suburbs={this.state.suburbs} onStartOver={this.onStartOver} onSuburbCompare={this.onSuburbCompare} onSuburbSelect={this.onSuburbSelect} />} />
+                <Route matches path="/compare" render={() => <CompareController suburbs={this.state.suburbs} onStartOver={this.onStartOver} onSuburbCompare={this.onSuburbCompare} onSuburbSelect={this.onSuburbSelect} />} />
+              </Switch>
+            </Router>
+          </Grid>
         </Grid>
-      </Grid>
-    </div>
+      </div>
     );
   }
 }
 
 export default App;
+
