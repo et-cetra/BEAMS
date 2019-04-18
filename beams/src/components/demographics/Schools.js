@@ -2,7 +2,7 @@ import React from 'react';
 import '../../App.css';
 import '../../pages/SuburbPage.css';
 import { getLocation, getSchools } from '../../utils.js';
-import { ExpansionPanel, ExpansionPanelSummary, ExpansionPanelDetails, Typography, CircularProgress, Chip } from '@material-ui/core';
+import { ExpansionPanel, ExpansionPanelSummary, ExpansionPanelDetails, Typography, CircularProgress, Chip, Grid } from '@material-ui/core';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import mSchools from '../../assets/ic_schools.png'
 
@@ -69,12 +69,13 @@ class Schools extends React.Component {
 
   getMergedList = (schoolData, schoolData2, suburb, suburb2) => {
     return(
-      <div>
+     <div>
+      <div style={{width: "49%", float: "left"}}>
+      <Chip label={suburb} color="primary" className="SchoolsListChip"/>
       {schoolData.map(
-        (item, i) => (
+        (item) => (
         <ExpansionPanel key={item.id}>
         <ExpansionPanelSummary expandIcon={<ExpandMoreIcon/>}>
-          <Chip label={suburb} color="primary" className="SchoolsListChip"/>
           <Typography className="SchoolsListText" inline>{item.name}</Typography>
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
@@ -85,12 +86,14 @@ class Schools extends React.Component {
           </Typography>
         </ExpansionPanelDetails>                       
         </ExpansionPanel>))}
+      </div>
 
+      <div style={{width: "49%", float: "right"}}>
+      <Chip label={suburb2} color="secondary" className="SchoolsListChip"/>
       {schoolData2.map(
-        (item, i) => (
+        (item) => (
         <ExpansionPanel key={item.id}>
         <ExpansionPanelSummary expandIcon={<ExpandMoreIcon/>}>
-          <Chip label={suburb2} color="secondary" className="SchoolsListChip"/>
           <Typography className="SchoolsListText" inline>{item.name}</Typography>
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
@@ -101,6 +104,7 @@ class Schools extends React.Component {
           </Typography>
         </ExpansionPanelDetails>                       
         </ExpansionPanel>))}
+      </div>
       </div>
     );
   }
