@@ -45,7 +45,7 @@ class WrapperHeader extends React.Component {
 
           {!isCompare ?
             <div className="CompareSearchContainer">
-              <QuickSearch suburb={suburbs[0].suburb} isSuburbPage={true} onSelect={onSuburbCompare}/>
+              <QuickSearch suburb={suburbs[0].suburb} isSuburbPage={true} onSuburbSelect={onSuburbCompare}/>
             </div>
             :
             <div className="HeadingR">
