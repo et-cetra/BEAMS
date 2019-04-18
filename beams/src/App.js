@@ -33,13 +33,15 @@ class App extends Component {
     suburbs[0].suburb = suburb;
     suburbs[0].suburb_state = suburb_state;
     // Upload it
-    this.setState(() => ({ suburbs: suburbs, route: "/suburb"}));
+    const route = "/suburb/" + suburb + "/" + suburb_state;
+    this.setState(() => ({ suburbs: suburbs, route: route}));
   };
 
   onSuburbCompare = (city) => {
     var { suburb, suburb_state } = this.parseCity(city);
     let suburbs = [this.state.suburbs[0], { suburb, suburb_state }];
-    this.setState(() => ({ suburbs: suburbs, route: "/suburb"}));
+    const route = "/suburb/" + this.state.suburbs[0].suburb + "/" + this.state.suburbs[0].suburb_state;
+    this.setState(() => ({ suburbs: suburbs, route: route}));
   }
 
   onStartOver = () => {
@@ -67,7 +69,7 @@ class App extends Component {
             <Switch>
             <Route exact path="/" render={() => (redirect && redirect !== "/" ? <Redirect to={redirect} /> :
               <HomePage onSelect={this.onSuburbSelect}/>)} />
-            <Route exact path="/suburb" render={() => (redirect && redirect !== "/suburb" ? <Redirect to={redirect} /> :
+            <Route matches path="/suburb" render={() => (redirect && redirect !== "/suburb/" + this.state.suburbs[0].suburb + "/" + this.state.suburbs[0].suburb_state ? <Redirect to={redirect} /> :
               <CompareController suburbs={this.state.suburbs} onStartOver={this.onStartOver} onSuburbCompare={this.onSuburbCompare}/>)} />
             </Switch>
           </BrowserRouter>
