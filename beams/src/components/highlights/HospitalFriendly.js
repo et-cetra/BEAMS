@@ -7,11 +7,11 @@ import LocalHospitalSharp from '@material-ui/icons/LocalHospital';
 class HospitalFriendly extends React.Component {
 
     isHospitalFriendly() {
-        var hospitalArray = jsonHospitalResponse.data.hospitals;
-        var arrayLength = hospitalArray.length;
+        const hospitalArray = jsonHospitalResponse.data.hospitals;
+        const arrayLength = hospitalArray.length;
         const suburb = this.props.suburb;
+        let counter = 0;
         for (var i = 0; i < arrayLength; i++) {
-            var counter = 0;
             if (hospitalArray[i].Suburb === suburb) {
                 counter++;
             }
@@ -24,9 +24,10 @@ class HospitalFriendly extends React.Component {
     }
 
     render() {
-        if (this.isHospitalFriendly) {
+        const isHospitalFriendly = this.isHospitalFriendly();
+        if (isHospitalFriendly) {
             return (
-                <Chip avatar={<Avatar><LocalHospitalSharp/></Avatar>} label="Health Care Friendly" 
+                <Chip avatar={<Avatar><LocalHospitalSharp/></Avatar>} label="Health Care Friendly"
                 className="ChipsHighlight" color={this.props.compareColor}/>
             );
         } else {

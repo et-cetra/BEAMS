@@ -68,7 +68,6 @@ export const getSentiment = async (newsArticles) => {
             }
         }
     }
-    console.log("HERE");
-    console.log(scores);
+    // console.log(scores);
     return scores;
 }

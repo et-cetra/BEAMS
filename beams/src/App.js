@@ -56,7 +56,6 @@ class App extends Component {
 
   render() {
     const redirect = this.state.route;
-    console.log("app state", this.state);
 
     return (
      <div>
