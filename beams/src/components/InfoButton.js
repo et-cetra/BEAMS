@@ -1,5 +1,6 @@
 import React from 'react';
 import {IconButton, Snackbar } from '@material-ui/core';
+import '../pages/SuburbPage.css'
 
 import mInfo from '../assets/ic_info.png'
 
@@ -46,25 +47,24 @@ class InfoButton extends React.Component {
 
 
     render() {
-
         return (
-            <div>
-                <IconButton style={{ float: "right" }} onClick={this.handleClick(this.props.message)}><img src={mInfo} className="InfoDef" /></IconButton>
-                <Snackbar
-                    key={this.state.messageInfo.key}
-                    anchorOrigin={{
-                        vertical: 'bottom',
-                        horizontal: 'left',
-                    }}
-                    open={this.state.open}
-                    autoHideDuration={3000}
-                    onClose={this.handleClose}
-                    onExited={this.handleExited}
-                    ContentProps={{
-                        'aria-describedby': 'message-id',
-                    }}
-                    message={<span id="message-id">{this.state.messageInfo.message}</span>}
-                />
+            <div className="InfoPopup">
+              <IconButton onClick={this.handleClick(this.props.message)}><img src={mInfo} className="InfoDef"/></IconButton>
+              <Snackbar
+                  key={this.state.messageInfo.key}
+                  anchorOrigin={{
+                      vertical: 'bottom',
+                      horizontal: 'left',
+                  }}
+                  open={this.state.open}
+                  autoHideDuration={3000}
+                  onClose={this.handleClose}
+                  onExited={this.handleExited}
+                  ContentProps={{
+                      'aria-describedby': 'message-id',
+                  }}
+                  message={<span id="message-id">{this.state.messageInfo.message}</span>}
+              />
             </div>
         );
     }

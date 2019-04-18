@@ -91,9 +91,15 @@
 }
 
 .InfoDef{
-  width: 18px;
-  height: 18px;
-  padding: 4px;
+  width: 25px;
+  height: 25px;
+}
+
+.InfoPopup{
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  padding: 6px;
 }
 
 .SideText{

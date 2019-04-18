@@ -53,6 +53,7 @@ class SuburbPage extends React.Component {
           </Grid>
         </Grid>
         </Grid>
+
         </Slide>
 
       </Grid>
@@ -94,6 +95,7 @@ class SuburbPage extends React.Component {
         <div className="ParentContainer">
           {/*Single vs Multi Suburb Display*/}
           {isCompare ? this.getMultiSuburb(suburbs) : this.getSingleSuburb(suburbs, onSuburbCompare)}
+          <InfoButton message={'Data sourced from ABC News, Domain, and Google Maps'}/>
         </div>
       );
   } else {
