@@ -8,10 +8,6 @@ class DGSection extends React.Component {
       const COLORS = this.props.COLORS;
       const chartData = this.props.chartData;
 
-      const renderTextSize = ({value, entry, index}) => {        
-        return <span style={{ textSize: 10 }}>{value}</span>;
-      };
-
       const renderCustomizedLabel = ({
         cx, cy, midAngle, innerRadius, outerRadius, percent, index,
       }) => {
@@ -20,15 +16,15 @@ class DGSection extends React.Component {
         const radius = innerRadius + (outerRadius - innerRadius) * 1.5;
         const x = cx + radius * Math.cos(-midAngle * RADIAN);
         const y = cy + radius * Math.sin(-midAngle * RADIAN);
-      
+
         return (
-          <text x={x} y={y} fill={COLORS[index % COLORS.length]} 
+          <text x={x} y={y} fill={COLORS[index % COLORS.length]}
           textAnchor={x > cx ? 'start' : 'end'} dominantBaseline="central">
             {`${(percent * 100).toFixed(0)}%`}
           </text>
         );
       };
-      
+
       if(this.props.loading){
         return (
           <div className="DGTab">
@@ -51,9 +47,9 @@ class DGSection extends React.Component {
             <Grid item xs={7}>
 
             <ResponsiveContainer height={350} width="100%">
-            <PieChart className="PieChart" 
+            <PieChart className="PieChart"
             onMouseEnter={this.onPieEnter}>
-                <Pie data={chartData} innerRadius="55%" outerRadius="70%" cx="48%"  
+                <Pie data={chartData} innerRadius="55%" outerRadius="70%" cx="48%"
                 animationBegin={0} animationDuration={50} fill="#8884d8" paddingAngle={4}
                 dataKey="value" label={renderCustomizedLabel} labelLine={false}>
                 {chartData.map((entry, index) =>

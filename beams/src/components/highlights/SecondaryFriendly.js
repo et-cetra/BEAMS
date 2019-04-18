@@ -1,7 +1,6 @@
 import React from 'react';
 import { getLocation, getSchools } from '../../utils.js';
 import Chip from '@material-ui/core/Chip';
-import Schools from '../demographics/Schools';
 import Avatar from '@material-ui/core/Avatar';
 import SchoolIcon from '@material-ui/icons/School'
 

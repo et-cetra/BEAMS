@@ -9,7 +9,7 @@ class CulturallyDiverse extends React.Component {
         isCulturallyDiverse: false
     };
 
-    // If Australians is < 50% give tag 'Culturally Diverse'
+    // If top country of birth is < 50% give tag 'Culturally Diverse'
 
     async isCulturallyDiverse() {
         const suburbInfo = await getDemographics(this.props.suburb, this.props.suburb_state, "CountryOfBirth");

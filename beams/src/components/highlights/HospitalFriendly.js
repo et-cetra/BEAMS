@@ -7,12 +7,13 @@ import LocalHospitalSharp from '@material-ui/icons/LocalHospital';
 class HospitalFriendly extends React.Component {
 
     isHospitalFriendly() {
+        console.log("inside here");
         var hospitalArray = jsonHospitalResponse.data.hospitals;
         var arrayLength = hospitalArray.length;
         const suburb = this.props.suburb;
+        var counter = 0;
         for (var i = 0; i < arrayLength; i++) {
-            var counter = 0;
-            if (hospitalArray[i].Suburb == suburb) {
+            if (hospitalArray[i].Suburb === suburb) {
                 counter++;
             }
         }
