@@ -29,13 +29,10 @@ class App extends Component {
   }
 
   onSuburbSelect = (city) => {
-    console.log(`onSuburbSelect ${city}`);
+    console.log(`The city is ${city}`);
     var { suburb, suburb_state } = this.parseCity(city);
-
     let suburbs = [{ suburb: suburb, suburb_state: suburb_state}];
-    // Upload it
     const route = "/suburb/" + suburb + "/" + suburb_state;
-    console.log("The route is", route);
     this.setState(() => ({ suburbs: suburbs}), () => this.history.push(route));
   };
 
@@ -43,7 +40,6 @@ class App extends Component {
     var { suburb, suburb_state } = this.parseCity(city);
     let suburbs = [this.state.suburbs[0], { suburb, suburb_state }];
     const route = "/compare/" + this.state.suburbs[0].suburb + "/" + this.state.suburbs[0].suburb_state + "/" + suburb + "/" + suburb_state;
-    console.log("route on compare is", route);
     this.setState(() => ({ suburbs: suburbs}), () => this.history.push(route));
   }
 
@@ -60,7 +56,6 @@ class App extends Component {
   }
 
   render() {
-    console.log("app state", this.state);
     return (
       <div>
         <Framework onSuburbSelect={this.onSuburbSelect} onStartOver={this.onStartOver} />

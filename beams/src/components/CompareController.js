@@ -4,7 +4,6 @@ import SuburbPage from "../pages/SuburbPage"
 
 class CompareController extends React.Component {
     render() {
-      console.log("CompareController, render", this.props);
       if (this.props.suburbs.length === 1) {
         return (
           <div>
