@@ -47,7 +47,7 @@ class QuickSearch extends React.Component {
         SearchResultsQuick = "SearchResultsQuick";
         bg1 = '#EE6A15';
         bg2 = '#04091E';
-        textDummy = 'Search for Suburb, Postcode...';
+        textDummy = 'Search for Suburb...';
       } else {
         QuickSearch = "SubQuickSearch";
         QuickSearchBox = "SubQuickSearchBox";
@@ -56,7 +56,7 @@ class QuickSearch extends React.Component {
         SearchResultsQuick = "SubSearchResultsQuick";
         bg1 = '#EE6A15';
         bg2 = '#FFFFFF';
-        textDummy = `Compare ${this.props.suburb} with another suburb...`;
+        textDummy = `Compare ${this.props.suburb} with...`;
       }
 
       return (

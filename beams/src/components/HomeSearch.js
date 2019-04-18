@@ -39,7 +39,7 @@ class HomeSearch extends React.Component {
                 {({ getInputProps, suggestions, getSuggestionItemProps, i }) => (
                 <div>
                 <InputBase {...getInputProps({
-                    placeholder: 'Search for Suburb, Postcode...',
+                    placeholder: 'Search for Suburb...',
                     className: 'HomeSearch',
                   })}/>
                 <Card className="AutocompleteCardHome">
