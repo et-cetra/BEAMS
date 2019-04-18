@@ -9,6 +9,7 @@
     "axios": "^0.18.0",
     "braces": "^2.3.2",
     "britecharts-react": "^0.5.1",
+    "deepai": "^1.0.0",
     "material-ui-search-bar": "^0.4.2",
     "mdi-material-ui": "^5.10.0",
     "node-cache": "^4.2.0",
