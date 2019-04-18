@@ -90,6 +90,12 @@
   height: 48px;
 }
 
+.InfoDef{
+  width: 18px;
+  height: 18px;
+  padding: 4px;
+}
+
 .SideText{
   vertical-align: 15px;
   padding-left: 5px;
@@ -122,6 +128,7 @@
 .MainText{
   vertical-align: 22px;
   padding-left: 14px;
+<<<<<<< HEAD
 }
 
 .MainTextR{
@@ -166,4 +173,7 @@
   right: 0;
   margin-top: -6px;
   margin-right: 46px;
+=======
+  color: #E62927;
+>>>>>>> origin/info-button
 }
