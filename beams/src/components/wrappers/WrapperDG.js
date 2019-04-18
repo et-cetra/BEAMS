@@ -30,6 +30,7 @@ class WrapperDG extends React.Component {
       const suburbs = this.props.suburbs;
       const COLORS = this.props.COLORS;
       const isCompare = this.props.isCompare;
+      const suburb = suburbs[0].suburb;
 
       return (
         <Grid item className="DGContainer" >
@@ -49,10 +50,10 @@ class WrapperDG extends React.Component {
               <Tab icon={<CommuteIcon />} label="Commute Methods" />
             </Tabs>
           </Paper>
-          {value === 0 && <AgeGroupOfPop COLORS={COLORS} suburbs={suburbs} isCompare={isCompare}/>}
-          {value === 1 && <CountryOfBirth COLORS={COLORS} suburbs={suburbs} isCompare={isCompare}/>}
-          {value === 2 && <NatureOfOccupancy COLORS={COLORS} suburbs={suburbs} isCompare={isCompare}/>}
-          {value === 3 && <TransportToWork COLORS={COLORS} suburbs={suburbs} isCompare={isCompare}/>}
+          {value === 0 && <AgeGroupOfPop COLORS={COLORS} suburbs={suburbs} isCompare={isCompare} key={'AgeGroupOfPop'+suburb}/>}
+          {value === 1 && <CountryOfBirth COLORS={COLORS} suburbs={suburbs} isCompare={isCompare} key={'CountryOfBirth'+suburb}/>}
+          {value === 2 && <NatureOfOccupancy COLORS={COLORS} suburbs={suburbs} isCompare={isCompare} key={'NatureOfOccupancy'+suburb}/>}
+          {value === 3 && <TransportToWork COLORS={COLORS} suburbs={suburbs} isCompare={isCompare} key={'TransportToWork'+suburb}/>}
         </Grid>
       );
     }

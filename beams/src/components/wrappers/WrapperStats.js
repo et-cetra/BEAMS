@@ -24,7 +24,8 @@ class WrapperStats extends React.Component {
       const suburbs = this.props.suburbs;
       const COLORS = this.props.COLORS;
       const isCompare = this.props.isCompare;
-        
+      const suburb = suburbs[0].suburb;
+
       return (
         <Grid item className="StatsContainer" >
         <div className="SubheadingContainer">
@@ -36,9 +37,9 @@ class WrapperStats extends React.Component {
         </div>
 
         <Paper>
-          {value === 0 && <MedianRent COLORS={COLORS} isCompare={isCompare} suburbs={suburbs} key={suburbs}/>}
-          {value === 1 && <HouseSoldPrice COLORS={COLORS} isCompare={isCompare} suburbs={suburbs} key={suburbs}/>}
-            
+          {value === 0 && <MedianRent COLORS={COLORS} isCompare={isCompare} suburbs={suburbs} key={'MedianRent'+suburb}/>}
+          {value === 1 && <HouseSoldPrice COLORS={COLORS} isCompare={isCompare} suburbs={suburbs} key={'HouseSoldPrice'+suburb}/>}
+
           <Tabs value={value} onChange={this.handleChange} centered
           indicatorColor="primary" textColor="primary" variant="fullWidth">
             <Tab icon={<HomeCity/>} label="Weekly Rent Prices" />
