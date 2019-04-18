@@ -49,7 +49,7 @@ class InfoButton extends React.Component {
     render() {
         return (
             <div className="InfoPopup">
-              <IconButton onClick={this.handleClick(this.props.message)}><img src={mInfo} className="InfoDef"/></IconButton>
+              <IconButton onClick={this.handleClick(this.props.message)}><img src={mInfo} className="InfoDef" alt="info"/></IconButton>
               <Snackbar
                   key={this.state.messageInfo.key}
                   anchorOrigin={{

@@ -12,7 +12,7 @@ class HospitalFriendly extends React.Component {
         const suburb = this.props.suburb;
         for (var i = 0; i < arrayLength; i++) {
             var counter = 0;
-            if (hospitalArray[i].Suburb == suburb) {
+            if (hospitalArray[i].Suburb === suburb) {
                 counter++;
             }
         }

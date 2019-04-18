@@ -79,12 +79,12 @@ class Transport extends React.Component {
     chartData = chartData.filter(item => item.name !== 'Did not go to work'
       || item.name !== 'Car (Pas.)'
       || item.name !== 'Worked at home');
-    for (var i = 0; i < chartData.length; i++) {
-      if (chartData[i].name === "Car (driver)") {
-        chartData[i].name = "Car";
+    for (var j = 0; j < chartData.length; j++) {
+      if (chartData[j].name === "Car (driver)") {
+        chartData[j].name = "Car";
       }
-      if (chartData[i].name === "Walked only") {
-        chartData[i].name = "Walked";
+      if (chartData[j].name === "Walked only") {
+        chartData[j].name = "Walked";
       }
     }
     chartData = chartData.splice(0, 3);

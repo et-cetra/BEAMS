@@ -59,9 +59,9 @@ export const getSentiment = async (newsArticles) => {
         });
 
         for (let iResp = 0; iResp < resp.output.length; iResp++) {
-            if (resp.output[iResp] == "Positive") {
+            if (resp.output[iResp] === "Positive") {
                 scores[0]++;
-            } else if (resp.output[iResp] = "Neutral") {
+            } else if (resp.output[iResp] === "Neutral") {
                 scores[1]++;
             } else {
                 scores[2]++;

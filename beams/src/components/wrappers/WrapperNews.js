@@ -18,7 +18,7 @@ class WrapperNews extends React.Component {
         Local News
       </Typography>
       <div className="NewsMain">
-        <SuburbNews suburb={suburb} />
+        <SuburbNews suburb={suburb} key={'News'+suburb}/>
       </div>
       </div>
       );

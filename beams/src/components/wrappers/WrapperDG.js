@@ -6,7 +6,6 @@ import AgeGroupOfPop from '../demographics/AgeGroupOfPop'
 import CountryOfBirth from '../demographics/CountryOfBirth';
 import NatureOfOccupancy from '../demographics/NatureOfOccupancy';
 import TransportToWork from '../demographics/TransportToWork';
-import Schools from '../demographics/Schools';
 import { Grid, Typography, Tabs, Tab, Paper } from '@material-ui/core';
 
 import FaceIcon from '@material-ui/icons/Face'

@@ -16,7 +16,7 @@ class FamilyFriendly extends React.Component {
         var agesArray = suburbInfo.demographics[0].items;
         var arrayLength = agesArray.length;
         for (var i = 0; i < arrayLength; i++) {
-            if (agesArray[i].label == "0 to 4") {
+            if (agesArray[i].label === "0 to 4") {
                 const zeroToFour = agesArray[i].value;
                 const total = suburbInfo.demographics[0].total;
                 if ((zeroToFour / total) > 0.05) {

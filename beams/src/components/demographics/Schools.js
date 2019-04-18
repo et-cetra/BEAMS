@@ -2,7 +2,7 @@ import React from 'react';
 import '../../App.css';
 import '../../pages/SuburbPage.css';
 import { getLocation, getSchools } from '../../utils.js';
-import { ExpansionPanel, ExpansionPanelSummary, ExpansionPanelDetails, Typography, CircularProgress, Chip, Grid } from '@material-ui/core';
+import { ExpansionPanel, ExpansionPanelSummary, ExpansionPanelDetails, Typography, CircularProgress, Chip } from '@material-ui/core';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import mSchools from '../../assets/ic_schools.png'
 
