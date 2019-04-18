@@ -7,6 +7,7 @@ import { Grid, Typography, Divider } from '@material-ui/core'
 import mTerrain from '../../assets/ic_terrain.png'
 import mTerrain1 from '../../assets/ic_terrain_1.png'
 import mTerrain2 from '../../assets/ic_terrain_2.png'
+import Highlights from '../Highlights.js'
 
 class WrapperHeader extends React.Component {
     render() {
@@ -38,7 +39,8 @@ class WrapperHeader extends React.Component {
             </div>
             }
           
-
+          <Highlights suburb={suburbs[0].suburb} suburb_state={suburbs[0].suburb_state} 
+            key={suburbs[0].suburb+suburbs[0].suburb_state+'Highlights'}/>
           <br></br>
           <Divider variant="fullWidth"/>
           <br></br>

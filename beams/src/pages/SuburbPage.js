@@ -53,9 +53,7 @@ class SuburbPage extends React.Component {
           </Grid>
         </Grid>
         </Grid>
-
         </Slide>
-
       </Grid>
       </Fade>
       </div>
