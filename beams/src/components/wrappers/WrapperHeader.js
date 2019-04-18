@@ -39,12 +39,28 @@ class WrapperHeader extends React.Component {
             </div>
             }
           
-          <Highlights suburb={suburbs[0].suburb} suburb_state={suburbs[0].suburb_state} 
-            key={suburbs[0].suburb+suburbs[0].suburb_state+'Highlights'}/>
+          <Grid container spacing={24} direction="row" justify="space-around" alignItems="center">
+            <Grid item>
+              <Highlights suburb={suburbs[0].suburb} suburb_state={suburbs[0].suburb_state} 
+                key={suburbs[0].suburb+suburbs[0].suburb_state+'Highlights'}/>
+            </Grid>
+            
+            <Grid item>
+              {/* Radar chart? */}
+            </Grid>
+
+            {isCompare && 
+              <Grid item>
+                <Highlights suburb={suburbs[1].suburb} suburb_state={suburbs[1].suburb_state} 
+                key={suburbs[1].suburb+suburbs[1].suburb_state+'Highlights'} isCompare={true}/>
+              </Grid>
+            }
+
+          </Grid>
+
           <br></br>
           <Divider variant="fullWidth"/>
           <br></br>
-        
       </div>
       );
     }
