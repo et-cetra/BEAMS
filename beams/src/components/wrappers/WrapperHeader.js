@@ -14,6 +14,8 @@ class WrapperHeader extends React.Component {
       const suburbs = this.props.suburbs;
       const onSuburbCompare = this.props.onSuburbCompare;
       const isCompare = this.props.isCompare;
+      var compareColorSet = "default";
+      if (isCompare) compareColorSet = "primary";
       return (
       <div>
           {!isCompare ? 
@@ -39,10 +41,10 @@ class WrapperHeader extends React.Component {
             </div>
             }
           
-          <Grid container spacing={24} direction="row" justify="space-around" alignItems="center">
+          <Grid container spacing={24} direction="row" justify="space-between" alignItems="center">
             <Grid item>
               <Highlights suburb={suburbs[0].suburb} suburb_state={suburbs[0].suburb_state} 
-                key={suburbs[0].suburb+suburbs[0].suburb_state+'Highlights'}/>
+                key={suburbs[0].suburb+suburbs[0].suburb_state+'Highlights'} compareColor={compareColorSet}/>
             </Grid>
             
             <Grid item>
@@ -52,7 +54,7 @@ class WrapperHeader extends React.Component {
             {isCompare && 
               <Grid item>
                 <Highlights suburb={suburbs[1].suburb} suburb_state={suburbs[1].suburb_state} 
-                key={suburbs[1].suburb+suburbs[1].suburb_state+'Highlights'} isCompare={true}/>
+                key={suburbs[1].suburb+suburbs[1].suburb_state+'Highlights'} compareColor="secondary"/>
               </Grid>
             }
 

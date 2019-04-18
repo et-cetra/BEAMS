@@ -21,28 +21,30 @@ class Highlights extends React.Component {
   render() {
     const suburb = this.props.suburb;
     const suburb_state = this.props.suburb_state;
+    const compareColor = this.props.compareColor;
     var align = "flex-start";
-    if(this.props.isCompare) align = "flex-end";
+    //Align to right for compare side 2
+    if(compareColor === "secondary") align = "flex-end";
 
     return (
       <Grid container direction="column" alignItems={align}>
         <Grid item>
-          <FamilyFriendly suburb={suburb} suburb_state={suburb_state}/>
+          <FamilyFriendly compareColor={compareColor} suburb={suburb} suburb_state={suburb_state}/>
         </Grid>
         <Grid item>
-          <HospitalFriendly suburb={suburb} suburb_state={suburb_state}/>
+          <HospitalFriendly compareColor={compareColor} suburb={suburb} suburb_state={suburb_state}/>
         </Grid>
         <Grid item>
-          <CulturallyDiverse suburb={suburb} suburb_state={suburb_state}/>
+          <CulturallyDiverse compareColor={compareColor} suburb={suburb} suburb_state={suburb_state}/>
         </Grid>
         <Grid item>
-          <ConvenientTransport suburb={suburb} suburb_state={suburb_state}/>
+          <ConvenientTransport compareColor={compareColor} suburb={suburb} suburb_state={suburb_state}/>
         </Grid>
         <Grid item>
-          <PrimaryFriendly suburb={suburb} suburb_state={suburb_state}/>
+          <PrimaryFriendly compareColor={compareColor} suburb={suburb} suburb_state={suburb_state}/>
         </Grid>
         <Grid item>
-          <SecondaryFriendly suburb={suburb} suburb_state={suburb_state}/>
+          <SecondaryFriendly compareColor={compareColor} suburb={suburb} suburb_state={suburb_state}/>
         </Grid>
       </Grid>
     );

@@ -36,7 +36,8 @@ class ConvenientTransport extends React.Component {
     render() {
         if (this.state.isConvenient) {
             return (
-                <Chip avatar={<Avatar><Train/></Avatar>} label="Convenient Transport" className="ChipsHighlight"/>
+                <Chip avatar={<Avatar><Train/></Avatar>} label="Convenient Transport" 
+                className="ChipsHighlight" color={this.props.compareColor}/>
             );
         } else {
             return (

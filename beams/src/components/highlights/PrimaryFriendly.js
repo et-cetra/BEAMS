@@ -40,7 +40,8 @@ class PrimaryFriendly extends React.Component {
     render() {
         if (this.state.isPrimaryFriendly) {
             return (
-                <Chip avatar={<Avatar><SchoolIcon/></Avatar>} label="Primary Education Friendly" className="ChipsHighlight"/>
+                <Chip avatar={<Avatar><SchoolIcon/></Avatar>} label="Primary Education Friendly" 
+                className="ChipsHighlight" color={this.props.compareColor}/>
             );
         } else {
             return (

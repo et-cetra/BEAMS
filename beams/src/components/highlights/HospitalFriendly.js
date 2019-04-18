@@ -26,7 +26,8 @@ class HospitalFriendly extends React.Component {
     render() {
         if (this.isHospitalFriendly) {
             return (
-                <Chip avatar={<Avatar><LocalHospitalSharp/></Avatar>} label="Health Care Friendly" className="ChipsHighlight"/>
+                <Chip avatar={<Avatar><LocalHospitalSharp/></Avatar>} label="Health Care Friendly" 
+                className="ChipsHighlight" color={this.props.compareColor}/>
             );
         } else {
             return (

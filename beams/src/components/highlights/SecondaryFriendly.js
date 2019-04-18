@@ -39,7 +39,8 @@ class SecondaryFriendly extends React.Component {
     render() {
         if (this.state.isSecondaryFriendly) {
             return (
-                <Chip avatar={<Avatar><SchoolIcon/></Avatar>} label="Secondary Education Friendly" className="ChipsHighlight"/>
+                <Chip avatar={<Avatar><SchoolIcon/></Avatar>} label="Secondary Education Friendly" 
+                className="ChipsHighlight" color={this.props.compareColor}/>
             );
         } else {
             return (
