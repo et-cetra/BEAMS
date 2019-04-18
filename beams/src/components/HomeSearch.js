@@ -39,15 +39,15 @@ class HomeSearch extends React.Component {
                 {({ getInputProps, suggestions, getSuggestionItemProps, i }) => (
                 <div>
                 <InputBase {...getInputProps({
-                    placeholder: 'Search for Suburb, Postcode...',
+                    placeholder: 'Search for Suburb...',
                     className: 'HomeSearch',
                   })}/>
                 <Card className="AutocompleteCardHome">
                     {suggestions.map(suggestion => {
                     const className = suggestion.active ? 'suggestion-item--active' : 'suggestion-item';
-                    const style = suggestion.active ? 
+                    const style = suggestion.active ?
                     { backgroundColor: '#fca064', cursor: 'pointer' } : { backgroundColor: '#FFFFFF', cursor: 'pointer' };
-                    
+
                     return (
                     <div key={suggestion.id}>
                         <ListItem className="SearchResultsHome" {...getSuggestionItemProps(suggestion, { className, style })}>
@@ -57,7 +57,7 @@ class HomeSearch extends React.Component {
                     </div>
                     );
                 })}
-                </Card>                  
+                </Card>
                 </div>
             )}</PlacesAutocomplete>
         </Grid>
