@@ -8,6 +8,7 @@ import mTerrain from '../../assets/ic_terrain.png'
 import mTerrain1 from '../../assets/ic_terrain_1.png'
 import mTerrain2 from '../../assets/ic_terrain_2.png'
 import Highlights from '../Highlights.js'
+import RadarSection from '../highlights/RadarSection';
 
 class WrapperHeader extends React.Component {
     render() {
@@ -41,14 +42,14 @@ class WrapperHeader extends React.Component {
             </div>
             }
           
-          <Grid container spacing={24} direction="row" justify="space-between" alignItems="center">
+          <Grid container spacing={24} direction="row" justify="space-around" alignItems="center">
             <Grid item>
               <Highlights suburb={suburbs[0].suburb} suburb_state={suburbs[0].suburb_state} 
                 key={suburbs[0].suburb+suburbs[0].suburb_state+'Highlights'} compareColor={compareColorSet}/>
             </Grid>
             
             <Grid item>
-              {/* Radar chart? */}
+              <RadarSection suburbs={suburbs} COLORS={this.props.COLORS}/>
             </Grid>
 
             {isCompare && 

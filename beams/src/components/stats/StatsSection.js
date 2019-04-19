@@ -153,9 +153,13 @@ class StatsSection extends React.Component {
             </Grid>
             </Fade>
             <Fade in timeout={600}>
-            <Grid className="StatsInfoContainer">
-            info goes here (no css yet)
-            </Grid>
+            {!isCompare ?
+              <Grid className="StatsInfoContainer">
+              info goes here (no css yet)
+              </Grid>
+              :
+              <Grid/>
+            }
             </Fade>
             </Grid>
           </div>

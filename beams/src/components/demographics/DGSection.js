@@ -84,24 +84,6 @@ class DGSection extends React.Component {
                 verticalAlign="bottom" iconSize={0}/>
               </PieChart>          
             </ResponsiveContainer>
-
-            {/* <Grid item xs={0}>
-            <ResponsiveContainer height={375} width="100%">
-              <PieChart className="PieChart" onMouseEnter={this.onPieEnter}>
-                <Pie data={chartData2} innerRadius="55%" outerRadius="72%" cx="50%"
-                isAnimationActive={false} fill="#8884d8" paddingAngle={4}
-                dataKey="value" label={this.renderCustomizedLabel} labelLine={false}
-                startAngle={180} endAngle={-180}>
-                {chartData2.map((_entry, index) =>
-                    <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]}/>
-                )}
-                </Pie>
-                <Tooltip/>
-                <Legend align="center" layout="horizontal" formatter={this.getLegend2}
-                verticalAlign="bottom" iconSize={0}/>
-              </PieChart>          
-            </ResponsiveContainer> 
-            </Grid>*/}
         </div>
       );
     }

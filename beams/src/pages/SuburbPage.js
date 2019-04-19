@@ -21,7 +21,7 @@ class SuburbPage extends React.Component {
 
     return (
       <div className="SingleWholeContainer">
-      <WrapperHeader isCompare={false} suburbs={suburbs} onSuburbCompare={onSuburbCompare}/>
+      <WrapperHeader isCompare={false} suburbs={suburbs} onSuburbCompare={onSuburbCompare} COLORS={COLORS}/>
       <Fade in timeout={750}>
       <Grid container spacing={16}
       direction="row"
@@ -65,7 +65,7 @@ class SuburbPage extends React.Component {
 
     return(
       <div className="MultiWholeContainer" >
-      <WrapperHeader isCompare={true} suburbs={suburbs}/>
+      <WrapperHeader isCompare={true} suburbs={suburbs} COLORS={COLORS}/>
       <Grow in timeout={750}>
         <Grid container spacing={16} direction="column" justify="flex-start" alignItems="stretch">
           <Grid item>
