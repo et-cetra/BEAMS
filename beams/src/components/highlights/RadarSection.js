@@ -47,7 +47,7 @@ class RadarSection extends React.Component {
 
     const COLORS = this.props.COLORS;
     return(
-      <RadarChart outerRadius="75%" width={400} height={350} data={radarData}>
+      <RadarChart outerRadius="75%" width={380} height={350} data={radarData}>
         <PolarGrid/>
         <PolarAngleAxis dataKey="category"/>
         <Radar dataKey="value" stroke={COLORS[0]} fill={COLORS[0]} fillOpacity={0.7}/>

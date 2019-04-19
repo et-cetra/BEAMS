@@ -2,7 +2,7 @@ import React from 'react';
 // import { jsonSchoolResponse } from '../../data/SchoolsData';
 import Chip from '@material-ui/core/Chip';
 import Avatar from '@material-ui/core/Avatar';
-import SchoolIcon from '@material-ui/icons/School'
+import GradeIcon from '@material-ui/icons/Grade'
 import { getSchoolRating } from '../../utils.js'
 
 class SchoolFriendly extends React.Component {
@@ -12,7 +12,7 @@ class SchoolFriendly extends React.Component {
         console.log("School rating", schoolRating);
         if (schoolRating >= 1000) {
             return (
-                <Chip avatar={<Avatar><SchoolIcon/></Avatar>} label="Education Friendly"
+                <Chip avatar={<Avatar><GradeIcon/></Avatar>} label="Advantaged Education"
                 className="ChipsHighlight" color={this.props.compareColor}/>
             );
         } else {

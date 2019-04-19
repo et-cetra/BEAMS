@@ -41,8 +41,9 @@ class WrapperHeader extends React.Component {
               {`${suburbs[0].suburb}, ${suburbs[0].suburb_state}`}
             </Typography>
             :
-            <Link to={subOneRoute} onClick={() => this.props.onSuburbSelect(city(0))}>
-              <Typography align="left" inline className="MainText"
+            <Link style={{cursor: "pointer"}} color="textPrimary" underline="none" 
+              to={subOneRoute} onClick={() => this.props.onSuburbSelect(city(0))}>
+              <Typography align="left" inline className="MainText" 
                 style={{ fontSize: 34 }} variant="overline" color="inherit">
                 {`${suburbs[0].suburb}, ${suburbs[0].suburb_state}`}
               </Typography>
@@ -55,9 +56,10 @@ class WrapperHeader extends React.Component {
             </div>
             :
             <div className="HeadingR">
-              <Link to={subTwoRoute} onClick={() => this.props.onSuburbSelect(city(1))}>
-                <Typography align="right" inline className="MainTextR"
-                style={{ fontSize: 34 }} variant="overline" color="inherit">
+              <Link style={{cursor: "pointer"}} color="textPrimary" underline="none" 
+                to={subTwoRoute} onClick={() => this.props.onSuburbSelect(city(1))}>
+                <Typography align="right" inline className="MainTextR" 
+                  style={{ fontSize: 34 }} variant="overline" color="inherit">
                   {`${suburbs[1].suburb}, ${suburbs[1].suburb_state}`}
                 </Typography>
               </Link>
@@ -65,7 +67,7 @@ class WrapperHeader extends React.Component {
             </div>
             }
           
-          <Grid container spacing={16} direction="row" justify="center" alignItems="center">
+          <Grid container spacing={8} direction="row" justify="center" alignItems="center">
             <Grid item>
               <Highlights suburb={suburbs[0].suburb} suburb_state={suburbs[0].suburb_state} 
                 key={suburbs[0].suburb+suburbs[0].suburb_state+'Highlights'} compareColor={compareColorSet}/>

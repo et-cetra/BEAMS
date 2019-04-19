@@ -49,7 +49,8 @@ class Framework extends React.Component {
 
           <Grid item className="HeadingBox">
             {/* This text is invisible, but is used as a mask to go back to home */}
-            <Link to="/" onClick={this.props.onStartOver}> <Typography style={{ fontSize: 30, color: 'white'}}
+            <Link to="/" onClick={this.props.onStartOver}> 
+            <Typography style={{ fontSize: 30, color: 'white'}}
             className="HeadingMain" variant="h1" noWrap> BEAMS </Typography></Link>
 
             <Typography style={{ fontSize: 30, color: 'white'}}
