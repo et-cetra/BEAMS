@@ -1,5 +1,5 @@
 import React from 'react';
-import { getStats, getDemographics, getSchools } from '../../utils.js'
+import { getStats, getDemographics, getSchoolRating} from '../../utils.js'
 import { RadarChart, PolarGrid, PolarAngleAxis, Radar } from 'recharts';
 
 class RadarSection extends React.Component {
@@ -8,42 +8,41 @@ class RadarSection extends React.Component {
     super(props);
     this.state = {
         isLoaded: false,
-        allData: []
+        priceRating: 0,
+        educationRating: 0,
+        seRating: 0,
     };
   } 
 
-  normalizeData() {
-
+  normalizeData(data, highest, lowest) {
+      return (((data - lowest) * 100.0 / (highest - lowest)) / 10.0);
   }
 
   async componentDidMount() {
-    const allStats = await getStats(this.props.suburbs[0].suburb, this.props.suburbs[0].suburb_state);
+    const suburbs = this.props.suburbs;
+
+    const statData = await getStats(suburbs[0].suburb, suburbs[0].suburb_state);
+    const educationData = await getSchoolRating(suburbs[0].suburb, suburbs[0].suburb_state);
+    const seRating = await getDemographics(suburbs[0].suburb, suburbs[0].suburb_state, "-------HOUSING DATA");
+
+    const priceRating = this.normalizeData(statData.series.seriesInfo[7].values.medianSoldPrice, 850000 * 1.5, 850000 / 1.5);
+    const educationRating = this.normalizeData(educationData, 1300, 100);
     
     this.setState({
-      allData: allStats.series.seriesInfo
+      priceRating: priceRating,
+      educationRating: educationRating,
     })
   }
 
   render() {
-    const allData = this.state.allData;
+    const { priceRating, educationRating } = this.state;
 
-    const avSoldPriceSub = 840000;
-    const avEducation = 5;
-
-    var soldPriceAv = 0;
-      (allData[7] != undefined) && (soldPriceAv = avSoldPriceSub - allData[7].values.medianSoldPrice);
-
-    console.log(soldPriceAv);
-
+    console.log("hi", educationRating);
     const radarData = [
-      {
-        category: 'Pricing', value: soldPriceAv, total: avSoldPriceSub,
-      },
-      {
-        category: 'Education', value: soldPriceAv, total: avEducation,
-      },
+      {category: 'Affordability', value: priceRating, total: 10},
+      {category: 'Education Quality', value: educationRating, total: 10},
+      {category: 'Socioeconomic Status', value: 0, total: 10},
     ];
-
 
     const COLORS = this.props.COLORS;
     return(
