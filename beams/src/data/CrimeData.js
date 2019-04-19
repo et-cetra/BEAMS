@@ -1,3 +1,6 @@
+// NSW and VIC and SA
+// NEED TO ADD SUBURB STATE
+
 export const jsonNSWCrimeResponse = {
     "data": {
         "crimes": [
@@ -17465,7 +17468,15769 @@ export const jsonNSWCrimeResponse = {
                 {
                     "suburb": "Tennyson",
                     "numCrimes": 9
+                },
+                {
+                    "suburb": "corunnun",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "mount scobie",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "victoria valley",
+                    "numCrimes": 11
+                },
+                {
+                    "suburb": "perry bridge",
+                    "numCrimes": 17
+                },
+                {
+                    "suburb": "inverloch",
+                    "numCrimes": 1394
+                },
+                {
+                    "suburb": "lauriston",
+                    "numCrimes": 21
+                },
+                {
+                    "suburb": "goorambat",
+                    "numCrimes": 34
+                },
+                {
+                    "suburb": "mount rowan",
+                    "numCrimes": 44
+                },
+                {
+                    "suburb": "wulgulmerang",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "kaniva",
+                    "numCrimes": 188
+                },
+                {
+                    "suburb": "lemnos",
+                    "numCrimes": 43
+                },
+                {
+                    "suburb": "gooram",
+                    "numCrimes": 17
+                },
+                {
+                    "suburb": "cobbannah",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "calder park",
+                    "numCrimes": 197
+                },
+                {
+                    "suburb": "whorouly south",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "bannerton",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "delacombe",
+                    "numCrimes": 2562
+                },
+                {
+                    "suburb": "meadow creek",
+                    "numCrimes": 25
+                },
+                {
+                    "suburb": "howes creek",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "ballendella",
+                    "numCrimes": 15
+                },
+                {
+                    "suburb": "taylors lakes",
+                    "numCrimes": 6726
+                },
+                {
+                    "suburb": "eltham north",
+                    "numCrimes": 694
+                },
+                {
+                    "suburb": "leitchville",
+                    "numCrimes": 138
+                },
+                {
+                    "suburb": "tatong",
+                    "numCrimes": 35
+                },
+                {
+                    "suburb": "lurg",
+                    "numCrimes": 7
+                },
+                {
+                    "suburb": "jam jerrup",
+                    "numCrimes": 17
+                },
+                {
+                    "suburb": "korobeit",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "combienbar",
+                    "numCrimes": 22
+                },
+                {
+                    "suburb": "lake rowan",
+                    "numCrimes": 19
+                },
+                {
+                    "suburb": "mount alfred",
+                    "numCrimes": 18
+                },
+                {
+                    "suburb": "colignan",
+                    "numCrimes": 87
+                },
+                {
+                    "suburb": "krowera",
+                    "numCrimes": 23
+                },
+                {
+                    "suburb": "lower plenty",
+                    "numCrimes": 742
+                },
+                {
+                    "suburb": "moolort",
+                    "numCrimes": 11
+                },
+                {
+                    "suburb": "heathmere",
+                    "numCrimes": 43
+                },
+                {
+                    "suburb": "chelsea heights",
+                    "numCrimes": 1601
+                },
+                {
+                    "suburb": "peronne",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "jindivick",
+                    "numCrimes": 81
+                },
+                {
+                    "suburb": "nug nug",
+                    "numCrimes": 12
+                },
+                {
+                    "suburb": "youarang",
+                    "numCrimes": 7
+                },
+                {
+                    "suburb": "gringegalgona",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "trentham",
+                    "numCrimes": 199
+                },
+                {
+                    "suburb": "bookaar",
+                    "numCrimes": 30
+                },
+                {
+                    "suburb": "lake bunga",
+                    "numCrimes": 22
+                },
+                {
+                    "suburb": "hesse",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "browns plains",
+                    "numCrimes": 10
+                },
+                {
+                    "suburb": "simson",
+                    "numCrimes": 13
+                },
+                {
+                    "suburb": "williams landing",
+                    "numCrimes": 1402
+                },
+                {
+                    "suburb": "dookie",
+                    "numCrimes": 92
+                },
+                {
+                    "suburb": "point henry",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "peechelba",
+                    "numCrimes": 30
+                },
+                {
+                    "suburb": "lower moira",
+                    "numCrimes": 9
+                },
+                {
+                    "suburb": "burramine",
+                    "numCrimes": 31
+                },
+                {
+                    "suburb": "albanvale",
+                    "numCrimes": 1187
+                },
+                {
+                    "suburb": "vervale",
+                    "numCrimes": 17
+                },
+                {
+                    "suburb": "chepstowe",
+                    "numCrimes": 12
+                },
+                {
+                    "suburb": "childers",
+                    "numCrimes": 25
+                },
+                {
+                    "suburb": "galah",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "eagle point",
+                    "numCrimes": 132
+                },
+                {
+                    "suburb": "goyura",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "minto",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "kenley",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "mount doran",
+                    "numCrimes": 12
+                },
+                {
+                    "suburb": "inglewood",
+                    "numCrimes": 233
+                },
+                {
+                    "suburb": "neerim east",
+                    "numCrimes": 68
+                },
+                {
+                    "suburb": "pentland hills",
+                    "numCrimes": 59
+                },
+                {
+                    "suburb": "barjarg",
+                    "numCrimes": 24
+                },
+                {
+                    "suburb": "millgrove",
+                    "numCrimes": 411
+                },
+                {
+                    "suburb": "caringal",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "bruarong",
+                    "numCrimes": 9
+                },
+                {
+                    "suburb": "spotswood",
+                    "numCrimes": 1389
+                },
+                {
+                    "suburb": "mount best",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "kelvin view",
+                    "numCrimes": 10
+                },
+                {
+                    "suburb": "torrita",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "lancefield",
+                    "numCrimes": 451
+                },
+                {
+                    "suburb": "wallagaraugh",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "dobie",
+                    "numCrimes": 39
+                },
+                {
+                    "suburb": "johnsonville",
+                    "numCrimes": 44
+                },
+                {
+                    "suburb": "laceby",
+                    "numCrimes": 14
+                },
+                {
+                    "suburb": "spargo creek",
+                    "numCrimes": 9
+                },
+                {
+                    "suburb": "byaduk north",
+                    "numCrimes": 8
+                },
+                {
+                    "suburb": "tooan",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "gobur",
+                    "numCrimes": 12
+                },
+                {
+                    "suburb": "wal wal",
+                    "numCrimes": 7
+                },
+                {
+                    "suburb": "glenlofty",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "walmer",
+                    "numCrimes": 36
+                },
+                {
+                    "suburb": "summerfield",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "pirron yallock",
+                    "numCrimes": 30
+                },
+                {
+                    "suburb": "buckley",
+                    "numCrimes": 20
+                },
+                {
+                    "suburb": "yalca",
+                    "numCrimes": 41
+                },
+                {
+                    "suburb": "picola",
+                    "numCrimes": 71
+                },
+                {
+                    "suburb": "drysdale",
+                    "numCrimes": 966
+                },
+                {
+                    "suburb": "dingley village",
+                    "numCrimes": 1897
+                },
+                {
+                    "suburb": "nullawil",
+                    "numCrimes": 8
+                },
+                {
+                    "suburb": "barkstead",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "cabarita",
+                    "numCrimes": 49
+                },
+                {
+                    "suburb": "howqua hills",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "amherst",
+                    "numCrimes": 18
+                },
+                {
+                    "suburb": "cathcart",
+                    "numCrimes": 17
+                },
+                {
+                    "suburb": "rokeby",
+                    "numCrimes": 20
+                },
+                {
+                    "suburb": "noorinbee north",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "drummartin",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "kyvalley",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "granite flat",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "gisborne",
+                    "numCrimes": 2088
+                },
+                {
+                    "suburb": "wonnangatta",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "darnum",
+                    "numCrimes": 144
+                },
+                {
+                    "suburb": "willung",
+                    "numCrimes": 16
+                },
+                {
+                    "suburb": "cassilis",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "musk",
+                    "numCrimes": 20
+                },
+                {
+                    "suburb": "moonee ponds",
+                    "numCrimes": 7638
+                },
+                {
+                    "suburb": "melton south",
+                    "numCrimes": 5685
+                },
+                {
+                    "suburb": "goongerah",
+                    "numCrimes": 12
+                },
+                {
+                    "suburb": "byrneside",
+                    "numCrimes": 31
+                },
+                {
+                    "suburb": "merricks north",
+                    "numCrimes": 46
+                },
+                {
+                    "suburb": "katunga",
+                    "numCrimes": 126
+                },
+                {
+                    "suburb": "gladysdale",
+                    "numCrimes": 40
+                },
+                {
+                    "suburb": "viewbank",
+                    "numCrimes": 878
+                },
+                {
+                    "suburb": "maffra",
+                    "numCrimes": 1935
+                },
+                {
+                    "suburb": "orbost",
+                    "numCrimes": 1326
+                },
+                {
+                    "suburb": "wye river",
+                    "numCrimes": 31
+                },
+                {
+                    "suburb": "warragul",
+                    "numCrimes": 6718
+                },
+                {
+                    "suburb": "burnside",
+                    "numCrimes": 1340
+                },
+                {
+                    "suburb": "kilcunda",
+                    "numCrimes": 102
+                },
+                {
+                    "suburb": "callignee",
+                    "numCrimes": 50
+                },
+                {
+                    "suburb": "murchison",
+                    "numCrimes": 397
+                },
+                {
+                    "suburb": "barunah plains",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "wangaratta",
+                    "numCrimes": 10902
+                },
+                {
+                    "suburb": "areegra",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "lismore",
+                    "numCrimes": 136
+                },
+                {
+                    "suburb": "bobinawarrah",
+                    "numCrimes": 12
+                },
+                {
+                    "suburb": "tremont",
+                    "numCrimes": 54
+                },
+                {
+                    "suburb": "pykes creek weir",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "panton hill",
+                    "numCrimes": 148
+                },
+                {
+                    "suburb": "kingsbury",
+                    "numCrimes": 1348
+                },
+                {
+                    "suburb": "merbein south",
+                    "numCrimes": 49
+                },
+                {
+                    "suburb": "thurla",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "ullswater",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "strathbogie",
+                    "numCrimes": 40
+                },
+                {
+                    "suburb": "alphington",
+                    "numCrimes": 1357
+                },
+                {
+                    "suburb": "mallacoota",
+                    "numCrimes": 344
+                },
+                {
+                    "suburb": "charlton",
+                    "numCrimes": 267
+                },
+                {
+                    "suburb": "narre warren east",
+                    "numCrimes": 88
+                },
+                {
+                    "suburb": "jallukar",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "brookville",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "welshpool",
+                    "numCrimes": 69
+                },
+                {
+                    "suburb": "bael bael",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "timbarra",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "eltham",
+                    "numCrimes": 5027
+                },
+                {
+                    "suburb": "colac colac",
+                    "numCrimes": 7
+                },
+                {
+                    "suburb": "watchem west",
+                    "numCrimes": 10
+                },
+                {
+                    "suburb": "tutye",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "nhill",
+                    "numCrimes": 422
+                },
+                {
+                    "suburb": "caulfield south",
+                    "numCrimes": 2162
+                },
+                {
+                    "suburb": "corringle",
+                    "numCrimes": 13
+                },
+                {
+                    "suburb": "cashmore",
+                    "numCrimes": 19
+                },
+                {
+                    "suburb": "carag carag",
+                    "numCrimes": 9
+                },
+                {
+                    "suburb": "eildon",
+                    "numCrimes": 433
+                },
+                {
+                    "suburb": "winslow",
+                    "numCrimes": 13
+                },
+                {
+                    "suburb": "pearsondale",
+                    "numCrimes": 11
+                },
+                {
+                    "suburb": "tarraville",
+                    "numCrimes": 35
+                },
+                {
+                    "suburb": "rosebery",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "mortchup",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "colquhoun",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "lah",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "barep",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "whitelaw",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "mailors flat",
+                    "numCrimes": 51
+                },
+                {
+                    "suburb": "heath hill",
+                    "numCrimes": 22
+                },
+                {
+                    "suburb": "franklinford",
+                    "numCrimes": 8
+                },
+                {
+                    "suburb": "gateway island",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "cranbourne north",
+                    "numCrimes": 4903
+                },
+                {
+                    "suburb": "talbotville",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "sutton grange",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "cabanandra",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "tongala",
+                    "numCrimes": 465
+                },
+                {
+                    "suburb": "chillingollah",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "five ways",
+                    "numCrimes": 16
+                },
+                {
+                    "suburb": "burnbank",
+                    "numCrimes": 12
+                },
+                {
+                    "suburb": "tyabb",
+                    "numCrimes": 1033
+                },
+                {
+                    "suburb": "nayook",
+                    "numCrimes": 98
+                },
+                {
+                    "suburb": "mount bute",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "mornington",
+                    "numCrimes": 10183
+                },
+                {
+                    "suburb": "malvern east",
+                    "numCrimes": 8202
+                },
+                {
+                    "suburb": "rosewhite",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "dandenong north",
+                    "numCrimes": 6575
+                },
+                {
+                    "suburb": "locksley",
+                    "numCrimes": 49
+                },
+                {
+                    "suburb": "kinglake",
+                    "numCrimes": 346
+                },
+                {
+                    "suburb": "newport west",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "doncaster",
+                    "numCrimes": 7500
+                },
+                {
+                    "suburb": "huntly",
+                    "numCrimes": 359
+                },
+                {
+                    "suburb": "narracan",
+                    "numCrimes": 38
+                },
+                {
+                    "suburb": "gunbower",
+                    "numCrimes": 110
+                },
+                {
+                    "suburb": "mount richmond",
+                    "numCrimes": 18
+                },
+                {
+                    "suburb": "ancona",
+                    "numCrimes": 14
+                },
+                {
+                    "suburb": "denver",
+                    "numCrimes": 10
+                },
+                {
+                    "suburb": "benalla",
+                    "numCrimes": 5311
+                },
+                {
+                    "suburb": "knebsworth",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "tanjil bren",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "la trobe university",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "burwood east",
+                    "numCrimes": 2263
+                },
+                {
+                    "suburb": "tooroonga falls",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "kongwak",
+                    "numCrimes": 50
+                },
+                {
+                    "suburb": "hawthorn",
+                    "numCrimes": 7754
+                },
+                {
+                    "suburb": "marong",
+                    "numCrimes": 184
+                },
+                {
+                    "suburb": "carranballac",
+                    "numCrimes": 9
+                },
+                {
+                    "suburb": "a1 mine settlement",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "glenlee",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "tallarook",
+                    "numCrimes": 297
+                },
+                {
+                    "suburb": "yabba north",
+                    "numCrimes": 11
+                },
+                {
+                    "suburb": "camberwell south",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "trawalla",
+                    "numCrimes": 110
+                },
+                {
+                    "suburb": "joyces creek",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "gowangardie",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "nintingbool",
+                    "numCrimes": 13
+                },
+                {
+                    "suburb": "koonoomoo",
+                    "numCrimes": 359
+                },
+                {
+                    "suburb": "tarwin",
+                    "numCrimes": 10
+                },
+                {
+                    "suburb": "carboor",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "beveridge",
+                    "numCrimes": 692
+                },
+                {
+                    "suburb": "manor lakes",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "gisborne south",
+                    "numCrimes": 197
+                },
+                {
+                    "suburb": "newport",
+                    "numCrimes": 4085
+                },
+                {
+                    "suburb": "mead",
+                    "numCrimes": 7
+                },
+                {
+                    "suburb": "chesney vale",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "mordialloc",
+                    "numCrimes": 3620
+                },
+                {
+                    "suburb": "ovens",
+                    "numCrimes": 20
+                },
+                {
+                    "suburb": "bunyip north",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "cowes east",
+                    "numCrimes": 17
+                },
+                {
+                    "suburb": "lake mokoan",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "yallourn",
+                    "numCrimes": 18
+                },
+                {
+                    "suburb": "weerite",
+                    "numCrimes": 11
+                },
+                {
+                    "suburb": "kilmore",
+                    "numCrimes": 2745
+                },
+                {
+                    "suburb": "kyneton south",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "elwood",
+                    "numCrimes": 4940
+                },
+                {
+                    "suburb": "port fairy",
+                    "numCrimes": 790
+                },
+                {
+                    "suburb": "smoko",
+                    "numCrimes": 7
+                },
+                {
+                    "suburb": "glenbrae",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "mount wallace",
+                    "numCrimes": 37
+                },
+                {
+                    "suburb": "koonwarra",
+                    "numCrimes": 32
+                },
+                {
+                    "suburb": "tooradin",
+                    "numCrimes": 463
+                },
+                {
+                    "suburb": "wharparilla",
+                    "numCrimes": 28
+                },
+                {
+                    "suburb": "le roy",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "kilsyth south",
+                    "numCrimes": 484
+                },
+                {
+                    "suburb": "nullawarre",
+                    "numCrimes": 54
+                },
+                {
+                    "suburb": "lascelles",
+                    "numCrimes": 24
+                },
+                {
+                    "suburb": "south kingsville",
+                    "numCrimes": 66
+                },
+                {
+                    "suburb": "brunswick east",
+                    "numCrimes": 3870
+                },
+                {
+                    "suburb": "claretown",
+                    "numCrimes": 10
+                },
+                {
+                    "suburb": "wycheproof",
+                    "numCrimes": 182
+                },
+                {
+                    "suburb": "baringhup",
+                    "numCrimes": 46
+                },
+                {
+                    "suburb": "south morang",
+                    "numCrimes": 6661
+                },
+                {
+                    "suburb": "drouin south",
+                    "numCrimes": 427
+                },
+                {
+                    "suburb": "lilydale",
+                    "numCrimes": 7575
+                },
+                {
+                    "suburb": "mulgrave",
+                    "numCrimes": 7746
+                },
+                {
+                    "suburb": "boolarong",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "beeac",
+                    "numCrimes": 66
+                },
+                {
+                    "suburb": "kangaroo flat",
+                    "numCrimes": 4572
+                },
+                {
+                    "suburb": "tawonga",
+                    "numCrimes": 44
+                },
+                {
+                    "suburb": "yabba south",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "bylands",
+                    "numCrimes": 57
+                },
+                {
+                    "suburb": "mambourin",
+                    "numCrimes": 10
+                },
+                {
+                    "suburb": "tamleugh north",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "noorat",
+                    "numCrimes": 97
+                },
+                {
+                    "suburb": "berwick",
+                    "numCrimes": 11148
+                },
+                {
+                    "suburb": "comet hill",
+                    "numCrimes": 179
+                },
+                {
+                    "suburb": "boole poole",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "selwyn",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "springmount",
+                    "numCrimes": 8
+                },
+                {
+                    "suburb": "metcalfe east",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "springdallah",
+                    "numCrimes": 7
+                },
+                {
+                    "suburb": "tarrengower",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "coolaroo",
+                    "numCrimes": 2499
+                },
+                {
+                    "suburb": "metcalfe",
+                    "numCrimes": 32
+                },
+                {
+                    "suburb": "stewart",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "airly",
+                    "numCrimes": 18
+                },
+                {
+                    "suburb": "berrys creek",
+                    "numCrimes": 26
+                },
+                {
+                    "suburb": "stoneleigh",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "wandiligong",
+                    "numCrimes": 35
+                },
+                {
+                    "suburb": "hallston",
+                    "numCrimes": 37
+                },
+                {
+                    "suburb": "moorabbin",
+                    "numCrimes": 6054
+                },
+                {
+                    "suburb": "heywood",
+                    "numCrimes": 492
+                },
+                {
+                    "suburb": "yarrawonga",
+                    "numCrimes": 1679
+                },
+                {
+                    "suburb": "strathallan",
+                    "numCrimes": 65
+                },
+                {
+                    "suburb": "longerenong",
+                    "numCrimes": 11
+                },
+                {
+                    "suburb": "nar nar goon north",
+                    "numCrimes": 64
+                },
+                {
+                    "suburb": "baringhup west",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "carlyle",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "don valley",
+                    "numCrimes": 80
+                },
+                {
+                    "suburb": "half moon bay",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "beverford",
+                    "numCrimes": 36
+                },
+                {
+                    "suburb": "arapiles",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "darebin",
+                    "numCrimes": 14
+                },
+                {
+                    "suburb": "chewton",
+                    "numCrimes": 122
+                },
+                {
+                    "suburb": "calulu",
+                    "numCrimes": 17
+                },
+                {
+                    "suburb": "south yarra",
+                    "numCrimes": 11311
+                },
+                {
+                    "suburb": "huon creek",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "carrum downs",
+                    "numCrimes": 8413
+                },
+                {
+                    "suburb": "glendaruel",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "king valley",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "nichols point",
+                    "numCrimes": 230
+                },
+                {
+                    "suburb": "nilma",
+                    "numCrimes": 55
+                },
+                {
+                    "suburb": "tarrington",
+                    "numCrimes": 15
+                },
+                {
+                    "suburb": "alberton west",
+                    "numCrimes": 16
+                },
+                {
+                    "suburb": "tonghi creek",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "waterford park",
+                    "numCrimes": 32
+                },
+                {
+                    "suburb": "pipers creek",
+                    "numCrimes": 7
+                },
+                {
+                    "suburb": "bendigo north",
+                    "numCrimes": 931
+                },
+                {
+                    "suburb": "mannerim",
+                    "numCrimes": 33
+                },
+                {
+                    "suburb": "berringama",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "moe south",
+                    "numCrimes": 29
+                },
+                {
+                    "suburb": "werrimull",
+                    "numCrimes": 20
+                },
+                {
+                    "suburb": "bundoora",
+                    "numCrimes": 10025
+                },
+                {
+                    "suburb": "pella",
+                    "numCrimes": 7
+                },
+                {
+                    "suburb": "ballangeich",
+                    "numCrimes": 7
+                },
+                {
+                    "suburb": "dunluce",
+                    "numCrimes": 7
+                },
+                {
+                    "suburb": "bindi",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "capel sound",
+                    "numCrimes": 1794
+                },
+                {
+                    "suburb": "tottington",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "ballarat",
+                    "numCrimes": 28747
+                },
+                {
+                    "suburb": "gooramadda",
+                    "numCrimes": 8
+                },
+                {
+                    "suburb": "sorrento",
+                    "numCrimes": 1104
+                },
+                {
+                    "suburb": "thorpdale",
+                    "numCrimes": 188
+                },
+                {
+                    "suburb": "running creek",
+                    "numCrimes": 10
+                },
+                {
+                    "suburb": "frankston",
+                    "numCrimes": 40739
+                },
+                {
+                    "suburb": "lindenow south",
+                    "numCrimes": 66
+                },
+                {
+                    "suburb": "tarra valley",
+                    "numCrimes": 16
+                },
+                {
+                    "suburb": "barongarook",
+                    "numCrimes": 74
+                },
+                {
+                    "suburb": "bete bolong north",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "warracknabeal",
+                    "numCrimes": 933
+                },
+                {
+                    "suburb": "thornton",
+                    "numCrimes": 49
+                },
+                {
+                    "suburb": "lower heytesbury",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "cororooke",
+                    "numCrimes": 55
+                },
+                {
+                    "suburb": "aspendale gardens",
+                    "numCrimes": 754
+                },
+                {
+                    "suburb": "greta",
+                    "numCrimes": 8
+                },
+                {
+                    "suburb": "huon",
+                    "numCrimes": 17
+                },
+                {
+                    "suburb": "watchupga",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "clayton north",
+                    "numCrimes": 53
+                },
+                {
+                    "suburb": "walhalla",
+                    "numCrimes": 44
+                },
+                {
+                    "suburb": "merricks",
+                    "numCrimes": 22
+                },
+                {
+                    "suburb": "musk vale",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "armadale",
+                    "numCrimes": 2411
+                },
+                {
+                    "suburb": "kangaroo ground",
+                    "numCrimes": 126
+                },
+                {
+                    "suburb": "wyndham vale",
+                    "numCrimes": 5894
+                },
+                {
+                    "suburb": "cherrypool",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "teesdale",
+                    "numCrimes": 70
+                },
+                {
+                    "suburb": "plenty",
+                    "numCrimes": 554
+                },
+                {
+                    "suburb": "lang lang east",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "kyabram south",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "darlimurla",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "docker",
+                    "numCrimes": 7
+                },
+                {
+                    "suburb": "bradford",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "neilborough east",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "richmond east",
+                    "numCrimes": 13
+                },
+                {
+                    "suburb": "north wangaratta",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "thowgla valley",
+                    "numCrimes": 22
+                },
+                {
+                    "suburb": "monomeith",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "croydon north",
+                    "numCrimes": 987
+                },
+                {
+                    "suburb": "moolap",
+                    "numCrimes": 1095
+                },
+                {
+                    "suburb": "eurobin",
+                    "numCrimes": 19
+                },
+                {
+                    "suburb": "amphitheatre",
+                    "numCrimes": 92
+                },
+                {
+                    "suburb": "forge creek",
+                    "numCrimes": 34
+                },
+                {
+                    "suburb": "agnes",
+                    "numCrimes": 10
+                },
+                {
+                    "suburb": "dunrobin",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "robinvale irrigation district section e",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "strathdownie",
+                    "numCrimes": 28
+                },
+                {
+                    "suburb": "monegeetta north",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "kotupna",
+                    "numCrimes": 30
+                },
+                {
+                    "suburb": "west creek",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "upfield",
+                    "numCrimes": 131
+                },
+                {
+                    "suburb": "bulgana",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "tynong",
+                    "numCrimes": 130
+                },
+                {
+                    "suburb": "nambrok",
+                    "numCrimes": 83
+                },
+                {
+                    "suburb": "riverslea",
+                    "numCrimes": 26
+                },
+                {
+                    "suburb": "colbrook",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "skye",
+                    "numCrimes": 1952
+                },
+                {
+                    "suburb": "toombon",
+                    "numCrimes": 11
+                },
+                {
+                    "suburb": "wurdiboluc",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "port welshpool",
+                    "numCrimes": 61
+                },
+                {
+                    "suburb": "deans marsh",
+                    "numCrimes": 37
+                },
+                {
+                    "suburb": "russells bridge",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "naroghid",
+                    "numCrimes": 13
+                },
+                {
+                    "suburb": "mokepilly",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "iraak",
+                    "numCrimes": 45
+                },
+                {
+                    "suburb": "adelaide lead",
+                    "numCrimes": 11
+                },
+                {
+                    "suburb": "prahran east",
+                    "numCrimes": 9
+                },
+                {
+                    "suburb": "tatura east",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "glen park",
+                    "numCrimes": 47
+                },
+                {
+                    "suburb": "kardella",
+                    "numCrimes": 7
+                },
+                {
+                    "suburb": "yackandandah",
+                    "numCrimes": 166
+                },
+                {
+                    "suburb": "irrewillipe",
+                    "numCrimes": 26
+                },
+                {
+                    "suburb": "chartwell",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "sea lake",
+                    "numCrimes": 131
+                },
+                {
+                    "suburb": "swan bay",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "telopea downs",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "ravenswood",
+                    "numCrimes": 174
+                },
+                {
+                    "suburb": "boisdale",
+                    "numCrimes": 73
+                },
+                {
+                    "suburb": "piambie",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "clonbinane",
+                    "numCrimes": 118
+                },
+                {
+                    "suburb": "beech forest",
+                    "numCrimes": 26
+                },
+                {
+                    "suburb": "emu",
+                    "numCrimes": 21
+                },
+                {
+                    "suburb": "tonimbuk",
+                    "numCrimes": 54
+                },
+                {
+                    "suburb": "seaholme",
+                    "numCrimes": 330
+                },
+                {
+                    "suburb": "wonwondah north",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "almurta",
+                    "numCrimes": 18
+                },
+                {
+                    "suburb": "cloverlea",
+                    "numCrimes": 14
+                },
+                {
+                    "suburb": "cannie",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "woodford",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "caulfield",
+                    "numCrimes": 2253
+                },
+                {
+                    "suburb": "eskdale",
+                    "numCrimes": 24
+                },
+                {
+                    "suburb": "nillahcootie",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "tandarra",
+                    "numCrimes": 7
+                },
+                {
+                    "suburb": "wooroonook",
+                    "numCrimes": 13
+                },
+                {
+                    "suburb": "langdons hill",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "lancaster",
+                    "numCrimes": 69
+                },
+                {
+                    "suburb": "beazleys bridge",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "brewster",
+                    "numCrimes": 8
+                },
+                {
+                    "suburb": "mount napier",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "norval",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "mcloughlins beach",
+                    "numCrimes": 75
+                },
+                {
+                    "suburb": "maintongoon",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "kialla lakes",
+                    "numCrimes": 42
+                },
+                {
+                    "suburb": "woodglen",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "warrandyte south",
+                    "numCrimes": 83
+                },
+                {
+                    "suburb": "carlisle river",
+                    "numCrimes": 17
+                },
+                {
+                    "suburb": "chapel flat",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "chintin",
+                    "numCrimes": 12
+                },
+                {
+                    "suburb": "corndale",
+                    "numCrimes": 8
+                },
+                {
+                    "suburb": "armstrong creek",
+                    "numCrimes": 283
+                },
+                {
+                    "suburb": "moolerr",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "konongwootong",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "mont albert north",
+                    "numCrimes": 444
+                },
+                {
+                    "suburb": "percydale",
+                    "numCrimes": 21
+                },
+                {
+                    "suburb": "warrion",
+                    "numCrimes": 17
+                },
+                {
+                    "suburb": "marcus hill",
+                    "numCrimes": 40
+                },
+                {
+                    "suburb": "mount waverley",
+                    "numCrimes": 6264
+                },
+                {
+                    "suburb": "prahran",
+                    "numCrimes": 13265
+                },
+                {
+                    "suburb": "gipsy point",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "fairhaven",
+                    "numCrimes": 74
+                },
+                {
+                    "suburb": "meredith",
+                    "numCrimes": 287
+                },
+                {
+                    "suburb": "barfold",
+                    "numCrimes": 28
+                },
+                {
+                    "suburb": "oakleigh south",
+                    "numCrimes": 2304
+                },
+                {
+                    "suburb": "jeparit",
+                    "numCrimes": 186
+                },
+                {
+                    "suburb": "hoppers crossing",
+                    "numCrimes": 15709
+                },
+                {
+                    "suburb": "swanwater",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "doveton",
+                    "numCrimes": 6171
+                },
+                {
+                    "suburb": "normanville",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "ardeer",
+                    "numCrimes": 2439
+                },
+                {
+                    "suburb": "numurkah",
+                    "numCrimes": 1025
+                },
+                {
+                    "suburb": "clarkes hill",
+                    "numCrimes": 14
+                },
+                {
+                    "suburb": "mininera",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "norlane west",
+                    "numCrimes": 24
+                },
+                {
+                    "suburb": "strathmerton",
+                    "numCrimes": 271
+                },
+                {
+                    "suburb": "mardan",
+                    "numCrimes": 15
+                },
+                {
+                    "suburb": "skenes creek north",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "knowsley",
+                    "numCrimes": 66
+                },
+                {
+                    "suburb": "braybrook",
+                    "numCrimes": 5864
+                },
+                {
+                    "suburb": "happy valley",
+                    "numCrimes": 13
+                },
+                {
+                    "suburb": "waanyarra",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "landsborough",
+                    "numCrimes": 96
+                },
+                {
+                    "suburb": "kingsville",
+                    "numCrimes": 784
+                },
+                {
+                    "suburb": "essendon airport",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "carlsruhe",
+                    "numCrimes": 80
+                },
+                {
+                    "suburb": "barkers creek",
+                    "numCrimes": 56
+                },
+                {
+                    "suburb": "manangatang",
+                    "numCrimes": 177
+                },
+                {
+                    "suburb": "harmers haven",
+                    "numCrimes": 20
+                },
+                {
+                    "suburb": "hamilton",
+                    "numCrimes": 4583
+                },
+                {
+                    "suburb": "cosgrove",
+                    "numCrimes": 17
+                },
+                {
+                    "suburb": "heathmont",
+                    "numCrimes": 2035
+                },
+                {
+                    "suburb": "long forest",
+                    "numCrimes": 51
+                },
+                {
+                    "suburb": "poolaijelo",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "ballarat west",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "balook",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "sunshine",
+                    "numCrimes": 19209
+                },
+                {
+                    "suburb": "castle donnington",
+                    "numCrimes": 22
+                },
+                {
+                    "suburb": "yelta",
+                    "numCrimes": 63
+                },
+                {
+                    "suburb": "strathewen",
+                    "numCrimes": 28
+                },
+                {
+                    "suburb": "dellicknora",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "yielima",
+                    "numCrimes": 44
+                },
+                {
+                    "suburb": "woodside",
+                    "numCrimes": 145
+                },
+                {
+                    "suburb": "lucknow",
+                    "numCrimes": 285
+                },
+                {
+                    "suburb": "wattle creek",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "coomoora",
+                    "numCrimes": 25
+                },
+                {
+                    "suburb": "upper gundowring",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "lubeck",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "denison",
+                    "numCrimes": 100
+                },
+                {
+                    "suburb": "kings park",
+                    "numCrimes": 2345
+                },
+                {
+                    "suburb": "croydon hills",
+                    "numCrimes": 572
+                },
+                {
+                    "suburb": "charleroi",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "skenes creek",
+                    "numCrimes": 26
+                },
+                {
+                    "suburb": "lake fyans",
+                    "numCrimes": 11
+                },
+                {
+                    "suburb": "parwan",
+                    "numCrimes": 106
+                },
+                {
+                    "suburb": "telford",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "corindhap",
+                    "numCrimes": 29
+                },
+                {
+                    "suburb": "st helens plains",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "moormbool west",
+                    "numCrimes": 11
+                },
+                {
+                    "suburb": "ledcourt",
+                    "numCrimes": 12
+                },
+                {
+                    "suburb": "maidstone",
+                    "numCrimes": 3339
+                },
+                {
+                    "suburb": "balliang east",
+                    "numCrimes": 55
+                },
+                {
+                    "suburb": "dorodong",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "mount emu",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "irishtown",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "green hill",
+                    "numCrimes": 7
+                },
+                {
+                    "suburb": "powlett plains",
+                    "numCrimes": 7
+                },
+                {
+                    "suburb": "ellinbank",
+                    "numCrimes": 21
+                },
+                {
+                    "suburb": "tallangatta",
+                    "numCrimes": 323
+                },
+                {
+                    "suburb": "benloch",
+                    "numCrimes": 54
+                },
+                {
+                    "suburb": "mitta mitta",
+                    "numCrimes": 14
+                },
+                {
+                    "suburb": "paraparap",
+                    "numCrimes": 35
+                },
+                {
+                    "suburb": "kilmany",
+                    "numCrimes": 35
+                },
+                {
+                    "suburb": "pental island",
+                    "numCrimes": 23
+                },
+                {
+                    "suburb": "parkdale",
+                    "numCrimes": 2250
+                },
+                {
+                    "suburb": "upper maffra west",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "huntly north",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "carron",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "glenisla",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "vermont",
+                    "numCrimes": 1809
+                },
+                {
+                    "suburb": "betley",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "lucas",
+                    "numCrimes": 188
+                },
+                {
+                    "suburb": "carapook",
+                    "numCrimes": 8
+                },
+                {
+                    "suburb": "baddaginnie",
+                    "numCrimes": 138
+                },
+                {
+                    "suburb": "bonegilla",
+                    "numCrimes": 148
+                },
+                {
+                    "suburb": "wilsons hill",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "barramunga",
+                    "numCrimes": 9
+                },
+                {
+                    "suburb": "trawool",
+                    "numCrimes": 25
+                },
+                {
+                    "suburb": "sandringham",
+                    "numCrimes": 2932
+                },
+                {
+                    "suburb": "campbells bridge",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "durdidwarrah",
+                    "numCrimes": 15
+                },
+                {
+                    "suburb": "the heart",
+                    "numCrimes": 21
+                },
+                {
+                    "suburb": "whipstick",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "dandenong",
+                    "numCrimes": 38735
+                },
+                {
+                    "suburb": "yeo",
+                    "numCrimes": 14
+                },
+                {
+                    "suburb": "yea",
+                    "numCrimes": 528
+                },
+                {
+                    "suburb": "wangaratta north",
+                    "numCrimes": 19
+                },
+                {
+                    "suburb": "everton",
+                    "numCrimes": 35
+                },
+                {
+                    "suburb": "tarrawarra",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "maryvale paper mill",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "deddick valley",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "strathdale",
+                    "numCrimes": 1123
+                },
+                {
+                    "suburb": "somerville",
+                    "numCrimes": 3337
+                },
+                {
+                    "suburb": "yarra junction",
+                    "numCrimes": 690
+                },
+                {
+                    "suburb": "marnoo",
+                    "numCrimes": 13
+                },
+                {
+                    "suburb": "terrick terrick",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "dutton way",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "woodstock",
+                    "numCrimes": 64
+                },
+                {
+                    "suburb": "tambo crossing",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "paaratte",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "mongans bridge",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "dewhurst",
+                    "numCrimes": 61
+                },
+                {
+                    "suburb": "nirranda east",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "mount hotham",
+                    "numCrimes": 92
+                },
+                {
+                    "suburb": "brimpaen",
+                    "numCrimes": 15
+                },
+                {
+                    "suburb": "fulham",
+                    "numCrimes": 892
+                },
+                {
+                    "suburb": "narbethong",
+                    "numCrimes": 86
+                },
+                {
+                    "suburb": "rhymney",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "corop",
+                    "numCrimes": 85
+                },
+                {
+                    "suburb": "nirranda south",
+                    "numCrimes": 14
+                },
+                {
+                    "suburb": "killara",
+                    "numCrimes": 53
+                },
+                {
+                    "suburb": "meringur",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "hawkesdale",
+                    "numCrimes": 35
+                },
+                {
+                    "suburb": "boinka",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "toolondo",
+                    "numCrimes": 25
+                },
+                {
+                    "suburb": "officer",
+                    "numCrimes": 2324
+                },
+                {
+                    "suburb": "carapooee west",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "amor",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "sebastian",
+                    "numCrimes": 30
+                },
+                {
+                    "suburb": "glenfyne",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "yallourn north",
+                    "numCrimes": 581
+                },
+                {
+                    "suburb": "creighton",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "nangana",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "dean",
+                    "numCrimes": 25
+                },
+                {
+                    "suburb": "san remo",
+                    "numCrimes": 353
+                },
+                {
+                    "suburb": "casterton",
+                    "numCrimes": 345
+                },
+                {
+                    "suburb": "athlone",
+                    "numCrimes": 20
+                },
+                {
+                    "suburb": "badger creek",
+                    "numCrimes": 102
+                },
+                {
+                    "suburb": "eastwood",
+                    "numCrimes": 223
+                },
+                {
+                    "suburb": "donald",
+                    "numCrimes": 302
+                },
+                {
+                    "suburb": "templestowe lower",
+                    "numCrimes": 1804
+                },
+                {
+                    "suburb": "laverton",
+                    "numCrimes": 4617
+                },
+                {
+                    "suburb": "colbinabbin",
+                    "numCrimes": 49
+                },
+                {
+                    "suburb": "katamatite",
+                    "numCrimes": 96
+                },
+                {
+                    "suburb": "korweinguboora",
+                    "numCrimes": 33
+                },
+                {
+                    "suburb": "barnawartha north",
+                    "numCrimes": 47
+                },
+                {
+                    "suburb": "homerton",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "vesper",
+                    "numCrimes": 34
+                },
+                {
+                    "suburb": "fernbank",
+                    "numCrimes": 70
+                },
+                {
+                    "suburb": "ferny creek",
+                    "numCrimes": 190
+                },
+                {
+                    "suburb": "harkaway",
+                    "numCrimes": 157
+                },
+                {
+                    "suburb": "eaglehawk north",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "traralgon",
+                    "numCrimes": 19579
+                },
+                {
+                    "suburb": "bagshot",
+                    "numCrimes": 23
+                },
+                {
+                    "suburb": "devon north",
+                    "numCrimes": 46
+                },
+                {
+                    "suburb": "warneet",
+                    "numCrimes": 150
+                },
+                {
+                    "suburb": "kingower",
+                    "numCrimes": 89
+                },
+                {
+                    "suburb": "langkoop",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "bandiana",
+                    "numCrimes": 69
+                },
+                {
+                    "suburb": "mologa",
+                    "numCrimes": 8
+                },
+                {
+                    "suburb": "blackheath",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "craigie",
+                    "numCrimes": 10
+                },
+                {
+                    "suburb": "buckrabanyule",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "watsons creek",
+                    "numCrimes": 8
+                },
+                {
+                    "suburb": "woorinen south",
+                    "numCrimes": 32
+                },
+                {
+                    "suburb": "alexandra",
+                    "numCrimes": 732
+                },
+                {
+                    "suburb": "macclesfield",
+                    "numCrimes": 110
+                },
+                {
+                    "suburb": "toolamba west",
+                    "numCrimes": 25
+                },
+                {
+                    "suburb": "seville east",
+                    "numCrimes": 64
+                },
+                {
+                    "suburb": "willung south",
+                    "numCrimes": 17
+                },
+                {
+                    "suburb": "maffra west upper",
+                    "numCrimes": 8
+                },
+                {
+                    "suburb": "langi kal kal",
+                    "numCrimes": 42
+                },
+                {
+                    "suburb": "red lion",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "laang",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "rosedale",
+                    "numCrimes": 770
+                },
+                {
+                    "suburb": "mount moriac",
+                    "numCrimes": 64
+                },
+                {
+                    "suburb": "cobungra",
+                    "numCrimes": 16
+                },
+                {
+                    "suburb": "lynbrook",
+                    "numCrimes": 2053
+                },
+                {
+                    "suburb": "boort",
+                    "numCrimes": 94
+                },
+                {
+                    "suburb": "marshall",
+                    "numCrimes": 482
+                },
+                {
+                    "suburb": "oakleigh east",
+                    "numCrimes": 1203
+                },
+                {
+                    "suburb": "saint arnaud",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "bell post hill",
+                    "numCrimes": 1306
+                },
+                {
+                    "suburb": "croydon south",
+                    "numCrimes": 972
+                },
+                {
+                    "suburb": "salisbury",
+                    "numCrimes": 7
+                },
+                {
+                    "suburb": "dumbalk north",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "carrum",
+                    "numCrimes": 2114
+                },
+                {
+                    "suburb": "fern hill",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "great western",
+                    "numCrimes": 192
+                },
+                {
+                    "suburb": "wandong",
+                    "numCrimes": 475
+                },
+                {
+                    "suburb": "towong",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "newstead",
+                    "numCrimes": 115
+                },
+                {
+                    "suburb": "portland west",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "east bairnsdale",
+                    "numCrimes": 124
+                },
+                {
+                    "suburb": "anderson",
+                    "numCrimes": 27
+                },
+                {
+                    "suburb": "booroolite",
+                    "numCrimes": 12
+                },
+                {
+                    "suburb": "gilderoy",
+                    "numCrimes": 16
+                },
+                {
+                    "suburb": "ballyrogan",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "milawa",
+                    "numCrimes": 33
+                },
+                {
+                    "suburb": "drummond",
+                    "numCrimes": 31
+                },
+                {
+                    "suburb": "evansford",
+                    "numCrimes": 88
+                },
+                {
+                    "suburb": "killarney",
+                    "numCrimes": 39
+                },
+                {
+                    "suburb": "blind bight",
+                    "numCrimes": 180
+                },
+                {
+                    "suburb": "batesford",
+                    "numCrimes": 142
+                },
+                {
+                    "suburb": "hotham heights",
+                    "numCrimes": 18
+                },
+                {
+                    "suburb": "nowie north",
+                    "numCrimes": 11
+                },
+                {
+                    "suburb": "glengower",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "muskvale",
+                    "numCrimes": 9
+                },
+                {
+                    "suburb": "st james",
+                    "numCrimes": 36
+                },
+                {
+                    "suburb": "shepparton",
+                    "numCrimes": 25192
+                },
+                {
+                    "suburb": "fairbank",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "moora",
+                    "numCrimes": 12
+                },
+                {
+                    "suburb": "nyah west",
+                    "numCrimes": 194
+                },
+                {
+                    "suburb": "bradvale",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "black range",
+                    "numCrimes": 21
+                },
+                {
+                    "suburb": "paradise beach",
+                    "numCrimes": 44
+                },
+                {
+                    "suburb": "purnim",
+                    "numCrimes": 38
+                },
+                {
+                    "suburb": "tarrone",
+                    "numCrimes": 11
+                },
+                {
+                    "suburb": "woodside beach",
+                    "numCrimes": 15
+                },
+                {
+                    "suburb": "strathkellar",
+                    "numCrimes": 8
+                },
+                {
+                    "suburb": "tatyoon",
+                    "numCrimes": 10
+                },
+                {
+                    "suburb": "altona",
+                    "numCrimes": 4201
+                },
+                {
+                    "suburb": "deddick",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "bullarto",
+                    "numCrimes": 18
+                },
+                {
+                    "suburb": "hiamdale",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "briar hill",
+                    "numCrimes": 516
+                },
+                {
+                    "suburb": "mooroopna north",
+                    "numCrimes": 16
+                },
+                {
+                    "suburb": "newbridge",
+                    "numCrimes": 46
+                },
+                {
+                    "suburb": "kalimna",
+                    "numCrimes": 142
+                },
+                {
+                    "suburb": "llowalong",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "noble park north",
+                    "numCrimes": 1626
+                },
+                {
+                    "suburb": "kalimna west",
+                    "numCrimes": 52
+                },
+                {
+                    "suburb": "woodfield",
+                    "numCrimes": 24
+                },
+                {
+                    "suburb": "cathkin",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "murrawee",
+                    "numCrimes": 7
+                },
+                {
+                    "suburb": "stonyford",
+                    "numCrimes": 16
+                },
+                {
+                    "suburb": "invermay",
+                    "numCrimes": 214
+                },
+                {
+                    "suburb": "sarsfield",
+                    "numCrimes": 53
+                },
+                {
+                    "suburb": "purrumbete south",
+                    "numCrimes": 9
+                },
+                {
+                    "suburb": "southbank",
+                    "numCrimes": 12079
+                },
+                {
+                    "suburb": "marnoo east",
+                    "numCrimes": 16
+                },
+                {
+                    "suburb": "travancore",
+                    "numCrimes": 639
+                },
+                {
+                    "suburb": "tottenham",
+                    "numCrimes": 514
+                },
+                {
+                    "suburb": "cullulleraine",
+                    "numCrimes": 15
+                },
+                {
+                    "suburb": "mount bruno",
+                    "numCrimes": 11
+                },
+                {
+                    "suburb": "glenrowan",
+                    "numCrimes": 301
+                },
+                {
+                    "suburb": "lilliput",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "elevated plains",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "invermay park",
+                    "numCrimes": 61
+                },
+                {
+                    "suburb": "koorlong",
+                    "numCrimes": 54
+                },
+                {
+                    "suburb": "matlock",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "inkerman",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "devenish",
+                    "numCrimes": 44
+                },
+                {
+                    "suburb": "diggora west",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "mitiamo",
+                    "numCrimes": 51
+                },
+                {
+                    "suburb": "clematis",
+                    "numCrimes": 144
+                },
+                {
+                    "suburb": "portarlington",
+                    "numCrimes": 845
+                },
+                {
+                    "suburb": "broken creek",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "tyaak",
+                    "numCrimes": 14
+                },
+                {
+                    "suburb": "fernihurst",
+                    "numCrimes": 21
+                },
+                {
+                    "suburb": "wangandary",
+                    "numCrimes": 12
+                },
+                {
+                    "suburb": "tubbut",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "fawcett",
+                    "numCrimes": 7
+                },
+                {
+                    "suburb": "neerim junction",
+                    "numCrimes": 18
+                },
+                {
+                    "suburb": "poowong",
+                    "numCrimes": 119
+                },
+                {
+                    "suburb": "yundool",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "bend of islands",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "berriwillock",
+                    "numCrimes": 15
+                },
+                {
+                    "suburb": "landsborough west",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "costerfield",
+                    "numCrimes": 56
+                },
+                {
+                    "suburb": "bungeet west",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "rubicon",
+                    "numCrimes": 24
+                },
+                {
+                    "suburb": "ararat",
+                    "numCrimes": 5810
+                },
+                {
+                    "suburb": "dartmouth",
+                    "numCrimes": 10
+                },
+                {
+                    "suburb": "yarraville",
+                    "numCrimes": 4205
+                },
+                {
+                    "suburb": "dudley south",
+                    "numCrimes": 169
+                },
+                {
+                    "suburb": "bet bet",
+                    "numCrimes": 68
+                },
+                {
+                    "suburb": "powers creek",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "whoorel",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "neerim",
+                    "numCrimes": 31
+                },
+                {
+                    "suburb": "winton north",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "lawloit",
+                    "numCrimes": 19
+                },
+                {
+                    "suburb": "barrys reef",
+                    "numCrimes": 19
+                },
+                {
+                    "suburb": "smeaton",
+                    "numCrimes": 44
+                },
+                {
+                    "suburb": "burramboot",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "timor",
+                    "numCrimes": 25
+                },
+                {
+                    "suburb": "newcomb",
+                    "numCrimes": 2692
+                },
+                {
+                    "suburb": "castleburn",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "arcadia south",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "cavendish",
+                    "numCrimes": 34
+                },
+                {
+                    "suburb": "waygara",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "cochranes creek",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "nurcoung",
+                    "numCrimes": 8
+                },
+                {
+                    "suburb": "mafeking",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "rowsley",
+                    "numCrimes": 61
+                },
+                {
+                    "suburb": "warburton",
+                    "numCrimes": 612
+                },
+                {
+                    "suburb": "reedy dam",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "mount cole",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "connewirrecoo",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "gardenvale",
+                    "numCrimes": 278
+                },
+                {
+                    "suburb": "venus bay",
+                    "numCrimes": 289
+                },
+                {
+                    "suburb": "warrenbayne",
+                    "numCrimes": 112
+                },
+                {
+                    "suburb": "tullich",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "reefton",
+                    "numCrimes": 17
+                },
+                {
+                    "suburb": "irish town",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "koroop",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "hampton north",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "high camp",
+                    "numCrimes": 32
+                },
+                {
+                    "suburb": "swanwater west",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "vite vite",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "hill end",
+                    "numCrimes": 51
+                },
+                {
+                    "suburb": "winchelsea",
+                    "numCrimes": 718
+                },
+                {
+                    "suburb": "banyenong",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "antwerp",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "chapple vale",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "ocean grove",
+                    "numCrimes": 2110
+                },
+                {
+                    "suburb": "creek junction",
+                    "numCrimes": 12
+                },
+                {
+                    "suburb": "taggerty",
+                    "numCrimes": 87
+                },
+                {
+                    "suburb": "mount egerton",
+                    "numCrimes": 90
+                },
+                {
+                    "suburb": "lillydale",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "mooroopna",
+                    "numCrimes": 5121
+                },
+                {
+                    "suburb": "nerrina",
+                    "numCrimes": 227
+                },
+                {
+                    "suburb": "inverleigh",
+                    "numCrimes": 151
+                },
+                {
+                    "suburb": "shepparton east",
+                    "numCrimes": 217
+                },
+                {
+                    "suburb": "keilor park",
+                    "numCrimes": 1246
+                },
+                {
+                    "suburb": "woorinen north",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "nerring",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "wail",
+                    "numCrimes": 11
+                },
+                {
+                    "suburb": "byawatha",
+                    "numCrimes": 25
+                },
+                {
+                    "suburb": "upton hill",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "bendigo east",
+                    "numCrimes": 630
+                },
+                {
+                    "suburb": "pakenham south",
+                    "numCrimes": 81
+                },
+                {
+                    "suburb": "dundas",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "arcadia",
+                    "numCrimes": 69
+                },
+                {
+                    "suburb": "barwon heads",
+                    "numCrimes": 1005
+                },
+                {
+                    "suburb": "mount taylor",
+                    "numCrimes": 35
+                },
+                {
+                    "suburb": "glendonald",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "boorcan",
+                    "numCrimes": 37
+                },
+                {
+                    "suburb": "strzelecki",
+                    "numCrimes": 10
+                },
+                {
+                    "suburb": "burnside heights",
+                    "numCrimes": 1248
+                },
+                {
+                    "suburb": "narre warren north",
+                    "numCrimes": 1481
+                },
+                {
+                    "suburb": "bunding",
+                    "numCrimes": 17
+                },
+                {
+                    "suburb": "mysia",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "three bridges",
+                    "numCrimes": 80
+                },
+                {
+                    "suburb": "lockington",
+                    "numCrimes": 114
+                },
+                {
+                    "suburb": "tongio west",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "seaford",
+                    "numCrimes": 9822
+                },
+                {
+                    "suburb": "cadello",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "bowmans forest",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "wallacedale",
+                    "numCrimes": 22
+                },
+                {
+                    "suburb": "iguana creek",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "willowmavin",
+                    "numCrimes": 30
+                },
+                {
+                    "suburb": "thomastown",
+                    "numCrimes": 11184
+                },
+                {
+                    "suburb": "churchill",
+                    "numCrimes": 2814
+                },
+                {
+                    "suburb": "frenchmans",
+                    "numCrimes": 9
+                },
+                {
+                    "suburb": "highton",
+                    "numCrimes": 2842
+                },
+                {
+                    "suburb": "arnold west",
+                    "numCrimes": 7
+                },
+                {
+                    "suburb": "waratah north",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "garvoc",
+                    "numCrimes": 93
+                },
+                {
+                    "suburb": "pompapiel",
+                    "numCrimes": 11
+                },
+                {
+                    "suburb": "shelley",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "benjeroop",
+                    "numCrimes": 20
+                },
+                {
+                    "suburb": "geelong east",
+                    "numCrimes": 1675
+                },
+                {
+                    "suburb": "north melbourne",
+                    "numCrimes": 8524
+                },
+                {
+                    "suburb": "yanakie",
+                    "numCrimes": 54
+                },
+                {
+                    "suburb": "mount elgin",
+                    "numCrimes": 7
+                },
+                {
+                    "suburb": "glen waverley",
+                    "numCrimes": 8214
+                },
+                {
+                    "suburb": "aberfeldy",
+                    "numCrimes": 17
+                },
+                {
+                    "suburb": "fairfield",
+                    "numCrimes": 2384
+                },
+                {
+                    "suburb": "jarklin",
+                    "numCrimes": 8
+                },
+                {
+                    "suburb": "yarraberb",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "runnymede",
+                    "numCrimes": 12
+                },
+                {
+                    "suburb": "crooked river",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "tolmie",
+                    "numCrimes": 44
+                },
+                {
+                    "suburb": "carrajung lower",
+                    "numCrimes": 45
+                },
+                {
+                    "suburb": "glen iris",
+                    "numCrimes": 3932
+                },
+                {
+                    "suburb": "belgrave heights",
+                    "numCrimes": 229
+                },
+                {
+                    "suburb": "frankston south",
+                    "numCrimes": 2533
+                },
+                {
+                    "suburb": "tenby point",
+                    "numCrimes": 24
+                },
+                {
+                    "suburb": "tecoma",
+                    "numCrimes": 551
+                },
+                {
+                    "suburb": "north warrandyte",
+                    "numCrimes": 140
+                },
+                {
+                    "suburb": "gillieston",
+                    "numCrimes": 7
+                },
+                {
+                    "suburb": "delatite",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "greenhill",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "fyans creek",
+                    "numCrimes": 10
+                },
+                {
+                    "suburb": "carlton south",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "kancoona",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "smokeytown",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "mansfield",
+                    "numCrimes": 1396
+                },
+                {
+                    "suburb": "benayeo",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "echuca",
+                    "numCrimes": 8820
+                },
+                {
+                    "suburb": "sutherlands creek",
+                    "numCrimes": 39
+                },
+                {
+                    "suburb": "upper ryans creek",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "dinner plain",
+                    "numCrimes": 18
+                },
+                {
+                    "suburb": "merrimu",
+                    "numCrimes": 29
+                },
+                {
+                    "suburb": "wando vale",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "hesket",
+                    "numCrimes": 46
+                },
+                {
+                    "suburb": "wool wool",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "hazel park",
+                    "numCrimes": 7
+                },
+                {
+                    "suburb": "kawarren",
+                    "numCrimes": 26
+                },
+                {
+                    "suburb": "fiskville",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "bahgallah",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "molyullah",
+                    "numCrimes": 11
+                },
+                {
+                    "suburb": "kinglake central",
+                    "numCrimes": 29
+                },
+                {
+                    "suburb": "anglesea",
+                    "numCrimes": 656
+                },
+                {
+                    "suburb": "dromana",
+                    "numCrimes": 2488
+                },
+                {
+                    "suburb": "mernda",
+                    "numCrimes": 5034
+                },
+                {
+                    "suburb": "middle creek",
+                    "numCrimes": 10
+                },
+                {
+                    "suburb": "balaclava",
+                    "numCrimes": 2769
+                },
+                {
+                    "suburb": "nutfield",
+                    "numCrimes": 137
+                },
+                {
+                    "suburb": "fumina",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "piggoreet",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "sandy creek",
+                    "numCrimes": 24
+                },
+                {
+                    "suburb": "dederang",
+                    "numCrimes": 55
+                },
+                {
+                    "suburb": "violet town",
+                    "numCrimes": 232
+                },
+                {
+                    "suburb": "cheshunt",
+                    "numCrimes": 49
+                },
+                {
+                    "suburb": "mockinya",
+                    "numCrimes": 21
+                },
+                {
+                    "suburb": "norong",
+                    "numCrimes": 8
+                },
+                {
+                    "suburb": "wonthaggi",
+                    "numCrimes": 4928
+                },
+                {
+                    "suburb": "narre warren south",
+                    "numCrimes": 4768
+                },
+                {
+                    "suburb": "springfield",
+                    "numCrimes": 27
+                },
+                {
+                    "suburb": "wonyip",
+                    "numCrimes": 21
+                },
+                {
+                    "suburb": "north shore",
+                    "numCrimes": 556
+                },
+                {
+                    "suburb": "shepparton north",
+                    "numCrimes": 24
+                },
+                {
+                    "suburb": "marengo",
+                    "numCrimes": 19
+                },
+                {
+                    "suburb": "valencia creek",
+                    "numCrimes": 21
+                },
+                {
+                    "suburb": "grahamvale",
+                    "numCrimes": 105
+                },
+                {
+                    "suburb": "carapooee",
+                    "numCrimes": 27
+                },
+                {
+                    "suburb": "bungador",
+                    "numCrimes": 8
+                },
+                {
+                    "suburb": "croxton east",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "hedley",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "knockwood",
+                    "numCrimes": 31
+                },
+                {
+                    "suburb": "buln buln east",
+                    "numCrimes": 8
+                },
+                {
+                    "suburb": "bentleigh east",
+                    "numCrimes": 4558
+                },
+                {
+                    "suburb": "big pats creek",
+                    "numCrimes": 12
+                },
+                {
+                    "suburb": "doctors flat",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "trafalgar",
+                    "numCrimes": 2004
+                },
+                {
+                    "suburb": "vasey",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "altona meadows",
+                    "numCrimes": 4664
+                },
+                {
+                    "suburb": "olinda",
+                    "numCrimes": 430
+                },
+                {
+                    "suburb": "omeo",
+                    "numCrimes": 120
+                },
+                {
+                    "suburb": "pier milan",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "keilor",
+                    "numCrimes": 1649
+                },
+                {
+                    "suburb": "cannons creek",
+                    "numCrimes": 89
+                },
+                {
+                    "suburb": "lyndhurst",
+                    "numCrimes": 1426
+                },
+                {
+                    "suburb": "myers flat",
+                    "numCrimes": 122
+                },
+                {
+                    "suburb": "buninyong",
+                    "numCrimes": 680
+                },
+                {
+                    "suburb": "mcmillans",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "altona north",
+                    "numCrimes": 6238
+                },
+                {
+                    "suburb": "docklands",
+                    "numCrimes": 7015
+                },
+                {
+                    "suburb": "lillimur",
+                    "numCrimes": 32
+                },
+                {
+                    "suburb": "birdwoodton",
+                    "numCrimes": 59
+                },
+                {
+                    "suburb": "redcastle",
+                    "numCrimes": 19
+                },
+                {
+                    "suburb": "cudgewa",
+                    "numCrimes": 12
+                },
+                {
+                    "suburb": "glengarry north",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "spring hill",
+                    "numCrimes": 47
+                },
+                {
+                    "suburb": "dundonnell",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "thomson",
+                    "numCrimes": 807
+                },
+                {
+                    "suburb": "blairgowrie",
+                    "numCrimes": 582
+                },
+                {
+                    "suburb": "purnim west",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "merino",
+                    "numCrimes": 112
+                },
+                {
+                    "suburb": "magpie",
+                    "numCrimes": 53
+                },
+                {
+                    "suburb": "byaduk",
+                    "numCrimes": 11
+                },
+                {
+                    "suburb": "mumbannar",
+                    "numCrimes": 32
+                },
+                {
+                    "suburb": "wallace",
+                    "numCrimes": 40
+                },
+                {
+                    "suburb": "ardmona",
+                    "numCrimes": 151
+                },
+                {
+                    "suburb": "panmure",
+                    "numCrimes": 65
+                },
+                {
+                    "suburb": "gatum",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "milloo",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "rythdale",
+                    "numCrimes": 9
+                },
+                {
+                    "suburb": "powlett river",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "cape clear",
+                    "numCrimes": 40
+                },
+                {
+                    "suburb": "thalia",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "hensley park",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "torquay",
+                    "numCrimes": 3049
+                },
+                {
+                    "suburb": "merricks beach",
+                    "numCrimes": 28
+                },
+                {
+                    "suburb": "kennedys creek",
+                    "numCrimes": 14
+                },
+                {
+                    "suburb": "warrenheip",
+                    "numCrimes": 356
+                },
+                {
+                    "suburb": "yearinga",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "seaspray",
+                    "numCrimes": 213
+                },
+                {
+                    "suburb": "telangatuk east",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "lance creek",
+                    "numCrimes": 8
+                },
+                {
+                    "suburb": "sunshine west",
+                    "numCrimes": 5445
+                },
+                {
+                    "suburb": "hoddles creek",
+                    "numCrimes": 80
+                },
+                {
+                    "suburb": "redbank",
+                    "numCrimes": 37
+                },
+                {
+                    "suburb": "bullioh",
+                    "numCrimes": 8
+                },
+                {
+                    "suburb": "yanac",
+                    "numCrimes": 28
+                },
+                {
+                    "suburb": "murroon",
+                    "numCrimes": 12
+                },
+                {
+                    "suburb": "robinvale",
+                    "numCrimes": 1856
+                },
+                {
+                    "suburb": "langi logan",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "everton upper",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "moutajup",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "gelliondale",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "warragul west",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "wilby",
+                    "numCrimes": 19
+                },
+                {
+                    "suburb": "noradjuha",
+                    "numCrimes": 7
+                },
+                {
+                    "suburb": "broadford",
+                    "numCrimes": 1433
+                },
+                {
+                    "suburb": "koo wee rup",
+                    "numCrimes": 950
+                },
+                {
+                    "suburb": "wendouree",
+                    "numCrimes": 8020
+                },
+                {
+                    "suburb": "bambra",
+                    "numCrimes": 22
+                },
+                {
+                    "suburb": "pirlta",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "quandong",
+                    "numCrimes": 255
+                },
+                {
+                    "suburb": "longwood east",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "granya",
+                    "numCrimes": 48
+                },
+                {
+                    "suburb": "tyntynder south",
+                    "numCrimes": 8
+                },
+                {
+                    "suburb": "carisbrook",
+                    "numCrimes": 326
+                },
+                {
+                    "suburb": "keilor lodge",
+                    "numCrimes": 184
+                },
+                {
+                    "suburb": "dunach",
+                    "numCrimes": 45
+                },
+                {
+                    "suburb": "camperdown",
+                    "numCrimes": 1092
+                },
+                {
+                    "suburb": "roslynmead",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "hordern vale",
+                    "numCrimes": 17
+                },
+                {
+                    "suburb": "richmond south",
+                    "numCrimes": 7
+                },
+                {
+                    "suburb": "macedon",
+                    "numCrimes": 384
+                },
+                {
+                    "suburb": "pootilla",
+                    "numCrimes": 13
+                },
+                {
+                    "suburb": "cabbage tree creek",
+                    "numCrimes": 15
+                },
+                {
+                    "suburb": "allestree",
+                    "numCrimes": 27
+                },
+                {
+                    "suburb": "moorabbin airport",
+                    "numCrimes": 183
+                },
+                {
+                    "suburb": "kilmore east",
+                    "numCrimes": 79
+                },
+                {
+                    "suburb": "addington",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "rathscar west",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "notting hill",
+                    "numCrimes": 880
+                },
+                {
+                    "suburb": "springvale",
+                    "numCrimes": 10007
+                },
+                {
+                    "suburb": "yarrambat",
+                    "numCrimes": 331
+                },
+                {
+                    "suburb": "darriman",
+                    "numCrimes": 9
+                },
+                {
+                    "suburb": "molka",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "toorloo arm",
+                    "numCrimes": 46
+                },
+                {
+                    "suburb": "new gisborne",
+                    "numCrimes": 283
+                },
+                {
+                    "suburb": "mirranatwa",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "mandurang south",
+                    "numCrimes": 11
+                },
+                {
+                    "suburb": "marlo",
+                    "numCrimes": 110
+                },
+                {
+                    "suburb": "londrigan",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "ripon",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "gordon",
+                    "numCrimes": 212
+                },
+                {
+                    "suburb": "beaumaris",
+                    "numCrimes": 1611
+                },
+                {
+                    "suburb": "appin south",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "newmerella",
+                    "numCrimes": 80
+                },
+                {
+                    "suburb": "lyons",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "kolora",
+                    "numCrimes": 54
+                },
+                {
+                    "suburb": "wollert",
+                    "numCrimes": 1840
+                },
+                {
+                    "suburb": "gonn crossing",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "whorouly",
+                    "numCrimes": 40
+                },
+                {
+                    "suburb": "wemen",
+                    "numCrimes": 38
+                },
+                {
+                    "suburb": "raywood",
+                    "numCrimes": 43
+                },
+                {
+                    "suburb": "muntham",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "goon nure",
+                    "numCrimes": 11
+                },
+                {
+                    "suburb": "lucyvale",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "kevington",
+                    "numCrimes": 19
+                },
+                {
+                    "suburb": "tamboon",
+                    "numCrimes": 18
+                },
+                {
+                    "suburb": "grantville",
+                    "numCrimes": 349
+                },
+                {
+                    "suburb": "flemington",
+                    "numCrimes": 7535
+                },
+                {
+                    "suburb": "lovely banks",
+                    "numCrimes": 569
+                },
+                {
+                    "suburb": "doncaster east",
+                    "numCrimes": 4360
+                },
+                {
+                    "suburb": "point nepean",
+                    "numCrimes": 8
+                },
+                {
+                    "suburb": "stonehaven",
+                    "numCrimes": 23
+                },
+                {
+                    "suburb": "lindenow",
+                    "numCrimes": 62
+                },
+                {
+                    "suburb": "seymour",
+                    "numCrimes": 5796
+                },
+                {
+                    "suburb": "coburg",
+                    "numCrimes": 13484
+                },
+                {
+                    "suburb": "beaconsfield",
+                    "numCrimes": 1904
+                },
+                {
+                    "suburb": "tyabb east",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "bayswater north",
+                    "numCrimes": 3513
+                },
+                {
+                    "suburb": "caulfield north",
+                    "numCrimes": 3099
+                },
+                {
+                    "suburb": "wonga",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "pomonal",
+                    "numCrimes": 29
+                },
+                {
+                    "suburb": "sebastopol",
+                    "numCrimes": 5286
+                },
+                {
+                    "suburb": "wareek",
+                    "numCrimes": 10
+                },
+                {
+                    "suburb": "ballarat north",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "barongarook west",
+                    "numCrimes": 9
+                },
+                {
+                    "suburb": "piangil",
+                    "numCrimes": 36
+                },
+                {
+                    "suburb": "dimboola",
+                    "numCrimes": 392
+                },
+                {
+                    "suburb": "morton plains",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "silvan",
+                    "numCrimes": 200
+                },
+                {
+                    "suburb": "bushy park",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "walwa",
+                    "numCrimes": 50
+                },
+                {
+                    "suburb": "tyrendarra",
+                    "numCrimes": 17
+                },
+                {
+                    "suburb": "cowes",
+                    "numCrimes": 2337
+                },
+                {
+                    "suburb": "pound creek",
+                    "numCrimes": 9
+                },
+                {
+                    "suburb": "glengarry west",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "wodonga west",
+                    "numCrimes": 10
+                },
+                {
+                    "suburb": "noble park",
+                    "numCrimes": 13338
+                },
+                {
+                    "suburb": "mudgegonga",
+                    "numCrimes": 8
+                },
+                {
+                    "suburb": "tinamba west",
+                    "numCrimes": 8
+                },
+                {
+                    "suburb": "pyalong",
+                    "numCrimes": 298
+                },
+                {
+                    "suburb": "south geelong",
+                    "numCrimes": 245
+                },
+                {
+                    "suburb": "junction village",
+                    "numCrimes": 129
+                },
+                {
+                    "suburb": "preston",
+                    "numCrimes": 27280
+                },
+                {
+                    "suburb": "crossover",
+                    "numCrimes": 48
+                },
+                {
+                    "suburb": "murgheboluc",
+                    "numCrimes": 10
+                },
+                {
+                    "suburb": "meeniyan",
+                    "numCrimes": 97
+                },
+                {
+                    "suburb": "watsonia",
+                    "numCrimes": 2532
+                },
+                {
+                    "suburb": "wairewa",
+                    "numCrimes": 21
+                },
+                {
+                    "suburb": "windsor",
+                    "numCrimes": 3766
+                },
+                {
+                    "suburb": "upper ferntree gully",
+                    "numCrimes": 1106
+                },
+                {
+                    "suburb": "cokum",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "mount helen",
+                    "numCrimes": 375
+                },
+                {
+                    "suburb": "nunga",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "exford",
+                    "numCrimes": 71
+                },
+                {
+                    "suburb": "clifton springs",
+                    "numCrimes": 872
+                },
+                {
+                    "suburb": "yeungroon east",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "albert park",
+                    "numCrimes": 3041
+                },
+                {
+                    "suburb": "meatian",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "neerim north",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "marysville",
+                    "numCrimes": 85
+                },
+                {
+                    "suburb": "ruffy",
+                    "numCrimes": 9
+                },
+                {
+                    "suburb": "burrowye",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "cundare north",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "powelltown",
+                    "numCrimes": 35
+                },
+                {
+                    "suburb": "staghorn flat",
+                    "numCrimes": 18
+                },
+                {
+                    "suburb": "essendon west",
+                    "numCrimes": 157
+                },
+                {
+                    "suburb": "sale",
+                    "numCrimes": 11106
+                },
+                {
+                    "suburb": "wonga park",
+                    "numCrimes": 471
+                },
+                {
+                    "suburb": "girgarre",
+                    "numCrimes": 135
+                },
+                {
+                    "suburb": "wheelers hill",
+                    "numCrimes": 2741
+                },
+                {
+                    "suburb": "panitya",
+                    "numCrimes": 7
+                },
+                {
+                    "suburb": "balnarring",
+                    "numCrimes": 364
+                },
+                {
+                    "suburb": "yellingbo",
+                    "numCrimes": 246
+                },
+                {
+                    "suburb": "barmah",
+                    "numCrimes": 130
+                },
+                {
+                    "suburb": "eynesbury",
+                    "numCrimes": 254
+                },
+                {
+                    "suburb": "buragwonduc",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "cape woolamai",
+                    "numCrimes": 447
+                },
+                {
+                    "suburb": "wattle bank",
+                    "numCrimes": 24
+                },
+                {
+                    "suburb": "whitlands",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "yalla y poora",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "glenmore",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "talbot",
+                    "numCrimes": 189
+                },
+                {
+                    "suburb": "bright",
+                    "numCrimes": 444
+                },
+                {
+                    "suburb": "ivanhoe",
+                    "numCrimes": 4095
+                },
+                {
+                    "suburb": "archies creek",
+                    "numCrimes": 57
+                },
+                {
+                    "suburb": "whroo",
+                    "numCrimes": 22
+                },
+                {
+                    "suburb": "grampians",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "gnotuk",
+                    "numCrimes": 8
+                },
+                {
+                    "suburb": "strath creek",
+                    "numCrimes": 60
+                },
+                {
+                    "suburb": "greta west",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "glenferrie south",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "lake tyers beach",
+                    "numCrimes": 122
+                },
+                {
+                    "suburb": "katandra",
+                    "numCrimes": 18
+                },
+                {
+                    "suburb": "raglan",
+                    "numCrimes": 42
+                },
+                {
+                    "suburb": "archdale junction",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "argyle",
+                    "numCrimes": 7
+                },
+                {
+                    "suburb": "swifts creek",
+                    "numCrimes": 81
+                },
+                {
+                    "suburb": "bittern",
+                    "numCrimes": 731
+                },
+                {
+                    "suburb": "gruyere",
+                    "numCrimes": 79
+                },
+                {
+                    "suburb": "gazette",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "murchison east",
+                    "numCrimes": 73
+                },
+                {
+                    "suburb": "maribyrnong",
+                    "numCrimes": 8730
+                },
+                {
+                    "suburb": "lethbridge",
+                    "numCrimes": 95
+                },
+                {
+                    "suburb": "tandarook",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "sandy point",
+                    "numCrimes": 33
+                },
+                {
+                    "suburb": "gerangamete",
+                    "numCrimes": 28
+                },
+                {
+                    "suburb": "silverleaves",
+                    "numCrimes": 19
+                },
+                {
+                    "suburb": "carlton north",
+                    "numCrimes": 2430
+                },
+                {
+                    "suburb": "wunghnu",
+                    "numCrimes": 75
+                },
+                {
+                    "suburb": "bealiba",
+                    "numCrimes": 109
+                },
+                {
+                    "suburb": "minjah",
+                    "numCrimes": 11
+                },
+                {
+                    "suburb": "plenty upper",
+                    "numCrimes": 7
+                },
+                {
+                    "suburb": "waldara",
+                    "numCrimes": 7
+                },
+                {
+                    "suburb": "port albert",
+                    "numCrimes": 124
+                },
+                {
+                    "suburb": "staceys bridge",
+                    "numCrimes": 8
+                },
+                {
+                    "suburb": "myrtleford",
+                    "numCrimes": 1033
+                },
+                {
+                    "suburb": "sidonia",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "devils river",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "brim",
+                    "numCrimes": 59
+                },
+                {
+                    "suburb": "gundowring upper",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "sandon",
+                    "numCrimes": 13
+                },
+                {
+                    "suburb": "casey fields",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "mount cottrell",
+                    "numCrimes": 270
+                },
+                {
+                    "suburb": "toolong",
+                    "numCrimes": 7
+                },
+                {
+                    "suburb": "arthurs creek",
+                    "numCrimes": 57
+                },
+                {
+                    "suburb": "merrigum",
+                    "numCrimes": 148
+                },
+                {
+                    "suburb": "stanley",
+                    "numCrimes": 19
+                },
+                {
+                    "suburb": "quarry hill",
+                    "numCrimes": 558
+                },
+                {
+                    "suburb": "aspendale",
+                    "numCrimes": 1398
+                },
+                {
+                    "suburb": "carrajung south",
+                    "numCrimes": 12
+                },
+                {
+                    "suburb": "lang lang",
+                    "numCrimes": 528
+                },
+                {
+                    "suburb": "delahey",
+                    "numCrimes": 2756
+                },
+                {
+                    "suburb": "dry creek",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "narre warren",
+                    "numCrimes": 15577
+                },
+                {
+                    "suburb": "reservoir east",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "acheron",
+                    "numCrimes": 24
+                },
+                {
+                    "suburb": "taradale",
+                    "numCrimes": 128
+                },
+                {
+                    "suburb": "smythes creek",
+                    "numCrimes": 97
+                },
+                {
+                    "suburb": "gunyah gunyah",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "heathcote junction",
+                    "numCrimes": 128
+                },
+                {
+                    "suburb": "tourello",
+                    "numCrimes": 8
+                },
+                {
+                    "suburb": "korong vale",
+                    "numCrimes": 105
+                },
+                {
+                    "suburb": "bellbridge",
+                    "numCrimes": 54
+                },
+                {
+                    "suburb": "gre gre south",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "binginwarri",
+                    "numCrimes": 20
+                },
+                {
+                    "suburb": "diamond creek",
+                    "numCrimes": 2971
+                },
+                {
+                    "suburb": "maddingley",
+                    "numCrimes": 520
+                },
+                {
+                    "suburb": "barnawartha",
+                    "numCrimes": 235
+                },
+                {
+                    "suburb": "greenvale",
+                    "numCrimes": 3025
+                },
+                {
+                    "suburb": "springbank",
+                    "numCrimes": 20
+                },
+                {
+                    "suburb": "wood wood",
+                    "numCrimes": 16
+                },
+                {
+                    "suburb": "buffalo river",
+                    "numCrimes": 49
+                },
+                {
+                    "suburb": "corack",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "fernshaw",
+                    "numCrimes": 9
+                },
+                {
+                    "suburb": "clayton",
+                    "numCrimes": 7537
+                },
+                {
+                    "suburb": "murtoa",
+                    "numCrimes": 326
+                },
+                {
+                    "suburb": "carwarp",
+                    "numCrimes": 32
+                },
+                {
+                    "suburb": "briagolong",
+                    "numCrimes": 202
+                },
+                {
+                    "suburb": "nulla vale",
+                    "numCrimes": 7
+                },
+                {
+                    "suburb": "portland north",
+                    "numCrimes": 8
+                },
+                {
+                    "suburb": "tallandoon",
+                    "numCrimes": 22
+                },
+                {
+                    "suburb": "porcupine ridge",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "st leonards",
+                    "numCrimes": 650
+                },
+                {
+                    "suburb": "ouyen",
+                    "numCrimes": 351
+                },
+                {
+                    "suburb": "talgarno",
+                    "numCrimes": 22
+                },
+                {
+                    "suburb": "kalkee",
+                    "numCrimes": 12
+                },
+                {
+                    "suburb": "waranga shores",
+                    "numCrimes": 14
+                },
+                {
+                    "suburb": "sulky",
+                    "numCrimes": 28
+                },
+                {
+                    "suburb": "koroit",
+                    "numCrimes": 393
+                },
+                {
+                    "suburb": "bearii",
+                    "numCrimes": 26
+                },
+                {
+                    "suburb": "leongatha south",
+                    "numCrimes": 33
+                },
+                {
+                    "suburb": "oaklands junction",
+                    "numCrimes": 69
+                },
+                {
+                    "suburb": "launching place",
+                    "numCrimes": 328
+                },
+                {
+                    "suburb": "port campbell",
+                    "numCrimes": 131
+                },
+                {
+                    "suburb": "bailieston",
+                    "numCrimes": 19
+                },
+                {
+                    "suburb": "mountain bay",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "lockwood south",
+                    "numCrimes": 66
+                },
+                {
+                    "suburb": "coburg east",
+                    "numCrimes": 188
+                },
+                {
+                    "suburb": "wingeel",
+                    "numCrimes": 10
+                },
+                {
+                    "suburb": "brenanah",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "wangaratta south",
+                    "numCrimes": 112
+                },
+                {
+                    "suburb": "drouin",
+                    "numCrimes": 4577
+                },
+                {
+                    "suburb": "cosgrove south",
+                    "numCrimes": 13
+                },
+                {
+                    "suburb": "club terrace",
+                    "numCrimes": 31
+                },
+                {
+                    "suburb": "camberwell east",
+                    "numCrimes": 9
+                },
+                {
+                    "suburb": "bronzewing",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "waratah bay",
+                    "numCrimes": 15
+                },
+                {
+                    "suburb": "berrybank",
+                    "numCrimes": 20
+                },
+                {
+                    "suburb": "wallup",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "jarvis creek",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "corack east",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "yatpool",
+                    "numCrimes": 17
+                },
+                {
+                    "suburb": "rochford",
+                    "numCrimes": 11
+                },
+                {
+                    "suburb": "cranbourne west",
+                    "numCrimes": 3478
+                },
+                {
+                    "suburb": "mount camel",
+                    "numCrimes": 20
+                },
+                {
+                    "suburb": "traralgon south",
+                    "numCrimes": 56
+                },
+                {
+                    "suburb": "rippleside",
+                    "numCrimes": 241
+                },
+                {
+                    "suburb": "kurunjang",
+                    "numCrimes": 2519
+                },
+                {
+                    "suburb": "myall",
+                    "numCrimes": 15
+                },
+                {
+                    "suburb": "gorae",
+                    "numCrimes": 23
+                },
+                {
+                    "suburb": "newborough",
+                    "numCrimes": 3591
+                },
+                {
+                    "suburb": "toombullup",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "connewarre",
+                    "numCrimes": 130
+                },
+                {
+                    "suburb": "glenaroua",
+                    "numCrimes": 34
+                },
+                {
+                    "suburb": "pine lodge south",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "ringwood",
+                    "numCrimes": 15622
+                },
+                {
+                    "suburb": "maiden gully",
+                    "numCrimes": 493
+                },
+                {
+                    "suburb": "arnold",
+                    "numCrimes": 11
+                },
+                {
+                    "suburb": "wyuna east",
+                    "numCrimes": 11
+                },
+                {
+                    "suburb": "cowes west",
+                    "numCrimes": 20
+                },
+                {
+                    "suburb": "western port",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "nalangil",
+                    "numCrimes": 9
+                },
+                {
+                    "suburb": "junortoun",
+                    "numCrimes": 273
+                },
+                {
+                    "suburb": "longford",
+                    "numCrimes": 219
+                },
+                {
+                    "suburb": "wooragee",
+                    "numCrimes": 39
+                },
+                {
+                    "suburb": "boweya north",
+                    "numCrimes": 10
+                },
+                {
+                    "suburb": "st albans park",
+                    "numCrimes": 1055
+                },
+                {
+                    "suburb": "scarsdale",
+                    "numCrimes": 151
+                },
+                {
+                    "suburb": "princes hill",
+                    "numCrimes": 575
+                },
+                {
+                    "suburb": "falls creek",
+                    "numCrimes": 142
+                },
+                {
+                    "suburb": "devon meadows",
+                    "numCrimes": 290
+                },
+                {
+                    "suburb": "jumbuk",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "earlston",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "hansonville",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "moyston",
+                    "numCrimes": 51
+                },
+                {
+                    "suburb": "barwon downs",
+                    "numCrimes": 15
+                },
+                {
+                    "suburb": "naring",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "fingal",
+                    "numCrimes": 143
+                },
+                {
+                    "suburb": "west bendigo",
+                    "numCrimes": 9
+                },
+                {
+                    "suburb": "broadwater",
+                    "numCrimes": 11
+                },
+                {
+                    "suburb": "leigh creek",
+                    "numCrimes": 32
+                },
+                {
+                    "suburb": "essendon fields",
+                    "numCrimes": 130
+                },
+                {
+                    "suburb": "torrumbarry",
+                    "numCrimes": 84
+                },
+                {
+                    "suburb": "cheshunt south",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "porcupine flat",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "glen creek",
+                    "numCrimes": 10
+                },
+                {
+                    "suburb": "kirwans bridge",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "ravenhall",
+                    "numCrimes": 2410
+                },
+                {
+                    "suburb": "lake mundi",
+                    "numCrimes": 8
+                },
+                {
+                    "suburb": "teddywaddy",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "ashbourne",
+                    "numCrimes": 14
+                },
+                {
+                    "suburb": "diggers rest",
+                    "numCrimes": 1088
+                },
+                {
+                    "suburb": "bulart",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "horsham",
+                    "numCrimes": 12091
+                },
+                {
+                    "suburb": "south wharf",
+                    "numCrimes": 735
+                },
+                {
+                    "suburb": "modella",
+                    "numCrimes": 42
+                },
+                {
+                    "suburb": "belgrave south",
+                    "numCrimes": 256
+                },
+                {
+                    "suburb": "bentleigh",
+                    "numCrimes": 3682
+                },
+                {
+                    "suburb": "balmattum",
+                    "numCrimes": 26
+                },
+                {
+                    "suburb": "koondrook",
+                    "numCrimes": 158
+                },
+                {
+                    "suburb": "ryanston",
+                    "numCrimes": 20
+                },
+                {
+                    "suburb": "woosang",
+                    "numCrimes": 7
+                },
+                {
+                    "suburb": "glen forbes",
+                    "numCrimes": 29
+                },
+                {
+                    "suburb": "eureka",
+                    "numCrimes": 22
+                },
+                {
+                    "suburb": "bowser",
+                    "numCrimes": 9
+                },
+                {
+                    "suburb": "morgiana",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "streatham",
+                    "numCrimes": 9
+                },
+                {
+                    "suburb": "green gully",
+                    "numCrimes": 10
+                },
+                {
+                    "suburb": "bromley",
+                    "numCrimes": 11
+                },
+                {
+                    "suburb": "cottles bridge",
+                    "numCrimes": 39
+                },
+                {
+                    "suburb": "bolinda",
+                    "numCrimes": 26
+                },
+                {
+                    "suburb": "chum creek",
+                    "numCrimes": 64
+                },
+                {
+                    "suburb": "lavers hill",
+                    "numCrimes": 31
+                },
+                {
+                    "suburb": "lake eildon",
+                    "numCrimes": 15
+                },
+                {
+                    "suburb": "abbotsford",
+                    "numCrimes": 5636
+                },
+                {
+                    "suburb": "warrnambool east",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "goomalibee",
+                    "numCrimes": 8
+                },
+                {
+                    "suburb": "melton",
+                    "numCrimes": 14075
+                },
+                {
+                    "suburb": "speed",
+                    "numCrimes": 8
+                },
+                {
+                    "suburb": "bald hills",
+                    "numCrimes": 25
+                },
+                {
+                    "suburb": "north wonthaggi",
+                    "numCrimes": 39
+                },
+                {
+                    "suburb": "cobaw",
+                    "numCrimes": 10
+                },
+                {
+                    "suburb": "mount evelyn",
+                    "numCrimes": 1624
+                },
+                {
+                    "suburb": "avenel",
+                    "numCrimes": 336
+                },
+                {
+                    "suburb": "winiam",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "mountain view",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "skipton",
+                    "numCrimes": 120
+                },
+                {
+                    "suburb": "nungurner",
+                    "numCrimes": 20
+                },
+                {
+                    "suburb": "woornack",
+                    "numCrimes": 10
+                },
+                {
+                    "suburb": "pastoria",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "westmeadows",
+                    "numCrimes": 1917
+                },
+                {
+                    "suburb": "euroa",
+                    "numCrimes": 839
+                },
+                {
+                    "suburb": "womerah",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "wilkin",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "cobains",
+                    "numCrimes": 65
+                },
+                {
+                    "suburb": "reedy creek",
+                    "numCrimes": 34
+                },
+                {
+                    "suburb": "gherang",
+                    "numCrimes": 12
+                },
+                {
+                    "suburb": "fentons creek",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "boolite",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "st kilda east",
+                    "numCrimes": 2887
+                },
+                {
+                    "suburb": "park orchards",
+                    "numCrimes": 461
+                },
+                {
+                    "suburb": "koetong",
+                    "numCrimes": 17
+                },
+                {
+                    "suburb": "werribee",
+                    "numCrimes": 20745
+                },
+                {
+                    "suburb": "lakes entrance",
+                    "numCrimes": 4066
+                },
+                {
+                    "suburb": "yalmy",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "hiawatha",
+                    "numCrimes": 10
+                },
+                {
+                    "suburb": "duverney",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "monbulk",
+                    "numCrimes": 733
+                },
+                {
+                    "suburb": "smythesdale",
+                    "numCrimes": 178
+                },
+                {
+                    "suburb": "lake marmal",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "cranbourne east",
+                    "numCrimes": 2692
+                },
+                {
+                    "suburb": "bostock creek",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "moe",
+                    "numCrimes": 11576
+                },
+                {
+                    "suburb": "ferndale",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "nunawading",
+                    "numCrimes": 3014
+                },
+                {
+                    "suburb": "footscray",
+                    "numCrimes": 14929
+                },
+                {
+                    "suburb": "macarthur",
+                    "numCrimes": 80
+                },
+                {
+                    "suburb": "golden square",
+                    "numCrimes": 2810
+                },
+                {
+                    "suburb": "ventnor",
+                    "numCrimes": 196
+                },
+                {
+                    "suburb": "steiglitz",
+                    "numCrimes": 32
+                },
+                {
+                    "suburb": "maryknoll",
+                    "numCrimes": 45
+                },
+                {
+                    "suburb": "woodstock on loddon",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "terrick terrick east",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "nagambie",
+                    "numCrimes": 654
+                },
+                {
+                    "suburb": "yannathan",
+                    "numCrimes": 40
+                },
+                {
+                    "suburb": "appin",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "woodstock-on-loddon",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "knox",
+                    "numCrimes": 350
+                },
+                {
+                    "suburb": "east sale",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "highett",
+                    "numCrimes": 4156
+                },
+                {
+                    "suburb": "sunnycliffs",
+                    "numCrimes": 26
+                },
+                {
+                    "suburb": "coimadai",
+                    "numCrimes": 106
+                },
+                {
+                    "suburb": "pittong",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "tarwin lower",
+                    "numCrimes": 78
+                },
+                {
+                    "suburb": "bullarto south",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "pira",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "spring gully",
+                    "numCrimes": 461
+                },
+                {
+                    "suburb": "tragowel",
+                    "numCrimes": 15
+                },
+                {
+                    "suburb": "macorna",
+                    "numCrimes": 11
+                },
+                {
+                    "suburb": "gheringhap",
+                    "numCrimes": 46
+                },
+                {
+                    "suburb": "markwood",
+                    "numCrimes": 42
+                },
+                {
+                    "suburb": "mirboo north",
+                    "numCrimes": 572
+                },
+                {
+                    "suburb": "toolamba",
+                    "numCrimes": 131
+                },
+                {
+                    "suburb": "bonn",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "kialla west",
+                    "numCrimes": 66
+                },
+                {
+                    "suburb": "creightons creek",
+                    "numCrimes": 8
+                },
+                {
+                    "suburb": "modewarre",
+                    "numCrimes": 41
+                },
+                {
+                    "suburb": "kanumbra",
+                    "numCrimes": 9
+                },
+                {
+                    "suburb": "epsom",
+                    "numCrimes": 1205
+                },
+                {
+                    "suburb": "licola",
+                    "numCrimes": 45
+                },
+                {
+                    "suburb": "leslie manor",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "croxton west",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "tidal river",
+                    "numCrimes": 33
+                },
+                {
+                    "suburb": "balintore",
+                    "numCrimes": 7
+                },
+                {
+                    "suburb": "beaconsfield upper",
+                    "numCrimes": 411
+                },
+                {
+                    "suburb": "cremorne",
+                    "numCrimes": 763
+                },
+                {
+                    "suburb": "black rock",
+                    "numCrimes": 958
+                },
+                {
+                    "suburb": "brighton",
+                    "numCrimes": 6469
+                },
+                {
+                    "suburb": "henty",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "genoa",
+                    "numCrimes": 20
+                },
+                {
+                    "suburb": "trinita",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "allans flat",
+                    "numCrimes": 12
+                },
+                {
+                    "suburb": "nar nar goon",
+                    "numCrimes": 294
+                },
+                {
+                    "suburb": "boundary bend",
+                    "numCrimes": 36
+                },
+                {
+                    "suburb": "tarilta",
+                    "numCrimes": 8
+                },
+                {
+                    "suburb": "beenak",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "heyfield",
+                    "numCrimes": 1129
+                },
+                {
+                    "suburb": "huntingdale",
+                    "numCrimes": 1041
+                },
+                {
+                    "suburb": "macks creek",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "sunday creek",
+                    "numCrimes": 38
+                },
+                {
+                    "suburb": "emu creek",
+                    "numCrimes": 11
+                },
+                {
+                    "suburb": "breakwater",
+                    "numCrimes": 944
+                },
+                {
+                    "suburb": "glen wills",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "fawkner",
+                    "numCrimes": 5499
+                },
+                {
+                    "suburb": "haddon",
+                    "numCrimes": 148
+                },
+                {
+                    "suburb": "elsternwick",
+                    "numCrimes": 3372
+                },
+                {
+                    "suburb": "clifton hill",
+                    "numCrimes": 3194
+                },
+                {
+                    "suburb": "coburg north",
+                    "numCrimes": 4263
+                },
+                {
+                    "suburb": "tamleugh",
+                    "numCrimes": 21
+                },
+                {
+                    "suburb": "vaughan",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "biggara",
+                    "numCrimes": 12
+                },
+                {
+                    "suburb": "rutherglen",
+                    "numCrimes": 483
+                },
+                {
+                    "suburb": "mincha",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "garfield north",
+                    "numCrimes": 14
+                },
+                {
+                    "suburb": "narraport",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "barraport west",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "hampton park",
+                    "numCrimes": 7013
+                },
+                {
+                    "suburb": "morrison",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "staughton vale",
+                    "numCrimes": 16
+                },
+                {
+                    "suburb": "koornalla",
+                    "numCrimes": 19
+                },
+                {
+                    "suburb": "grenville",
+                    "numCrimes": 21
+                },
+                {
+                    "suburb": "carrajung",
+                    "numCrimes": 74
+                },
+                {
+                    "suburb": "gobarup",
+                    "numCrimes": 16
+                },
+                {
+                    "suburb": "kingsville south",
+                    "numCrimes": 273
+                },
+                {
+                    "suburb": "golden beach",
+                    "numCrimes": 182
+                },
+                {
+                    "suburb": "castella",
+                    "numCrimes": 18
+                },
+                {
+                    "suburb": "thorpdale south",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "welshmans reef",
+                    "numCrimes": 19
+                },
+                {
+                    "suburb": "burnt bridge",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "elphinstone",
+                    "numCrimes": 266
+                },
+                {
+                    "suburb": "cambrian hill",
+                    "numCrimes": 47
+                },
+                {
+                    "suburb": "woodleigh",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "little river",
+                    "numCrimes": 566
+                },
+                {
+                    "suburb": "whorouly east",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "sandsmere",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "kiewa",
+                    "numCrimes": 59
+                },
+                {
+                    "suburb": "yarrara",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "lake eppalock",
+                    "numCrimes": 11
+                },
+                {
+                    "suburb": "watchem",
+                    "numCrimes": 41
+                },
+                {
+                    "suburb": "leongatha north",
+                    "numCrimes": 9
+                },
+                {
+                    "suburb": "gellibrand river",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "ebden",
+                    "numCrimes": 46
+                },
+                {
+                    "suburb": "caramut",
+                    "numCrimes": 40
+                },
+                {
+                    "suburb": "tuerong",
+                    "numCrimes": 106
+                },
+                {
+                    "suburb": "apsley",
+                    "numCrimes": 23
+                },
+                {
+                    "suburb": "hinnomunjie",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "fairy dell",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "kooroocheang",
+                    "numCrimes": 10
+                },
+                {
+                    "suburb": "johanna",
+                    "numCrimes": 14
+                },
+                {
+                    "suburb": "neds corner",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "blackburn south",
+                    "numCrimes": 1715
+                },
+                {
+                    "suburb": "goughs bay",
+                    "numCrimes": 65
+                },
+                {
+                    "suburb": "tintaldra",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "noble park east",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "ross creek",
+                    "numCrimes": 119
+                },
+                {
+                    "suburb": "kalorama",
+                    "numCrimes": 123
+                },
+                {
+                    "suburb": "soldiers hill",
+                    "numCrimes": 81
+                },
+                {
+                    "suburb": "myola",
+                    "numCrimes": 11
+                },
+                {
+                    "suburb": "carnegie",
+                    "numCrimes": 3789
+                },
+                {
+                    "suburb": "clayton south",
+                    "numCrimes": 3393
+                },
+                {
+                    "suburb": "beulah",
+                    "numCrimes": 87
+                },
+                {
+                    "suburb": "drouin west",
+                    "numCrimes": 65
+                },
+                {
+                    "suburb": "telangatuk",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "bayswater",
+                    "numCrimes": 6285
+                },
+                {
+                    "suburb": "abbeyard",
+                    "numCrimes": 8
+                },
+                {
+                    "suburb": "guildford",
+                    "numCrimes": 87
+                },
+                {
+                    "suburb": "jilpanger",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "dumbalk",
+                    "numCrimes": 52
+                },
+                {
+                    "suburb": "mount tamboritha",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "bayles",
+                    "numCrimes": 83
+                },
+                {
+                    "suburb": "yeodene",
+                    "numCrimes": 10
+                },
+                {
+                    "suburb": "glenaire",
+                    "numCrimes": 13
+                },
+                {
+                    "suburb": "arthurs seat",
+                    "numCrimes": 110
+                },
+                {
+                    "suburb": "dutson",
+                    "numCrimes": 22
+                },
+                {
+                    "suburb": "cape paterson",
+                    "numCrimes": 305
+                },
+                {
+                    "suburb": "merbein west",
+                    "numCrimes": 34
+                },
+                {
+                    "suburb": "bunguluke",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "reedy lake",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "nelson",
+                    "numCrimes": 79
+                },
+                {
+                    "suburb": "banyena",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "lamplough",
+                    "numCrimes": 20
+                },
+                {
+                    "suburb": "coldstream",
+                    "numCrimes": 443
+                },
+                {
+                    "suburb": "wurruk",
+                    "numCrimes": 527
+                },
+                {
+                    "suburb": "richmond north",
+                    "numCrimes": 28
+                },
+                {
+                    "suburb": "leaghur",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "dollar",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "hampton",
+                    "numCrimes": 3091
+                },
+                {
+                    "suburb": "mount buller",
+                    "numCrimes": 302
+                },
+                {
+                    "suburb": "kallista",
+                    "numCrimes": 158
+                },
+                {
+                    "suburb": "weering",
+                    "numCrimes": 7
+                },
+                {
+                    "suburb": "garibaldi",
+                    "numCrimes": 10
+                },
+                {
+                    "suburb": "ballarat central",
+                    "numCrimes": 242
+                },
+                {
+                    "suburb": "mount toolebewong",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "ruby",
+                    "numCrimes": 20
+                },
+                {
+                    "suburb": "murrayville",
+                    "numCrimes": 49
+                },
+                {
+                    "suburb": "elingamite north",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "oxley",
+                    "numCrimes": 45
+                },
+                {
+                    "suburb": "williamstown",
+                    "numCrimes": 5445
+                },
+                {
+                    "suburb": "foster",
+                    "numCrimes": 342
+                },
+                {
+                    "suburb": "tostaree",
+                    "numCrimes": 8
+                },
+                {
+                    "suburb": "elingamite",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "jeeralang",
+                    "numCrimes": 18
+                },
+                {
+                    "suburb": "congupna",
+                    "numCrimes": 124
+                },
+                {
+                    "suburb": "killingworth",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "wheatsheaf",
+                    "numCrimes": 25
+                },
+                {
+                    "suburb": "cambarville",
+                    "numCrimes": 14
+                },
+                {
+                    "suburb": "cobrico",
+                    "numCrimes": 7
+                },
+                {
+                    "suburb": "edi",
+                    "numCrimes": 8
+                },
+                {
+                    "suburb": "horfield",
+                    "numCrimes": 9
+                },
+                {
+                    "suburb": "double bridges",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "somers",
+                    "numCrimes": 270
+                },
+                {
+                    "suburb": "kerrisdale",
+                    "numCrimes": 29
+                },
+                {
+                    "suburb": "st andrews",
+                    "numCrimes": 151
+                },
+                {
+                    "suburb": "alma",
+                    "numCrimes": 18
+                },
+                {
+                    "suburb": "rushworth",
+                    "numCrimes": 607
+                },
+                {
+                    "suburb": "bridgewater on loddon",
+                    "numCrimes": 355
+                },
+                {
+                    "suburb": "bellellen",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "romsey",
+                    "numCrimes": 950
+                },
+                {
+                    "suburb": "balwyn",
+                    "numCrimes": 2652
+                },
+                {
+                    "suburb": "the sisters",
+                    "numCrimes": 25
+                },
+                {
+                    "suburb": "blampied",
+                    "numCrimes": 18
+                },
+                {
+                    "suburb": "bungeet",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "bungal",
+                    "numCrimes": 7
+                },
+                {
+                    "suburb": "tulkara",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "cockatoo",
+                    "numCrimes": 1044
+                },
+                {
+                    "suburb": "nerrena",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "newfield",
+                    "numCrimes": 10
+                },
+                {
+                    "suburb": "st kilda west",
+                    "numCrimes": 840
+                },
+                {
+                    "suburb": "seddon",
+                    "numCrimes": 1410
+                },
+                {
+                    "suburb": "kiamal",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "eppalock",
+                    "numCrimes": 85
+                },
+                {
+                    "suburb": "mount hooghly",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "rye",
+                    "numCrimes": 3113
+                },
+                {
+                    "suburb": "ranceby",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "glenmaggie",
+                    "numCrimes": 113
+                },
+                {
+                    "suburb": "bulleen south",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "ringwood north",
+                    "numCrimes": 1039
+                },
+                {
+                    "suburb": "bagshot north",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "lawrence",
+                    "numCrimes": 7
+                },
+                {
+                    "suburb": "scotts creek",
+                    "numCrimes": 26
+                },
+                {
+                    "suburb": "katamatite east",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "milltown",
+                    "numCrimes": 35
+                },
+                {
+                    "suburb": "derrimut",
+                    "numCrimes": 2721
+                },
+                {
+                    "suburb": "colac east",
+                    "numCrimes": 18
+                },
+                {
+                    "suburb": "strathfieldsaye",
+                    "numCrimes": 428
+                },
+                {
+                    "suburb": "jil jil",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "leichardt",
+                    "numCrimes": 13
+                },
+                {
+                    "suburb": "boorhaman",
+                    "numCrimes": 7
+                },
+                {
+                    "suburb": "freeburgh",
+                    "numCrimes": 17
+                },
+                {
+                    "suburb": "cobden",
+                    "numCrimes": 368
+                },
+                {
+                    "suburb": "poowong east",
+                    "numCrimes": 7
+                },
+                {
+                    "suburb": "diggora",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "moyarra",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "wannon",
+                    "numCrimes": 11
+                },
+                {
+                    "suburb": "goroke",
+                    "numCrimes": 81
+                },
+                {
+                    "suburb": "guys hill",
+                    "numCrimes": 47
+                },
+                {
+                    "suburb": "nyerimilang",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "woodside north",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "cobberas",
+                    "numCrimes": 12
+                },
+                {
+                    "suburb": "silver creek",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "bullarook",
+                    "numCrimes": 21
+                },
+                {
+                    "suburb": "lalbert",
+                    "numCrimes": 17
+                },
+                {
+                    "suburb": "langwarrin south",
+                    "numCrimes": 159
+                },
+                {
+                    "suburb": "glenormiston south",
+                    "numCrimes": 15
+                },
+                {
+                    "suburb": "netherby",
+                    "numCrimes": 9
+                },
+                {
+                    "suburb": "aberfeldie",
+                    "numCrimes": 609
+                },
+                {
+                    "suburb": "benalla west",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "collingwood",
+                    "numCrimes": 9163
+                },
+                {
+                    "suburb": "stradbroke",
+                    "numCrimes": 57
+                },
+                {
+                    "suburb": "loch valley",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "winter valley",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "grassdale",
+                    "numCrimes": 16
+                },
+                {
+                    "suburb": "maroona",
+                    "numCrimes": 17
+                },
+                {
+                    "suburb": "lysterfield",
+                    "numCrimes": 883
+                },
+                {
+                    "suburb": "corinella",
+                    "numCrimes": 153
+                },
+                {
+                    "suburb": "warrak",
+                    "numCrimes": 18
+                },
+                {
+                    "suburb": "tesbury",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "yinnar south",
+                    "numCrimes": 98
+                },
+                {
+                    "suburb": "bete bolong",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "moonambel",
+                    "numCrimes": 57
+                },
+                {
+                    "suburb": "waterholes",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "kingspark",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "newlands arm",
+                    "numCrimes": 75
+                },
+                {
+                    "suburb": "eddington",
+                    "numCrimes": 11
+                },
+                {
+                    "suburb": "culgoa",
+                    "numCrimes": 14
+                },
+                {
+                    "suburb": "barooga",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "bolwarra",
+                    "numCrimes": 41
+                },
+                {
+                    "suburb": "merrinee",
+                    "numCrimes": 9
+                },
+                {
+                    "suburb": "manns beach",
+                    "numCrimes": 12
+                },
+                {
+                    "suburb": "ballan",
+                    "numCrimes": 1381
+                },
+                {
+                    "suburb": "kilsyth",
+                    "numCrimes": 3348
+                },
+                {
+                    "suburb": "brunswick",
+                    "numCrimes": 14178
+                },
+                {
+                    "suburb": "ghin ghin",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "waterways",
+                    "numCrimes": 296
+                },
+                {
+                    "suburb": "dunneworthy",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "bonbeach",
+                    "numCrimes": 1214
+                },
+                {
+                    "suburb": "pioneer bay",
+                    "numCrimes": 92
+                },
+                {
+                    "suburb": "indigo valley",
+                    "numCrimes": 11
+                },
+                {
+                    "suburb": "slaty creek",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "avoca",
+                    "numCrimes": 283
+                },
+                {
+                    "suburb": "dargo",
+                    "numCrimes": 93
+                },
+                {
+                    "suburb": "mount buller alpine",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "glenhope",
+                    "numCrimes": 30
+                },
+                {
+                    "suburb": "chetwynd",
+                    "numCrimes": 34
+                },
+                {
+                    "suburb": "pearcedale",
+                    "numCrimes": 708
+                },
+                {
+                    "suburb": "nowingi",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "undera",
+                    "numCrimes": 97
+                },
+                {
+                    "suburb": "caveat",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "hotspur",
+                    "numCrimes": 13
+                },
+                {
+                    "suburb": "wiseleigh",
+                    "numCrimes": 8
+                },
+                {
+                    "suburb": "warranwood",
+                    "numCrimes": 307
+                },
+                {
+                    "suburb": "woodvale",
+                    "numCrimes": 141
+                },
+                {
+                    "suburb": "jacksons creek",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "brimboal",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "strathmore",
+                    "numCrimes": 2117
+                },
+                {
+                    "suburb": "springhurst",
+                    "numCrimes": 182
+                },
+                {
+                    "suburb": "stanhope",
+                    "numCrimes": 191
+                },
+                {
+                    "suburb": "silvan south",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "glen valley",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "iona",
+                    "numCrimes": 40
+                },
+                {
+                    "suburb": "werneth",
+                    "numCrimes": 14
+                },
+                {
+                    "suburb": "yan yean",
+                    "numCrimes": 98
+                },
+                {
+                    "suburb": "ensay",
+                    "numCrimes": 22
+                },
+                {
+                    "suburb": "stockdale",
+                    "numCrimes": 21
+                },
+                {
+                    "suburb": "bowenvale",
+                    "numCrimes": 25
+                },
+                {
+                    "suburb": "teal point",
+                    "numCrimes": 8
+                },
+                {
+                    "suburb": "northcote",
+                    "numCrimes": 9937
+                },
+                {
+                    "suburb": "bears lagoon",
+                    "numCrimes": 22
+                },
+                {
+                    "suburb": "bolwarrah",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "apollo bay",
+                    "numCrimes": 669
+                },
+                {
+                    "suburb": "mannibadar",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "cape conran",
+                    "numCrimes": 12
+                },
+                {
+                    "suburb": "osbornes flat",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "canterbury",
+                    "numCrimes": 1164
+                },
+                {
+                    "suburb": "willow grove",
+                    "numCrimes": 110
+                },
+                {
+                    "suburb": "bona vista",
+                    "numCrimes": 13
+                },
+                {
+                    "suburb": "timberoo",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "greenwald",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "langley",
+                    "numCrimes": 16
+                },
+                {
+                    "suburb": "rosanna",
+                    "numCrimes": 1710
+                },
+                {
+                    "suburb": "pakenham upper",
+                    "numCrimes": 390
+                },
+                {
+                    "suburb": "woolsthorpe",
+                    "numCrimes": 30
+                },
+                {
+                    "suburb": "chute",
+                    "numCrimes": 17
+                },
+                {
+                    "suburb": "havelock",
+                    "numCrimes": 13
+                },
+                {
+                    "suburb": "durham lead",
+                    "numCrimes": 22
+                },
+                {
+                    "suburb": "dreeite",
+                    "numCrimes": 14
+                },
+                {
+                    "suburb": "toongabbie",
+                    "numCrimes": 127
+                },
+                {
+                    "suburb": "rosebud",
+                    "numCrimes": 7474
+                },
+                {
+                    "suburb": "cardigan village",
+                    "numCrimes": 183
+                },
+                {
+                    "suburb": "mudgeegonga",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "golden point",
+                    "numCrimes": 270
+                },
+                {
+                    "suburb": "tanjil east",
+                    "numCrimes": 10
+                },
+                {
+                    "suburb": "warburton east",
+                    "numCrimes": 79
+                },
+                {
+                    "suburb": "eurack",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "wildwood",
+                    "numCrimes": 77
+                },
+                {
+                    "suburb": "labertouche",
+                    "numCrimes": 78
+                },
+                {
+                    "suburb": "wild dog valley",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "ceres",
+                    "numCrimes": 57
+                },
+                {
+                    "suburb": "curdies river",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "reservoir",
+                    "numCrimes": 19900
+                },
+                {
+                    "suburb": "little hampton",
+                    "numCrimes": 26
+                },
+                {
+                    "suburb": "geelong south",
+                    "numCrimes": 1035
+                },
+                {
+                    "suburb": "tullamarine airport",
+                    "numCrimes": 32
+                },
+                {
+                    "suburb": "tallangatta south",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "mooralla",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "elliminyt",
+                    "numCrimes": 290
+                },
+                {
+                    "suburb": "logan",
+                    "numCrimes": 10
+                },
+                {
+                    "suburb": "peechelba east",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "darlington",
+                    "numCrimes": 46
+                },
+                {
+                    "suburb": "gritjurk",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "barringo",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "gymbowen",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "point wilson",
+                    "numCrimes": 34
+                },
+                {
+                    "suburb": "point roadknight",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "officer south",
+                    "numCrimes": 18
+                },
+                {
+                    "suburb": "patyah",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "point addis",
+                    "numCrimes": 8
+                },
+                {
+                    "suburb": "campbellfield",
+                    "numCrimes": 7578
+                },
+                {
+                    "suburb": "leongatha",
+                    "numCrimes": 1946
+                },
+                {
+                    "suburb": "porepunkah",
+                    "numCrimes": 138
+                },
+                {
+                    "suburb": "middle park",
+                    "numCrimes": 1270
+                },
+                {
+                    "suburb": "bundalaguah",
+                    "numCrimes": 71
+                },
+                {
+                    "suburb": "brimin",
+                    "numCrimes": 17
+                },
+                {
+                    "suburb": "bells beach",
+                    "numCrimes": 35
+                },
+                {
+                    "suburb": "wahgunyah",
+                    "numCrimes": 150
+                },
+                {
+                    "suburb": "mollongghip",
+                    "numCrimes": 12
+                },
+                {
+                    "suburb": "macorna north",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "hunter",
+                    "numCrimes": 7
+                },
+                {
+                    "suburb": "wootong vale",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "kerrie",
+                    "numCrimes": 18
+                },
+                {
+                    "suburb": "hazelwood",
+                    "numCrimes": 72
+                },
+                {
+                    "suburb": "ascot vale",
+                    "numCrimes": 6813
+                },
+                {
+                    "suburb": "burrumbeet",
+                    "numCrimes": 112
+                },
+                {
+                    "suburb": "rocklyn",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "harrow",
+                    "numCrimes": 33
+                },
+                {
+                    "suburb": "balnarring beach",
+                    "numCrimes": 59
+                },
+                {
+                    "suburb": "invergordon",
+                    "numCrimes": 103
+                },
+                {
+                    "suburb": "yambuk",
+                    "numCrimes": 20
+                },
+                {
+                    "suburb": "mount martha",
+                    "numCrimes": 2160
+                },
+                {
+                    "suburb": "capels crossing",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "jeffcott north",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "wallan",
+                    "numCrimes": 4658
+                },
+                {
+                    "suburb": "ashwood",
+                    "numCrimes": 2246
+                },
+                {
+                    "suburb": "derrinallum",
+                    "numCrimes": 82
+                },
+                {
+                    "suburb": "leneva",
+                    "numCrimes": 52
+                },
+                {
+                    "suburb": "duchembegarra north",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "edgecombe",
+                    "numCrimes": 8
+                },
+                {
+                    "suburb": "boho south",
+                    "numCrimes": 17
+                },
+                {
+                    "suburb": "warncoort",
+                    "numCrimes": 12
+                },
+                {
+                    "suburb": "st arnaud east",
+                    "numCrimes": 7
+                },
+                {
+                    "suburb": "murchison north",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "kerang east",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "st arnaud",
+                    "numCrimes": 1022
+                },
+                {
+                    "suburb": "bangholme",
+                    "numCrimes": 286
+                },
+                {
+                    "suburb": "specimen hill",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "moyreisk",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "katandra west",
+                    "numCrimes": 156
+                },
+                {
+                    "suburb": "major plains",
+                    "numCrimes": 7
+                },
+                {
+                    "suburb": "naringal",
+                    "numCrimes": 21
+                },
+                {
+                    "suburb": "foster north",
+                    "numCrimes": 19
+                },
+                {
+                    "suburb": "quambatook",
+                    "numCrimes": 122
+                },
+                {
+                    "suburb": "newlyn north",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "muckleford south",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "bengworden",
+                    "numCrimes": 28
+                },
+                {
+                    "suburb": "tanwood",
+                    "numCrimes": 7
+                },
+                {
+                    "suburb": "portland",
+                    "numCrimes": 5986
+                },
+                {
+                    "suburb": "thologolong",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "polkemmet",
+                    "numCrimes": 24
+                },
+                {
+                    "suburb": "kensington",
+                    "numCrimes": 4798
+                },
+                {
+                    "suburb": "borung",
+                    "numCrimes": 30
+                },
+                {
+                    "suburb": "douglas",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "research",
+                    "numCrimes": 368
+                },
+                {
+                    "suburb": "grovedale",
+                    "numCrimes": 3935
+                },
+                {
+                    "suburb": "mooroolbark",
+                    "numCrimes": 5580
+                },
+                {
+                    "suburb": "clarkefield",
+                    "numCrimes": 101
+                },
+                {
+                    "suburb": "jack river",
+                    "numCrimes": 13
+                },
+                {
+                    "suburb": "paradise",
+                    "numCrimes": 23
+                },
+                {
+                    "suburb": "kerang",
+                    "numCrimes": 1573
+                },
+                {
+                    "suburb": "minhamite",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "vinifera",
+                    "numCrimes": 8
+                },
+                {
+                    "suburb": "bass",
+                    "numCrimes": 214
+                },
+                {
+                    "suburb": "ecklin south",
+                    "numCrimes": 46
+                },
+                {
+                    "suburb": "gowanbrae",
+                    "numCrimes": 470
+                },
+                {
+                    "suburb": "larralea",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "keilor north",
+                    "numCrimes": 69
+                },
+                {
+                    "suburb": "hepburn",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "box hill",
+                    "numCrimes": 6864
+                },
+                {
+                    "suburb": "bendigo",
+                    "numCrimes": 15941
+                },
+                {
+                    "suburb": "woorndoo",
+                    "numCrimes": 14
+                },
+                {
+                    "suburb": "red hill",
+                    "numCrimes": 257
+                },
+                {
+                    "suburb": "malmsbury",
+                    "numCrimes": 869
+                },
+                {
+                    "suburb": "sailors hill",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "bulla",
+                    "numCrimes": 470
+                },
+                {
+                    "suburb": "winnap",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "natimuk",
+                    "numCrimes": 78
+                },
+                {
+                    "suburb": "fitzroy north",
+                    "numCrimes": 5048
+                },
+                {
+                    "suburb": "youanmite",
+                    "numCrimes": 10
+                },
+                {
+                    "suburb": "birchip",
+                    "numCrimes": 130
+                },
+                {
+                    "suburb": "pine grove",
+                    "numCrimes": 9
+                },
+                {
+                    "suburb": "bamawm",
+                    "numCrimes": 61
+                },
+                {
+                    "suburb": "pomborneit north",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "smiths gully",
+                    "numCrimes": 27
+                },
+                {
+                    "suburb": "ninda",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "tambo upper",
+                    "numCrimes": 24
+                },
+                {
+                    "suburb": "watsonia north",
+                    "numCrimes": 388
+                },
+                {
+                    "suburb": "irymple",
+                    "numCrimes": 1142
+                },
+                {
+                    "suburb": "newington",
+                    "numCrimes": 140
+                },
+                {
+                    "suburb": "limestone",
+                    "numCrimes": 8
+                },
+                {
+                    "suburb": "lal lal",
+                    "numCrimes": 65
+                },
+                {
+                    "suburb": "koriella",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "glenloth",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "dandenong south",
+                    "numCrimes": 5953
+                },
+                {
+                    "suburb": "dingee",
+                    "numCrimes": 46
+                },
+                {
+                    "suburb": "belmont",
+                    "numCrimes": 5513
+                },
+                {
+                    "suburb": "bungaree",
+                    "numCrimes": 81
+                },
+                {
+                    "suburb": "swan hill",
+                    "numCrimes": 7089
+                },
+                {
+                    "suburb": "dunkeld",
+                    "numCrimes": 100
+                },
+                {
+                    "suburb": "whiteheads creek",
+                    "numCrimes": 54
+                },
+                {
+                    "suburb": "ricketts point",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "glenlyon",
+                    "numCrimes": 38
+                },
+                {
+                    "suburb": "joel joel",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "stewarton",
+                    "numCrimes": 9
+                },
+                {
+                    "suburb": "piedmont",
+                    "numCrimes": 8
+                },
+                {
+                    "suburb": "bayindeen",
+                    "numCrimes": 10
+                },
+                {
+                    "suburb": "thoona",
+                    "numCrimes": 22
+                },
+                {
+                    "suburb": "barwidgee",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "mont albert",
+                    "numCrimes": 914
+                },
+                {
+                    "suburb": "tungamah",
+                    "numCrimes": 112
+                },
+                {
+                    "suburb": "yulecart",
+                    "numCrimes": 18
+                },
+                {
+                    "suburb": "tylden",
+                    "numCrimes": 139
+                },
+                {
+                    "suburb": "daylesford",
+                    "numCrimes": 964
+                },
+                {
+                    "suburb": "yapeen",
+                    "numCrimes": 28
+                },
+                {
+                    "suburb": "otway",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "barrabool",
+                    "numCrimes": 22
+                },
+                {
+                    "suburb": "nareeb",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "the gurdies",
+                    "numCrimes": 57
+                },
+                {
+                    "suburb": "nareen",
+                    "numCrimes": 9
+                },
+                {
+                    "suburb": "cairnlea",
+                    "numCrimes": 2285
+                },
+                {
+                    "suburb": "nowa nowa",
+                    "numCrimes": 64
+                },
+                {
+                    "suburb": "bogong",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "pitfield",
+                    "numCrimes": 7
+                },
+                {
+                    "suburb": "neerim south",
+                    "numCrimes": 219
+                },
+                {
+                    "suburb": "greensborough",
+                    "numCrimes": 7982
+                },
+                {
+                    "suburb": "nathalia",
+                    "numCrimes": 549
+                },
+                {
+                    "suburb": "prairie",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "bakery hill",
+                    "numCrimes": 64
+                },
+                {
+                    "suburb": "nilma north",
+                    "numCrimes": 59
+                },
+                {
+                    "suburb": "glenpatrick",
+                    "numCrimes": 10
+                },
+                {
+                    "suburb": "stuart mill",
+                    "numCrimes": 20
+                },
+                {
+                    "suburb": "navigators",
+                    "numCrimes": 57
+                },
+                {
+                    "suburb": "trida",
+                    "numCrimes": 22
+                },
+                {
+                    "suburb": "boosey",
+                    "numCrimes": 20
+                },
+                {
+                    "suburb": "morwell",
+                    "numCrimes": 19700
+                },
+                {
+                    "suburb": "eden park",
+                    "numCrimes": 158
+                },
+                {
+                    "suburb": "halls gap",
+                    "numCrimes": 159
+                },
+                {
+                    "suburb": "elmore",
+                    "numCrimes": 280
+                },
+                {
+                    "suburb": "brighton east",
+                    "numCrimes": 2572
+                },
+                {
+                    "suburb": "hallam",
+                    "numCrimes": 5077
+                },
+                {
+                    "suburb": "batchica",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "bacchus marsh",
+                    "numCrimes": 6156
+                },
+                {
+                    "suburb": "point leo",
+                    "numCrimes": 42
+                },
+                {
+                    "suburb": "rochester",
+                    "numCrimes": 1014
+                },
+                {
+                    "suburb": "cherokee",
+                    "numCrimes": 9
+                },
+                {
+                    "suburb": "laverton north",
+                    "numCrimes": 3307
+                },
+                {
+                    "suburb": "campbells forest",
+                    "numCrimes": 16
+                },
+                {
+                    "suburb": "caralulup",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "somerton",
+                    "numCrimes": 994
+                },
+                {
+                    "suburb": "moorilim",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "glenormiston",
+                    "numCrimes": 33
+                },
+                {
+                    "suburb": "flamingo beach",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "ellerslie",
+                    "numCrimes": 25
+                },
+                {
+                    "suburb": "delburn",
+                    "numCrimes": 15
+                },
+                {
+                    "suburb": "patho",
+                    "numCrimes": 31
+                },
+                {
+                    "suburb": "cobram",
+                    "numCrimes": 2260
+                },
+                {
+                    "suburb": "tooborac",
+                    "numCrimes": 129
+                },
+                {
+                    "suburb": "yambuna",
+                    "numCrimes": 11
+                },
+                {
+                    "suburb": "knoxfield",
+                    "numCrimes": 2266
+                },
+                {
+                    "suburb": "majorca",
+                    "numCrimes": 55
+                },
+                {
+                    "suburb": "hunterston",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "timboon",
+                    "numCrimes": 229
+                },
+                {
+                    "suburb": "brooklyn",
+                    "numCrimes": 1749
+                },
+                {
+                    "suburb": "myrniong",
+                    "numCrimes": 97
+                },
+                {
+                    "suburb": "churchill island",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "the honeysuckles",
+                    "numCrimes": 24
+                },
+                {
+                    "suburb": "strangways",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "swan marsh",
+                    "numCrimes": 14
+                },
+                {
+                    "suburb": "green lake",
+                    "numCrimes": 30
+                },
+                {
+                    "suburb": "mckenzie creek",
+                    "numCrimes": 8
+                },
+                {
+                    "suburb": "big river",
+                    "numCrimes": 9
+                },
+                {
+                    "suburb": "wonwondah",
+                    "numCrimes": 8
+                },
+                {
+                    "suburb": "werona",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "hurstbridge",
+                    "numCrimes": 704
+                },
+                {
+                    "suburb": "sailors gully",
+                    "numCrimes": 46
+                },
+                {
+                    "suburb": "coghills creek",
+                    "numCrimes": 14
+                },
+                {
+                    "suburb": "kealba",
+                    "numCrimes": 1559
+                },
+                {
+                    "suburb": "merrijig",
+                    "numCrimes": 102
+                },
+                {
+                    "suburb": "marungi",
+                    "numCrimes": 11
+                },
+                {
+                    "suburb": "nariel",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "moorngag",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "woodend",
+                    "numCrimes": 1186
+                },
+                {
+                    "suburb": "nangeela",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "yarrawalla",
+                    "numCrimes": 67
+                },
+                {
+                    "suburb": "st albans",
+                    "numCrimes": 19193
+                },
+                {
+                    "suburb": "dhurringile",
+                    "numCrimes": 248
+                },
+                {
+                    "suburb": "gellibrand lower",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "stony creek",
+                    "numCrimes": 33
+                },
+                {
+                    "suburb": "woomelang",
+                    "numCrimes": 18
+                },
+                {
+                    "suburb": "cheltenham",
+                    "numCrimes": 9435
+                },
+                {
+                    "suburb": "wartook",
+                    "numCrimes": 14
+                },
+                {
+                    "suburb": "tarnook",
+                    "numCrimes": 10
+                },
+                {
+                    "suburb": "lake powell",
+                    "numCrimes": 23
+                },
+                {
+                    "suburb": "hillside",
+                    "numCrimes": 3167
+                },
+                {
+                    "suburb": "whitfield",
+                    "numCrimes": 25
+                },
+                {
+                    "suburb": "taylors hill",
+                    "numCrimes": 2696
+                },
+                {
+                    "suburb": "tallangatta valley",
+                    "numCrimes": 12
+                },
+                {
+                    "suburb": "dingwall",
+                    "numCrimes": 22
+                },
+                {
+                    "suburb": "winton",
+                    "numCrimes": 65
+                },
+                {
+                    "suburb": "toolleen",
+                    "numCrimes": 42
+                },
+                {
+                    "suburb": "tootgarook",
+                    "numCrimes": 1802
+                },
+                {
+                    "suburb": "yarroweyah",
+                    "numCrimes": 111
+                },
+                {
+                    "suburb": "karyrie",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "marionvale",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "tetoora road",
+                    "numCrimes": 9
+                },
+                {
+                    "suburb": "bonnie doon",
+                    "numCrimes": 207
+                },
+                {
+                    "suburb": "axedale",
+                    "numCrimes": 91
+                },
+                {
+                    "suburb": "flowerdale",
+                    "numCrimes": 114
+                },
+                {
+                    "suburb": "bruthen",
+                    "numCrimes": 173
+                },
+                {
+                    "suburb": "kanyapella",
+                    "numCrimes": 10
+                },
+                {
+                    "suburb": "pomborneit east",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "glenaladale",
+                    "numCrimes": 22
+                },
+                {
+                    "suburb": "mickleham",
+                    "numCrimes": 869
+                },
+                {
+                    "suburb": "wilsons promontory",
+                    "numCrimes": 18
+                },
+                {
+                    "suburb": "bung bong",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "cabbage tree",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "warrayure",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "wingan river",
+                    "numCrimes": 11
+                },
+                {
+                    "suburb": "wedderburn junction",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "tabilk",
+                    "numCrimes": 85
+                },
+                {
+                    "suburb": "yuroke",
+                    "numCrimes": 44
+                },
+                {
+                    "suburb": "broadmeadows",
+                    "numCrimes": 17995
+                },
+                {
+                    "suburb": "upper yarra dam",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "montmorency",
+                    "numCrimes": 1397
+                },
+                {
+                    "suburb": "rosebrook",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "kentbruck",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "flora hill",
+                    "numCrimes": 975
+                },
+                {
+                    "suburb": "goldsborough",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "windermere",
+                    "numCrimes": 31
+                },
+                {
+                    "suburb": "wattle hill",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "bungil",
+                    "numCrimes": 29
+                },
+                {
+                    "suburb": "yarragon",
+                    "numCrimes": 474
+                },
+                {
+                    "suburb": "mandurang",
+                    "numCrimes": 37
+                },
+                {
+                    "suburb": "melbourne airport",
+                    "numCrimes": 3237
+                },
+                {
+                    "suburb": "rich avon",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "bailieston east",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "geelong north",
+                    "numCrimes": 3650
+                },
+                {
+                    "suburb": "blackwarry",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "shelford",
+                    "numCrimes": 41
+                },
+                {
+                    "suburb": "yarpturk",
+                    "numCrimes": 10
+                },
+                {
+                    "suburb": "narrawong",
+                    "numCrimes": 118
+                },
+                {
+                    "suburb": "wangarabell",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "yarram",
+                    "numCrimes": 891
+                },
+                {
+                    "suburb": "lorquon",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "balliang",
+                    "numCrimes": 75
+                },
+                {
+                    "suburb": "molesworth",
+                    "numCrimes": 58
+                },
+                {
+                    "suburb": "bridgewater",
+                    "numCrimes": 29
+                },
+                {
+                    "suburb": "foxhow",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "mirimbah",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "staffordshire reef",
+                    "numCrimes": 8
+                },
+                {
+                    "suburb": "shallow inlet",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "keilor downs",
+                    "numCrimes": 3030
+                },
+                {
+                    "suburb": "esmond",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "cranbourne",
+                    "numCrimes": 14715
+                },
+                {
+                    "suburb": "ocean grange",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "barwite",
+                    "numCrimes": 19
+                },
+                {
+                    "suburb": "lake charm",
+                    "numCrimes": 36
+                },
+                {
+                    "suburb": "red hill south",
+                    "numCrimes": 78
+                },
+                {
+                    "suburb": "glencairn",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "broughton",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "burwood",
+                    "numCrimes": 4225
+                },
+                {
+                    "suburb": "condah",
+                    "numCrimes": 22
+                },
+                {
+                    "suburb": "longlea",
+                    "numCrimes": 146
+                },
+                {
+                    "suburb": "gainsborough",
+                    "numCrimes": 17
+                },
+                {
+                    "suburb": "bairnsdale",
+                    "numCrimes": 8649
+                },
+                {
+                    "suburb": "kurting",
+                    "numCrimes": 10
+                },
+                {
+                    "suburb": "red cliffs",
+                    "numCrimes": 1744
+                },
+                {
+                    "suburb": "pennyroyal",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "catani",
+                    "numCrimes": 105
+                },
+                {
+                    "suburb": "boolarra",
+                    "numCrimes": 227
+                },
+                {
+                    "suburb": "mangalore",
+                    "numCrimes": 60
+                },
+                {
+                    "suburb": "kimbolton",
+                    "numCrimes": 34
+                },
+                {
+                    "suburb": "tanjil",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "woorinen",
+                    "numCrimes": 86
+                },
+                {
+                    "suburb": "red bluff",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "glen huntly",
+                    "numCrimes": 1413
+                },
+                {
+                    "suburb": "glenburn",
+                    "numCrimes": 91
+                },
+                {
+                    "suburb": "leonards hill",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "point cook raaf",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "drung",
+                    "numCrimes": 40
+                },
+                {
+                    "suburb": "buchan south",
+                    "numCrimes": 14
+                },
+                {
+                    "suburb": "lake wendouree",
+                    "numCrimes": 131
+                },
+                {
+                    "suburb": "creek view",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "liparoo",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "dales creek",
+                    "numCrimes": 48
+                },
+                {
+                    "suburb": "faraday",
+                    "numCrimes": 41
+                },
+                {
+                    "suburb": "east bendigo",
+                    "numCrimes": 99
+                },
+                {
+                    "suburb": "moggs creek",
+                    "numCrimes": 17
+                },
+                {
+                    "suburb": "thalloo",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "nunniong",
+                    "numCrimes": 9
+                },
+                {
+                    "suburb": "burramine south",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "glenlogie",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "glenrowan west",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "clifton creek",
+                    "numCrimes": 14
+                },
+                {
+                    "suburb": "wongarra",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "joel south",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "newbury",
+                    "numCrimes": 16
+                },
+                {
+                    "suburb": "icy creek",
+                    "numCrimes": 14
+                },
+                {
+                    "suburb": "aireys inlet",
+                    "numCrimes": 171
+                },
+                {
+                    "suburb": "bellbrae",
+                    "numCrimes": 94
+                },
+                {
+                    "suburb": "wodonga",
+                    "numCrimes": 15485
+                },
+                {
+                    "suburb": "port franklin",
+                    "numCrimes": 12
+                },
+                {
+                    "suburb": "mount mercer",
+                    "numCrimes": 57
+                },
+                {
+                    "suburb": "mitre",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "ferntree gully",
+                    "numCrimes": 7787
+                },
+                {
+                    "suburb": "tower hill",
+                    "numCrimes": 30
+                },
+                {
+                    "suburb": "loy yang",
+                    "numCrimes": 12
+                },
+                {
+                    "suburb": "kennington",
+                    "numCrimes": 1141
+                },
+                {
+                    "suburb": "west melbourne",
+                    "numCrimes": 3050
+                },
+                {
+                    "suburb": "hmas cerberus",
+                    "numCrimes": 47
+                },
+                {
+                    "suburb": "lochiel bridge",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "moliagul",
+                    "numCrimes": 29
+                },
+                {
+                    "suburb": "echuca west",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "port melbourne",
+                    "numCrimes": 8951
+                },
+                {
+                    "suburb": "hawthorn east",
+                    "numCrimes": 2707
+                },
+                {
+                    "suburb": "grass flat",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "box hill central",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "winnindoo",
+                    "numCrimes": 47
+                },
+                {
+                    "suburb": "garfield",
+                    "numCrimes": 527
+                },
+                {
+                    "suburb": "linga",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "concongella",
+                    "numCrimes": 56
+                },
+                {
+                    "suburb": "wesburn",
+                    "numCrimes": 151
+                },
+                {
+                    "suburb": "macleod",
+                    "numCrimes": 3279
+                },
+                {
+                    "suburb": "woolamai",
+                    "numCrimes": 31
+                },
+                {
+                    "suburb": "wy yung",
+                    "numCrimes": 202
+                },
+                {
+                    "suburb": "fumina south",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "dookie college",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "greendale",
+                    "numCrimes": 68
+                },
+                {
+                    "suburb": "winchelsea south",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "cranbourne south",
+                    "numCrimes": 409
+                },
+                {
+                    "suburb": "newlyn",
+                    "numCrimes": 38
+                },
+                {
+                    "suburb": "blackwood",
+                    "numCrimes": 62
+                },
+                {
+                    "suburb": "branxholme",
+                    "numCrimes": 78
+                },
+                {
+                    "suburb": "pyramid hill",
+                    "numCrimes": 115
+                },
+                {
+                    "suburb": "truganina",
+                    "numCrimes": 4234
+                },
+                {
+                    "suburb": "grant",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "newham",
+                    "numCrimes": 44
+                },
+                {
+                    "suburb": "shoreham",
+                    "numCrimes": 123
+                },
+                {
+                    "suburb": "korumburra",
+                    "numCrimes": 1499
+                },
+                {
+                    "suburb": "nirranda",
+                    "numCrimes": 17
+                },
+                {
+                    "suburb": "hallora",
+                    "numCrimes": 20
+                },
+                {
+                    "suburb": "airport west",
+                    "numCrimes": 4883
+                },
+                {
+                    "suburb": "yering",
+                    "numCrimes": 40
+                },
+                {
+                    "suburb": "swan reach",
+                    "numCrimes": 127
+                },
+                {
+                    "suburb": "balwyn north",
+                    "numCrimes": 2773
+                },
+                {
+                    "suburb": "derby",
+                    "numCrimes": 11
+                },
+                {
+                    "suburb": "murrabit",
+                    "numCrimes": 48
+                },
+                {
+                    "suburb": "avondale heights",
+                    "numCrimes": 2342
+                },
+                {
+                    "suburb": "laanecoorie",
+                    "numCrimes": 43
+                },
+                {
+                    "suburb": "wandin east",
+                    "numCrimes": 64
+                },
+                {
+                    "suburb": "malvern",
+                    "numCrimes": 3998
+                },
+                {
+                    "suburb": "cardross",
+                    "numCrimes": 152
+                },
+                {
+                    "suburb": "lima east",
+                    "numCrimes": 7
+                },
+                {
+                    "suburb": "doreen",
+                    "numCrimes": 4118
+                },
+                {
+                    "suburb": "tongio",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "stoney point",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "naringal east",
+                    "numCrimes": 8
+                },
+                {
+                    "suburb": "crowlands",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "boxwood",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "mckenzie hill",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "baynton",
+                    "numCrimes": 10
+                },
+                {
+                    "suburb": "boronia",
+                    "numCrimes": 8867
+                },
+                {
+                    "suburb": "robertsons beach",
+                    "numCrimes": 49
+                },
+                {
+                    "suburb": "hastings",
+                    "numCrimes": 7070
+                },
+                {
+                    "suburb": "snake valley",
+                    "numCrimes": 172
+                },
+                {
+                    "suburb": "footscray west",
+                    "numCrimes": 3733
+                },
+                {
+                    "suburb": "warrnambool",
+                    "numCrimes": 13784
+                },
+                {
+                    "suburb": "alvie",
+                    "numCrimes": 24
+                },
+                {
+                    "suburb": "colac west",
+                    "numCrimes": 53
+                },
+                {
+                    "suburb": "tresco west",
+                    "numCrimes": 13
+                },
+                {
+                    "suburb": "drumcondra",
+                    "numCrimes": 222
+                },
+                {
+                    "suburb": "koyuga",
+                    "numCrimes": 58
+                },
+                {
+                    "suburb": "nandaly",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "bethanga",
+                    "numCrimes": 43
+                },
+                {
+                    "suburb": "kellalac",
+                    "numCrimes": 9
+                },
+                {
+                    "suburb": "lower norton",
+                    "numCrimes": 11
+                },
+                {
+                    "suburb": "moorooduc",
+                    "numCrimes": 558
+                },
+                {
+                    "suburb": "dalmore",
+                    "numCrimes": 34
+                },
+                {
+                    "suburb": "forrest",
+                    "numCrimes": 32
+                },
+                {
+                    "suburb": "stawell",
+                    "numCrimes": 4481
+                },
+                {
+                    "suburb": "rowville",
+                    "numCrimes": 8025
+                },
+                {
+                    "suburb": "bunyip",
+                    "numCrimes": 461
+                },
+                {
+                    "suburb": "murphys creek",
+                    "numCrimes": 18
+                },
+                {
+                    "suburb": "werribee south",
+                    "numCrimes": 863
+                },
+                {
+                    "suburb": "you yangs",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "ricketts marsh",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "edithvale",
+                    "numCrimes": 1436
+                },
+                {
+                    "suburb": "pomborneit",
+                    "numCrimes": 33
+                },
+                {
+                    "suburb": "heidelberg",
+                    "numCrimes": 7966
+                },
+                {
+                    "suburb": "myrtlebank",
+                    "numCrimes": 35
+                },
+                {
+                    "suburb": "derrinal",
+                    "numCrimes": 38
+                },
+                {
+                    "suburb": "princetown",
+                    "numCrimes": 41
+                },
+                {
+                    "suburb": "ripplebrook",
+                    "numCrimes": 39
+                },
+                {
+                    "suburb": "edi upper",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "clifton hill east",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "greens creek",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "deep lead",
+                    "numCrimes": 48
+                },
+                {
+                    "suburb": "upper lurg",
+                    "numCrimes": 18
+                },
+                {
+                    "suburb": "boomahnoomoonah",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "ercildoune",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "clunes",
+                    "numCrimes": 400
+                },
+                {
+                    "suburb": "wonthaggi north",
+                    "numCrimes": 17
+                },
+                {
+                    "suburb": "hazeldene",
+                    "numCrimes": 17
+                },
+                {
+                    "suburb": "boorhaman east",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "summerlands",
+                    "numCrimes": 19
+                },
+                {
+                    "suburb": "wandin",
+                    "numCrimes": 126
+                },
+                {
+                    "suburb": "yangery",
+                    "numCrimes": 13
+                },
+                {
+                    "suburb": "moriac",
+                    "numCrimes": 83
+                },
+                {
+                    "suburb": "rocklands",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "blowhard",
+                    "numCrimes": 13
+                },
+                {
+                    "suburb": "crib point",
+                    "numCrimes": 1025
+                },
+                {
+                    "suburb": "blakeville",
+                    "numCrimes": 9
+                },
+                {
+                    "suburb": "calrossie",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "muckleford",
+                    "numCrimes": 125
+                },
+                {
+                    "suburb": "bulleen",
+                    "numCrimes": 2049
+                },
+                {
+                    "suburb": "chocolyn",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "eastville",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "langsborough",
+                    "numCrimes": 21
+                },
+                {
+                    "suburb": "wahring",
+                    "numCrimes": 68
+                },
+                {
+                    "suburb": "rokewood junction",
+                    "numCrimes": 16
+                },
+                {
+                    "suburb": "booroopki",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "balmoral",
+                    "numCrimes": 61
+                },
+                {
+                    "suburb": "cliffside",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "glenluce",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "jacana",
+                    "numCrimes": 982
+                },
+                {
+                    "suburb": "melwood",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "kadnook",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "golden gully",
+                    "numCrimes": 37
+                },
+                {
+                    "suburb": "brighton beach",
+                    "numCrimes": 21
+                },
+                {
+                    "suburb": "mount burnett",
+                    "numCrimes": 24
+                },
+                {
+                    "suburb": "hilldene",
+                    "numCrimes": 38
+                },
+                {
+                    "suburb": "minimay",
+                    "numCrimes": 13
+                },
+                {
+                    "suburb": "kialla",
+                    "numCrimes": 1456
+                },
+                {
+                    "suburb": "wimbledon heights",
+                    "numCrimes": 107
+                },
+                {
+                    "suburb": "buckland",
+                    "numCrimes": 20
+                },
+                {
+                    "suburb": "bendoc",
+                    "numCrimes": 12
+                },
+                {
+                    "suburb": "lara",
+                    "numCrimes": 4216
+                },
+                {
+                    "suburb": "california gully",
+                    "numCrimes": 1931
+                },
+                {
+                    "suburb": "merriang south",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "crossley",
+                    "numCrimes": 27
+                },
+                {
+                    "suburb": "morrisons",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "kulwin",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "brookfield",
+                    "numCrimes": 1927
+                },
+                {
+                    "suburb": "yuulong",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "framlingham",
+                    "numCrimes": 57
+                },
+                {
+                    "suburb": "wantirna",
+                    "numCrimes": 3601
+                },
+                {
+                    "suburb": "tabor",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "propodollah",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "tyntynder",
+                    "numCrimes": 66
+                },
+                {
+                    "suburb": "skibo",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "jancourt",
+                    "numCrimes": 14
+                },
+                {
+                    "suburb": "bellarine",
+                    "numCrimes": 71
+                },
+                {
+                    "suburb": "lillicur",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "allendale",
+                    "numCrimes": 31
+                },
+                {
+                    "suburb": "mount franklin",
+                    "numCrimes": 7
+                },
+                {
+                    "suburb": "gerang gerung",
+                    "numCrimes": 16
+                },
+                {
+                    "suburb": "the patch",
+                    "numCrimes": 218
+                },
+                {
+                    "suburb": "yinnar",
+                    "numCrimes": 248
+                },
+                {
+                    "suburb": "donvale",
+                    "numCrimes": 1511
+                },
+                {
+                    "suburb": "sheoaks",
+                    "numCrimes": 22
+                },
+                {
+                    "suburb": "pigeon ponds",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "blackburn",
+                    "numCrimes": 2802
+                },
+                {
+                    "suburb": "gowar east",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "caldermeade",
+                    "numCrimes": 166
+                },
+                {
+                    "suburb": "melbourne",
+                    "numCrimes": 116005
+                },
+                {
+                    "suburb": "heidelberg heights",
+                    "numCrimes": 2857
+                },
+                {
+                    "suburb": "maude",
+                    "numCrimes": 33
+                },
+                {
+                    "suburb": "herne hill",
+                    "numCrimes": 902
+                },
+                {
+                    "suburb": "creswick",
+                    "numCrimes": 1123
+                },
+                {
+                    "suburb": "upwey",
+                    "numCrimes": 1367
+                },
+                {
+                    "suburb": "cape bridgewater",
+                    "numCrimes": 23
+                },
+                {
+                    "suburb": "brodribb river",
+                    "numCrimes": 10
+                },
+                {
+                    "suburb": "walpa",
+                    "numCrimes": 21
+                },
+                {
+                    "suburb": "carlton",
+                    "numCrimes": 10442
+                },
+                {
+                    "suburb": "balcombe",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "konagaderra",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "hopetoun",
+                    "numCrimes": 102
+                },
+                {
+                    "suburb": "mundoona",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "ulupna",
+                    "numCrimes": 10
+                },
+                {
+                    "suburb": "suggan buggan",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "mill park",
+                    "numCrimes": 10062
+                },
+                {
+                    "suburb": "castlemaine",
+                    "numCrimes": 3227
+                },
+                {
+                    "suburb": "fish creek",
+                    "numCrimes": 82
+                },
+                {
+                    "suburb": "gorae west",
+                    "numCrimes": 34
+                },
+                {
+                    "suburb": "brit brit",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "allambee south",
+                    "numCrimes": 14
+                },
+                {
+                    "suburb": "yallambie",
+                    "numCrimes": 775
+                },
+                {
+                    "suburb": "shepherds flat",
+                    "numCrimes": 30
+                },
+                {
+                    "suburb": "parkville",
+                    "numCrimes": 4597
+                },
+                {
+                    "suburb": "baromi",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "maryvale",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "langi ghiran",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "eaglehawk",
+                    "numCrimes": 2987
+                },
+                {
+                    "suburb": "raymond island",
+                    "numCrimes": 39
+                },
+                {
+                    "suburb": "stockyard hill",
+                    "numCrimes": 20
+                },
+                {
+                    "suburb": "drouin east",
+                    "numCrimes": 17
+                },
+                {
+                    "suburb": "karabeal",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "cape schanck",
+                    "numCrimes": 99
+                },
+                {
+                    "suburb": "beaufort",
+                    "numCrimes": 601
+                },
+                {
+                    "suburb": "arawata",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "benwerrin",
+                    "numCrimes": 8
+                },
+                {
+                    "suburb": "allambee",
+                    "numCrimes": 11
+                },
+                {
+                    "suburb": "wangoom",
+                    "numCrimes": 19
+                },
+                {
+                    "suburb": "alfredton",
+                    "numCrimes": 1832
+                },
+                {
+                    "suburb": "erica",
+                    "numCrimes": 58
+                },
+                {
+                    "suburb": "kanagulk",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "almonds",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "longwood",
+                    "numCrimes": 46
+                },
+                {
+                    "suburb": "wonwondah south",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "chelsea",
+                    "numCrimes": 2764
+                },
+                {
+                    "suburb": "cooma",
+                    "numCrimes": 13
+                },
+                {
+                    "suburb": "irrewarra",
+                    "numCrimes": 44
+                },
+                {
+                    "suburb": "englefield",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "drumanure",
+                    "numCrimes": 14
+                },
+                {
+                    "suburb": "wyuna",
+                    "numCrimes": 120
+                },
+                {
+                    "suburb": "armstrong",
+                    "numCrimes": 35
+                },
+                {
+                    "suburb": "bamganie",
+                    "numCrimes": 7
+                },
+                {
+                    "suburb": "mckinnon",
+                    "numCrimes": 980
+                },
+                {
+                    "suburb": "longwarry",
+                    "numCrimes": 872
+                },
+                {
+                    "suburb": "coral bank",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "echuca village",
+                    "numCrimes": 43
+                },
+                {
+                    "suburb": "fiveways",
+                    "numCrimes": 16
+                },
+                {
+                    "suburb": "sanctuary lakes",
+                    "numCrimes": 243
+                },
+                {
+                    "suburb": "murraydale",
+                    "numCrimes": 8
+                },
+                {
+                    "suburb": "freshwater creek",
+                    "numCrimes": 74
+                },
+                {
+                    "suburb": "french island",
+                    "numCrimes": 12
+                },
+                {
+                    "suburb": "burnley",
+                    "numCrimes": 605
+                },
+                {
+                    "suburb": "puckapunyal",
+                    "numCrimes": 156
+                },
+                {
+                    "suburb": "meerlieu",
+                    "numCrimes": 31
+                },
+                {
+                    "suburb": "rainbow",
+                    "numCrimes": 160
+                },
+                {
+                    "suburb": "peterborough",
+                    "numCrimes": 46
+                },
+                {
+                    "suburb": "bridge creek",
+                    "numCrimes": 16
+                },
+                {
+                    "suburb": "callignee south",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "barnadown",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "dooen",
+                    "numCrimes": 51
+                },
+                {
+                    "suburb": "sunshine north",
+                    "numCrimes": 4409
+                },
+                {
+                    "suburb": "rupanyup",
+                    "numCrimes": 148
+                },
+                {
+                    "suburb": "waurn ponds",
+                    "numCrimes": 1166
+                },
+                {
+                    "suburb": "budgerum east",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "fiery flat",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "samaria",
+                    "numCrimes": 9
+                },
+                {
+                    "suburb": "warragul south",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "hopetoun park",
+                    "numCrimes": 81
+                },
+                {
+                    "suburb": "bostocks creek",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "nuggetty",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "dooboobetic",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "darraweit guim",
+                    "numCrimes": 75
+                },
+                {
+                    "suburb": "corryong",
+                    "numCrimes": 415
+                },
+                {
+                    "suburb": "surf beach",
+                    "numCrimes": 129
+                },
+                {
+                    "suburb": "north bendigo",
+                    "numCrimes": 210
+                },
+                {
+                    "suburb": "cape otway",
+                    "numCrimes": 18
+                },
+                {
+                    "suburb": "broomfield",
+                    "numCrimes": 35
+                },
+                {
+                    "suburb": "enochs point",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "riddells creek",
+                    "numCrimes": 533
+                },
+                {
+                    "suburb": "benambra",
+                    "numCrimes": 56
+                },
+                {
+                    "suburb": "waaia",
+                    "numCrimes": 42
+                },
+                {
+                    "suburb": "mia mia",
+                    "numCrimes": 31
+                },
+                {
+                    "suburb": "shady creek",
+                    "numCrimes": 28
+                },
+                {
+                    "suburb": "kooreh",
+                    "numCrimes": 9
+                },
+                {
+                    "suburb": "harcourt",
+                    "numCrimes": 438
+                },
+                {
+                    "suburb": "buffalo",
+                    "numCrimes": 27
+                },
+                {
+                    "suburb": "gaffneys creek",
+                    "numCrimes": 7
+                },
+                {
+                    "suburb": "albion",
+                    "numCrimes": 2081
+                },
+                {
+                    "suburb": "tarneit",
+                    "numCrimes": 7663
+                },
+                {
+                    "suburb": "wattle flat",
+                    "numCrimes": 24
+                },
+                {
+                    "suburb": "redesdale",
+                    "numCrimes": 44
+                },
+                {
+                    "suburb": "eastern view",
+                    "numCrimes": 10
+                },
+                {
+                    "suburb": "deakin university",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "woodend north",
+                    "numCrimes": 10
+                },
+                {
+                    "suburb": "point cook",
+                    "numCrimes": 8138
+                },
+                {
+                    "suburb": "wehla",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "carpendeit",
+                    "numCrimes": 23
+                },
+                {
+                    "suburb": "nyora",
+                    "numCrimes": 205
+                },
+                {
+                    "suburb": "greta south",
+                    "numCrimes": 7
+                },
+                {
+                    "suburb": "jeetho",
+                    "numCrimes": 10
+                },
+                {
+                    "suburb": "yarck",
+                    "numCrimes": 44
+                },
+                {
+                    "suburb": "lake gardens",
+                    "numCrimes": 246
+                },
+                {
+                    "suburb": "mittyack",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "lake buloke",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "lyal",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "kergunyah",
+                    "numCrimes": 24
+                },
+                {
+                    "suburb": "manifold heights",
+                    "numCrimes": 541
+                },
+                {
+                    "suburb": "barrakee",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "bundalong south",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "mitcham",
+                    "numCrimes": 4870
+                },
+                {
+                    "suburb": "willaura",
+                    "numCrimes": 97
+                },
+                {
+                    "suburb": "waterford",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "bannockburn",
+                    "numCrimes": 659
+                },
+                {
+                    "suburb": "templestowe",
+                    "numCrimes": 2177
+                },
+                {
+                    "suburb": "humevale",
+                    "numCrimes": 45
+                },
+                {
+                    "suburb": "poowong north",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "sherbrooke",
+                    "numCrimes": 39
+                },
+                {
+                    "suburb": "moondarra",
+                    "numCrimes": 56
+                },
+                {
+                    "suburb": "homebush",
+                    "numCrimes": 7
+                },
+                {
+                    "suburb": "rawson",
+                    "numCrimes": 89
+                },
+                {
+                    "suburb": "illawarra",
+                    "numCrimes": 15
+                },
+                {
+                    "suburb": "hazelwood north",
+                    "numCrimes": 250
+                },
+                {
+                    "suburb": "tresco",
+                    "numCrimes": 58
+                },
+                {
+                    "suburb": "lara lake",
+                    "numCrimes": 17
+                },
+                {
+                    "suburb": "avalon",
+                    "numCrimes": 175
+                },
+                {
+                    "suburb": "steels creek",
+                    "numCrimes": 19
+                },
+                {
+                    "suburb": "coojar",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "nangiloc",
+                    "numCrimes": 61
+                },
+                {
+                    "suburb": "pascoe vale",
+                    "numCrimes": 4889
+                },
+                {
+                    "suburb": "mulgrave east",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "miga lake",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "salisbury west",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "campbells creek",
+                    "numCrimes": 222
+                },
+                {
+                    "suburb": "melville forest",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "beauchamp",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "murrabit west",
+                    "numCrimes": 7
+                },
+                {
+                    "suburb": "mena park",
+                    "numCrimes": 8
+                },
+                {
+                    "suburb": "tyers",
+                    "numCrimes": 214
+                },
+                {
+                    "suburb": "miram",
+                    "numCrimes": 16
+                },
+                {
+                    "suburb": "wychitella",
+                    "numCrimes": 15
+                },
+                {
+                    "suburb": "sandford",
+                    "numCrimes": 34
+                },
+                {
+                    "suburb": "tyers junction",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "gapsted",
+                    "numCrimes": 28
+                },
+                {
+                    "suburb": "cheltenham north",
+                    "numCrimes": 14
+                },
+                {
+                    "suburb": "tarranyurk",
+                    "numCrimes": 26
+                },
+                {
+                    "suburb": "wooreen",
+                    "numCrimes": 11
+                },
+                {
+                    "suburb": "burrum",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "newborough east",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "toora north",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "dereel",
+                    "numCrimes": 181
+                },
+                {
+                    "suburb": "lake lonsdale",
+                    "numCrimes": 11
+                },
+                {
+                    "suburb": "kooyong",
+                    "numCrimes": 386
+                },
+                {
+                    "suburb": "bonshaw",
+                    "numCrimes": 10
+                },
+                {
+                    "suburb": "wymlet",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "moyhu",
+                    "numCrimes": 66
+                },
+                {
+                    "suburb": "rosebud south",
+                    "numCrimes": 53
+                },
+                {
+                    "suburb": "larpent",
+                    "numCrimes": 24
+                },
+                {
+                    "suburb": "pimpinio",
+                    "numCrimes": 61
+                },
+                {
+                    "suburb": "yendon",
+                    "numCrimes": 25
+                },
+                {
+                    "suburb": "tullamarine",
+                    "numCrimes": 5302
+                },
+                {
+                    "suburb": "richmond",
+                    "numCrimes": 20291
+                },
+                {
+                    "suburb": "wallinduc",
+                    "numCrimes": 8
+                },
+                {
+                    "suburb": "delvine",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "kewell",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "taylor bay",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "pascoe vale south",
+                    "numCrimes": 2233
+                },
+                {
+                    "suburb": "loddon vale",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "coalville",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "braeside",
+                    "numCrimes": 1815
+                },
+                {
+                    "suburb": "hampton east",
+                    "numCrimes": 1918
+                },
+                {
+                    "suburb": "mitchellstown",
+                    "numCrimes": 21
+                },
+                {
+                    "suburb": "bushfield",
+                    "numCrimes": 14
+                },
+                {
+                    "suburb": "endeavour hills",
+                    "numCrimes": 6749
+                },
+                {
+                    "suburb": "mccrae",
+                    "numCrimes": 629
+                },
+                {
+                    "suburb": "essendon",
+                    "numCrimes": 6987
+                },
+                {
+                    "suburb": "tahara bridge",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "sunderland bay",
+                    "numCrimes": 72
+                },
+                {
+                    "suburb": "gormandale",
+                    "numCrimes": 120
+                },
+                {
+                    "suburb": "tawonga south",
+                    "numCrimes": 40
+                },
+                {
+                    "suburb": "dandongadale",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "tabberabbera",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "litchfield",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "tarrawingee",
+                    "numCrimes": 61
+                },
+                {
+                    "suburb": "denicull creek",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "merriang",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "east melbourne",
+                    "numCrimes": 4219
+                },
+                {
+                    "suburb": "corio",
+                    "numCrimes": 11610
+                },
+                {
+                    "suburb": "girgarre east",
+                    "numCrimes": 9
+                },
+                {
+                    "suburb": "korumburra south",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "patchewollock",
+                    "numCrimes": 19
+                },
+                {
+                    "suburb": "selby",
+                    "numCrimes": 205
+                },
+                {
+                    "suburb": "pura pura",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "willenabrina",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "pakenham",
+                    "numCrimes": 19487
+                },
+                {
+                    "suburb": "guys forest",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "myrrhee",
+                    "numCrimes": 22
+                },
+                {
+                    "suburb": "tarnagulla",
+                    "numCrimes": 29
+                },
+                {
+                    "suburb": "yaapeet",
+                    "numCrimes": 61
+                },
+                {
+                    "suburb": "lima",
+                    "numCrimes": 9
+                },
+                {
+                    "suburb": "traralgon east",
+                    "numCrimes": 52
+                },
+                {
+                    "suburb": "glenroy",
+                    "numCrimes": 9170
+                },
+                {
+                    "suburb": "toolern vale",
+                    "numCrimes": 230
+                },
+                {
+                    "suburb": "waranga",
+                    "numCrimes": 10
+                },
+                {
+                    "suburb": "keilor east",
+                    "numCrimes": 3434
+                },
+                {
+                    "suburb": "big hill",
+                    "numCrimes": 34
+                },
+                {
+                    "suburb": "hernes oak",
+                    "numCrimes": 88
+                },
+                {
+                    "suburb": "lyonville",
+                    "numCrimes": 14
+                },
+                {
+                    "suburb": "south purrumbete",
+                    "numCrimes": 11
+                },
+                {
+                    "suburb": "wargan",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "basalt",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "northwood",
+                    "numCrimes": 68
+                },
+                {
+                    "suburb": "curdie vale",
+                    "numCrimes": 8
+                },
+                {
+                    "suburb": "longwarry north",
+                    "numCrimes": 63
+                },
+                {
+                    "suburb": "upotipotpon",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "codrington",
+                    "numCrimes": 7
+                },
+                {
+                    "suburb": "quantong",
+                    "numCrimes": 18
+                },
+                {
+                    "suburb": "tarrayoukyan",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "kinglake west",
+                    "numCrimes": 198
+                },
+                {
+                    "suburb": "eumemmerring",
+                    "numCrimes": 858
+                },
+                {
+                    "suburb": "breamlea",
+                    "numCrimes": 56
+                },
+                {
+                    "suburb": "durham ox",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "cowwarr",
+                    "numCrimes": 55
+                },
+                {
+                    "suburb": "kamarooka",
+                    "numCrimes": 31
+                },
+                {
+                    "suburb": "campbelltown",
+                    "numCrimes": 11
+                },
+                {
+                    "suburb": "strathlea",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "lockwood",
+                    "numCrimes": 124
+                },
+                {
+                    "suburb": "winjallok",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "hexham",
+                    "numCrimes": 45
+                },
+                {
+                    "suburb": "boneo",
+                    "numCrimes": 86
+                },
+                {
+                    "suburb": "lindsay point",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "dadswells bridge",
+                    "numCrimes": 19
+                },
+                {
+                    "suburb": "loch",
+                    "numCrimes": 116
+                },
+                {
+                    "suburb": "ellaswood",
+                    "numCrimes": 21
+                },
+                {
+                    "suburb": "epping",
+                    "numCrimes": 15805
+                },
+                {
+                    "suburb": "bena",
+                    "numCrimes": 16
+                },
+                {
+                    "suburb": "rossbridge",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "monegeetta",
+                    "numCrimes": 32
+                },
+                {
+                    "suburb": "maryborough",
+                    "numCrimes": 4566
+                },
+                {
+                    "suburb": "kariah",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "langwarrin",
+                    "numCrimes": 5187
+                },
+                {
+                    "suburb": "gelantipy",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "newhaven",
+                    "numCrimes": 170
+                },
+                {
+                    "suburb": "mount donna buang",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "anakie",
+                    "numCrimes": 153
+                },
+                {
+                    "suburb": "albacutya",
+                    "numCrimes": 7
+                },
+                {
+                    "suburb": "underbool",
+                    "numCrimes": 37
+                },
+                {
+                    "suburb": "pheasant creek",
+                    "numCrimes": 40
+                },
+                {
+                    "suburb": "tol tol",
+                    "numCrimes": 9
+                },
+                {
+                    "suburb": "teddywaddy west",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "harcourt north",
+                    "numCrimes": 57
+                },
+                {
+                    "suburb": "seaton",
+                    "numCrimes": 42
+                },
+                {
+                    "suburb": "altona gate",
+                    "numCrimes": 8
+                },
+                {
+                    "suburb": "won wron",
+                    "numCrimes": 33
+                },
+                {
+                    "suburb": "nanneella",
+                    "numCrimes": 60
+                },
+                {
+                    "suburb": "craigieburn",
+                    "numCrimes": 15998
+                },
+                {
+                    "suburb": "gowanford",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "muckatah",
+                    "numCrimes": 22
+                },
+                {
+                    "suburb": "coonooer bridge",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "ondit",
+                    "numCrimes": 10
+                },
+                {
+                    "suburb": "trentham east",
+                    "numCrimes": 33
+                },
+                {
+                    "suburb": "kalkallo",
+                    "numCrimes": 216
+                },
+                {
+                    "suburb": "mincha west",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "pine lodge",
+                    "numCrimes": 36
+                },
+                {
+                    "suburb": "w tree",
+                    "numCrimes": 19
+                },
+                {
+                    "suburb": "glenorchy",
+                    "numCrimes": 24
+                },
+                {
+                    "suburb": "knox park",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "napoleans",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "glen alvie",
+                    "numCrimes": 27
+                },
+                {
+                    "suburb": "napoleons",
+                    "numCrimes": 82
+                },
+                {
+                    "suburb": "lima south",
+                    "numCrimes": 12
+                },
+                {
+                    "suburb": "forest hill",
+                    "numCrimes": 3085
+                },
+                {
+                    "suburb": "yarragon south",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "rhyll",
+                    "numCrimes": 61
+                },
+                {
+                    "suburb": "sydenham",
+                    "numCrimes": 3884
+                },
+                {
+                    "suburb": "laharum",
+                    "numCrimes": 28
+                },
+                {
+                    "suburb": "hazelwood south",
+                    "numCrimes": 29
+                },
+                {
+                    "suburb": "dalyenong",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "lake meran",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "glengarry",
+                    "numCrimes": 201
+                },
+                {
+                    "suburb": "dahlen",
+                    "numCrimes": 7
+                },
+                {
+                    "suburb": "massey",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "cudgee",
+                    "numCrimes": 16
+                },
+                {
+                    "suburb": "moorabool",
+                    "numCrimes": 35
+                },
+                {
+                    "suburb": "lexton",
+                    "numCrimes": 190
+                },
+                {
+                    "suburb": "walpeup",
+                    "numCrimes": 9
+                },
+                {
+                    "suburb": "kardella south",
+                    "numCrimes": 12
+                },
+                {
+                    "suburb": "murrumbeena",
+                    "numCrimes": 1935
+                },
+                {
+                    "suburb": "deer park",
+                    "numCrimes": 9088
+                },
+                {
+                    "suburb": "bungalally",
+                    "numCrimes": 10
+                },
+                {
+                    "suburb": "ullina",
+                    "numCrimes": 7
+                },
+                {
+                    "suburb": "heytesbury lower",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "fish point",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "driffield",
+                    "numCrimes": 22
+                },
+                {
+                    "suburb": "merton",
+                    "numCrimes": 34
+                },
+                {
+                    "suburb": "rhymney reef",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "wandin north",
+                    "numCrimes": 436
+                },
+                {
+                    "suburb": "cocoroc",
+                    "numCrimes": 9
+                },
+                {
+                    "suburb": "metung",
+                    "numCrimes": 228
+                },
+                {
+                    "suburb": "ferguson",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "essendon north",
+                    "numCrimes": 1104
+                },
+                {
+                    "suburb": "carngham",
+                    "numCrimes": 23
+                },
+                {
+                    "suburb": "waubra",
+                    "numCrimes": 78
+                },
+                {
+                    "suburb": "dunnstown",
+                    "numCrimes": 56
+                },
+                {
+                    "suburb": "serpentine",
+                    "numCrimes": 79
+                },
+                {
+                    "suburb": "cann river",
+                    "numCrimes": 208
+                },
+                {
+                    "suburb": "yandoit",
+                    "numCrimes": 30
+                },
+                {
+                    "suburb": "kithbrook",
+                    "numCrimes": 9
+                },
+                {
+                    "suburb": "gembrook",
+                    "numCrimes": 459
+                },
+                {
+                    "suburb": "jarrahmond",
+                    "numCrimes": 16
+                },
+                {
+                    "suburb": "wallan east",
+                    "numCrimes": 30
+                },
+                {
+                    "suburb": "birregurra",
+                    "numCrimes": 120
+                },
+                {
+                    "suburb": "sunset strip",
+                    "numCrimes": 98
+                },
+                {
+                    "suburb": "mitchell park",
+                    "numCrimes": 237
+                },
+                {
+                    "suburb": "niddrie",
+                    "numCrimes": 1608
+                },
+                {
+                    "suburb": "baxter",
+                    "numCrimes": 1108
+                },
+                {
+                    "suburb": "dixie",
+                    "numCrimes": 9
+                },
+                {
+                    "suburb": "st helena",
+                    "numCrimes": 367
+                },
+                {
+                    "suburb": "caniambo",
+                    "numCrimes": 9
+                },
+                {
+                    "suburb": "eganstown",
+                    "numCrimes": 30
+                },
+                {
+                    "suburb": "koallah",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "croydon",
+                    "numCrimes": 9147
+                },
+                {
+                    "suburb": "dergholm",
+                    "numCrimes": 20
+                },
+                {
+                    "suburb": "woods point",
+                    "numCrimes": 52
+                },
+                {
+                    "suburb": "kiata",
+                    "numCrimes": 21
+                },
+                {
+                    "suburb": "flaggy creek",
+                    "numCrimes": 8
+                },
+                {
+                    "suburb": "oakleigh",
+                    "numCrimes": 5278
+                },
+                {
+                    "suburb": "waarre",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "sugarloaf creek",
+                    "numCrimes": 21
+                },
+                {
+                    "suburb": "mount eccles",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "springvale south",
+                    "numCrimes": 2946
+                },
+                {
+                    "suburb": "white hills",
+                    "numCrimes": 855
+                },
+                {
+                    "suburb": "woodhouse",
+                    "numCrimes": 7
+                },
+                {
+                    "suburb": "bell park",
+                    "numCrimes": 1619
+                },
+                {
+                    "suburb": "berrimal",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "hughesdale",
+                    "numCrimes": 1390
+                },
+                {
+                    "suburb": "goornong",
+                    "numCrimes": 302
+                },
+                {
+                    "suburb": "warrambine",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "coomboona",
+                    "numCrimes": 13
+                },
+                {
+                    "suburb": "lalor",
+                    "numCrimes": 7400
+                },
+                {
+                    "suburb": "ten mile",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "maindample",
+                    "numCrimes": 32
+                },
+                {
+                    "suburb": "skinners flat",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "picola west",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "kew east",
+                    "numCrimes": 952
+                },
+                {
+                    "suburb": "giffard west",
+                    "numCrimes": 25
+                },
+                {
+                    "suburb": "tempy",
+                    "numCrimes": 38
+                },
+                {
+                    "suburb": "chirnside park",
+                    "numCrimes": 3128
+                },
+                {
+                    "suburb": "eaglemont",
+                    "numCrimes": 579
+                },
+                {
+                    "suburb": "waterloo",
+                    "numCrimes": 34
+                },
+                {
+                    "suburb": "mount baw baw",
+                    "numCrimes": 15
+                },
+                {
+                    "suburb": "mortlake",
+                    "numCrimes": 495
+                },
+                {
+                    "suburb": "healesville",
+                    "numCrimes": 1847
+                },
+                {
+                    "suburb": "lake tyers",
+                    "numCrimes": 183
+                },
+                {
+                    "suburb": "turtons creek",
+                    "numCrimes": 31
+                },
+                {
+                    "suburb": "glenalbyn",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "toolangi",
+                    "numCrimes": 80
+                },
+                {
+                    "suburb": "williamstown north",
+                    "numCrimes": 1138
+                },
+                {
+                    "suburb": "botanic ridge",
+                    "numCrimes": 376
+                },
+                {
+                    "suburb": "duchembegarra",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "buangor",
+                    "numCrimes": 58
+                },
+                {
+                    "suburb": "kialla east",
+                    "numCrimes": 7
+                },
+                {
+                    "suburb": "christmas hills",
+                    "numCrimes": 68
+                },
+                {
+                    "suburb": "middle footscray",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "cannum",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "hillcrest",
+                    "numCrimes": 13
+                },
+                {
+                    "suburb": "coragulac",
+                    "numCrimes": 11
+                },
+                {
+                    "suburb": "coronet bay",
+                    "numCrimes": 315
+                },
+                {
+                    "suburb": "kirkstall",
+                    "numCrimes": 74
+                },
+                {
+                    "suburb": "moorooduc south",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "tarneit gardens",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "culla",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "burnt creek",
+                    "numCrimes": 8
+                },
+                {
+                    "suburb": "tangambalanga",
+                    "numCrimes": 72
+                },
+                {
+                    "suburb": "belgrave",
+                    "numCrimes": 1488
+                },
+                {
+                    "suburb": "murra warra",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "turoar",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "mount beauty",
+                    "numCrimes": 130
+                },
+                {
+                    "suburb": "mount buffalo",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "mystic park",
+                    "numCrimes": 38
+                },
+                {
+                    "suburb": "ripponlea",
+                    "numCrimes": 433
+                },
+                {
+                    "suburb": "barwidgee creek",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "thornbury",
+                    "numCrimes": 6518
+                },
+                {
+                    "suburb": "nyah",
+                    "numCrimes": 62
+                },
+                {
+                    "suburb": "bunkers hill",
+                    "numCrimes": 36
+                },
+                {
+                    "suburb": "lake bolac",
+                    "numCrimes": 125
+                },
+                {
+                    "suburb": "curdievale",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "coopers creek",
+                    "numCrimes": 43
+                },
+                {
+                    "suburb": "rose river",
+                    "numCrimes": 15
+                },
+                {
+                    "suburb": "highlands",
+                    "numCrimes": 23
+                },
+                {
+                    "suburb": "kyabram",
+                    "numCrimes": 2447
+                },
+                {
+                    "suburb": "allansford",
+                    "numCrimes": 162
+                },
+                {
+                    "suburb": "haven",
+                    "numCrimes": 114
+                },
+                {
+                    "suburb": "howqua",
+                    "numCrimes": 28
+                },
+                {
+                    "suburb": "mount bolton",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "point lonsdale",
+                    "numCrimes": 401
+                },
+                {
+                    "suburb": "keysborough",
+                    "numCrimes": 7120
+                },
+                {
+                    "suburb": "roxburgh park",
+                    "numCrimes": 6716
+                },
+                {
+                    "suburb": "ringwood east",
+                    "numCrimes": 2728
+                },
+                {
+                    "suburb": "granite rock",
+                    "numCrimes": 10
+                },
+                {
+                    "suburb": "noojee",
+                    "numCrimes": 144
+                },
+                {
+                    "suburb": "karramomus",
+                    "numCrimes": 10
+                },
+                {
+                    "suburb": "colac",
+                    "numCrimes": 5839
+                },
+                {
+                    "suburb": "sawmill settlement",
+                    "numCrimes": 17
+                },
+                {
+                    "suburb": "she oaks",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "glenloth east",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "daisy hill",
+                    "numCrimes": 31
+                },
+                {
+                    "suburb": "bumberrah",
+                    "numCrimes": 11
+                },
+                {
+                    "suburb": "cardinia",
+                    "numCrimes": 108
+                },
+                {
+                    "suburb": "phillip island",
+                    "numCrimes": 161
+                },
+                {
+                    "suburb": "chewton bushlands",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "clear lake",
+                    "numCrimes": 17
+                },
+                {
+                    "suburb": "seville",
+                    "numCrimes": 433
+                },
+                {
+                    "suburb": "georges creek",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "mossiface",
+                    "numCrimes": 29
+                },
+                {
+                    "suburb": "beechworth",
+                    "numCrimes": 663
+                },
+                {
+                    "suburb": "serviceton",
+                    "numCrimes": 54
+                },
+                {
+                    "suburb": "timmering",
+                    "numCrimes": 22
+                },
+                {
+                    "suburb": "melbourne university",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "muskerry east",
+                    "numCrimes": 8
+                },
+                {
+                    "suburb": "dallas",
+                    "numCrimes": 2558
+                },
+                {
+                    "suburb": "boggy creek",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "linton",
+                    "numCrimes": 125
+                },
+                {
+                    "suburb": "montgomery",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "cotswold",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "mepunga",
+                    "numCrimes": 111
+                },
+                {
+                    "suburb": "narrung",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "cowleys creek",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "orford",
+                    "numCrimes": 12
+                },
+                {
+                    "suburb": "vermont south",
+                    "numCrimes": 1766
+                },
+                {
+                    "suburb": "bunbartha",
+                    "numCrimes": 43
+                },
+                {
+                    "suburb": "tanybryn",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "boolarra south",
+                    "numCrimes": 19
+                },
+                {
+                    "suburb": "madalya",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "long gully",
+                    "numCrimes": 1897
+                },
+                {
+                    "suburb": "manor",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "nalinga",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "moorabbin east",
+                    "numCrimes": 39
+                },
+                {
+                    "suburb": "boonah",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "buchan",
+                    "numCrimes": 80
+                },
+                {
+                    "suburb": "merbein",
+                    "numCrimes": 1345
+                },
+                {
+                    "suburb": "germantown",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "hadfield",
+                    "numCrimes": 2452
+                },
+                {
+                    "suburb": "kalpienung",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "dartmoor",
+                    "numCrimes": 35
+                },
+                {
+                    "suburb": "mount duneed",
+                    "numCrimes": 267
+                },
+                {
+                    "suburb": "wensleydale",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "charlemont",
+                    "numCrimes": 16
+                },
+                {
+                    "suburb": "avonmore",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "harrietville",
+                    "numCrimes": 27
+                },
+                {
+                    "suburb": "nicholson",
+                    "numCrimes": 137
+                },
+                {
+                    "suburb": "ravenswood south",
+                    "numCrimes": 18
+                },
+                {
+                    "suburb": "bullengarook",
+                    "numCrimes": 119
+                },
+                {
+                    "suburb": "ascot",
+                    "numCrimes": 159
+                },
+                {
+                    "suburb": "vectis",
+                    "numCrimes": 22
+                },
+                {
+                    "suburb": "wanalta",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "whittington",
+                    "numCrimes": 2485
+                },
+                {
+                    "suburb": "the basin",
+                    "numCrimes": 882
+                },
+                {
+                    "suburb": "upper plenty",
+                    "numCrimes": 89
+                },
+                {
+                    "suburb": "clyde north",
+                    "numCrimes": 1544
+                },
+                {
+                    "suburb": "lorne",
+                    "numCrimes": 820
+                },
+                {
+                    "suburb": "boralma",
+                    "numCrimes": 16
+                },
+                {
+                    "suburb": "annuello",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "moonlight flat",
+                    "numCrimes": 7
+                },
+                {
+                    "suburb": "simpson barracks",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "fyansford",
+                    "numCrimes": 190
+                },
+                {
+                    "suburb": "glenormiston north",
+                    "numCrimes": 17
+                },
+                {
+                    "suburb": "neilborough",
+                    "numCrimes": 58
+                },
+                {
+                    "suburb": "ladys pass",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "mcmahons creek",
+                    "numCrimes": 13
+                },
+                {
+                    "suburb": "cornella",
+                    "numCrimes": 18
+                },
+                {
+                    "suburb": "willowvale",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "lake boga",
+                    "numCrimes": 207
+                },
+                {
+                    "suburb": "kaarimba",
+                    "numCrimes": 28
+                },
+                {
+                    "suburb": "miepoll",
+                    "numCrimes": 13
+                },
+                {
+                    "suburb": "goulburn weir",
+                    "numCrimes": 15
+                },
+                {
+                    "suburb": "penshurst",
+                    "numCrimes": 141
+                },
+                {
+                    "suburb": "st andrews beach",
+                    "numCrimes": 174
+                },
+                {
+                    "suburb": "yarra glen",
+                    "numCrimes": 414
+                },
+                {
+                    "suburb": "cressy",
+                    "numCrimes": 39
+                },
+                {
+                    "suburb": "indented head",
+                    "numCrimes": 201
+                },
+                {
+                    "suburb": "glenvale",
+                    "numCrimes": 7
+                },
+                {
+                    "suburb": "attwood",
+                    "numCrimes": 578
+                },
+                {
+                    "suburb": "howqua inlet",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "frankston east",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "kangaroo lake",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "wuk wuk",
+                    "numCrimes": 21
+                },
+                {
+                    "suburb": "middle tarwin",
+                    "numCrimes": 8
+                },
+                {
+                    "suburb": "seabrook",
+                    "numCrimes": 1045
+                },
+                {
+                    "suburb": "lysterfield south",
+                    "numCrimes": 192
+                },
+                {
+                    "suburb": "tahara",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "pelluebla",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "nullawarre north",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "bundalong",
+                    "numCrimes": 142
+                },
+                {
+                    "suburb": "navarre",
+                    "numCrimes": 14
+                },
+                {
+                    "suburb": "boweya",
+                    "numCrimes": 13
+                },
+                {
+                    "suburb": "scotsburn",
+                    "numCrimes": 35
+                },
+                {
+                    "suburb": "clarinda",
+                    "numCrimes": 1454
+                },
+                {
+                    "suburb": "plumpton",
+                    "numCrimes": 1025
+                },
+                {
+                    "suburb": "bellfield",
+                    "numCrimes": 718
+                },
+                {
+                    "suburb": "nurrabiel",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "myamyn",
+                    "numCrimes": 9
+                },
+                {
+                    "suburb": "edenhope",
+                    "numCrimes": 274
+                },
+                {
+                    "suburb": "bochara",
+                    "numCrimes": 11
+                },
+                {
+                    "suburb": "shelbourne",
+                    "numCrimes": 37
+                },
+                {
+                    "suburb": "baranduda",
+                    "numCrimes": 185
+                },
+                {
+                    "suburb": "tanjil south",
+                    "numCrimes": 65
+                },
+                {
+                    "suburb": "wyelangta",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "terrick east",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "redan",
+                    "numCrimes": 955
+                },
+                {
+                    "suburb": "homewood",
+                    "numCrimes": 9
+                },
+                {
+                    "suburb": "noorongong",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "glenthompson",
+                    "numCrimes": 39
+                },
+                {
+                    "suburb": "walkerville",
+                    "numCrimes": 31
+                },
+                {
+                    "suburb": "mirboo",
+                    "numCrimes": 45
+                },
+                {
+                    "suburb": "safety beach",
+                    "numCrimes": 895
+                },
+                {
+                    "suburb": "north blackwood",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "caroline springs",
+                    "numCrimes": 6515
+                },
+                {
+                    "suburb": "geelong west",
+                    "numCrimes": 4476
+                },
+                {
+                    "suburb": "jamieson",
+                    "numCrimes": 55
+                },
+                {
+                    "suburb": "syndal",
+                    "numCrimes": 118
+                },
+                {
+                    "suburb": "moranding",
+                    "numCrimes": 7
+                },
+                {
+                    "suburb": "kew",
+                    "numCrimes": 7071
+                },
+                {
+                    "suburb": "sassafras",
+                    "numCrimes": 135
+                },
+                {
+                    "suburb": "mount beckworth",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "curlewis",
+                    "numCrimes": 218
+                },
+                {
+                    "suburb": "drummond north",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "main ridge",
+                    "numCrimes": 65
+                },
+                {
+                    "suburb": "archdale",
+                    "numCrimes": 17
+                },
+                {
+                    "suburb": "tarranginnie",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "anglers rest",
+                    "numCrimes": 19
+                },
+                {
+                    "suburb": "seaview",
+                    "numCrimes": 16
+                },
+                {
+                    "suburb": "st germains",
+                    "numCrimes": 20
+                },
+                {
+                    "suburb": "goldie",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "mentone",
+                    "numCrimes": 4145
+                },
+                {
+                    "suburb": "kunat",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "chadstone",
+                    "numCrimes": 5023
+                },
+                {
+                    "suburb": "surrey hills",
+                    "numCrimes": 2030
+                },
+                {
+                    "suburb": "manorina",
+                    "numCrimes": 8
+                },
+                {
+                    "suburb": "meadow heights",
+                    "numCrimes": 6447
+                },
+                {
+                    "suburb": "chatsworth",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "bringalbert",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "terang",
+                    "numCrimes": 808
+                },
+                {
+                    "suburb": "lillico",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "wickliffe",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "orrvale",
+                    "numCrimes": 73
+                },
+                {
+                    "suburb": "yandoit hills",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "calivil",
+                    "numCrimes": 23
+                },
+                {
+                    "suburb": "fitzroy",
+                    "numCrimes": 13389
+                },
+                {
+                    "suburb": "gre gre",
+                    "numCrimes": 8
+                },
+                {
+                    "suburb": "turriff",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "wensley dale",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "bonang",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "tallygaroopna",
+                    "numCrimes": 52
+                },
+                {
+                    "suburb": "lerderderg",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "mount eliza",
+                    "numCrimes": 2435
+                },
+                {
+                    "suburb": "rockbank",
+                    "numCrimes": 2042
+                },
+                {
+                    "suburb": "flinders",
+                    "numCrimes": 286
+                },
+                {
+                    "suburb": "giffard",
+                    "numCrimes": 13
+                },
+                {
+                    "suburb": "woodstock west",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "heidelberg west",
+                    "numCrimes": 5767
+                },
+                {
+                    "suburb": "boorhaman north",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "grand ridge",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "avon plains",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "marraweeney",
+                    "numCrimes": 11
+                },
+                {
+                    "suburb": "elmhurst",
+                    "numCrimes": 54
+                },
+                {
+                    "suburb": "timboon west",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "wellsford",
+                    "numCrimes": 36
+                },
+                {
+                    "suburb": "glomar beach",
+                    "numCrimes": 8
+                },
+                {
+                    "suburb": "gundowring",
+                    "numCrimes": 8
+                },
+                {
+                    "suburb": "barkly",
+                    "numCrimes": 10
+                },
+                {
+                    "suburb": "kennett river",
+                    "numCrimes": 13
+                },
+                {
+                    "suburb": "patterson lakes",
+                    "numCrimes": 2096
+                },
+                {
+                    "suburb": "gentle annie",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "charam",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "garden city",
+                    "numCrimes": 10
+                },
+                {
+                    "suburb": "portsea",
+                    "numCrimes": 320
+                },
+                {
+                    "suburb": "cobram east",
+                    "numCrimes": 27
+                },
+                {
+                    "suburb": "dixons creek",
+                    "numCrimes": 60
+                },
+                {
+                    "suburb": "beremboke",
+                    "numCrimes": 32
+                },
+                {
+                    "suburb": "cora lynn",
+                    "numCrimes": 34
+                },
+                {
+                    "suburb": "toora",
+                    "numCrimes": 174
+                },
+                {
+                    "suburb": "maldon",
+                    "numCrimes": 295
+                },
+                {
+                    "suburb": "mid valley",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "jeeralang junction",
+                    "numCrimes": 54
+                },
+                {
+                    "suburb": "melton west",
+                    "numCrimes": 4631
+                },
+                {
+                    "suburb": "woorarra",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "bairnsdale east",
+                    "numCrimes": 150
+                },
+                {
+                    "suburb": "zeerust",
+                    "numCrimes": 108
+                },
+                {
+                    "suburb": "digby",
+                    "numCrimes": 28
+                },
+                {
+                    "suburb": "rathscar",
+                    "numCrimes": 8
+                },
+                {
+                    "suburb": "harston",
+                    "numCrimes": 27
+                },
+                {
+                    "suburb": "yeungroon",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "south melbourne",
+                    "numCrimes": 11265
+                },
+                {
+                    "suburb": "willatook",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "taminick",
+                    "numCrimes": 7
+                },
+                {
+                    "suburb": "dunolly",
+                    "numCrimes": 214
+                },
+                {
+                    "suburb": "bullumwaal",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "blackburn north",
+                    "numCrimes": 979
+                },
+                {
+                    "suburb": "sunbury",
+                    "numCrimes": 12218
+                },
+                {
+                    "suburb": "seacombe",
+                    "numCrimes": 13
+                },
+                {
+                    "suburb": "burnewang",
+                    "numCrimes": 8
+                },
+                {
+                    "suburb": "swanpool",
+                    "numCrimes": 17
+                },
+                {
+                    "suburb": "baw baw",
+                    "numCrimes": 10
+                },
+                {
+                    "suburb": "trafalgar south",
+                    "numCrimes": 8
+                },
+                {
+                    "suburb": "camberwell",
+                    "numCrimes": 5592
+                },
+                {
+                    "suburb": "mepunga west",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "oak park",
+                    "numCrimes": 1339
+                },
+                {
+                    "suburb": "ky valley",
+                    "numCrimes": 153
+                },
+                {
+                    "suburb": "tinamba",
+                    "numCrimes": 75
+                },
+                {
+                    "suburb": "rokewood",
+                    "numCrimes": 89
+                },
+                {
+                    "suburb": "mildura",
+                    "numCrimes": 23863
+                },
+                {
+                    "suburb": "simpsons creek",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "newry",
+                    "numCrimes": 90
+                },
+                {
+                    "suburb": "wantirna south",
+                    "numCrimes": 7770
+                },
+                {
+                    "suburb": "boho",
+                    "numCrimes": 12
+                },
+                {
+                    "suburb": "mount clear",
+                    "numCrimes": 917
+                },
+                {
+                    "suburb": "norlane",
+                    "numCrimes": 8775
+                },
+                {
+                    "suburb": "sedgwick",
+                    "numCrimes": 32
+                },
+                {
+                    "suburb": "mcintyre",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "warrong",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "st clair",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "jan juc",
+                    "numCrimes": 516
+                },
+                {
+                    "suburb": "fosterville",
+                    "numCrimes": 19
+                },
+                {
+                    "suburb": "muskerry",
+                    "numCrimes": 8
+                },
+                {
+                    "suburb": "emerald",
+                    "numCrimes": 1122
+                },
+                {
+                    "suburb": "adams estate",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "middle camberwell",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "menzies creek",
+                    "numCrimes": 136
+                },
+                {
+                    "suburb": "paynesville",
+                    "numCrimes": 657
+                },
+                {
+                    "suburb": "merrivale",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "murrindindi",
+                    "numCrimes": 36
+                },
+                {
+                    "suburb": "gong gong",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "jancourt east",
+                    "numCrimes": 30
+                },
+                {
+                    "suburb": "chinkapook",
+                    "numCrimes": 14
+                },
+                {
+                    "suburb": "sailors falls",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "eldorado",
+                    "numCrimes": 31
+                },
+                {
+                    "suburb": "archerton",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "fairley",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "clyde",
+                    "numCrimes": 622
+                },
+                {
+                    "suburb": "forbes",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "minyip",
+                    "numCrimes": 64
+                },
+                {
+                    "suburb": "buxton",
+                    "numCrimes": 91
+                },
+                {
+                    "suburb": "enfield",
+                    "numCrimes": 86
+                },
+                {
+                    "suburb": "illabarook",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "riverside",
+                    "numCrimes": 36
+                },
+                {
+                    "suburb": "wattle glen",
+                    "numCrimes": 248
+                },
+                {
+                    "suburb": "caulfield east",
+                    "numCrimes": 779
+                },
+                {
+                    "suburb": "milnes bridge",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "budgeree",
+                    "numCrimes": 15
+                },
+                {
+                    "suburb": "heatherton",
+                    "numCrimes": 728
+                },
+                {
+                    "suburb": "learmonth",
+                    "numCrimes": 106
+                },
+                {
+                    "suburb": "strathmore heights",
+                    "numCrimes": 198
+                },
+                {
+                    "suburb": "beardmore",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "coleraine",
+                    "numCrimes": 369
+                },
+                {
+                    "suburb": "st kilda",
+                    "numCrimes": 23116
+                },
+                {
+                    "suburb": "sheep hills",
+                    "numCrimes": 7
+                },
+                {
+                    "suburb": "mount dandenong",
+                    "numCrimes": 218
+                },
+                {
+                    "suburb": "wallington",
+                    "numCrimes": 220
+                },
+                {
+                    "suburb": "jackass flat",
+                    "numCrimes": 251
+                },
+                {
+                    "suburb": "tennyson",
+                    "numCrimes": 27
+                },
+                {
+                    "suburb": "breakaway creek",
+                    "numCrimes": 15
+                },
+                {
+                    "suburb": "bo peep",
+                    "numCrimes": 28
+                },
+                {
+                    "suburb": "koorooman",
+                    "numCrimes": 7
+                },
+                {
+                    "suburb": "miners rest",
+                    "numCrimes": 583
+                },
+                {
+                    "suburb": "murrindal",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "butchers ridge",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "separation creek",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "clydesdale",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "gladstone park",
+                    "numCrimes": 2868
+                },
+                {
+                    "suburb": "sandhurst",
+                    "numCrimes": 784
+                },
+                {
+                    "suburb": "cowangie",
+                    "numCrimes": 24
+                },
+                {
+                    "suburb": "willowgrove",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "smiths beach",
+                    "numCrimes": 139
+                },
+                {
+                    "suburb": "toorak",
+                    "numCrimes": 4215
+                },
+                {
+                    "suburb": "macs cove",
+                    "numCrimes": 19
+                },
+                {
+                    "suburb": "fryerstown",
+                    "numCrimes": 16
+                },
+                {
+                    "suburb": "gellibrand",
+                    "numCrimes": 54
+                },
+                {
+                    "suburb": "brandy creek",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "ingliston",
+                    "numCrimes": 17
+                },
+                {
+                    "suburb": "hollands landing",
+                    "numCrimes": 65
+                },
+                {
+                    "suburb": "allambee reserve",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "mount macedon",
+                    "numCrimes": 158
+                },
+                {
+                    "suburb": "alberton",
+                    "numCrimes": 50
+                },
+                {
+                    "suburb": "marshalltown",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "chiltern",
+                    "numCrimes": 313
+                },
+                {
+                    "suburb": "tynong north",
+                    "numCrimes": 60
+                },
+                {
+                    "suburb": "yarraby",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "bemm river",
+                    "numCrimes": 18
+                },
+                {
+                    "suburb": "millbrook",
+                    "numCrimes": 33
+                },
+                {
+                    "suburb": "eversley",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "nerrin nerrin",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "clarendon",
+                    "numCrimes": 35
+                },
+                {
+                    "suburb": "framlingham east",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "bamawm extension",
+                    "numCrimes": 7
+                },
+                {
+                    "suburb": "natte yallock",
+                    "numCrimes": 24
+                },
+                {
+                    "suburb": "leopold",
+                    "numCrimes": 1787
+                },
+                {
+                    "suburb": "box hill south",
+                    "numCrimes": 1544
+                },
+                {
+                    "suburb": "llanelly",
+                    "numCrimes": 8
+                },
+                {
+                    "suburb": "cooriemungle",
+                    "numCrimes": 23
+                },
+                {
+                    "suburb": "ormond",
+                    "numCrimes": 1515
+                },
+                {
+                    "suburb": "pastoria east",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "southern cross",
+                    "numCrimes": 11
+                },
+                {
+                    "suburb": "buln buln",
+                    "numCrimes": 61
+                },
+                {
+                    "suburb": "mepunga east",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "brucknell",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "lardner",
+                    "numCrimes": 65
+                },
+                {
+                    "suburb": "jumbunna",
+                    "numCrimes": 11
+                },
+                {
+                    "suburb": "warrandyte",
+                    "numCrimes": 837
+                },
+                {
+                    "suburb": "cooramook",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "woolenook",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "curyo",
+                    "numCrimes": 7
+                },
+                {
+                    "suburb": "burkes flat",
+                    "numCrimes": 8
+                },
+                {
+                    "suburb": "narrewillock",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "kotta",
+                    "numCrimes": 26
+                },
+                {
+                    "suburb": "stratford",
+                    "numCrimes": 444
+                },
+                {
+                    "suburb": "bessiebelle",
+                    "numCrimes": 25
+                },
+                {
+                    "suburb": "avonsleigh",
+                    "numCrimes": 187
+                },
+                {
+                    "suburb": "westmere",
+                    "numCrimes": 10
+                },
+                {
+                    "suburb": "donnybrook",
+                    "numCrimes": 222
+                },
+                {
+                    "suburb": "culloden",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "geelong",
+                    "numCrimes": 15760
+                },
+                {
+                    "suburb": "box hill north",
+                    "numCrimes": 1561
+                },
+                {
+                    "suburb": "frankston north",
+                    "numCrimes": 4747
+                },
+                {
+                    "suburb": "hepburn springs",
+                    "numCrimes": 112
+                },
+                {
+                    "suburb": "kernot",
+                    "numCrimes": 12
+                },
+                {
+                    "suburb": "killawarra",
+                    "numCrimes": 30
+                },
+                {
+                    "suburb": "mount prospect",
+                    "numCrimes": 9
+                },
+                {
+                    "suburb": "galaquil",
+                    "numCrimes": 15
+                },
+                {
+                    "suburb": "wombat creek",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "mount lonarch",
+                    "numCrimes": 39
+                },
+                {
+                    "suburb": "hamlyn heights",
+                    "numCrimes": 1577
+                },
+                {
+                    "suburb": "flynn",
+                    "numCrimes": 45
+                },
+                {
+                    "suburb": "choclyn",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "hattah",
+                    "numCrimes": 20
+                },
+                {
+                    "suburb": "cornishtown",
+                    "numCrimes": 15
+                },
+                {
+                    "suburb": "illowa",
+                    "numCrimes": 35
+                },
+                {
+                    "suburb": "dumosa",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "brunswick west",
+                    "numCrimes": 3812
+                },
+                {
+                    "suburb": "lake goldsmith",
+                    "numCrimes": 36
+                },
+                {
+                    "suburb": "ultima",
+                    "numCrimes": 60
+                },
+                {
+                    "suburb": "newtown",
+                    "numCrimes": 2922
+                },
+                {
+                    "suburb": "munro",
+                    "numCrimes": 13
+                },
+                {
+                    "suburb": "cohuna",
+                    "numCrimes": 518
+                },
+                {
+                    "suburb": "coongulla",
+                    "numCrimes": 112
+                },
+                {
+                    "suburb": "rennick",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "flagstaff",
+                    "numCrimes": 12
+                },
+                {
+                    "suburb": "yatchaw",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "weatherboard",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "nariel valley",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "callawadda",
+                    "numCrimes": 9
+                },
+                {
+                    "suburb": "kyneton",
+                    "numCrimes": 2833
+                },
+                {
+                    "suburb": "noorinbee",
+                    "numCrimes": 12
+                },
+                {
+                    "suburb": "drumborg",
+                    "numCrimes": 32
+                },
+                {
+                    "suburb": "wandana heights",
+                    "numCrimes": 219
+                },
+                {
+                    "suburb": "banksia peninsula",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "piries",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "graytown",
+                    "numCrimes": 29
+                },
+                {
+                    "suburb": "ombersley",
+                    "numCrimes": 10
+                },
+                {
+                    "suburb": "wedderburn",
+                    "numCrimes": 379
+                },
+                {
+                    "suburb": "rheola",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "kingston",
+                    "numCrimes": 81
+                },
+                {
+                    "suburb": "berringa",
+                    "numCrimes": 15
+                },
+                {
+                    "suburb": "main lead",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "dockers plains",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "glenbervie",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "dawson",
+                    "numCrimes": 17
+                },
+                {
+                    "suburb": "woori yallock",
+                    "numCrimes": 551
+                },
+                {
+                    "suburb": "terip terip",
+                    "numCrimes": 12
+                },
+                {
+                    "suburb": "gannawarra",
+                    "numCrimes": 12
+                },
+                {
+                    "suburb": "cheltenham east",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "queenscliff",
+                    "numCrimes": 352
+                },
+                {
+                    "suburb": "wallaloo east",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "aringa",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "clydebank",
+                    "numCrimes": 23
+                },
+                {
+                    "suburb": "tatura",
+                    "numCrimes": 1458
+                },
+                {
+                    "suburb": "outtrim",
+                    "numCrimes": 35
+                },
+                {
+                    "suburb": "mount glasgow",
+                    "numCrimes": 25
+                },
+                {
+                    "suburb": "east warburton",
+                    "numCrimes": 29
+                },
+                {
+                    "suburb": "ashburton",
+                    "numCrimes": 2212
+                },
+                {
+                    "suburb": "scoresby",
+                    "numCrimes": 2330
+                },
+                {
+                    "suburb": "drung drung",
+                    "numCrimes": 11
+                },
+                {
+                    "suburb": "dalyston",
+                    "numCrimes": 141
+                },
+                {
+                    "suburb": "woorarra east",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "ayrford",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "axe creek",
+                    "numCrimes": 31
+                },
+                {
+                    "suburb": "jung",
+                    "numCrimes": 22
+                },
+                {
+                    "suburb": "gnarwarre",
+                    "numCrimes": 34
+                },
+                {
+                    "suburb": "loch sport",
+                    "numCrimes": 394
+                },
+                {
+                    "suburb": "dry diggings",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "montrose",
+                    "numCrimes": 1358
+                },
+                {
+                    "suburb": "baker",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "tarrenlea",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "elaine",
+                    "numCrimes": 68
+                },
+                {
+                    "suburb": "whittlesea",
+                    "numCrimes": 1802
+                },
+                {
+                    "suburb": "heathcote",
+                    "numCrimes": 883
+                },
+                {
+                    "suburb": "simpson",
+                    "numCrimes": 52
+                },
+                {
+                    "suburb": "Monash",
+                    "numCrimes": 29
+                },
+                {
+                    "suburb": "Dismal swamp",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Seacombe heights",
+                    "numCrimes": 23
+                },
+                {
+                    "suburb": "Kensington",
+                    "numCrimes": 52
+                },
+                {
+                    "suburb": "Kangaroo flat",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Bolivar",
+                    "numCrimes": 185
+                },
+                {
+                    "suburb": "Gawler",
+                    "numCrimes": 193
+                },
+                {
+                    "suburb": "Warradale",
+                    "numCrimes": 123
+                },
+                {
+                    "suburb": "Nyapari",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "Cowell",
+                    "numCrimes": 14
+                },
+                {
+                    "suburb": "Royal park",
+                    "numCrimes": 165
+                },
+                {
+                    "suburb": "Somerton park",
+                    "numCrimes": 102
+                },
+                {
+                    "suburb": "Uraidla",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "Highgate",
+                    "numCrimes": 13
+                },
+                {
+                    "suburb": "Curramulka",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "Cleve",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "Erith",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Davoren park",
+                    "numCrimes": 460
+                },
+                {
+                    "suburb": "Welland",
+                    "numCrimes": 67
+                },
+                {
+                    "suburb": "Worlds end",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Bower",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Hyde park",
+                    "numCrimes": 35
+                },
+                {
+                    "suburb": "Tarpeena",
+                    "numCrimes": 13
+                },
+                {
+                    "suburb": "West hindmarsh",
+                    "numCrimes": 74
+                },
+                {
+                    "suburb": "Bowmans",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Tranmere",
+                    "numCrimes": 99
+                },
+                {
+                    "suburb": "Murninnie beach",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Tatachilla",
+                    "numCrimes": 7
+                },
+                {
+                    "suburb": "Basket range",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "Renown park",
+                    "numCrimes": 91
+                },
+                {
+                    "suburb": "Blanchetown",
+                    "numCrimes": 12
+                },
+                {
+                    "suburb": "Kybunga",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Harrogate",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Blewitt springs",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Ottoway",
+                    "numCrimes": 75
+                },
+                {
+                    "suburb": "Hahndorf",
+                    "numCrimes": 46
+                },
+                {
+                    "suburb": "Cungena",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Umuwa",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "Port noarlunga south",
+                    "numCrimes": 62
+                },
+                {
+                    "suburb": "Edillilie",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Hewett",
+                    "numCrimes": 22
+                },
+                {
+                    "suburb": "Mil-lel",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "White sands",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Port elliot",
+                    "numCrimes": 30
+                },
+                {
+                    "suburb": "Huntfield heights",
+                    "numCrimes": 166
+                },
+                {
+                    "suburb": "Beaumont",
+                    "numCrimes": 22
+                },
+                {
+                    "suburb": "Robertstown",
+                    "numCrimes": 11
+                },
+                {
+                    "suburb": "O'sullivans beach",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Bakara",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Montacute",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Elizabeth grove",
+                    "numCrimes": 132
+                },
+                {
+                    "suburb": "Quorn",
+                    "numCrimes": 13
+                },
+                {
+                    "suburb": "Jupiter creek",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Karatta",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Hartley",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Summertown",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "Waterloo corner",
+                    "numCrimes": 29
+                },
+                {
+                    "suburb": "Bugle ranges",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "Risdon park",
+                    "numCrimes": 101
+                },
+                {
+                    "suburb": "Hindmarsh valley",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "Semaphore",
+                    "numCrimes": 124
+                },
+                {
+                    "suburb": "Largs bay",
+                    "numCrimes": 116
+                },
+                {
+                    "suburb": "Mount jagged",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Two wells",
+                    "numCrimes": 82
+                },
+                {
+                    "suburb": "North adelaide",
+                    "numCrimes": 257
+                },
+                {
+                    "suburb": "Yumali",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Kingston s.e.",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Moonta",
+                    "numCrimes": 52
+                },
+                {
+                    "suburb": "Robe",
+                    "numCrimes": 17
+                },
+                {
+                    "suburb": "Novar gardens",
+                    "numCrimes": 34
+                },
+                {
+                    "suburb": "Kanmantoo",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "Hawthorn",
+                    "numCrimes": 62
+                },
+                {
+                    "suburb": "Tusmore",
+                    "numCrimes": 10
+                },
+                {
+                    "suburb": "Park holme",
+                    "numCrimes": 125
+                },
+                {
+                    "suburb": "Duck ponds",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Carpenter rocks",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Moana",
+                    "numCrimes": 41
+                },
+                {
+                    "suburb": "Gum creek",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Colonel light gardens",
+                    "numCrimes": 52
+                },
+                {
+                    "suburb": "Elizabeth south",
+                    "numCrimes": 298
+                },
+                {
+                    "suburb": "Clarendon",
+                    "numCrimes": 12
+                },
+                {
+                    "suburb": "Bussleton",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Highland valley",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Sedan",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Coonawarra",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Oak valley",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Ramco",
+                    "numCrimes": 12
+                },
+                {
+                    "suburb": "Brunswick",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Cannawigara",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Wynn vale",
+                    "numCrimes": 94
+                },
+                {
+                    "suburb": "Houghton",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "Berri",
+                    "numCrimes": 150
+                },
+                {
+                    "suburb": "Flaxman valley",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Port broughton",
+                    "numCrimes": 16
+                },
+                {
+                    "suburb": "Murbko",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Onkaparinga hills",
+                    "numCrimes": 16
+                },
+                {
+                    "suburb": "Fulham gardens",
+                    "numCrimes": 106
+                },
+                {
+                    "suburb": "Gumeracha",
+                    "numCrimes": 12
+                },
+                {
+                    "suburb": "Rockleigh",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Cowandilla",
+                    "numCrimes": 40
+                },
+                {
+                    "suburb": "Pennington",
+                    "numCrimes": 221
+                },
+                {
+                    "suburb": "Edwardstown",
+                    "numCrimes": 289
+                },
+                {
+                    "suburb": "Torrens park",
+                    "numCrimes": 51
+                },
+                {
+                    "suburb": "Winkie",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "Lower hermitage",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Penwortham",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Reservoir",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Salisbury plain",
+                    "numCrimes": 49
+                },
+                {
+                    "suburb": "Clare",
+                    "numCrimes": 48
+                },
+                {
+                    "suburb": "Payneham",
+                    "numCrimes": 53
+                },
+                {
+                    "suburb": "Thebarton",
+                    "numCrimes": 88
+                },
+                {
+                    "suburb": "Renmark north",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "Geranium plains",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Trott park",
+                    "numCrimes": 24
+                },
+                {
+                    "suburb": "Bibaringa",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "Whyalla",
+                    "numCrimes": 119
+                },
+                {
+                    "suburb": "Beverley",
+                    "numCrimes": 61
+                },
+                {
+                    "suburb": "Calomba",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Cudlee creek",
+                    "numCrimes": 11
+                },
+                {
+                    "suburb": "College park",
+                    "numCrimes": 16
+                },
+                {
+                    "suburb": "Kanpi",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "Pipalyatjara",
+                    "numCrimes": 17
+                },
+                {
+                    "suburb": "Port augusta west",
+                    "numCrimes": 147
+                },
+                {
+                    "suburb": "Olympic dam",
+                    "numCrimes": 12
+                },
+                {
+                    "suburb": "Piccadilly",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Alma",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Katarapko",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Lower inman valley",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "Richmond",
+                    "numCrimes": 98
+                },
+                {
+                    "suburb": "Royston park",
+                    "numCrimes": 16
+                },
+                {
+                    "suburb": "St peters",
+                    "numCrimes": 70
+                },
+                {
+                    "suburb": "Marrabel",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Sheidow park",
+                    "numCrimes": 77
+                },
+                {
+                    "suburb": "Hove",
+                    "numCrimes": 27
+                },
+                {
+                    "suburb": "Blanche harbor",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Brompton",
+                    "numCrimes": 242
+                },
+                {
+                    "suburb": "Hampstead gardens",
+                    "numCrimes": 57
+                },
+                {
+                    "suburb": "Allenby gardens",
+                    "numCrimes": 48
+                },
+                {
+                    "suburb": "Export park",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Glenalta",
+                    "numCrimes": 9
+                },
+                {
+                    "suburb": "Elizabeth park",
+                    "numCrimes": 290
+                },
+                {
+                    "suburb": "Port neill",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "Macs beach",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Swan reach",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "Sandilands",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Para vista",
+                    "numCrimes": 88
+                },
+                {
+                    "suburb": "Bungama",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Golden heights",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Surrey downs",
+                    "numCrimes": 70
+                },
+                {
+                    "suburb": "Mount burr",
+                    "numCrimes": 8
+                },
+                {
+                    "suburb": "Edinburgh north",
+                    "numCrimes": 23
+                },
+                {
+                    "suburb": "O'sullivan beach",
+                    "numCrimes": 49
+                },
+                {
+                    "suburb": "Roxby downs",
+                    "numCrimes": 83
+                },
+                {
+                    "suburb": "Salisbury heights",
+                    "numCrimes": 73
+                },
+                {
+                    "suburb": "Lucindale",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "Brighton",
+                    "numCrimes": 165
+                },
+                {
+                    "suburb": "Windsor gardens",
+                    "numCrimes": 153
+                },
+                {
+                    "suburb": "Glencoe",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "West croydon",
+                    "numCrimes": 165
+                },
+                {
+                    "suburb": "Skye",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Mccracken",
+                    "numCrimes": 17
+                },
+                {
+                    "suburb": "Port macdonnell",
+                    "numCrimes": 11
+                },
+                {
+                    "suburb": "Port paterson",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "Redwood park",
+                    "numCrimes": 63
+                },
+                {
+                    "suburb": "Wirrina cove",
+                    "numCrimes": 8
+                },
+                {
+                    "suburb": "Minvalara",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Croydon park",
+                    "numCrimes": 131
+                },
+                {
+                    "suburb": "Loveday",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "Coromandel east",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "Clinton",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Manningham",
+                    "numCrimes": 25
+                },
+                {
+                    "suburb": "Peterhead",
+                    "numCrimes": 84
+                },
+                {
+                    "suburb": "Cheltenham",
+                    "numCrimes": 80
+                },
+                {
+                    "suburb": "Telowie",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Cockatoo valley",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "Hectorville",
+                    "numCrimes": 88
+                },
+                {
+                    "suburb": "Parilla",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Parafield gardens",
+                    "numCrimes": 478
+                },
+                {
+                    "suburb": "Mclaren vale",
+                    "numCrimes": 58
+                },
+                {
+                    "suburb": "Mount pleasant",
+                    "numCrimes": 12
+                },
+                {
+                    "suburb": "Talia",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Dernancourt",
+                    "numCrimes": 62
+                },
+                {
+                    "suburb": "Mclaren flat",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "Glenelg south",
+                    "numCrimes": 34
+                },
+                {
+                    "suburb": "Mosquito hill",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Unley park",
+                    "numCrimes": 15
+                },
+                {
+                    "suburb": "White hill",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Para hills west",
+                    "numCrimes": 173
+                },
+                {
+                    "suburb": "Salisbury north",
+                    "numCrimes": 444
+                },
+                {
+                    "suburb": "Craigburn farm",
+                    "numCrimes": 14
+                },
+                {
+                    "suburb": "Willamulka",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "Wandilo",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "Sandy creek",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Echunga",
+                    "numCrimes": 7
+                },
+                {
+                    "suburb": "Kingsford",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Forestville",
+                    "numCrimes": 57
+                },
+                {
+                    "suburb": "Kent town",
+                    "numCrimes": 96
+                },
+                {
+                    "suburb": "Nuriootpa",
+                    "numCrimes": 139
+                },
+                {
+                    "suburb": "Paisley",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "Nairne",
+                    "numCrimes": 41
+                },
+                {
+                    "suburb": "Broadview",
+                    "numCrimes": 162
+                },
+                {
+                    "suburb": "Koongawa",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Caltowie west",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Elanora",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Mullaquana",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "Thrington",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "Loxton",
+                    "numCrimes": 112
+                },
+                {
+                    "suburb": "Hackham west",
+                    "numCrimes": 184
+                },
+                {
+                    "suburb": "Indulkana",
+                    "numCrimes": 25
+                },
+                {
+                    "suburb": "Mount osmond",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "Felixstow",
+                    "numCrimes": 61
+                },
+                {
+                    "suburb": "Hope forest",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Toorak gardens",
+                    "numCrimes": 31
+                },
+                {
+                    "suburb": "Millicent",
+                    "numCrimes": 87
+                },
+                {
+                    "suburb": "Yattalunga",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "Fulham",
+                    "numCrimes": 68
+                },
+                {
+                    "suburb": "Yalata",
+                    "numCrimes": 51
+                },
+                {
+                    "suburb": "Clarence gardens",
+                    "numCrimes": 41
+                },
+                {
+                    "suburb": "Minlaton",
+                    "numCrimes": 14
+                },
+                {
+                    "suburb": "Amata",
+                    "numCrimes": 51
+                },
+                {
+                    "suburb": "Saddleworth",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "Athol park",
+                    "numCrimes": 65
+                },
+                {
+                    "suburb": "Christies beach",
+                    "numCrimes": 349
+                },
+                {
+                    "suburb": "Oaklands park",
+                    "numCrimes": 611
+                },
+                {
+                    "suburb": "Beachport",
+                    "numCrimes": 14
+                },
+                {
+                    "suburb": "Greenock",
+                    "numCrimes": 7
+                },
+                {
+                    "suburb": "Tumby bay",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "Goolwa",
+                    "numCrimes": 59
+                },
+                {
+                    "suburb": "Parndana",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "Stirling",
+                    "numCrimes": 29
+                },
+                {
+                    "suburb": "Yallunda flat",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Tanunda",
+                    "numCrimes": 58
+                },
+                {
+                    "suburb": "Netley",
+                    "numCrimes": 34
+                },
+                {
+                    "suburb": "Orroroo",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "Carrickalinga",
+                    "numCrimes": 11
+                },
+                {
+                    "suburb": "Goolwa south",
+                    "numCrimes": 10
+                },
+                {
+                    "suburb": "Overland corner",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Morphettville",
+                    "numCrimes": 104
+                },
+                {
+                    "suburb": "Moorook",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "Mudamuckla",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "Adelaide airport",
+                    "numCrimes": 85
+                },
+                {
+                    "suburb": "Mimili",
+                    "numCrimes": 40
+                },
+                {
+                    "suburb": "Murtho",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Koonibba",
+                    "numCrimes": 10
+                },
+                {
+                    "suburb": "Padthaway",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Maslin beach",
+                    "numCrimes": 26
+                },
+                {
+                    "suburb": "Mintaro",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "Salisbury",
+                    "numCrimes": 740
+                },
+                {
+                    "suburb": "Mount barker",
+                    "numCrimes": 285
+                },
+                {
+                    "suburb": "Yatala vale",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "Glanville",
+                    "numCrimes": 22
+                },
+                {
+                    "suburb": "Northfield",
+                    "numCrimes": 170
+                },
+                {
+                    "suburb": "Port rickaby",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Olary",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Wintinna",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Glenelg east",
+                    "numCrimes": 120
+                },
+                {
+                    "suburb": "Peterborough",
+                    "numCrimes": 33
+                },
+                {
+                    "suburb": "Torrensville",
+                    "numCrimes": 188
+                },
+                {
+                    "suburb": "Koppamurra",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Chandlers hill",
+                    "numCrimes": 7
+                },
+                {
+                    "suburb": "North moonta",
+                    "numCrimes": 7
+                },
+                {
+                    "suburb": "Brunswick west",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Willaston",
+                    "numCrimes": 109
+                },
+                {
+                    "suburb": "Strathalbyn",
+                    "numCrimes": 68
+                },
+                {
+                    "suburb": "Clements gap",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Mount schank",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "Ingle farm",
+                    "numCrimes": 346
+                },
+                {
+                    "suburb": "Wangolina",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Dover gardens",
+                    "numCrimes": 84
+                },
+                {
+                    "suburb": "Brooklyn park",
+                    "numCrimes": 139
+                },
+                {
+                    "suburb": "Suttontown",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "Seaford rise",
+                    "numCrimes": 110
+                },
+                {
+                    "suburb": "Thompson beach",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "Gould creek",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "Terowie",
+                    "numCrimes": 10
+                },
+                {
+                    "suburb": "Bowden",
+                    "numCrimes": 106
+                },
+                {
+                    "suburb": "Koolunga",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "Vale park",
+                    "numCrimes": 54
+                },
+                {
+                    "suburb": "Mundulla",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Peake",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Gifford hill",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Yelta",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Stockwell",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Exeter",
+                    "numCrimes": 29
+                },
+                {
+                    "suburb": "New town",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "Moody",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Arthurton",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Dulwich",
+                    "numCrimes": 30
+                },
+                {
+                    "suburb": "Encounter bay",
+                    "numCrimes": 43
+                },
+                {
+                    "suburb": "Colton",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Wattle park",
+                    "numCrimes": 8
+                },
+                {
+                    "suburb": "Ashton",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Wirraminna",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Booleroo centre",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Hendon",
+                    "numCrimes": 35
+                },
+                {
+                    "suburb": "Netherby",
+                    "numCrimes": 20
+                },
+                {
+                    "suburb": "Ferryden park",
+                    "numCrimes": 113
+                },
+                {
+                    "suburb": "Mingbool",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Mitchell park",
+                    "numCrimes": 195
+                },
+                {
+                    "suburb": "Greenacres",
+                    "numCrimes": 127
+                },
+                {
+                    "suburb": "Yatina",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Salisbury east",
+                    "numCrimes": 221
+                },
+                {
+                    "suburb": "Laffer",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Woodville north",
+                    "numCrimes": 118
+                },
+                {
+                    "suburb": "Wattle flat",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Surrey hills",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Annadale",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Newton",
+                    "numCrimes": 114
+                },
+                {
+                    "suburb": "Tarnma",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Copley",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "Moyhall",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Aldinga beach",
+                    "numCrimes": 213
+                },
+                {
+                    "suburb": "Woods point",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Toora",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Fairview park",
+                    "numCrimes": 71
+                },
+                {
+                    "suburb": "Myponga",
+                    "numCrimes": 16
+                },
+                {
+                    "suburb": "Ninnes",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Parawa",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "Old noarlunga",
+                    "numCrimes": 82
+                },
+                {
+                    "suburb": "Mawson lakes",
+                    "numCrimes": 464
+                },
+                {
+                    "suburb": "Mypolonga",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "Mingary",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Sunnyside",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Cavan",
+                    "numCrimes": 105
+                },
+                {
+                    "suburb": "Woolpunda",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Maaoupe",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Evanston",
+                    "numCrimes": 192
+                },
+                {
+                    "suburb": "Mylor",
+                    "numCrimes": 8
+                },
+                {
+                    "suburb": "Marden",
+                    "numCrimes": 75
+                },
+                {
+                    "suburb": "Mount barker springs",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "The pines",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Bordertown",
+                    "numCrimes": 58
+                },
+                {
+                    "suburb": "Jamestown",
+                    "numCrimes": 20
+                },
+                {
+                    "suburb": "Nelshaby",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Chaffey",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Eudunda",
+                    "numCrimes": 12
+                },
+                {
+                    "suburb": "Pukatja",
+                    "numCrimes": 32
+                },
+                {
+                    "suburb": "Wigley flat",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Elizabeth",
+                    "numCrimes": 520
+                },
+                {
+                    "suburb": "Wirrulla",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Vivonne bay",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Yahl",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Kersbrook",
+                    "numCrimes": 13
+                },
+                {
+                    "suburb": "Mount arden",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Bright",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Bowillia",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Hillier",
+                    "numCrimes": 18
+                },
+                {
+                    "suburb": "Golden grove",
+                    "numCrimes": 241
+                },
+                {
+                    "suburb": "Riverton",
+                    "numCrimes": 24
+                },
+                {
+                    "suburb": "Modbury north",
+                    "numCrimes": 114
+                },
+                {
+                    "suburb": "Heathfield",
+                    "numCrimes": 12
+                },
+                {
+                    "suburb": "Kangarilla",
+                    "numCrimes": 10
+                },
+                {
+                    "suburb": "Gurra gurra",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Valley view",
+                    "numCrimes": 167
+                },
+                {
+                    "suburb": "Willalooka",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Stonyfell",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "Nundroo",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Pinks beach",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Alford",
+                    "numCrimes": 9
+                },
+                {
+                    "suburb": "Elwomple",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Port pirie west",
+                    "numCrimes": 84
+                },
+                {
+                    "suburb": "Reynella east",
+                    "numCrimes": 32
+                },
+                {
+                    "suburb": "Joslin",
+                    "numCrimes": 7
+                },
+                {
+                    "suburb": "Port vincent",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "Salisbury park",
+                    "numCrimes": 64
+                },
+                {
+                    "suburb": "Aldgate",
+                    "numCrimes": 19
+                },
+                {
+                    "suburb": "Regency park",
+                    "numCrimes": 41
+                },
+                {
+                    "suburb": "Kings park",
+                    "numCrimes": 11
+                },
+                {
+                    "suburb": "Warooka",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "Marryatville",
+                    "numCrimes": 19
+                },
+                {
+                    "suburb": "Wattle range",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "Reid",
+                    "numCrimes": 12
+                },
+                {
+                    "suburb": "Good hope landing",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Willowie",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Port augusta",
+                    "numCrimes": 737
+                },
+                {
+                    "suburb": "Lincoln gap",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Flagstaff hill",
+                    "numCrimes": 79
+                },
+                {
+                    "suburb": "Boston",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Collinswood",
+                    "numCrimes": 46
+                },
+                {
+                    "suburb": "Owen",
+                    "numCrimes": 7
+                },
+                {
+                    "suburb": "Windsor",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "Seddon",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Whyalla playford",
+                    "numCrimes": 101
+                },
+                {
+                    "suburb": "Moorlands",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Glossop",
+                    "numCrimes": 24
+                },
+                {
+                    "suburb": "Seaford heights",
+                    "numCrimes": 8
+                },
+                {
+                    "suburb": "Corny point",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Port pirie south",
+                    "numCrimes": 75
+                },
+                {
+                    "suburb": "Adelaide",
+                    "numCrimes": 3379
+                },
+                {
+                    "suburb": "Monteith",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Palmer",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Allendale north",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Renmark",
+                    "numCrimes": 184
+                },
+                {
+                    "suburb": "North lakes",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Kingsgrove",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Burdett",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "Wudinna",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "Munno para",
+                    "numCrimes": 278
+                },
+                {
+                    "suburb": "Birdwood",
+                    "numCrimes": 23
+                },
+                {
+                    "suburb": "Port wakefield",
+                    "numCrimes": 23
+                },
+                {
+                    "suburb": "Flinders park",
+                    "numCrimes": 134
+                },
+                {
+                    "suburb": "Woodchester",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Yundi",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Tonsley",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "Angle vale",
+                    "numCrimes": 121
+                },
+                {
+                    "suburb": "Kensington gardens",
+                    "numCrimes": 36
+                },
+                {
+                    "suburb": "Agery",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Semaphore park",
+                    "numCrimes": 123
+                },
+                {
+                    "suburb": "Dudley park",
+                    "numCrimes": 29
+                },
+                {
+                    "suburb": "Greenwith",
+                    "numCrimes": 103
+                },
+                {
+                    "suburb": "Kingscote",
+                    "numCrimes": 18
+                },
+                {
+                    "suburb": "Halbury",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "Sunlands",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "Cromer",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Roseworthy",
+                    "numCrimes": 12
+                },
+                {
+                    "suburb": "Hawker",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "Burra",
+                    "numCrimes": 10
+                },
+                {
+                    "suburb": "Andrews farm",
+                    "numCrimes": 152
+                },
+                {
+                    "suburb": "Bridgewater",
+                    "numCrimes": 39
+                },
+                {
+                    "suburb": "Milang",
+                    "numCrimes": 14
+                },
+                {
+                    "suburb": "Whyalla jenkins",
+                    "numCrimes": 44
+                },
+                {
+                    "suburb": "Erindale",
+                    "numCrimes": 8
+                },
+                {
+                    "suburb": "Port adelaide",
+                    "numCrimes": 335
+                },
+                {
+                    "suburb": "Cape jervis",
+                    "numCrimes": 15
+                },
+                {
+                    "suburb": "Hayborough",
+                    "numCrimes": 22
+                },
+                {
+                    "suburb": "Penola",
+                    "numCrimes": 21
+                },
+                {
+                    "suburb": "Moonta mines",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "Gillentown",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Dutton",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "Monarto south",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "West lakes",
+                    "numCrimes": 314
+                },
+                {
+                    "suburb": "Charleston",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Stockport",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "Mount gambier",
+                    "numCrimes": 576
+                },
+                {
+                    "suburb": "Cygnet river",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Brukunga",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Seacliff",
+                    "numCrimes": 41
+                },
+                {
+                    "suburb": "Woodville",
+                    "numCrimes": 120
+                },
+                {
+                    "suburb": "Tarlee",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "Gepps cross",
+                    "numCrimes": 106
+                },
+                {
+                    "suburb": "Kalka",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "Seaford meadows",
+                    "numCrimes": 102
+                },
+                {
+                    "suburb": "Bugle hut",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "Auburn",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "Croydon",
+                    "numCrimes": 39
+                },
+                {
+                    "suburb": "Magdala",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Concordia",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Kilburn",
+                    "numCrimes": 470
+                },
+                {
+                    "suburb": "Cumberland park",
+                    "numCrimes": 72
+                },
+                {
+                    "suburb": "Eastwood",
+                    "numCrimes": 56
+                },
+                {
+                    "suburb": "Myponga beach",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Crafers west",
+                    "numCrimes": 7
+                },
+                {
+                    "suburb": "Evandale",
+                    "numCrimes": 33
+                },
+                {
+                    "suburb": "Forreston",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Shea-oak log",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "Willunga",
+                    "numCrimes": 34
+                },
+                {
+                    "suburb": "Cobdogla",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Halidon",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Wingfield",
+                    "numCrimes": 101
+                },
+                {
+                    "suburb": "Lochiel",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "Grange",
+                    "numCrimes": 111
+                },
+                {
+                    "suburb": "Port germein",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "Templers",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "Riverglades",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "Underdale",
+                    "numCrimes": 87
+                },
+                {
+                    "suburb": "Lockleys",
+                    "numCrimes": 83
+                },
+                {
+                    "suburb": "Paskeville",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "Port flinders",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Kensington park",
+                    "numCrimes": 24
+                },
+                {
+                    "suburb": "Angas valley",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Lightsview",
+                    "numCrimes": 129
+                },
+                {
+                    "suburb": "Innamincka",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Ashbourne",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Truro",
+                    "numCrimes": 9
+                },
+                {
+                    "suburb": "Mallala",
+                    "numCrimes": 11
+                },
+                {
+                    "suburb": "Price",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "Murray bridge south",
+                    "numCrimes": 7
+                },
+                {
+                    "suburb": "Albert park",
+                    "numCrimes": 58
+                },
+                {
+                    "suburb": "Ascot park",
+                    "numCrimes": 151
+                },
+                {
+                    "suburb": "Marananga",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Morphett vale",
+                    "numCrimes": 952
+                },
+                {
+                    "suburb": "Mantung",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Korunye",
+                    "numCrimes": 7
+                },
+                {
+                    "suburb": "Thevenard",
+                    "numCrimes": 47
+                },
+                {
+                    "suburb": "St kilda",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "Coonamia",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Yankalilla",
+                    "numCrimes": 12
+                },
+                {
+                    "suburb": "Tiddy widdy beach",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Penrice",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "Renmark west",
+                    "numCrimes": 15
+                },
+                {
+                    "suburb": "Douglas point",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Whyte yarcowie",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "Hindmarsh tiers",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Bowhill",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Compton",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Trinity gardens",
+                    "numCrimes": 30
+                },
+                {
+                    "suburb": "Woodville park",
+                    "numCrimes": 83
+                },
+                {
+                    "suburb": "Parafield",
+                    "numCrimes": 134
+                },
+                {
+                    "suburb": "Christie downs",
+                    "numCrimes": 364
+                },
+                {
+                    "suburb": "Cultana",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Cadell",
+                    "numCrimes": 7
+                },
+                {
+                    "suburb": "Banksia park",
+                    "numCrimes": 56
+                },
+                {
+                    "suburb": "Normanville",
+                    "numCrimes": 14
+                },
+                {
+                    "suburb": "Wallaroo",
+                    "numCrimes": 114
+                },
+                {
+                    "suburb": "Mile end",
+                    "numCrimes": 225
+                },
+                {
+                    "suburb": "Younghusband",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "Whites valley",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "North brighton",
+                    "numCrimes": 42
+                },
+                {
+                    "suburb": "Bute",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "Medindie",
+                    "numCrimes": 42
+                },
+                {
+                    "suburb": "Lock",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "Rose park",
+                    "numCrimes": 31
+                },
+                {
+                    "suburb": "Gawler south",
+                    "numCrimes": 120
+                },
+                {
+                    "suburb": "Cummins",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "Hillcrest",
+                    "numCrimes": 110
+                },
+                {
+                    "suburb": "Nepean bay",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Sellicks hill",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Hay flat",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Coromandel valley",
+                    "numCrimes": 25
+                },
+                {
+                    "suburb": "Lobethal",
+                    "numCrimes": 39
+                },
+                {
+                    "suburb": "Moonta bay",
+                    "numCrimes": 24
+                },
+                {
+                    "suburb": "Tungkillo",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Magill",
+                    "numCrimes": 112
+                },
+                {
+                    "suburb": "Mount bryan east",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Bedford park",
+                    "numCrimes": 77
+                },
+                {
+                    "suburb": "Cherry gardens",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "Stirling north",
+                    "numCrimes": 59
+                },
+                {
+                    "suburb": "Clarence park",
+                    "numCrimes": 81
+                },
+                {
+                    "suburb": "Kulpara",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Ceduna",
+                    "numCrimes": 183
+                },
+                {
+                    "suburb": "Paradise",
+                    "numCrimes": 117
+                },
+                {
+                    "suburb": "Frankton",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Australia plains",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Goolwa beach",
+                    "numCrimes": 36
+                },
+                {
+                    "suburb": "Artarmon",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Seaton",
+                    "numCrimes": 372
+                },
+                {
+                    "suburb": "Findon",
+                    "numCrimes": 265
+                },
+                {
+                    "suburb": "Coonalpyn",
+                    "numCrimes": 15
+                },
+                {
+                    "suburb": "Klemzig",
+                    "numCrimes": 137
+                },
+                {
+                    "suburb": "Medindie gardens",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "Fowlers bay",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Cape jaffa",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Maryborough",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Waitpinga",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "Paechtown",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Upper hermitage",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Warburto",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Thorngate",
+                    "numCrimes": 38
+                },
+                {
+                    "suburb": "Holden hill",
+                    "numCrimes": 154
+                },
+                {
+                    "suburb": "Fisher",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "Chilpenunda",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Mansfield park",
+                    "numCrimes": 131
+                },
+                {
+                    "suburb": "Keswick",
+                    "numCrimes": 44
+                },
+                {
+                    "suburb": "Upper sturt",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "Mount bryan",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "Cooltong",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Beulah park",
+                    "numCrimes": 18
+                },
+                {
+                    "suburb": "Back valley",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "Walker flat",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Pompoota",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Dublin",
+                    "numCrimes": 11
+                },
+                {
+                    "suburb": "Port victoria",
+                    "numCrimes": 8
+                },
+                {
+                    "suburb": "Currency creek",
+                    "numCrimes": 7
+                },
+                {
+                    "suburb": "Glenunga",
+                    "numCrimes": 60
+                },
+                {
+                    "suburb": "Clapham",
+                    "numCrimes": 20
+                },
+                {
+                    "suburb": "Clayton bay",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "Kingston se",
+                    "numCrimes": 10
+                },
+                {
+                    "suburb": "Port bonython",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Gladstone",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "Clearview",
+                    "numCrimes": 184
+                },
+                {
+                    "suburb": "Smithfield plains",
+                    "numCrimes": 189
+                },
+                {
+                    "suburb": "Noarlunga downs",
+                    "numCrimes": 171
+                },
+                {
+                    "suburb": "Port noarlunga",
+                    "numCrimes": 103
+                },
+                {
+                    "suburb": "Outer harbor",
+                    "numCrimes": 9
+                },
+                {
+                    "suburb": "St clair",
+                    "numCrimes": 72
+                },
+                {
+                    "suburb": "Modbury",
+                    "numCrimes": 464
+                },
+                {
+                    "suburb": "Green patch",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Loxton north",
+                    "numCrimes": 10
+                },
+                {
+                    "suburb": "Long plains",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "Carcuma",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "South brighton",
+                    "numCrimes": 36
+                },
+                {
+                    "suburb": "Mitcham",
+                    "numCrimes": 30
+                },
+                {
+                    "suburb": "Campbpelltown",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Brownlow",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Marion",
+                    "numCrimes": 137
+                },
+                {
+                    "suburb": "Redbanks",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Darlington",
+                    "numCrimes": 58
+                },
+                {
+                    "suburb": "Cunliffe",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Fullarton",
+                    "numCrimes": 87
+                },
+                {
+                    "suburb": "Plympton",
+                    "numCrimes": 210
+                },
+                {
+                    "suburb": "Ebenezer",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Lynton",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "Sefton park",
+                    "numCrimes": 58
+                },
+                {
+                    "suburb": "Cleland",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "Kurralta park",
+                    "numCrimes": 114
+                },
+                {
+                    "suburb": "Meningie",
+                    "numCrimes": 21
+                },
+                {
+                    "suburb": "Tulka",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Mount torrens",
+                    "numCrimes": 10
+                },
+                {
+                    "suburb": "Sampson flat",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "Bagot well",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Goodwood",
+                    "numCrimes": 98
+                },
+                {
+                    "suburb": "Victor harbor",
+                    "numCrimes": 142
+                },
+                {
+                    "suburb": "Williamstown",
+                    "numCrimes": 24
+                },
+                {
+                    "suburb": "Short",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Sydney",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Brahma lodge",
+                    "numCrimes": 117
+                },
+                {
+                    "suburb": "Barmera",
+                    "numCrimes": 72
+                },
+                {
+                    "suburb": "Moculta",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "Light pass",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "Clovelly park",
+                    "numCrimes": 89
+                },
+                {
+                    "suburb": "Woodside",
+                    "numCrimes": 33
+                },
+                {
+                    "suburb": "Paringa",
+                    "numCrimes": 15
+                },
+                {
+                    "suburb": "Coomandook",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "Caltowie",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Hamley bridge",
+                    "numCrimes": 13
+                },
+                {
+                    "suburb": "Millswood",
+                    "numCrimes": 53
+                },
+                {
+                    "suburb": "Not disclosed",
+                    "numCrimes": 977
+                },
+                {
+                    "suburb": "Queenstown",
+                    "numCrimes": 122
+                },
+                {
+                    "suburb": "Mount barker summit",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Smithfield",
+                    "numCrimes": 474
+                },
+                {
+                    "suburb": "Oodla wirra",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Osborne",
+                    "numCrimes": 78
+                },
+                {
+                    "suburb": "Lyrup",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "Beaufort",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "Black hill",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Lenswood",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Inglewood",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "Stansbury",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "Old reynella",
+                    "numCrimes": 137
+                },
+                {
+                    "suburb": "Burton",
+                    "numCrimes": 206
+                },
+                {
+                    "suburb": "Leabrook",
+                    "numCrimes": 15
+                },
+                {
+                    "suburb": "Gawler river",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "Crystal brook",
+                    "numCrimes": 15
+                },
+                {
+                    "suburb": "Campbelltown",
+                    "numCrimes": 157
+                },
+                {
+                    "suburb": "Fox",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Redhill",
+                    "numCrimes": 8
+                },
+                {
+                    "suburb": "Port moorowie",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Wild dog valley",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Crafers",
+                    "numCrimes": 16
+                },
+                {
+                    "suburb": "Farm beach",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Sunnydale",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Wistow",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "Sultana point",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Seaview downs",
+                    "numCrimes": 74
+                },
+                {
+                    "suburb": "Allendale east",
+                    "numCrimes": 8
+                },
+                {
+                    "suburb": "Rocky gully",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "Hillbank",
+                    "numCrimes": 210
+                },
+                {
+                    "suburb": "Poonindie",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Dry creek",
+                    "numCrimes": 109
+                },
+                {
+                    "suburb": "Kalbeeba",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "Laura",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Glenelg north",
+                    "numCrimes": 123
+                },
+                {
+                    "suburb": "Glen osmond",
+                    "numCrimes": 41
+                },
+                {
+                    "suburb": "Hindmarsh",
+                    "numCrimes": 91
+                },
+                {
+                    "suburb": "Nalyappa",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Taylorville",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "Unley",
+                    "numCrimes": 139
+                },
+                {
+                    "suburb": "Happy valley",
+                    "numCrimes": 136
+                },
+                {
+                    "suburb": "Willunga south",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "Munno para downs",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "Palm beach",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Wolseley",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "Eden hills",
+                    "numCrimes": 39
+                },
+                {
+                    "suburb": "Devon park",
+                    "numCrimes": 57
+                },
+                {
+                    "suburb": "Gilles plains",
+                    "numCrimes": 245
+                },
+                {
+                    "suburb": "Kainton",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Beetaloo valley",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Parkside",
+                    "numCrimes": 98
+                },
+                {
+                    "suburb": "Lonsdale",
+                    "numCrimes": 98
+                },
+                {
+                    "suburb": "Meadows",
+                    "numCrimes": 20
+                },
+                {
+                    "suburb": "Woodforde",
+                    "numCrimes": 19
+                },
+                {
+                    "suburb": "Ridleyton",
+                    "numCrimes": 85
+                },
+                {
+                    "suburb": "Bethel",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "Paracombe",
+                    "numCrimes": 7
+                },
+                {
+                    "suburb": "Glenside",
+                    "numCrimes": 133
+                },
+                {
+                    "suburb": "Long flat",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Sevenhill",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Rosslyn park",
+                    "numCrimes": 7
+                },
+                {
+                    "suburb": "Brinkworth",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Glandore",
+                    "numCrimes": 87
+                },
+                {
+                    "suburb": "Elizabeth east",
+                    "numCrimes": 224
+                },
+                {
+                    "suburb": "Woodville south",
+                    "numCrimes": 119
+                },
+                {
+                    "suburb": "Willow creek",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Denial bay",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "Edithburgh",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "Hindmarsh island",
+                    "numCrimes": 14
+                },
+                {
+                    "suburb": "Arno bay",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Port willunga",
+                    "numCrimes": 36
+                },
+                {
+                    "suburb": "Coorabie",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Woomera",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Kadina",
+                    "numCrimes": 121
+                },
+                {
+                    "suburb": "Middle beach",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "Buckland park",
+                    "numCrimes": 9
+                },
+                {
+                    "suburb": "Elizabeth vale",
+                    "numCrimes": 290
+                },
+                {
+                    "suburb": "Wellington",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "Maitland",
+                    "numCrimes": 37
+                },
+                {
+                    "suburb": "Bethany",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Balaklava",
+                    "numCrimes": 46
+                },
+                {
+                    "suburb": "Taperoo",
+                    "numCrimes": 159
+                },
+                {
+                    "suburb": "Tintinara",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "Glendambo",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "Lower light",
+                    "numCrimes": 12
+                },
+                {
+                    "suburb": "Davenport",
+                    "numCrimes": 26
+                },
+                {
+                    "suburb": "Inman valley",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "Goolwa north",
+                    "numCrimes": 11
+                },
+                {
+                    "suburb": "Heathpool",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Gawler east",
+                    "numCrimes": 85
+                },
+                {
+                    "suburb": "Nectar brook",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Aldinga",
+                    "numCrimes": 82
+                },
+                {
+                    "suburb": "North beach",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "Napperby",
+                    "numCrimes": 8
+                },
+                {
+                    "suburb": "Solomontown",
+                    "numCrimes": 38
+                },
+                {
+                    "suburb": "Totness",
+                    "numCrimes": 10
+                },
+                {
+                    "suburb": "Woodville west",
+                    "numCrimes": 154
+                },
+                {
+                    "suburb": "Manoora",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "West lakes shore",
+                    "numCrimes": 54
+                },
+                {
+                    "suburb": "Wallaroo mines",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "Direk",
+                    "numCrimes": 32
+                },
+                {
+                    "suburb": "Sturt",
+                    "numCrimes": 115
+                },
+                {
+                    "suburb": "Lower mitcham",
+                    "numCrimes": 34
+                },
+                {
+                    "suburb": "Angle park",
+                    "numCrimes": 85
+                },
+                {
+                    "suburb": "Langhorne creek",
+                    "numCrimes": 12
+                },
+                {
+                    "suburb": "Kudla",
+                    "numCrimes": 23
+                },
+                {
+                    "suburb": "Panorama",
+                    "numCrimes": 29
+                },
+                {
+                    "suburb": "Middleton",
+                    "numCrimes": 18
+                },
+                {
+                    "suburb": "Bangham",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Leigh creek",
+                    "numCrimes": 7
+                },
+                {
+                    "suburb": "South kilkerran",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Semaphore south",
+                    "numCrimes": 29
+                },
+                {
+                    "suburb": "Gillman",
+                    "numCrimes": 25
+                },
+                {
+                    "suburb": "Lipson",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "Ashford",
+                    "numCrimes": 17
+                },
+                {
+                    "suburb": "Narrung",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Nailsworth",
+                    "numCrimes": 85
+                },
+                {
+                    "suburb": "Rostrevor",
+                    "numCrimes": 70
+                },
+                {
+                    "suburb": "Sutherlands",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Georgetown",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "West beach",
+                    "numCrimes": 132
+                },
+                {
+                    "suburb": "Pellaring flat",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Coffin bay",
+                    "numCrimes": 9
+                },
+                {
+                    "suburb": "Oodnadatta",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "Evanston gardens",
+                    "numCrimes": 83
+                },
+                {
+                    "suburb": "Springton",
+                    "numCrimes": 8
+                },
+                {
+                    "suburb": "Green fields",
+                    "numCrimes": 42
+                },
+                {
+                    "suburb": "Wallaroo plain",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Balgowan",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Hazelwood park",
+                    "numCrimes": 13
+                },
+                {
+                    "suburb": "South plympton",
+                    "numCrimes": 126
+                },
+                {
+                    "suburb": "Tantanoola",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Greenhill",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Kyancutta",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Hackney",
+                    "numCrimes": 34
+                },
+                {
+                    "suburb": "Northern heights",
+                    "numCrimes": 13
+                },
+                {
+                    "suburb": "Lyndhurst",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Yunta",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "Binnum",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Rowland flat",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "Haines",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Blyth",
+                    "numCrimes": 10
+                },
+                {
+                    "suburb": "Whyalla stuart",
+                    "numCrimes": 426
+                },
+                {
+                    "suburb": "Henley beach",
+                    "numCrimes": 136
+                },
+                {
+                    "suburb": "Ridgehaven",
+                    "numCrimes": 83
+                },
+                {
+                    "suburb": "Kidman park",
+                    "numCrimes": 91
+                },
+                {
+                    "suburb": "Pekina",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Cherryville",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Hawthorndene",
+                    "numCrimes": 17
+                },
+                {
+                    "suburb": "Booborowie",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "Mitchell",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Kilkenny",
+                    "numCrimes": 221
+                },
+                {
+                    "suburb": "Kongorong",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "Linden park",
+                    "numCrimes": 24
+                },
+                {
+                    "suburb": "Salt creek",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Sheaoak flat",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Glenelg",
+                    "numCrimes": 252
+                },
+                {
+                    "suburb": "Spalding",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "Eyre",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "Appila",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Angas plains",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Oakden",
+                    "numCrimes": 72
+                },
+                {
+                    "suburb": "Karoonda",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "Sunnybrae",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Hilton",
+                    "numCrimes": 106
+                },
+                {
+                    "suburb": "Frewville",
+                    "numCrimes": 36
+                },
+                {
+                    "suburb": "Linwood",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Seacliff park",
+                    "numCrimes": 36
+                },
+                {
+                    "suburb": "Jerusalem",
+                    "numCrimes": 7
+                },
+                {
+                    "suburb": "Andamooka",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "Albany",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Worrolong",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "Caliph",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Salisbury downs",
+                    "numCrimes": 380
+                },
+                {
+                    "suburb": "Naracoorte",
+                    "numCrimes": 113
+                },
+                {
+                    "suburb": "Urrbrae",
+                    "numCrimes": 9
+                },
+                {
+                    "suburb": "East moonta",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Ponde",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "Krongart",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Virginia",
+                    "numCrimes": 91
+                },
+                {
+                    "suburb": "Newland",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Pimba",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "Renmark south",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "Herne bay",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Enfield",
+                    "numCrimes": 225
+                },
+                {
+                    "suburb": "Kuitpo",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Littlehampton",
+                    "numCrimes": 13
+                },
+                {
+                    "suburb": "Rudall",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Mount willoughby",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "Minnipa",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Mile end south",
+                    "numCrimes": 54
+                },
+                {
+                    "suburb": "Rosewater",
+                    "numCrimes": 183
+                },
+                {
+                    "suburb": "Oakbank",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "Marleston",
+                    "numCrimes": 36
+                },
+                {
+                    "suburb": "Henley beach south",
+                    "numCrimes": 40
+                },
+                {
+                    "suburb": "Reeves plains",
+                    "numCrimes": 13
+                },
+                {
+                    "suburb": "Borrika",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Lameroo",
+                    "numCrimes": 14
+                },
+                {
+                    "suburb": "Elizabeth downs",
+                    "numCrimes": 377
+                },
+                {
+                    "suburb": "Marino",
+                    "numCrimes": 20
+                },
+                {
+                    "suburb": "Coobowie",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "Hansborough",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Hackham",
+                    "numCrimes": 125
+                },
+                {
+                    "suburb": "Spence",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Ramsay",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Port hughes",
+                    "numCrimes": 7
+                },
+                {
+                    "suburb": "Moorak",
+                    "numCrimes": 12
+                },
+                {
+                    "suburb": "Whyalla barson",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Condowie",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Macdonald park",
+                    "numCrimes": 8
+                },
+                {
+                    "suburb": "Coles",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Bellevue heights",
+                    "numCrimes": 20
+                },
+                {
+                    "suburb": "St morris",
+                    "numCrimes": 22
+                },
+                {
+                    "suburb": "North plympton",
+                    "numCrimes": 41
+                },
+                {
+                    "suburb": "Humbug scrub",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Walkley heights",
+                    "numCrimes": 48
+                },
+                {
+                    "suburb": "Sellicks beach",
+                    "numCrimes": 47
+                },
+                {
+                    "suburb": "Westlakes",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Gerard",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Tooligie",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Modbury heights",
+                    "numCrimes": 79
+                },
+                {
+                    "suburb": "Mount george",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "West richmond",
+                    "numCrimes": 38
+                },
+                {
+                    "suburb": "Farrell flat",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "Ward belt",
+                    "numCrimes": 8
+                },
+                {
+                    "suburb": "Payneham south",
+                    "numCrimes": 20
+                },
+                {
+                    "suburb": "Callington",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "Warnertown",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "Whyalla norrie",
+                    "numCrimes": 560
+                },
+                {
+                    "suburb": "Fregon",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Wirrega",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Stanley flat",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Pasadena",
+                    "numCrimes": 60
+                },
+                {
+                    "suburb": "Greenfields",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Hallett",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Kingswood",
+                    "numCrimes": 69
+                },
+                {
+                    "suburb": "Port gawler",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Alberton",
+                    "numCrimes": 95
+                },
+                {
+                    "suburb": "Maggea",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Kaltjiti",
+                    "numCrimes": 48
+                },
+                {
+                    "suburb": "Wayville",
+                    "numCrimes": 81
+                },
+                {
+                    "suburb": "Cambrai",
+                    "numCrimes": 8
+                },
+                {
+                    "suburb": "Old calperum",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Auldana",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "Leighton",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Gilberton",
+                    "numCrimes": 99
+                },
+                {
+                    "suburb": "Port clinton",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "Melrose",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Snowtown",
+                    "numCrimes": 10
+                },
+                {
+                    "suburb": "James well",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Keswick terminal",
+                    "numCrimes": 10
+                },
+                {
+                    "suburb": "Reynella",
+                    "numCrimes": 154
+                },
+                {
+                    "suburb": "Belvidere",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Castambul",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "One tree hill",
+                    "numCrimes": 18
+                },
+                {
+                    "suburb": "Edinburgh",
+                    "numCrimes": 11
+                },
+                {
+                    "suburb": "Murray bridge",
+                    "numCrimes": 795
+                },
+                {
+                    "suburb": "Brentwood",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Morphetville",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Jervois",
+                    "numCrimes": 10
+                },
+                {
+                    "suburb": "Elizabeth north",
+                    "numCrimes": 201
+                },
+                {
+                    "suburb": "Flinders chase",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Meningie east",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Largs north",
+                    "numCrimes": 51
+                },
+                {
+                    "suburb": "Freeling",
+                    "numCrimes": 31
+                },
+                {
+                    "suburb": "Kingoonya",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Burnside",
+                    "numCrimes": 22
+                },
+                {
+                    "suburb": "Western flat",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Keith",
+                    "numCrimes": 20
+                },
+                {
+                    "suburb": "Stepney",
+                    "numCrimes": 58
+                },
+                {
+                    "suburb": "Marla",
+                    "numCrimes": 19
+                },
+                {
+                    "suburb": "O'halloran hill",
+                    "numCrimes": 64
+                },
+                {
+                    "suburb": "North shields",
+                    "numCrimes": 8
+                },
+                {
+                    "suburb": "Holder siding",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Evanston park",
+                    "numCrimes": 100
+                },
+                {
+                    "suburb": "Munno para west",
+                    "numCrimes": 123
+                },
+                {
+                    "suburb": "Klemziig",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Westbourne park",
+                    "numCrimes": 44
+                },
+                {
+                    "suburb": "Tennyson",
+                    "numCrimes": 20
+                },
+                {
+                    "suburb": "Murray bridge east",
+                    "numCrimes": 26
+                },
+                {
+                    "suburb": "Aberfoyle park",
+                    "numCrimes": 133
+                },
+                {
+                    "suburb": "Seaford",
+                    "numCrimes": 179
+                },
+                {
+                    "suburb": "Mannum",
+                    "numCrimes": 61
+                },
+                {
+                    "suburb": "Penong",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "Smoky bay",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Mount mary",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Penneshaw",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Salisbury south",
+                    "numCrimes": 18
+                },
+                {
+                    "suburb": "Keyneton",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Nullarbor",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Penfield gardens",
+                    "numCrimes": 14
+                },
+                {
+                    "suburb": "Brady creek",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Para hills",
+                    "numCrimes": 269
+                },
+                {
+                    "suburb": "Burrungule",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Cowirra",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Kenton valley",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Hill river",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "Blackwood",
+                    "numCrimes": 71
+                },
+                {
+                    "suburb": "Eden valley",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "Glenroy",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Scott creek",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "St marys",
+                    "numCrimes": 98
+                },
+                {
+                    "suburb": "Camden park",
+                    "numCrimes": 97
+                },
+                {
+                    "suburb": "Fitzroy",
+                    "numCrimes": 14
+                },
+                {
+                    "suburb": "Rapid bay",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Culburra",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Deep creek",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "Conmurra",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Cape douglas",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Glenburnie",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Kingston park",
+                    "numCrimes": 10
+                },
+                {
+                    "suburb": "Sheringa",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Kalangadoo",
+                    "numCrimes": 11
+                },
+                {
+                    "suburb": "Hatherleigh",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Glengowrie",
+                    "numCrimes": 132
+                },
+                {
+                    "suburb": "Point pearce",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "Nildottie",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Melrose park",
+                    "numCrimes": 71
+                },
+                {
+                    "suburb": "Kilburn north",
+                    "numCrimes": 29
+                },
+                {
+                    "suburb": "Blair athol",
+                    "numCrimes": 359
+                },
+                {
+                    "suburb": "Penfield",
+                    "numCrimes": 42
+                },
+                {
+                    "suburb": "Nangkita",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "Bull creek",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Balhannah",
+                    "numCrimes": 17
+                },
+                {
+                    "suburb": "Belair",
+                    "numCrimes": 50
+                },
+                {
+                    "suburb": "Ardrossan",
+                    "numCrimes": 17
+                },
+                {
+                    "suburb": "Swanport",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Streaky bay",
+                    "numCrimes": 14
+                },
+                {
+                    "suburb": "Macclesfield",
+                    "numCrimes": 9
+                },
+                {
+                    "suburb": "Peebinga",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Black forest",
+                    "numCrimes": 56
+                },
+                {
+                    "suburb": "Gulfview heights",
+                    "numCrimes": 46
+                },
+                {
+                    "suburb": "Pooraka",
+                    "numCrimes": 364
+                },
+                {
+                    "suburb": "Donovans",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Norwood",
+                    "numCrimes": 231
+                },
+                {
+                    "suburb": "Ettrick",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Cortlinye",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Firle",
+                    "numCrimes": 57
+                },
+                {
+                    "suburb": "Seacombe gardens",
+                    "numCrimes": 94
+                },
+                {
+                    "suburb": "St agnes",
+                    "numCrimes": 95
+                },
+                {
+                    "suburb": "Gawler belt",
+                    "numCrimes": 7
+                },
+                {
+                    "suburb": "Rosetown",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Pages flat",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "Yongala",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Tea tree gully",
+                    "numCrimes": 64
+                },
+                {
+                    "suburb": "Mount compass",
+                    "numCrimes": 36
+                },
+                {
+                    "suburb": "Lewiston",
+                    "numCrimes": 32
+                },
+                {
+                    "suburb": "Mambray creek",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Pinnaroo",
+                    "numCrimes": 8
+                },
+                {
+                    "suburb": "Nepabunna",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Paralowie",
+                    "numCrimes": 421
+                },
+                {
+                    "suburb": "Wirrabara",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "Wasleys",
+                    "numCrimes": 8
+                },
+                {
+                    "suburb": "Glynde",
+                    "numCrimes": 34
+                },
+                {
+                    "suburb": "Monarto",
+                    "numCrimes": 8
+                },
+                {
+                    "suburb": "Delamere",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "New port",
+                    "numCrimes": 15
+                },
+                {
+                    "suburb": "Hallett cove",
+                    "numCrimes": 140
+                },
+                {
+                    "suburb": "Woodville gardens",
+                    "numCrimes": 121
+                },
+                {
+                    "suburb": "Ob flat",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Hope valley",
+                    "numCrimes": 144
+                },
+                {
+                    "suburb": "Buchfelde",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "Netherton",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Vista",
+                    "numCrimes": 11
+                },
+                {
+                    "suburb": "Kingston",
+                    "numCrimes": 11
+                },
+                {
+                    "suburb": "Tooperang",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Risdon park south",
+                    "numCrimes": 23
+                },
+                {
+                    "suburb": "Maylands",
+                    "numCrimes": 39
+                },
+                {
+                    "suburb": "Everard park",
+                    "numCrimes": 47
+                },
+                {
+                    "suburb": "Wami kata",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Yacka",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Ethelton",
+                    "numCrimes": 30
+                },
+                {
+                    "suburb": "Plympton park",
+                    "numCrimes": 96
+                },
+                {
+                    "suburb": "Kimba",
+                    "numCrimes": 7
+                },
+                {
+                    "suburb": "Weetulta",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Myrtle bank",
+                    "numCrimes": 28
+                },
+                {
+                    "suburb": "St georges",
+                    "numCrimes": 11
+                },
+                {
+                    "suburb": "Foul bay",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Verdun",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "Waikerie",
+                    "numCrimes": 91
+                },
+                {
+                    "suburb": "Springfield",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "Elliston",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "Tailem bend",
+                    "numCrimes": 68
+                },
+                {
+                    "suburb": "Raukkan",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "Milendella",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Noarlunga centre",
+                    "numCrimes": 343
+                },
+                {
+                    "suburb": "Fisherman bay",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Walkerville",
+                    "numCrimes": 121
+                },
+                {
+                    "suburb": "Cockburn",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "Bradbury",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Highbury",
+                    "numCrimes": 72
+                },
+                {
+                    "suburb": "Angaston",
+                    "numCrimes": 23
+                },
+                {
+                    "suburb": "Teringie",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Willyaroo",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Kingston on murray",
+                    "numCrimes": 7
+                },
+                {
+                    "suburb": "Northgate",
+                    "numCrimes": 49
+                },
+                {
+                    "suburb": "Monbulla",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Yorketown",
+                    "numCrimes": 6
+                },
+                {
+                    "suburb": "Port pirie",
+                    "numCrimes": 140
+                },
+                {
+                    "suburb": "Malvern",
+                    "numCrimes": 30
+                },
+                {
+                    "suburb": "Woodcroft",
+                    "numCrimes": 165
+                },
+                {
+                    "suburb": "Bray",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Yamba",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Lyndoch",
+                    "numCrimes": 21
+                },
+                {
+                    "suburb": "Polish hill river",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Uleybury",
+                    "numCrimes": 9
+                },
+                {
+                    "suburb": "Craigmore",
+                    "numCrimes": 156
+                },
+                {
+                    "suburb": "Watervale",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "Iwantja",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Wilmington",
+                    "numCrimes": 7
+                },
+                {
+                    "suburb": "Nangwarry",
+                    "numCrimes": 10
+                },
+                {
+                    "suburb": "Birkenhead",
+                    "numCrimes": 39
+                },
+                {
+                    "suburb": "Blakeview",
+                    "numCrimes": 239
+                },
+                {
+                    "suburb": "Boors plain",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "Longwood",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Morgan",
+                    "numCrimes": 13
+                },
+                {
+                    "suburb": "Globe derby park",
+                    "numCrimes": 18
+                },
+                {
+                    "suburb": "Wyomi",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Marree",
+                    "numCrimes": 3
+                },
+                {
+                    "suburb": "Gawler west",
+                    "numCrimes": 34
+                },
+                {
+                    "suburb": "Coober pedy",
+                    "numCrimes": 213
+                },
+                {
+                    "suburb": "Prospect",
+                    "numCrimes": 482
+                },
+                {
+                    "suburb": "Port mannum",
+                    "numCrimes": 2
+                },
+                {
+                    "suburb": "Evanston south",
+                    "numCrimes": 12
+                },
+                {
+                    "suburb": "Ovingham",
+                    "numCrimes": 49
+                },
+                {
+                    "suburb": "Athelstone",
+                    "numCrimes": 77
+                },
+                {
+                    "suburb": "Kringin",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Mundulla west",
+                    "numCrimes": 1
+                },
+                {
+                    "suburb": "Daw park",
+                    "numCrimes": 62
+                },
+                {
+                    "suburb": "Kapunda",
+                    "numCrimes": 79
+                },
+                {
+                    "suburb": "Crescent",
+                    "numCrimes": 5
+                },
+                {
+                    "suburb": "Mintabie",
+                    "numCrimes": 60
+                },
+                {
+                    "suburb": "Norton summit",
+                    "numCrimes": 4
+                },
+                {
+                    "suburb": "North haven",
+                    "numCrimes": 88
+                },
+                {
+                    "suburb": "Port lincoln",
+                    "numCrimes": 675
+                },
+                {
+                    "suburb": "Port kenny",
+                    "numCrimes": 1
                 }
+
+
             ]
         ]
     }
