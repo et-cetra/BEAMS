@@ -29,7 +29,7 @@ class AxisTickY extends React.Component {
 }
 
 class StatsSection extends React.Component {
-  //Function used to format numbers concisely
+    //Function used to format numbers concisely
     static nFormatter(num, digits) {
       var si = [
         { value: 1, symbol: "" },
@@ -50,13 +50,16 @@ class StatsSection extends React.Component {
 
       return "$" + (num / si[i].value).toFixed(digits).replace(rx, "$1") + si[i].symbol;
     }      
-    //End number formatter
+
+    thousandsFormatter(x) {
+      return "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
 
     customTooltip = ({ active, payload, label }) => {
       if (active) {
         var newValues = [];
         payload.forEach((item) => {
-          newValues.push({value: StatsSection.nFormatter(item.value, 7), 
+          newValues.push({value: this.thousandsFormatter(item.value), 
             name: item.name,
             color: item.color,
           })
