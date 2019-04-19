@@ -14,7 +14,7 @@ import InfoButton from '../components/InfoButton';
 
 class SuburbPage extends React.Component {
   /* Color scheme, used for graphs */
-  COLORS = () => {return(['#213084', '#E62927', '#EE6A15', '#333F48', '#04091E'])}
+  COLORS = () => {return(['#213084', '#E62927', '#EE6A15', '#333F48', '#04091E', '#662daf', '#a02faa'])}
 
   getSingleSuburb = (suburbs, onSuburbCompare) => {
     const COLORS = this.COLORS();

@@ -4,17 +4,33 @@ import { PieChart, Pie, Cell, Tooltip, Legend, ResponsiveContainer } from 'recha
 import { Grid, Paper, CircularProgress, Fade, Chip } from '@material-ui/core';
 
 class DGSection extends React.Component {
+
+    customTooltip = ({ active, payload }) => {
+      if (active) {
+        return (
+          <Paper className="TooltipWindow">
+            <div>
+              <span className="TooltipLabel">{`${payload[0].name}`}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+              <span style={{float: "right"}} className="TooltipLabel">{`${payload[0].value} people`}</span>
+            </div>
+          </Paper>
+        );
+      }
     
-    getLegend = (value, entry, index, colorType) => {
+      return null;
+    };
+    
+    getLegend = (value, entry, index) => {
       const COLORS = this.props.COLORS;
       return <Chip variant="outlined" label={value} color="primary"
-        style={{color: COLORS[index], marginTop: "3px", marginBottom: "3px"}}/>;
+        style={{color: COLORS[index], marginTop: "3px", marginBottom: "3px", marginLeft: "-4px", marginRight: "-4px"}}/>;
     }
 
-    getLegend2 = (value, entry, index, colorType) => {
+    getLegend2 = (value, entry, index) => {
       const COLORS = this.props.COLORS;
-      return <Chip variant="outlined" label={value} color="secondary"
-        style={{color: COLORS[index], marginTop: "3px", marginBottom: "3px"}}/>;
+      if(index >= this.props.chartData.length) return;
+      return <Chip variant="outlined" label={value} color="default"
+        style={{color: COLORS[index], marginTop: "3px", marginBottom: "3px", marginLeft: "-4px", marginRight: "-4px"}}/>;
     }
 
     singlePie = (chartData, COLORS) => {
@@ -30,39 +46,46 @@ class DGSection extends React.Component {
             </Pie>
             <Legend align="center" layout="horizontal" formatter={this.getLegend}
             verticalAlign="bottom" iconSize={0}/>
-            <Tooltip/>
+            <Tooltip content={this.customTooltip}/>
         </PieChart>
         </ResponsiveContainer>
       );
     }
 
-    multiPie = (chartData, chartData2, COLORS, suburbs) => {
+    multiPie = (chartData, COLORS, suburbs) => {
       return(
         <div style={{width: "100%"}}>
           <div className="CompareDGText">
               <Chip className="CompareDGTextL" color="primary" label={suburbs[0].suburb}/>
               <Chip className="CompareDGTextR" color="secondary" label={suburbs[1].suburb}/>
           </div>
-          <Grid container direction="row" justify="center" alignItems="stretch">
-            <Grid item xs={6}>
             <ResponsiveContainer height={375} width="100%">
               <PieChart className="PieChart" onMouseEnter={this.onPieEnter}>
-                <Pie data={chartData} innerRadius="55%" outerRadius="72%" cx="50%"
-                isAnimationActive={false} fill="#8884d8" paddingAngle={4}
+                <Pie data={chartData} innerRadius="55%" outerRadius="72%" cx="25%"
+                isAnimationActive={false} fill="#8884d8" paddingAngle={3}
                 dataKey="value" label={this.renderCustomizedLabel} labelLine={false}
                 >
                 {chartData.map((_entry, index) =>
                     <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]}/>
                 )}
                 </Pie>
-                <Tooltip/>
-                <Legend align="center" layout="horizontal" formatter={this.getLegend}
+
+                <Pie data={chartData} innerRadius="55%" outerRadius="72%" cx="75%"
+                isAnimationActive={false} fill="#8884d8" paddingAngle={3}
+                dataKey="value2" label={this.renderCustomizedLabel} labelLine={false}
+                startAngle={180} endAngle={-180}>
+                {chartData.map((_entry, index) =>
+                    <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]}/>
+                )}
+                </Pie>
+
+                <Tooltip content={this.customTooltip}/>
+                <Legend wrapperStyle={{marginLeft: "36px"}} align="center" layout="horizontal" formatter={this.getLegend2}
                 verticalAlign="bottom" iconSize={0}/>
               </PieChart>          
             </ResponsiveContainer>
-            </Grid>
 
-            <Grid item xs={6}>
+            {/* <Grid item xs={0}>
             <ResponsiveContainer height={375} width="100%">
               <PieChart className="PieChart" onMouseEnter={this.onPieEnter}>
                 <Pie data={chartData2} innerRadius="55%" outerRadius="72%" cx="50%"
@@ -77,9 +100,8 @@ class DGSection extends React.Component {
                 <Legend align="center" layout="horizontal" formatter={this.getLegend2}
                 verticalAlign="bottom" iconSize={0}/>
               </PieChart>          
-            </ResponsiveContainer>
-            </Grid>
-          </Grid>
+            </ResponsiveContainer> 
+            </Grid>*/}
         </div>
       );
     }
@@ -94,6 +116,13 @@ class DGSection extends React.Component {
       const x = cx + radius * Math.cos(-midAngle * RADIAN);
       const y = cy + radius * Math.sin(-midAngle * RADIAN);
     
+      if((percent * 100).toFixed(0) == 0) 
+      return (
+        <text x={x} y={y} fill={COLORS[index % COLORS.length]} 
+        textAnchor={x > cx ? 'start' : 'end'} dominantBaseline="central" style={{fontSize: "12px"}}>
+          {"< 1%"}
+        </text>
+      );
       return (
         <text x={x} y={y} fill={COLORS[index % COLORS.length]} 
         textAnchor={x > cx ? 'start' : 'end'} dominantBaseline="central">
@@ -105,7 +134,6 @@ class DGSection extends React.Component {
     render() {
       const COLORS = this.props.COLORS;
       const chartData = this.props.chartData;
-      const chartData2 = this.props.chartData2;
       const isCompare = this.props.isCompare;
       const suburbs = this.props.suburbs;
       var itemSize = 7;
@@ -132,7 +160,7 @@ class DGSection extends React.Component {
             <Fade in timeout={600}>
             <Grid item xs={itemSize}>
 
-              {isCompare ? this.multiPie(chartData, chartData2, COLORS, suburbs) 
+              {isCompare ? this.multiPie(chartData, COLORS, suburbs) 
                 : this.singlePie(chartData, COLORS)}
 
             </Grid>
