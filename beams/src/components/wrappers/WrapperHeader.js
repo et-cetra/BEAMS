@@ -42,14 +42,14 @@ class WrapperHeader extends React.Component {
             </div>
             }
           
-          <Grid container spacing={24} direction="row" justify="space-around" alignItems="center">
+          <Grid container spacing={16} direction="row" justify="center" alignItems="center">
             <Grid item>
               <Highlights suburb={suburbs[0].suburb} suburb_state={suburbs[0].suburb_state} 
                 key={suburbs[0].suburb+suburbs[0].suburb_state+'Highlights'} compareColor={compareColorSet}/>
             </Grid>
             
             <Grid item>
-              <RadarSection suburbs={suburbs} COLORS={this.props.COLORS}/>
+              <RadarSection suburbs={suburbs} COLORS={this.props.COLORS} key={suburbs[0].suburb+'Radar'}/>
             </Grid>
 
             {isCompare && 
