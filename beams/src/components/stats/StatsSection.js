@@ -1,7 +1,7 @@
 import  React  from 'react';
 import '../../pages/SuburbPage.css'
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
-import { Grid, CircularProgress, Fade, Chip } from '@material-ui/core';
+import { Grid, CircularProgress, Fade, Chip, Paper } from '@material-ui/core';
 
 class AxisTickX extends React.Component {
   render() {
@@ -20,9 +20,17 @@ class AxisTickY extends React.Component {
     const {
       x, y, payload,
     } = this.props;
+  
+    const formattedValue = StatsSection.nFormatter(payload.value, 2);
+    return (
+      <text style={{fontSize: 14}} x={x} y={y} textAnchor="end" fill="#666">{formattedValue}</text>
+    );
+  }
+}
 
-    //Function used to make Y axis concise
-    function nFormatter(num, digits) {
+class StatsSection extends React.Component {
+  //Function used to format numbers concisely
+    static nFormatter(num, digits) {
       var si = [
         { value: 1, symbol: "" },
         { value: 1E3, symbol: "k" },
@@ -39,18 +47,40 @@ class AxisTickY extends React.Component {
           break;
         }
       }
+
       return "$" + (num / si[i].value).toFixed(digits).replace(rx, "$1") + si[i].symbol;
     }      
     //End number formatter
 
-    const formattedValue = nFormatter(payload.value, 2);
-    return (
-      <text style={{fontSize: 14}} x={x} y={y} textAnchor="end" fill="#666">{formattedValue}</text>
-    );
-  }
-}
+    customTooltip = ({ active, payload, label }) => {
+      if (active) {
+        var newValues = [];
+        payload.forEach((item) => {
+          newValues.push({value: StatsSection.nFormatter(item.value, 7), 
+            name: item.name,
+            color: item.color,
+          })
+        });
 
-class StatsSection extends React.Component {
+        console.log(newValues);
+
+        return (
+          <Paper className="TooltipWindow">
+            <b>{label}</b>
+              {newValues.map((item) => (
+                <div>
+                <text style={{color: item.color}} className="TooltipLabel">{`${item.name}: `}</text>
+                <text style={{color: item.color, float: "right"}} className="TooltipLabel">{`${item.value}`}</text>
+                <br/>
+                </div>
+              ))}
+          </Paper>
+        );
+      }
+    
+      return null;
+    };
+
     getLegend = (value, entry, index) => {
       var COLORS = this.props.COLORS;
       //Swap colours so graph syncs
@@ -67,7 +97,7 @@ class StatsSection extends React.Component {
           <CartesianGrid strokeDasharray="3 3"/>
           <XAxis dataKey="name" tick={<AxisTickX/>} tickLine={false}/>
           <YAxis tick={<AxisTickY/>} tickLine={false}/>
-          <Tooltip />
+          <Tooltip content={this.customTooltip}/>
           <Legend verticalAlign="bottom" align="center" iconSize={0} formatter={this.getLegend}/>
           <Line type="monotone" dataKey="Highest" stroke={COLORS[1]} strokeDasharray="3 3"/>
           <Line type="monotone" dataKey="Median" stroke={COLORS[0]}/>
@@ -87,7 +117,7 @@ class StatsSection extends React.Component {
           <CartesianGrid strokeDasharray="3 3"/>
           <XAxis dataKey="name" tick={<AxisTickX/>} tickLine={false}/>
           <YAxis tick={<AxisTickY/>} tickLine={false}/>
-          <Tooltip />
+          <Tooltip content={this.customTooltip}/>
           <Legend verticalAlign="bottom" align="center" iconSize={0} formatter={this.getLegend}/>
           <Line type="monotone" dataKey={s1Name} stroke={COLORS[0]}/>
           <Line type="monotone" dataKey={s2Name} stroke={COLORS[1]}/>

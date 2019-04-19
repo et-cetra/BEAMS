@@ -178,3 +178,11 @@
   padding: 6px;
   margin-bottom: 10px;
 }
+
+.TooltipWindow{
+  padding: 12px;
+  opacity: 0.9;
+  line-height: 25px;
+}
+
+
