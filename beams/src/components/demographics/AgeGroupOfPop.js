@@ -63,6 +63,7 @@ class AgeGroupOfPop extends React.Component {
     if (isCompare && contents2[0] != null) {
       contents2.map(content => (content.items.map((item) => (chartData2.push({ name: item.label, value: item.value })))));
     }
+    
     contents.map(content => (content.items.map((item) => (chartData.push({ name: item.label, value: item.value })))));
     return { chartData, chartData2 };
   }

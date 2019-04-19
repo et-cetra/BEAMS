@@ -69,10 +69,10 @@ class StatsSection extends React.Component {
           <Paper className="TooltipWindow">
             <b>{label}</b>
               {newValues.map((item) => (
-                <div>
-                <text style={{color: item.color}} className="TooltipLabel">{`${item.name}`}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>
-                <text style={{color: item.color, float: "right"}} className="TooltipLabel">{`${item.value}`}</text>
-                <br/>
+                <div key={item.name+item.value}>
+                  <span style={{color: item.color}} className="TooltipLabel">{`${item.name}`}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                  <span style={{color: item.color, float: "right"}} className="TooltipLabel">{`${item.value}`}</span>
+                  <br/>
                 </div>
               ))}
           </Paper>
