@@ -1,3 +1,5 @@
+import PlaceSearch from 'googleplaces';
+
 export const getSuburbId = async (suburb, suburb_state) => {
     // const res = await fetch(`http://b3ams.com.au:5000/suburb/${suburb}/${suburb_state}`);
     const res = await fetch(`http://localhost:5000/suburb/${suburb}/${suburb_state}`);
@@ -68,7 +70,18 @@ export const getSentiment = async (newsArticles) => {
             }
         }
     }
-    console.log("HERE");
-    console.log(scores);
     return scores;
+}
+
+export const getSurrounding = async (suburb, suburb_state) => {
+    const location = await getLocation(suburb, suburb_state);
+    const coords = location.results[0].locations[0].latLng;
+    const radius = 3000;
+
+    const url = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location='+coords.lat+','+coords.lng+'&radius='+radius+'&type=locality&key=AIzaSyDIMGCB2qSD9qIB0mrZu0uGEmZlc9e8m-Y'
+    const res = await fetch(url);
+    const result = await res.json();
+    console.log("HERE");
+    console.log(result);
+    return result;
 }
