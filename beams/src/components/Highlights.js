@@ -5,6 +5,7 @@ import CulturallyDiverse from './highlights/CulturallyDiverse';
 import ConvenientTransport from './highlights/ConvenientTransport';
 import PrimaryFriendly from './highlights/PrimaryFriendly';
 import SecondaryFriendly from './highlights/SecondaryFriendly';
+import SchoolFriendly from './highlights/SchoolFriendly';
 import './Highlights.css'
 import { Grid } from '@material-ui/core';
 
@@ -29,22 +30,25 @@ class Highlights extends React.Component {
     return (
       <Grid container direction="column" alignItems={align}>
         <Grid item>
-          <FamilyFriendly compareColor={compareColor} suburb={suburb} suburb_state={suburb_state}/>
+          <FamilyFriendly compareColor={compareColor} suburb={suburb} suburb_state={suburb_state} key={'Family'+suburb+suburb_state}/>
         </Grid>
         <Grid item>
-          <HospitalFriendly compareColor={compareColor} suburb={suburb} suburb_state={suburb_state}/>
+          <HospitalFriendly compareColor={compareColor} suburb={suburb} suburb_state={suburb_state} key={'Hospital'+suburb+suburb_state}/>
         </Grid>
         <Grid item>
-          <CulturallyDiverse compareColor={compareColor} suburb={suburb} suburb_state={suburb_state}/>
+          <CulturallyDiverse compareColor={compareColor} suburb={suburb} suburb_state={suburb_state} key={'Culture'+suburb+suburb_state}/>
         </Grid>
         <Grid item>
-          <ConvenientTransport compareColor={compareColor} suburb={suburb} suburb_state={suburb_state}/>
+          <ConvenientTransport compareColor={compareColor} suburb={suburb} suburb_state={suburb_state} key={'Transport'+suburb+suburb_state}/>
         </Grid>
         <Grid item>
-          <PrimaryFriendly compareColor={compareColor} suburb={suburb} suburb_state={suburb_state}/>
+          <PrimaryFriendly compareColor={compareColor} suburb={suburb} suburb_state={suburb_state} key={'Primary'+suburb+suburb_state}/>
         </Grid>
         <Grid item>
-          <SecondaryFriendly compareColor={compareColor} suburb={suburb} suburb_state={suburb_state}/>
+          <SecondaryFriendly compareColor={compareColor} suburb={suburb} suburb_state={suburb_state} key={'Secondary'+suburb+suburb_state}/>
+        </Grid>
+        <Grid item>
+          <SchoolFriendly compareColor={compareColor} suburb={suburb} suburb_state={suburb_state} key={'School'+suburb+suburb_state}/>
         </Grid>
       </Grid>
     );

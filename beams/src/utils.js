@@ -1,3 +1,5 @@
+import { jsonSchoolResponse } from './data/SchoolsData';
+
 export const getSuburbId = async (suburb, suburb_state) => {
     // const res = await fetch(`http://b3ams.com.au:5000/suburb/${suburb}/${suburb_state}`);
     const res = await fetch(`http://localhost:5000/suburb/${suburb}/${suburb_state}`);
@@ -68,7 +70,26 @@ export const getSentiment = async (newsArticles) => {
             }
         }
     }
-    console.log("HERE");
-    console.log(scores);
+    // console.log(scores);
     return scores;
+}
+
+export const getSchoolRating = (suburb, suburb_state) => {
+    const schoolArray = jsonSchoolResponse.data.schools;
+    const arrayLength = schoolArray.length;
+    let counter = 0;
+    let ICSEA_sum = 0;
+    for (var i = 0; i < arrayLength; i++) {
+        if (schoolArray[i].Suburb && suburb && (schoolArray[i].Suburb.toLowerCase() === suburb.toLowerCase()) && (schoolArray[i].State.toLowerCase() === suburb_state.toLowerCase())) {
+            ICSEA_sum = ICSEA_sum + schoolArray[i].ICSEA;
+            counter++;
+        }
+    }
+    console.log("counter = ", counter);
+    console.log("ISCEA sum = ", ICSEA_sum);
+    if (counter === 0) {
+        return 1000;
+    } else {
+        return ICSEA_sum/counter;
+    }
 }

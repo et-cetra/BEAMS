@@ -22,13 +22,13 @@ class SuburbNews extends React.Component {
             articles: allArticles
         })
         const sentiment =  await getSentiment(this.state.articles);
-        console.log(sentiment);
+        // console.log(sentiment);
     }
 
     render() {
         let articles = this.state.articles;
-        console.log(articles);
-        
+        // console.log(articles);
+
         if (!this.state.isLoaded) {
           return <div>Loading...</div>
         } else {
