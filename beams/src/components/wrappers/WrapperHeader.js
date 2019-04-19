@@ -3,7 +3,7 @@ import 'typeface-roboto';
 
 import '../../pages/SuburbPage.css'
 import QuickSearch from '../QuickSearch.js'
-import { Grid, Typography, Divider } from '@material-ui/core'
+import { Grid, Typography, Divider, Link } from '@material-ui/core'
 import mTerrain from '../../assets/ic_terrain.png'
 import mTerrain1 from '../../assets/ic_terrain_1.png'
 import mTerrain2 from '../../assets/ic_terrain_2.png'
@@ -11,33 +11,56 @@ import Highlights from '../Highlights.js'
 import RadarSection from '../highlights/RadarSection';
 
 class WrapperHeader extends React.Component {
+
     render() {
       const suburbs = this.props.suburbs;
       const onSuburbCompare = this.props.onSuburbCompare;
       const isCompare = this.props.isCompare;
       var compareColorSet = "default";
       if (isCompare) compareColorSet = "primary";
+      
+      //Routing
+      const subOneRoute = "/suburb/" + suburbs[0].suburb + "/" + suburbs[0].suburb_state;
+      const city = (idx) => suburbs[idx].suburb + " " + suburbs[idx].suburb_state + " Australia";
+      var subTwoRoute = null;
+      if (suburbs.length !== 1) {
+        subTwoRoute = "/suburb/" + suburbs[1].suburb + "/" + suburbs[1].suburb_state;
+      }
+
       return (
       <div>
-          {!isCompare ? 
+          {!isCompare ?
             <img src={mTerrain} className="IconMain" alt="terrain"/>
             :
             <img src={mTerrain1} className="IconMain" alt="terrain"/>
           }
-          <Typography align="left" inline className="MainText" 
-          style={{ fontSize: 34 }} variant="overline" color="inherit">
-            {`${suburbs[0].suburb}, ${suburbs[0].suburb_state}`}
-          </Typography>
-          {!isCompare ? 
-            <div className="CompareSearchContainer">
-              <QuickSearch suburb={suburbs[0].suburb} isSuburbPage={true} onSelect={onSuburbCompare}/>
-            </div>
-            : 
-            <div className="HeadingR">
-              <Typography align="right" inline className="MainTextR" 
+
+          {!isCompare ?
+            <Typography align="left" inline className="MainText"
               style={{ fontSize: 34 }} variant="overline" color="inherit">
-                {`${suburbs[1].suburb}, ${suburbs[1].suburb_state}`}
+              {`${suburbs[0].suburb}, ${suburbs[0].suburb_state}`}
+            </Typography>
+            :
+            <Link to={subOneRoute} onClick={() => this.props.onSuburbSelect(city(0))}>
+              <Typography align="left" inline className="MainText"
+                style={{ fontSize: 34 }} variant="overline" color="inherit">
+                {`${suburbs[0].suburb}, ${suburbs[0].suburb_state}`}
               </Typography>
+            </Link>
+          }
+
+          {!isCompare ?
+            <div className="CompareSearchContainer">
+              <QuickSearch suburb={suburbs[0].suburb} isSuburbPage={true} onSuburbSelect={onSuburbCompare}/>
+            </div>
+            :
+            <div className="HeadingR">
+              <Link to={subTwoRoute} onClick={() => this.props.onSuburbSelect(city(1))}>
+                <Typography align="right" inline className="MainTextR"
+                style={{ fontSize: 34 }} variant="overline" color="inherit">
+                  {`${suburbs[1].suburb}, ${suburbs[1].suburb_state}`}
+                </Typography>
+              </Link>
               <img src={mTerrain2} className="IconMainR" alt="terrain"/>
             </div>
             }

@@ -15,7 +15,7 @@ class HomePage extends React.Component {
           </Typography>
           <br></br>
           </Grid>
-          <Grid item><HomeSearch onSelect={this.props.onSelect}/></Grid>
+          <Grid item><HomeSearch onSelect={(city) => this.props.onSelect(city, this.props.history)}/></Grid>
         </Grid>
         </Grow>
         </div>

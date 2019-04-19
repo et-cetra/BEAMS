@@ -45,9 +45,9 @@ class HomeSearch extends React.Component {
                 <Card className="AutocompleteCardHome">
                     {suggestions.map(suggestion => {
                     const className = suggestion.active ? 'suggestion-item--active' : 'suggestion-item';
-                    const style = suggestion.active ? 
+                    const style = suggestion.active ?
                     { backgroundColor: '#fca064', cursor: 'pointer' } : { backgroundColor: '#FFFFFF', cursor: 'pointer' };
-                    
+
                     return (
                     <div key={suggestion.id}>
                         <ListItem className="SearchResultsHome" {...getSuggestionItemProps(suggestion, { className, style })}>
@@ -57,7 +57,7 @@ class HomeSearch extends React.Component {
                     </div>
                     );
                 })}
-                </Card>                  
+                </Card>
                 </div>
             )}</PlacesAutocomplete>
         </Grid>
