@@ -1,4 +1,5 @@
 import { jsonSchoolResponse } from './data/SchoolsData';
+import {jsonCrimeData} from './data/CrimeData';
 
 export const getSuburbId = async (suburb, suburb_state) => {
     // const res = await fetch(`http://b3ams.com.au:5000/suburb/${suburb}/${suburb_state}`);
@@ -85,11 +86,35 @@ export const getSchoolRating = (suburb, suburb_state) => {
             counter++;
         }
     }
-    console.log("counter = ", counter);
-    console.log("ISCEA sum = ", ICSEA_sum);
     if (counter === 0) {
         return 1000;
     } else {
         return ICSEA_sum/counter;
     }
+}
+
+
+export const getCrimeRate = async (suburb, suburb_state) => {
+    const crimeArray = jsonCrimeData.data.crimes;
+    const arrayLength = crimeArray.length;
+    let crimeRate = 0;
+    let numCrimes = 0;
+
+    // Get total population
+    const suburbInfo = await getDemographics(suburb, suburb_state, "AgeGroupOfPopulation");
+    const population = suburbInfo.demographics[0].total;
+
+    for (var i = 0; i < arrayLength; i++) {
+        if(suburb && (crimeArray[i].suburb.toLowerCase() === suburb.toLowerCase())) {
+            numCrimes = crimeArray[i].numCrimes;
+        }
+    }
+
+    console.log("Num crimes", numCrimes);
+    console.log("Population", population);
+
+    crimeRate = numCrimes / population;
+    console.log("crime rate", crimeRate);
+
+    return crimeRate;
 }

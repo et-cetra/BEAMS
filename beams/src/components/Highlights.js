@@ -6,6 +6,7 @@ import ConvenientTransport from './highlights/ConvenientTransport';
 import PrimaryFriendly from './highlights/PrimaryFriendly';
 import SecondaryFriendly from './highlights/SecondaryFriendly';
 import SchoolFriendly from './highlights/SchoolFriendly';
+import Crime from './highlights/Crime';
 import './Highlights.css'
 import { Grid } from '@material-ui/core';
 
@@ -49,6 +50,9 @@ class Highlights extends React.Component {
         </Grid>
         <Grid item>
           <SchoolFriendly compareColor={compareColor} suburb={suburb} suburb_state={suburb_state} key={'School'+suburb+suburb_state}/>
+        </Grid>
+        <Grid item>
+          <Crime compareColor={compareColor} suburb={suburb} suburb_state={suburb_state} key={'Crime'+suburb+suburb_state}/>
         </Grid>
       </Grid>
     );
