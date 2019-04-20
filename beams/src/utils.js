@@ -72,6 +72,11 @@ export const getSentiment = async (newsArticles) => {
         }
     }
 
+    //
+    // Scoretotal > 0 = positive
+    // < 0 = negative
+    //
+
     //Calc and return score
     return scoreTotal/limit;
 }
