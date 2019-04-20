@@ -1,4 +1,5 @@
 import { jsonSchoolResponse } from './data/SchoolsData';
+import { jsonSEResponse } from './data/SEData'
 
 export const getSuburbId = async (suburb, suburb_state) => {
     // const res = await fetch(`http://b3ams.com.au:5000/suburb/${suburb}/${suburb_state}`);
@@ -47,14 +48,14 @@ export const getNews = async (suburb, suburb_state) => {
 // An idea for rating conversion: each positive = +2 stars, each neutral = -0.5 stars. Then divide by 5.
 export const getSentiment = async (newsArticles) => {
     const deepai = require('deepai'); // OR include deepai.min.js as a script tag in your HTML
-
-    // Positive in scores[0], neutral in scores[1] and negative in scores[2]
-    var scores = [0,0,0];
     deepai.setApiKey('2adbe484-819f-45e9-a270-602439ab410e');
-    var limit = 10;
-    if (newsArticles.articles.length < limit) {
+
+    var scoreTotal = 0;
+
+    var limit = 5;
+    if (newsArticles.articles.length < limit) 
         limit = newsArticles.articles.length;
-    }
+
     for (let i = 0; i < limit; i++) {
         var resp = await deepai.callStandardApi("sentiment-analysis", {
                 text: newsArticles.articles[i].description,
@@ -62,16 +63,17 @@ export const getSentiment = async (newsArticles) => {
 
         for (let iResp = 0; iResp < resp.output.length; iResp++) {
             if (resp.output[iResp] === "Positive") {
-                scores[0]++;
+                scoreTotal++;
             } else if (resp.output[iResp] === "Neutral") {
-                scores[1]++;
+                scoreTotal += 0.5;
             } else {
-                scores[2]++;
+                scoreTotal--;
             }
         }
     }
-    // console.log(scores);
-    return scores;
+
+    //Calc and return score
+    return scoreTotal/limit;
 }
 
 export const getSchoolRating = (suburb, suburb_state) => {
@@ -85,11 +87,34 @@ export const getSchoolRating = (suburb, suburb_state) => {
             counter++;
         }
     }
-    console.log("counter = ", counter);
-    console.log("ISCEA sum = ", ICSEA_sum);
+ 
     if (counter === 0) {
         return 1000;
     } else {
         return ICSEA_sum/counter;
     }
+}
+
+export const getSEData = async (suburb, suburb_state) => {
+  const seArray = jsonSEResponse.values;
+  var id = 0;
+
+  try{
+    //Shitty ABS json data is inconsistent ffs so need to do this quicky hacky to find right suburb
+    id = seArray.find(item => item.name === suburb 
+      || (item.name.split("(")[0] === `${suburb} ` && 
+        ((item.name.split(" ").pop().split("(").pop() === `${suburb_state})`)
+        || (item.name.split(" ").pop().split("(").pop() === `${suburb_state.charAt(0).toUpperCase() + suburb_state.slice(1).toLowerCase()})`)
+        || (item.name.split(" ").pop().split("(").pop() === `${suburb_state.charAt(0).toUpperCase() + suburb_state.slice(1).toLowerCase()}).`)
+    ))).id;
+
+    const url = `http://stat.data.abs.gov.au/sdmx-json/data/SEIFA_SSC/${id}.IRSAD.RWAD/all?detail=DataOnly&dimensionAtObservation=AllDimensions`
+    const res = await fetch(url);
+    var result = await res.json();
+    result = result.dataSets[0].observations['0:0:0:0'][0];
+
+    return result;
+  } catch {
+    return 5;
+  }
 }

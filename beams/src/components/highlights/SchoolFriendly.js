@@ -9,7 +9,7 @@ class SchoolFriendly extends React.Component {
 
     render() {
         const schoolRating = getSchoolRating(this.props.suburb, this.props.suburb_state);
-        console.log("School rating", schoolRating);
+
         if (schoolRating >= 1000) {
             return (
                 <Chip avatar={<Avatar><GradeIcon/></Avatar>} label="Advantaged Education"

@@ -98,7 +98,7 @@ class DGSection extends React.Component {
       const x = cx + radius * Math.cos(-midAngle * RADIAN);
       const y = cy + radius * Math.sin(-midAngle * RADIAN);
     
-      if((percent * 100).toFixed(0) == 0) 
+      if((percent * 100).toFixed(0) === 0) 
       return (
         <text x={x} y={y} fill={COLORS[index % COLORS.length]} 
         textAnchor={x > cx ? 'start' : 'end'} dominantBaseline="central" style={{fontSize: "12px"}}>

@@ -65,6 +65,21 @@ class Transport extends React.Component {
 
     contents.map(content => (content.items.map((item) => (chartDataF.push({ name: item.label, value: item.value })))));
 
+    chartDataF = chartDataF.filter(item => item.name !== 'Did not go to work'
+      && item.name !== 'Car (Pas.)'
+      && item.name !== 'Worked at home');
+
+    for (var j = 0; j < chartDataF.length; j++) {
+      if (chartDataF[j].name === "Car (driver)") {
+        chartDataF[j].name = "Car";
+      }
+      if (chartDataF[j].name === "Walked only") {
+        chartDataF[j].name = "Walked";
+      }
+    }
+
+    chartData = chartDataF.splice(0, 3);
+
     if (isCompare && contents2[0] != null) {
       contents2.map(content => (content.items.map((item) => (chartData2F.push({ name: item.label, value: item.value })))));
 
@@ -81,20 +96,6 @@ class Transport extends React.Component {
         }
       }
 
-      chartDataF = chartDataF.filter(item => item.name !== 'Did not go to work'
-        && item.name !== 'Car (Pas.)'
-        && item.name !== 'Worked at home');
-
-      for (var i = 0; i < chartDataF.length; i++) {
-        if (chartDataF[i].name === "Car (driver)") {
-          chartDataF[i].name = "Car";
-        }
-        if (chartDataF[i].name === "Walked only") {
-          chartDataF[i].name = "Walked";
-        }
-      }
-
-      chartData = chartDataF.splice(0, 3);
       chartData2 = chartData2F.splice(0, 3);
 
       //Align items between both data sets, and remove found data from second set
@@ -120,62 +121,17 @@ class Transport extends React.Component {
 
       //Fill missing items
       chartData.forEach(item => {
-        if(item.value == undefined){
+        if(item.value === undefined){
           item.value = chartDataF.find(childItem => childItem.name === item.name).value;
         }
 
-        if(item.value2 == undefined){
+        if(item.value2 === undefined){
           item.value2 = chartData2F.find(childItem => childItem.name === item.name).value;
         }
       });
-    }
-
+    } 
+    
     return { chartData };
-
-
-
-
-
-
-
-
-
-
-
-
-
-    var chartData = [];
-    var chartData2 = [];
-    //Dont add if not loaded
-    if (isCompare && contents2[0] != null) {
-      contents2.map(content => (content.items.map((item) => (chartData2.push({ name: item.label, value: item.value })))));
-      chartData2 = chartData2.filter(item => item.name !== 'Did not go to work'
-        || item.name !== 'Car (Pas.)'
-        || item.name !== 'Worked at home');
-      for (var i = 0; i < chartData2.length; i++) {
-        if (chartData2[i].name === "Car (driver)") {
-          chartData2[i].name = "Car";
-        }
-        if (chartData2[i].name === "Walked only") {
-          chartData2[i].name = "Walked";
-        }
-      }
-      chartData2 = chartData2.splice(0, 3);
-    }
-    contents.map(content => (content.items.map((item) => (chartData.push({ name: item.label, value: item.value })))));
-    chartData = chartData.filter(item => item.name !== 'Did not go to work'
-      || item.name !== 'Car (Pas.)'
-      || item.name !== 'Worked at home');
-    for (var j = 0; j < chartData.length; j++) {
-      if (chartData[j].name === "Car (driver)") {
-        chartData[j].name = "Car";
-      }
-      if (chartData[j].name === "Walked only") {
-        chartData[j].name = "Walked";
-      }
-    }
-    chartData = chartData.splice(0, 3);
-    return { chartData, chartData2 };
   }
 }
 

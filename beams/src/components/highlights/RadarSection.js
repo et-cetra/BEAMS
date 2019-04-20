@@ -1,20 +1,28 @@
 import React from 'react';
-import { getStats, getDemographics, getSchoolRating} from '../../utils.js'
-import { RadarChart, PolarGrid, PolarAngleAxis, Radar } from 'recharts';
+import '../../pages/SuburbPage.css'
+import { getStats, getSEData, getSchoolRating, getNews, getSentiment} from '../../utils.js'
+import { RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Radar } from 'recharts'
+import { CircularProgress } from '@material-ui/core'
 
 class RadarSection extends React.Component {
 
   constructor(props) {
     super(props);
     this.state = {
+        priceRating: 5,
+        educationRating: 5,
+        seRating: 5,
+        wellbeingRating: 5,
+        priceRating2: 5,
+        educationRating2: 5,
+        seRating2: 5,
+        wellbeingRating2: 5,
         isLoaded: false,
-        priceRating: 0,
-        educationRating: 0,
-        seRating: 0,
     };
   } 
 
   normalizeData(data, highest, lowest) {
+    if(data === undefined || data === null || data === 0) return 5;
       return (((data - lowest) * 100.0 / (highest - lowest)) / 10.0);
   }
 
@@ -23,35 +31,85 @@ class RadarSection extends React.Component {
 
     const statData = await getStats(suburbs[0].suburb, suburbs[0].suburb_state);
     const educationData = await getSchoolRating(suburbs[0].suburb, suburbs[0].suburb_state);
-    const seRating = await getDemographics(suburbs[0].suburb, suburbs[0].suburb_state, "-------HOUSING DATA");
+    const allArticles = await getNews(suburbs[0].suburb, suburbs[0].suburb_state);
+    var sentimentData = await getSentiment(allArticles);
+    if(allArticles.length === 0) sentimentData = 0;
 
-    const priceRating = this.normalizeData(statData.series.seriesInfo[7].values.medianSoldPrice, 850000 * 1.5, 850000 / 1.5);
+    const priceRating = this.normalizeData(statData.series.seriesInfo[6].values.medianSoldPrice, 0, 835000*2);
     const educationRating = this.normalizeData(educationData, 1300, 100);
+    const seRating = await getSEData(suburbs[0].suburb, suburbs[0].suburb_state);
+    const wellbeingRating = this.normalizeData(sentimentData, 10, -10)
     
     this.setState({
       priceRating: priceRating,
       educationRating: educationRating,
-    })
+      seRating: seRating,
+      wellbeingRating: wellbeingRating,
+      isLoaded: true,
+    });
+
+    if(this.props.isCompare){
+      this.setState({isLoaded: false});
+
+      const statData2 = await getStats(suburbs[1].suburb, suburbs[1].suburb_state);
+      const educationData2 = await getSchoolRating(suburbs[1].suburb, suburbs[1].suburb_state);
+      const allArticles2 = await getNews(suburbs[1].suburb, suburbs[1].suburb_state);
+      var sentimentData2 = await getSentiment(allArticles2);
+      if(allArticles2.length === 0) sentimentData2 = 0;
+
+      const priceRating2 = this.normalizeData(statData2.series.seriesInfo[6].values.medianSoldPrice, 0, 835000*2);
+      const educationRating2 = this.normalizeData(educationData2, 1300, 100);
+      const seRating2 = await getSEData(suburbs[1].suburb, suburbs[1].suburb_state);
+      const wellbeingRating2 = this.normalizeData(sentimentData2, 10, -10)
+
+      this.setState({
+        priceRating2: priceRating2,
+        educationRating2: educationRating2,
+        seRating2: seRating2,
+        wellbeingRating2: wellbeingRating2,
+        isLoaded: true,
+      });
+    }
+  }
+
+  renderTicks = (props) => {
+    const { payload, x, y, index } = props;
+
+    return (
+      <text x={x} y={index === 0 ? y-5 : y+20} textAnchor={'middle'} className="RadarTicks">
+        {payload.value}
+      </text>
+    );
   }
 
   render() {
-    const { priceRating, educationRating } = this.state;
-
-    console.log("hi", educationRating);
+    const { isLoaded, priceRating, educationRating, seRating, wellbeingRating } = this.state;
+    const { priceRating2, educationRating2, seRating2, wellbeingRating2 } = this.state;
+    const COLORS = this.props.COLORS;
+    const isCompare = this.props.isCompare;
     const radarData = [
-      {category: 'Affordability', value: priceRating, total: 10},
-      {category: 'Education Quality', value: educationRating, total: 10},
-      {category: 'Socioeconomic Status', value: 0, total: 10},
+      {category: 'Socioeconomic Status', value: seRating, value2: seRating2, total: 10},
+      {category: 'Affordability', value: priceRating, value2: priceRating2, total: 10},
+      {category: 'Education Quality', value: educationRating, value2: educationRating2, total: 10},
+      {category: 'Wellbeing', value: wellbeingRating, value2: wellbeingRating2, total: 10},
     ];
 
-    const COLORS = this.props.COLORS;
-    return(
-      <RadarChart outerRadius="75%" width={380} height={350} data={radarData}>
-        <PolarGrid/>
-        <PolarAngleAxis dataKey="category"/>
-        <Radar dataKey="value" stroke={COLORS[0]} fill={COLORS[0]} fillOpacity={0.7}/>
-      </RadarChart>
-    )
+    if(isLoaded) {
+      return(
+        <RadarChart outerRadius="75%" width={400} height={400} data={radarData} cy="50%">
+          <PolarGrid/>
+          <PolarAngleAxis dataKey="category" tick={this.renderTicks}/>
+          <PolarRadiusAxis domain={[0, 10]} angle={90} tick={false}/>
+          <Radar dataKey="value" stroke={COLORS[0]} fill={COLORS[0]} fillOpacity={0.5} dot={true}/>
+          {isCompare && <Radar dataKey="value2" stroke={COLORS[1]} fill={COLORS[1]} fillOpacity={0.5} dot={true}/>}
+        </RadarChart>
+      );
+    } else {
+      return(
+        <CircularProgress size={60} color="primary"/>
+      );
+    }
+   
   }
 }
 

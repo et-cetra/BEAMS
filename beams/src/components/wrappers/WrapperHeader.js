@@ -74,7 +74,12 @@ class WrapperHeader extends React.Component {
             </Grid>
             
             <Grid item>
-              <RadarSection suburbs={suburbs} COLORS={this.props.COLORS} key={suburbs[0].suburb+'Radar'}/>
+            {!isCompare ?
+              <RadarSection suburbs={suburbs} COLORS={this.props.COLORS} key={suburbs[0].suburb+suburbs[0].suburb_state+'Radar'}/>
+              :
+              <RadarSection isCompare={true} suburbs={suburbs} COLORS={this.props.COLORS} key={suburbs[0].suburb+suburbs[1].suburb+'Radar'}/>
+            }
+
             </Grid>
 
             {isCompare && 

@@ -90,11 +90,11 @@ class CountryOfBirth extends React.Component {
 
       //Fill missing items
       chartData.forEach(item => {
-        if(item.value == undefined){
+        if(item.value === undefined){
           item.value = chartDataF.find(childItem => childItem.name === item.name).value;
         }
 
-        if(item.value2 == undefined){
+        if(item.value2 === undefined){
           item.value2 = chartData2F.find(childItem => childItem.name === item.name).value;
         }
       });
