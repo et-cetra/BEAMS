@@ -38,7 +38,7 @@ class DGSection extends React.Component {
         <div style={{paddingLeft: "50px", paddingRight: "50px", paddingTop: "20px"}}>
         <ResponsiveContainer height={400} width="100%">
         <PieChart className="PieChart" onMouseEnter={this.onPieEnter}>
-            <Pie data={chartData} innerRadius="55%" outerRadius="72%" cx="35%"  
+            <Pie data={chartData} innerRadius="55%" outerRadius="72%" cx="42%"  
             isAnimationActive={false} fill="#8884d8" paddingAngle={4}
             dataKey="value" label={this.renderCustomizedLabel} labelLine={false}>
             {chartData.map((entry, index) =>
