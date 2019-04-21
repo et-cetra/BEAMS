@@ -105,7 +105,7 @@ export const getCrimeRate = async (suburb, suburb_state) => {
     const population = suburbInfo.demographics[0].total;
 
     for (var i = 0; i < arrayLength; i++) {
-        if(suburb && (crimeArray[i].suburb.toLowerCase() === suburb.toLowerCase())) {
+        if(suburb && (crimeArray[i].suburb.toLowerCase() === suburb.toLowerCase()) && (crimeArray[i].suburb_state.toLowerCase() === suburb_state.toLowerCase())) {
             numCrimes = crimeArray[i].numCrimes;
         }
     }
@@ -114,7 +114,5 @@ export const getCrimeRate = async (suburb, suburb_state) => {
     console.log("Population", population);
 
     crimeRate = numCrimes / population;
-    console.log("crime rate", crimeRate);
-
     return crimeRate;
 }

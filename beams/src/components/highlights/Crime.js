@@ -9,15 +9,15 @@ class Crime extends React.Component {
         crimeRate: 0.2
     };
 
-    async resolveCrimeRate(suburb, suburb_state) {
-        const crimeRate = await getCrimeRate(suburb, suburb_state);
+    async resolveCrimeRate() {
+        const crimeRate = await getCrimeRate(this.props.suburb, this.props.suburb_state);
         return crimeRate;
     }
 
     async componentDidMount() {
-        const crimeRate = await this.resolveCrimeRate();
+        const result = await this.resolveCrimeRate(this.props.suburb, this.props.suburb_state);
         this.setState({
-            crimeRate: crimeRate
+            crimeRate: result
         });
     }
 
@@ -25,9 +25,9 @@ class Crime extends React.Component {
     render() {
         const crimeRate = this.state.crimeRate;
         console.log("Crime crime rate", crimeRate);
-        if (crimeRate >= 0.2) {
+        if (crimeRate < 0.2) {
             return (
-                <Chip avatar={<Avatar><GradeIcon/></Avatar>} label="Crime is High"
+                <Chip avatar={<Avatar><GradeIcon/></Avatar>} label="Low Crime Rate"
                 className="ChipsHighlight" color={this.props.compareColor}/>
             );
         } else {
