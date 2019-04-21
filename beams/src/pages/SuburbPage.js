@@ -1,8 +1,10 @@
 import React from 'react'
 import './SuburbPage.css'
+import { Route, Redirect, Link } from "react-router-dom";
+import HomePage from './HomePage'
 
-import { Grid, Fade, Slide, Grow, createMuiTheme, MuiThemeProvider } from '@material-ui/core'
-
+import { Grid, Fade, Slide, Grow, createMuiTheme, MuiThemeProvider, Fab, Typography } from '@material-ui/core'
+import PeopleIcon from '@material-ui/icons/People';
 import WrapperHeader from '../components/wrappers/WrapperHeader'
 import WrapperDG from '../components/wrappers/WrapperDG'
 import WrapperStats from '../components/wrappers/WrapperStats'
@@ -109,21 +111,23 @@ class SuburbPage extends React.Component {
         <div className="ParentContainer">
           {/*Single vs Multi Suburb Display*/}
           {isCompare ? this.getMultiSuburb(suburbs) : this.getSingleSuburb(suburbs, onSuburbCompare)}
-          <InfoButton message={'Data sourced from ABC News, Domain, and Google Maps'}/>
+          <InfoButton message={'Data sourced from GNews, Domain, Google Maps, Mapquest and ABS'}/>
+        </div>
+        <div className="footer-left">
+          <Fab
+          size="small"
+          style={{ backgroundImage: "linear-gradient(to right,#EE6A15 0%,#E62927 100%)"}} >
+            <Link to="/developers">
+              <PeopleIcon style={{color: "whitesmoke"}}/>
+            </Link>
+          </Fab>
         </div>
         </MuiThemeProvider>
       );
   } else {
     return (
-      <MuiThemeProvider theme={theme}>
-      <div>
-        <p>
-        Error: No valid suburb selected.
-        Please go home and select a valid suburb.
-        </p>
-        <button className="button" onClick={this.props.onStartOver}>Home</button>
-      </div>
-      </MuiThemeProvider>
+      <Route exact path="/suburb" render={() => ("/suburb"  !== "/" ? <Redirect to={"/"} /> :
+        <HomePage/>)} />
     )
   }
 }

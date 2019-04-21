@@ -8,6 +8,8 @@ import { Grid } from '@material-ui/core';
 
 import Framework from './components/Framework';
 import HomePage from "./pages/HomePage"
+import DevPage from "./pages/DevPage"
+
 import CompareController from './components/CompareController';
 import { Router } from 'react-router';
 import createBrowserHistory from 'history/createBrowserHistory';
@@ -66,6 +68,7 @@ class App extends Component {
                 <Route exact path="/" render={() => <HomePage onSelect={this.onSuburbSelect} onStartOver={this.onStartOver}/>}/>
                 <Route matches path="/suburb" render={() => <CompareController suburbs={this.state.suburbs} onStartOver={this.onStartOver} onSuburbCompare={this.onSuburbCompare} onSuburbSelect={this.onSuburbSelect} />} />
                 <Route matches path="/compare" render={() => <CompareController suburbs={this.state.suburbs} onStartOver={this.onStartOver} onSuburbCompare={this.onSuburbCompare} onSuburbSelect={this.onSuburbSelect} />} />
+                <Route exact path="/developers" component={DevPage} />
               </Switch>
             </Router>
           </Grid>

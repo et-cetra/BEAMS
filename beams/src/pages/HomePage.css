@@ -1,3 +1,12 @@
 .HomeContainer{
   padding-top: 140px;
 }
+
+.footer{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 5px;
+}
+
+
