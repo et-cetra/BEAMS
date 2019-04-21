@@ -1,5 +1,7 @@
 import React from 'react'
 import './SuburbPage.css'
+import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
+import HomePage from './HomePage'
 
 import { Grid, Fade, Slide, Grow } from '@material-ui/core'
 
@@ -14,7 +16,8 @@ import InfoButton from '../components/InfoButton';
 
 class SuburbPage extends React.Component {
   /* Color scheme, used for graphs */
-  COLORS = () => {return(['#213084', '#E62927', '#EE6A15', '#333F48', '#04091E', '#662daf', '#a02faa'])}
+  COLORS = () => {return(['#213084', '#E62927', '#EE6A15', '#333F48', '#04091E', '#662daf', '#a02faa'])};
+
 
   getSingleSuburb = (suburbs, onSuburbCompare) => {
     const COLORS = this.COLORS();
@@ -98,13 +101,9 @@ class SuburbPage extends React.Component {
       );
   } else {
     return (
-      <div>
-        <p>
-        Error: No valid suburb selected.
-        Please go home and select a valid suburb.
-        </p>
-        <button className="button" onClick={this.props.onStartOver}>Home</button>
-      </div>
+      <Route exact path="/suburb" render={() => ("/suburb"  !== "/" ? <Redirect to={"/"} /> :
+        <HomePage/>)} />
+
     )
   }
 }

@@ -8,6 +8,9 @@ import { Grid } from '@material-ui/core';
 
 import Framework from './components/Framework';
 import HomePage from "./pages/HomePage"
+import SuburbPage from "./pages/SuburbPage"
+import DevPage from "./pages/DevPage"
+
 import CompareController from './components/CompareController';
 
 // export const BeamsContext = React.createContext({ suburb: null, suburb_state: null });
@@ -66,9 +69,13 @@ class App extends Component {
           <BrowserRouter>
             <Switch>
             <Route exact path="/" render={() => (redirect && redirect !== "/" ? <Redirect to={redirect} /> :
-              <HomePage onSelect={this.onSuburbSelect}/>)} />
+            <HomePage onSelect={this.onSuburbSelect}/>)} />
+
             <Route exact path="/suburb" render={() => (redirect && redirect !== "/suburb" ? <Redirect to={redirect} /> :
               <CompareController suburbs={this.state.suburbs} onStartOver={this.onStartOver} onSuburbCompare={this.onSuburbCompare}/>)} />
+
+            <Route exact path="/developers" component={DevPage} />
+
             </Switch>
           </BrowserRouter>
         </Grid>
