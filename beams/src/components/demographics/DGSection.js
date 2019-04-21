@@ -35,20 +35,22 @@ class DGSection extends React.Component {
 
     singlePie = (chartData, COLORS) => {
       return(
+        <div style={{paddingLeft: "50px", paddingRight: "50px", paddingTop: "20px"}}>
         <ResponsiveContainer height={400} width="100%">
         <PieChart className="PieChart" onMouseEnter={this.onPieEnter}>
-            <Pie data={chartData} innerRadius="55%" outerRadius="72%" cx="50%"  
+            <Pie data={chartData} innerRadius="55%" outerRadius="72%" cx="35%"  
             isAnimationActive={false} fill="#8884d8" paddingAngle={4}
             dataKey="value" label={this.renderCustomizedLabel} labelLine={false}>
             {chartData.map((entry, index) =>
                 <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]}/>
             )}
             </Pie>
-            <Legend align="center" layout="horizontal" formatter={this.getLegend}
-            verticalAlign="bottom" iconSize={0}/>
+            <Legend align="right" layout="vertical" formatter={this.getLegend}
+            verticalAlign="middle" iconSize={0}/>
             <Tooltip content={this.customTooltip}/>
         </PieChart>
         </ResponsiveContainer>
+        </div>
       );
     }
 
@@ -118,8 +120,6 @@ class DGSection extends React.Component {
       const chartData = this.props.chartData;
       const isCompare = this.props.isCompare;
       const suburbs = this.props.suburbs;
-      var itemSize = 7;
-      if(isCompare) itemSize = 12;
 
       if(this.props.loading){
         return (
@@ -127,7 +127,7 @@ class DGSection extends React.Component {
             <Paper square>
             <Grid className="DGGridContainer" container spacing={0} direction="row"
             justify="center" alignItems="stretch">
-              <Grid item xs={itemSize}><CircularProgress size={60} color="secondary"/></Grid>
+              <Grid item xs={12}><CircularProgress size={60} color="secondary"/></Grid>
             </Grid>
             </Paper>
           </div>
@@ -140,23 +140,12 @@ class DGSection extends React.Component {
             <Grid className="DGGridContainer" container spacing={0} direction="row"
             justify="center" alignItems="stretch">
             <Fade in timeout={600}>
-            <Grid item xs={itemSize}>
+            <Grid item xs={12}>
 
               {isCompare ? this.multiPie(chartData, COLORS, suburbs) 
                 : this.singlePie(chartData, COLORS)}
 
             </Grid>
-            </Fade>
-            <Fade in timeout={600}>
-
-            {!isCompare ?
-              <Grid item xs={5} className="DGInfoContainer">
-              <br/><br/>
-              info goes here (no css yet)
-              </Grid>
-              :
-              <Grid item xs={3}/>
-            }
             </Fade>
             </Grid>
             </Paper>

@@ -152,15 +152,6 @@ class StatsSection extends React.Component {
               {isCompare ? this.multiChart(chartData, COLORS) : this.singleChart(chartData, COLORS)}
             </Grid>
             </Fade>
-            <Fade in timeout={600}>
-            {!isCompare ?
-              <Grid className="StatsInfoContainer">
-              info goes here (no css yet)
-              </Grid>
-              :
-              <Grid/>
-            }
-            </Fade>
             </Grid>
           </div>
       );
