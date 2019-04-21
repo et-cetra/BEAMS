@@ -110,9 +110,6 @@ export const getCrimeRate = async (suburb, suburb_state) => {
         }
     }
 
-    console.log("Num crimes", numCrimes);
-    console.log("Population", population);
-
     crimeRate = numCrimes / population;
     return crimeRate;
 }

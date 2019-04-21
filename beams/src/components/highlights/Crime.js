@@ -24,7 +24,6 @@ class Crime extends React.Component {
 
     render() {
         const crimeRate = this.state.crimeRate;
-        console.log("Crime crime rate", crimeRate);
         if (crimeRate < 0.2) {
             return (
                 <Chip avatar={<Avatar><GradeIcon/></Avatar>} label="Low Crime Rate"
