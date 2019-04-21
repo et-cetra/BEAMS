@@ -1,9 +1,9 @@
 import React from 'react'
 import './SuburbPage.css'
-import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
+import { BrowserRouter, Route, Switch, Redirect, Link } from "react-router-dom";
 import HomePage from './HomePage'
 
-import { Grid, Fade, Slide, Grow } from '@material-ui/core'
+import { Grid, Fade, Slide, Grow} from '@material-ui/core'
 
 import WrapperHeader from '../components/wrappers/WrapperHeader'
 import WrapperDG from '../components/wrappers/WrapperDG'
@@ -97,7 +97,11 @@ class SuburbPage extends React.Component {
           {/*Single vs Multi Suburb Display*/}
           {isCompare ? this.getMultiSuburb(suburbs) : this.getSingleSuburb(suburbs, onSuburbCompare)}
           <InfoButton message={'Data sourced from ABC News, Domain, and Google Maps'}/>
+        <div className="footer">
+          <Link to="/developers">Beams &copy; 2019</Link>
         </div>
+        </div>
+
       );
   } else {
     return (

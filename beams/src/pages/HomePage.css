@@ -1,3 +1,9 @@
 .HomeContainer{
   padding-top: 140px;
 }
+
+.footer{
+    padding: 12px;
+    text-align: center;
+    font-size: 10pt;
+}

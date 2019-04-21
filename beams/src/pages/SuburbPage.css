@@ -185,4 +185,8 @@
   line-height: 25px;
 }
 
-
+.footer{
+    padding: 12px;
+    text-align: center;
+    font-size: 10pt;
+}
