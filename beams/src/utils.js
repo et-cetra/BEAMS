@@ -129,6 +129,7 @@ export const getCrimeRate = async (suburb, suburb_state) => {
     const arrayLength = crimeArray.length;
     let crimeRate = 0;
     let numCrimes = 0;
+    let found = false;
 
     // Get total population
     const suburbInfo = await getDemographics(suburb, suburb_state, "AgeGroupOfPopulation");
@@ -136,8 +137,20 @@ export const getCrimeRate = async (suburb, suburb_state) => {
 
     for (var i = 0; i < arrayLength; i++) {
         if(suburb && (crimeArray[i].suburb.toLowerCase() === suburb.toLowerCase()) && (crimeArray[i].suburb_state.toLowerCase() === suburb_state.toLowerCase())) {
+            found = true;
             numCrimes = crimeArray[i].numCrimes;
         }
+    }
+
+    if(found == false)
+    {
+      switch(suburb_state){
+        case "NT": return 0.0897;
+        case "TAS": return 0.0508;
+        case "WA": return 0.0457;
+        case "QLD": return 0.1073;
+        default: return 0.65/2; 
+      }
     }
 
     crimeRate = numCrimes / population;

@@ -1,7 +1,7 @@
 import React from 'react';
 import Chip from '@material-ui/core/Chip';
 import Avatar from '@material-ui/core/Avatar';
-import GradeIcon from '@material-ui/icons/Grade'
+import GavelIcon from '@material-ui/icons/Gavel'
 import { getCrimeRate } from '../../utils.js'
 
 class Crime extends React.Component {
@@ -21,12 +21,11 @@ class Crime extends React.Component {
         });
     }
 
-
     render() {
         const crimeRate = this.state.crimeRate;
         if (crimeRate < 0.2) {
             return (
-                <Chip avatar={<Avatar><GradeIcon/></Avatar>} label="Low Crime Rate"
+                <Chip avatar={<Avatar><GavelIcon/></Avatar>} label="Low Crime Rate"
                 className="ChipsHighlight" color={this.props.compareColor}/>
             );
         } else {
