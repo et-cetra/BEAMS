@@ -35,7 +35,7 @@ export const getSchools = async (lat, lng) => {
 }
 
 export const getNews = async (suburb, suburb_state) => {
-    const url = `https://newsapi.org/v2/everything?q=${suburb}%20australia&sources=abc-news-au,cbs-news,fox-sports,nbc-news,the-new-york-times,the-washington-times&language=en&sortBy=popularity&apiKey=bf2f2f717b5144da9abca234ee7f31c7`;
+    const url = `https://gnews.io/api/v2/?q=${suburb}&max=7&country=au&in=title&token=7a7b0d71ed28c75d56b185fc5896f148`;
     const res = await fetch(url);
     const result = await res.json();
     return result;

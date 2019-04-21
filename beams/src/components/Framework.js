@@ -1,5 +1,6 @@
 //Uses 'App.css' for style
 import React from 'react';
+import '../App.css'
 import { Grid, AppBar, Toolbar, Typography, createMuiTheme, MuiThemeProvider, Link } from '@material-ui/core';
 import 'typeface-roboto';
 import mBannerSm from '../assets/ic_banner_small.png'
@@ -24,13 +25,16 @@ const theme = createMuiTheme({
       light: '#FFFFFF',
       main: '#333F48',
     },
-    // error: will use default color
+    error: {
+      main: '#FFFFFF',
+    }
   },
 });
 
 
 class Framework extends React.Component {
   render() {
+    
     return (
 
     /*
@@ -41,45 +45,42 @@ class Framework extends React.Component {
 
      <MuiThemeProvider theme={theme}>
      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500"/>
-      <AppBar position="static" className="AppBar" color="primary">
-        <Toolbar className="Toolbar">
-        <Grid className="HeadingContainer">
+        <AppBar position="static" className="AppBar" color="primary">
+          <Toolbar className="Toolbar">
+          <Grid className="HeadingContainer">
 
-        <PinIcon fontSize="large" className="PinIcon"></PinIcon>
+          <PinIcon fontSize="large" className="PinIcon"></PinIcon>
 
-          <Grid item className="HeadingBox">
-            {/* This text is invisible, but is used as a mask to go back to home */}
-            <Link to="/" onClick={this.props.onStartOver}> 
-            <Typography style={{ fontSize: 30, color: 'white'}}
-            className="HeadingMain" variant="h1" noWrap> BEAMS </Typography></Link>
+            <Grid item className="HeadingBox">
+              {/* This text is invisible, but is used as a mask to go back to home */}
+              <Link to="/" onClick={this.props.onStartOver}> 
+              <Typography style={{ fontSize: 30, color: 'white'}}
+              className="HeadingMain" variant="h1" noWrap> BEAMS </Typography></Link>
 
-            <Typography style={{ fontSize: 30, color: 'white'}}
-            variant="h1" noWrap> BEAMS </Typography>
-          </Grid>
-
-          <Grid item className="SubHeadingBox">
-          <Typography variant="overline" color="inherit">
-            Suburb analysis
-          </Typography>
-          </Grid>
-
-          <Grid container direction="row" justify="flex-end"
-          alignItems="center" className="LogoContainer">
-            <QuickSearch onSuburbSelect={this.props.onSuburbSelect}/>
-            <Grid item>
-              <img src={mBannerSm} width={160*0.9} height={97*0.9} alt="banner"
-              style={{paddingRight: "4px"}}/>
+              <Typography style={{ fontSize: 30, color: 'white'}}
+              variant="h1" noWrap> BEAMS </Typography>
             </Grid>
+
+            <Grid item className="SubHeadingBox">
+            <Typography variant="overline" color="inherit">
+              Suburb analysis
+            </Typography>
+            </Grid>
+
+            <Grid container direction="row" justify="flex-end"
+            alignItems="center" className="LogoContainer">
+              <QuickSearch onSuburbSelect={this.props.onSuburbSelect}/>
+              <Grid item>
+                <img src={mBannerSm} width={160*0.9} height={97*0.9} alt="banner"
+                style={{paddingRight: "4px"}}/>
+              </Grid>
+            </Grid>
+
+
           </Grid>
-
-
-        </Grid>
-        </Toolbar>
-      </AppBar>
+          </Toolbar>
+        </AppBar>
       </MuiThemeProvider>
-
-
-
     );
   }
 }

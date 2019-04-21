@@ -58,12 +58,12 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Framework onSuburbSelect={this.onSuburbSelect} onStartOver={this.onStartOver} />
+        <Framework onSuburbSelect={this.onSuburbSelect} onStartOver={this.onStartOver}/>
         <Grid container className="ContentHolderMain" direction="column" justify="center" alignItems="center">
           <Grid item>
             <Router history={this.history}>
               <Switch>
-                <Route exact path="/" render={() => <HomePage onSelect={this.onSuburbSelect} />} />
+                <Route exact path="/" render={() => <HomePage onSelect={this.onSuburbSelect} onStartOver={this.onStartOver}/>}/>
                 <Route matches path="/suburb" render={() => <CompareController suburbs={this.state.suburbs} onStartOver={this.onStartOver} onSuburbCompare={this.onSuburbCompare} onSuburbSelect={this.onSuburbSelect} />} />
                 <Route matches path="/compare" render={() => <CompareController suburbs={this.state.suburbs} onStartOver={this.onStartOver} onSuburbCompare={this.onSuburbCompare} onSuburbSelect={this.onSuburbSelect} />} />
               </Switch>

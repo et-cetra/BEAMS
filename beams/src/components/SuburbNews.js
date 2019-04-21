@@ -31,7 +31,7 @@ class SuburbNews extends React.Component {
           return <div>Loading...</div>
         } else {
 
-          if(articles.articles.length === 0)
+          if(articles.count_results === 0)
           return (
             <Typography style={{ fontSize: 18 }} variant="h5" color="inherit">No news available at this time</Typography>
           );
@@ -41,12 +41,12 @@ class SuburbNews extends React.Component {
                   {articles.articles.map((article, i) =>
                       <div key={i}>
                       <Paper className="PaperBox">
-                      <a href={article.url} key={article.id} target="_blank" rel="noopener noreferrer">
+                      <a href={article.link} key={article.id} target="_blank" rel="noopener noreferrer">
                           <b className="Title">{article.title}</b>
                           <br/>
                       </a>
-                          <p className="Content">{article.description}</p>
-                          <i className="Date">{article.publishedAt.split('T')[0]}</i>
+                          <p className="Content">{article.desc}</p>
+                          <i className="Date">{article.date.split(' ').slice(0,4).join(' ')}</i>
                       </Paper>
                       <br></br>
                       </div>

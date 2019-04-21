@@ -1,7 +1,7 @@
 import React from 'react'
 import './SuburbPage.css'
 
-import { Grid, Fade, Slide, Grow } from '@material-ui/core'
+import { Grid, Fade, Slide, Grow, createMuiTheme, MuiThemeProvider } from '@material-ui/core'
 
 import WrapperHeader from '../components/wrappers/WrapperHeader'
 import WrapperDG from '../components/wrappers/WrapperDG'
@@ -11,10 +11,23 @@ import WrapperNews from '../components/wrappers/WrapperNews'
 import WrapperSchools from '../components/wrappers/WrapperSchools'
 import InfoButton from '../components/InfoButton';
 
+const theme = createMuiTheme({
+  typography: {
+    useNextVariants: true,
+  },
+  palette: {
+    primary: {
+      main: '#3F51B5',
+    },
+    secondary: {
+      main: '#FF5722',
+    },
+  },
+});
 
 class SuburbPage extends React.Component {
   /* Color scheme, used for graphs */
-  COLORS = () => {return(['#213084', '#E62927', '#EE6A15', '#333F48', '#04091E', '#662daf', '#a02faa'])}
+  COLORS = () => {return([theme.palette.primary.main, theme.palette.secondary.main, '#E62927', '#333F48', '#04091E', '#662daf', '#a02faa'])}
 
   getSingleSuburb = (suburbs, onSuburbCompare) => {
     const COLORS = this.COLORS();
@@ -92,14 +105,17 @@ class SuburbPage extends React.Component {
     if (suburbs[0].suburb != null) {
       const onSuburbCompare = this.props.onSuburbCompare;
       return (
+        <MuiThemeProvider theme={theme}>
         <div className="ParentContainer">
           {/*Single vs Multi Suburb Display*/}
           {isCompare ? this.getMultiSuburb(suburbs) : this.getSingleSuburb(suburbs, onSuburbCompare)}
           <InfoButton message={'Data sourced from ABC News, Domain, and Google Maps'}/>
         </div>
+        </MuiThemeProvider>
       );
   } else {
     return (
+      <MuiThemeProvider theme={theme}>
       <div>
         <p>
         Error: No valid suburb selected.
@@ -107,6 +123,7 @@ class SuburbPage extends React.Component {
         </p>
         <button className="button" onClick={this.props.onStartOver}>Home</button>
       </div>
+      </MuiThemeProvider>
     )
   }
 }
