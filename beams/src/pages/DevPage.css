@@ -4,6 +4,7 @@
   padding: 8px;
   margin: auto;
   text-align: center;
+  height: 400px;
 }
 
 
@@ -11,4 +12,20 @@ a {
   text-decoration: none;
   font-size: 22px;
   color: black;
+}
+
+.role {
+  color: grey;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.org{
+    font-size: 12px;
+    font-style: italic;
+}
+
+.description {
+  color: grey;
+  font-size: 12px;
 }

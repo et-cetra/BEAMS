@@ -1,10 +1,11 @@
 import React from 'react';
-import './HomePage.css'
+import './SuburbPage.css'
 import './DevPage.css'
 import { Grid, Typography, Grow } from '@material-ui/core';
 import HomeSearch from '../components/HomeSearch';
 import avatar from '../assets/avatar2.png'
 import bei from'../assets/bei.png'
+import moz from'../assets/moz.png'
 import mariya from'../assets/mariya.png'
 
 //card ref
@@ -22,11 +23,18 @@ class DevPage extends React.Component {
             <div class="w3-row-padding">
               <div class="w3-col m2 w3-center"><p></p>
               <div className="card">
-                  <img src={avatar} style={{width:100}}/>
+                  <img src={moz} style={{width:100}}/>
                   <h3>Mozamel Anwary</h3>
 
-                  <p>The University of New South Wales</p>
+                  <div class="org">The University of New South Wales</div><p></p>
+                  <div class="role">
+                  Developer
+                  </div>
                   <a href="https://github.com/atude"><i class="fa fa-github"></i></a>
+                  <div class="description">
+                  Responsible for all infographics and theme (with Material UI) and colours on this site.
+                  </div>
+
               </div>
               </div>
               <div class="w3-col m2 w3-center"><p></p>
@@ -34,8 +42,15 @@ class DevPage extends React.Component {
                   <img src={bei} style={{width:100}}/>
                   <h3>Bei Chen</h3>
 
-                  <p>The University of New South Wales</p>
+                  <div class="org">The University of New South Wales</div><p></p>
+                  <div class="role">
+                  Developer
+                  </div>
                   <a href="https://github.com/bei98"><i class="fa fa-github"></i></a>
+                  <div class="description">
+                  Responsible for creation of the developer&#39;s page.
+                  </div>
+
               </div>
               </div>
               <div class="w3-col m2 w3-center"><p></p>
@@ -43,8 +58,15 @@ class DevPage extends React.Component {
                   <img src={avatar} style={{width:100}}/>
                   <h3>Paul Grace</h3>
 
-                  <p>The University of New South Wales</p>
+                  <div class="org">The University of New South Wales</div><p></p>
+                  <div class="role">
+                  Developer
+                  </div>
                   <a href="https://github.com/PaulGrace1200"><i class="fa fa-github"></i></a>
+                  <div class="description">
+                  Responsible for all news related components on suburb pages.
+                  </div>
+
               </div>
               </div>
               <div class="w3-col m2 w3-center"><p></p>
@@ -52,8 +74,15 @@ class DevPage extends React.Component {
                   <img src={avatar} style={{width:100}}/>
                   <h3>Sumayyah Ho</h3>
 
-                  <p>The University of New South Wales</p>
+                  <div class="org">The University of New South Wales</div><p></p>
+                  <div class="role">
+                  Developer
+                  </div>
                   <a href="https://github.com/z5210234"><i class="fa fa-github"></i></a>
+                  <div class="description">
+                  Responsible for suburb highlights and schools information on suburb pages.
+                  </div>
+
               </div>
               </div>
               <div class="w3-col m2 w3-center"><p></p>
@@ -61,8 +90,15 @@ class DevPage extends React.Component {
                   <img src={mariya} style={{width:100}}/>
                   <h3>Mariya Shmalko</h3>
 
-                  <p>The University of New South Wales</p>
+                  <div class="org">The University of New South Wales</div><p></p>
+                  <div class="role">
+                  Developer
+                  </div>
                   <a href="https://github.com/et-cetra"><i class="fa fa-github"></i></a>
+                  <div class="description">
+                  Responsible for back-end infrastructure (with Node JS) and demographic data on suburb pages.
+                  </div>
+
               </div>
               </div>
 
