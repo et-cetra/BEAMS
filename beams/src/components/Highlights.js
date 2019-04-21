@@ -1,8 +1,9 @@
 import React from 'react';
-import FamilyFriendly from './highlights/FamilyFriendy';
+import FamilyFriendly from './highlights/FamilyFriendly';
+import RetirementFriendly from './highlights/RetirementFriendly';
 import HospitalFriendly from './highlights/HospitalFriendly';
 import CulturallyDiverse from './highlights/CulturallyDiverse';
-import ConvenientTransport from './highlights/ConvenientTransport';
+import CommuteFriendly from './highlights/CommuteFriendly';
 import PrimaryFriendly from './highlights/PrimaryFriendly';
 import SecondaryFriendly from './highlights/SecondaryFriendly';
 import SchoolFriendly from './highlights/SchoolFriendly';
@@ -34,13 +35,13 @@ class Highlights extends React.Component {
           <FamilyFriendly compareColor={compareColor} suburb={suburb} suburb_state={suburb_state} key={'Family'+suburb+suburb_state}/>
         </Grid>
         <Grid item>
+          <RetirementFriendly compareColor={compareColor} suburb={suburb} suburb_state={suburb_state} key={'Retire'+suburb+suburb_state}/>
+        </Grid>
+        <Grid item>
           <HospitalFriendly compareColor={compareColor} suburb={suburb} suburb_state={suburb_state} key={'Hospital'+suburb+suburb_state}/>
         </Grid>
         <Grid item>
           <CulturallyDiverse compareColor={compareColor} suburb={suburb} suburb_state={suburb_state} key={'Culture'+suburb+suburb_state}/>
-        </Grid>
-        <Grid item>
-          <ConvenientTransport compareColor={compareColor} suburb={suburb} suburb_state={suburb_state} key={'Transport'+suburb+suburb_state}/>
         </Grid>
         <Grid item>
           <PrimaryFriendly compareColor={compareColor} suburb={suburb} suburb_state={suburb_state} key={'Primary'+suburb+suburb_state}/>
@@ -53,6 +54,9 @@ class Highlights extends React.Component {
         </Grid>
         <Grid item>
           <Crime compareColor={compareColor} suburb={suburb} suburb_state={suburb_state} key={'Crime'+suburb+suburb_state}/>
+        </Grid>
+        <Grid item>
+          <CommuteFriendly compareColor={compareColor} suburb={suburb} suburb_state={suburb_state} key={'Commute'+suburb+suburb_state}/>
         </Grid>
       </Grid>
     );
