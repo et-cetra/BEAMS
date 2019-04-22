@@ -3,13 +3,12 @@ import 'typeface-roboto';
 
 import '../../pages/SuburbPage.css'
 import QuickSearch from '../QuickSearch.js'
-import { Grid, Typography, Divider, Link } from '@material-ui/core'
+import { Grid, Typography, Divider, Link, Fade } from '@material-ui/core'
 import mTerrain from '../../assets/ic_terrain.png'
 import mTerrain1 from '../../assets/ic_terrain_1.png'
 import mTerrain2 from '../../assets/ic_terrain_2.png'
 import Highlights from '../Highlights.js'
 import RadarSection from '../highlights/RadarSection';
-import NearbySuburbs from '../NearbySuburbs';
 
 class WrapperHeader extends React.Component {
 
@@ -29,7 +28,7 @@ class WrapperHeader extends React.Component {
       }
 
       return (
-      <div>
+      <Fade in timeout={1000}><div>
           {!isCompare ?
             <img src={mTerrain} className="IconMain" alt="terrain"/>
             :
@@ -104,7 +103,7 @@ class WrapperHeader extends React.Component {
           <br></br>
           <Divider variant="fullWidth"/>
           <br></br>
-      </div>
+      </div></Fade>
       );
     }
 }

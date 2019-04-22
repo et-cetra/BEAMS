@@ -5,7 +5,7 @@ import avatar from '../assets/avatar2.png'
 import bei from'../assets/bei.png'
 import moz from'../assets/moz.png'
 import mariya from'../assets/mariya.png'
-import { Grid, Paper, Typography } from '@material-ui/core';
+import { Grid, Paper, Typography, Slide, Grow } from '@material-ui/core';
 
 //card ref
 // https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_templates_website&stacked=h
@@ -15,12 +15,12 @@ class DevPage extends React.Component {
     render() {
       return (
           <div>
-            <Typography align="center" style={{fontSize: "26px"}} variant="overline">Our Team</Typography>
+            <Grow in timeout={1000}><Typography align="center" style={{fontSize: "26px"}} variant="overline">Our Team</Typography></Grow>
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
             <Grid container spacing={24} direction="row" alignItems="center" justify="center">
-              <Grid item><p></p>
+              <Slide in direction="up" timeout={1000}><Grid item><p></p>
               <Paper className="card">
-                  <img src={moz} style={{width:100}}/>
+                  <img alt="moz" src={moz} style={{width:100}}/>
                   <h3>Mozamel Anwary</h3>
 
                   <div class="org">University of New South Wales</div><p></p>
@@ -32,10 +32,10 @@ class DevPage extends React.Component {
                   Responsible for front-end design, including infographics and Material UI implementation throughout BEAMS.
                   </div>
               </Paper>
-              </Grid>
-              <Grid item><p></p>
+              </Grid></Slide>
+              <Slide in direction="up" timeout={1250}><Grid item><p></p>
               <Paper className="card">
-                  <img src={bei} style={{width:100}}/>
+                  <img alt="bei" src={bei} style={{width:100}}/>
                   <h3>Bei Chen</h3>
 
                   <div class="org">University of New South Wales</div><p></p>
@@ -48,10 +48,10 @@ class DevPage extends React.Component {
                   </div>
 
               </Paper>
-              </Grid>
-              <Grid item><p></p>
+              </Grid></Slide>
+              <Slide in direction="up" timeout={1500}><Grid item><p></p>
               <Paper className="card">
-                  <img src={avatar} style={{width:100}}/>
+                  <img alt="paul" src={avatar} style={{width:100}}/>
                   <h3>Paul Grace</h3>
 
                   <div class="org">University of New South Wales</div><p></p>
@@ -64,10 +64,10 @@ class DevPage extends React.Component {
                   </div>
 
               </Paper>
-              </Grid>
-              <Grid item><p></p>
+              </Grid></Slide>
+              <Slide in direction="up" timeout={1750}><Grid item><p></p>
               <Paper className="card">
-                  <img src={avatar} style={{width:100}}/>
+                  <img alt="sumo" src={avatar} style={{width:100}}/>
                   <h3>Sumayyah Ho</h3>
 
                   <div class="org">University of New South Wales</div><p></p>
@@ -80,10 +80,10 @@ class DevPage extends React.Component {
                   </div>
 
               </Paper>
-              </Grid>
-              <Grid item><p></p>
+              </Grid></Slide>
+              <Slide in direction="up" timeout={2000}><Grid item><p></p>
               <Paper className="card">
-                  <img src={mariya} style={{width:100}}/>
+                  <img alt="mariya" src={mariya} style={{width:100}}/>
                   <h3>Mariya Shmalko</h3>
 
                   <div class="org">University of New South Wales</div><p></p>
@@ -96,7 +96,7 @@ class DevPage extends React.Component {
                   </div>
 
               </Paper>
-              </Grid>
+              </Grid></Slide>
 
             </Grid>
         </div>

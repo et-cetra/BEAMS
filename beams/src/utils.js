@@ -143,7 +143,7 @@ export const getCrimeRate = async (suburb, suburb_state) => {
         }
     }
 
-    if(found == false)
+    if(found === false)
     {
       switch(suburb_state){
         case "NT": return 0.0897;

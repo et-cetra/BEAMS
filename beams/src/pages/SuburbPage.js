@@ -3,7 +3,7 @@ import './SuburbPage.css'
 import { Route, Redirect, Link } from "react-router-dom";
 import HomePage from './HomePage'
 
-import { Grid, Fade, Slide, Grow, createMuiTheme, MuiThemeProvider, Fab, Typography } from '@material-ui/core'
+import { Grid, Fade, Slide, Grow, createMuiTheme, MuiThemeProvider } from '@material-ui/core'
 import PeopleIcon from '@material-ui/icons/People';
 import WrapperHeader from '../components/wrappers/WrapperHeader'
 import WrapperDG from '../components/wrappers/WrapperDG'
@@ -52,7 +52,7 @@ class SuburbPage extends React.Component {
           <WrapperStats suburbs={suburbs} COLORS={COLORS}/>
           <WrapperDG suburbs={suburbs} COLORS={COLORS}/>
           <Grid item className="SchoolsContainer">
-            <WrapperSchools suburbs={suburbs} isCompare={false}/>
+            {/* <WrapperSchools suburbs={suburbs} isCompare={false}/> */}
           </Grid>
         </Grid>
         </Grid>
@@ -65,7 +65,7 @@ class SuburbPage extends React.Component {
         <Grid className="RightContainer">
           <Grid item className="MapsContainer">
             <WrapperMaps suburb={suburbs[0].suburb}/>
-            <WrapperNews suburb={suburbs[0].suburb} suburb_state={suburbs[0].suburb_state}/>
+            {/* <WrapperNews suburb={suburbs[0].suburb} suburb_state={suburbs[0].suburb_state}/> */}
           </Grid>
         </Grid>
         </Grid>

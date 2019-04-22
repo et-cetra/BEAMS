@@ -50,7 +50,7 @@ class NatureOfOccupancy extends React.Component {
       return (
       <div>
           <DGSection isCompare={isCompare} suburbs={this.props.suburbs} 
-            loading={0} COLORS={COLORS} chartData={chartData}/>
+            loading={0} COLORS={COLORS} chartData={chartData} type="NatureOfOccupancy"/>
       </div>
       );
     }

@@ -190,3 +190,19 @@
   font-family: 'Segoe UI';
   background-color: white;
 }
+
+.ExtraIcon{
+  position: absolute;
+  float: left;
+  z-index: 20;
+}
+
+.PopperContainer{
+  margin-left: 10px;
+  opacity: 0.9;
+}
+
+.PopperInfo{
+  padding: 16px;
+  max-width: 300px;
+}
