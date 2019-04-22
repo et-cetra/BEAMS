@@ -7,6 +7,8 @@ import avatar from '../assets/avatar2.png'
 import bei from'../assets/bei.png'
 import moz from'../assets/moz.png'
 import mariya from'../assets/mariya.png'
+import paul from'../assets/paul.png'
+import sumayyah from'../assets/sumayyah.png'
 
 //card ref
 // https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_templates_website&stacked=h
@@ -55,7 +57,7 @@ class DevPage extends React.Component {
               </div>
               <div class="w3-col m2 w3-center"><p></p>
               <div className="card">
-                  <img src={avatar} style={{width:100}}/>
+                  <img src={paul} style={{width:100}}/>
                   <h3>Paul Grace</h3>
 
                   <div class="org">The University of New South Wales</div><p></p>
@@ -71,7 +73,7 @@ class DevPage extends React.Component {
               </div>
               <div class="w3-col m2 w3-center"><p></p>
               <div className="card">
-                  <img src={avatar} style={{width:100}}/>
+                  <img src={sumayyah} style={{width:100}}/>
                   <h3>Sumayyah Ho</h3>
 
                   <div class="org">The University of New South Wales</div><p></p>
