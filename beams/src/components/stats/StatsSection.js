@@ -1,7 +1,7 @@
 import  React  from 'react';
 import '../../pages/SuburbPage.css'
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
-import { Grid, CircularProgress, Fade, Chip, Paper, Button, Popper } from '@material-ui/core';
+import { Grid, CircularProgress, Fade, Chip, Paper, Button, Popper, Typography } from '@material-ui/core';
 import ExtraIcon from '@material-ui/icons/ChevronRight';
 
 class AxisTickX extends React.Component {
@@ -111,7 +111,8 @@ class StatsSection extends React.Component {
 
     return(
       <div>
-      <div className="ExtraIcon">
+
+      <div className="ExtraIconStats">
       <Button aria-describedby={id} variant="contained" onClick={this.handleClick('right-start')}
       size="medium" color="secondary" aria-label="Guide">
         Info<ExtraIcon />
@@ -125,10 +126,11 @@ class StatsSection extends React.Component {
           )}
         </Popper>
       </Button>
+
       </div>
-      <ResponsiveContainer height={450} width="95%">
+      <ResponsiveContainer height={430} width="95%">
       <LineChart className="LineChart"
-      data={chartData} margin={{top: 40, right: 20, left: 20, bottom: 10}}>
+      data={chartData} margin={{top: 50, right: 20, left: 20, bottom: 10}}>
         <CartesianGrid strokeDasharray="3 3"/>
         <XAxis dataKey="name" tick={<AxisTickX/>} tickLine={false}/>
         <YAxis tick={<AxisTickY/>} tickLine={false}/>
@@ -191,6 +193,66 @@ class StatsSection extends React.Component {
         </div>
       );
     }
+  }
+
+  getPopperContent = () => {
+    const type = this.props.type;
+    const chartData = this.props.chartData;
+    var formattedText = this.formattedText;
+    var median = this.getMedian(chartData);
+
+    switch(type){
+       case "HouseSoldPrice":
+        if(median <= 630000)
+          return formattedText("Affordable House Prices", 
+           "Home prices are considered affordable in this area. This may be in expense of socioeconomic status, and/or may be a rural region.")
+        else if(median > 630000 && median <= 1030000)
+          return formattedText("Low-Median House Prices", 
+            "House prices are within the low-high standard for this area. The suburb is often relatively distant from state cities, but is starting to grow with new transport, education and workplace solutions. Recommended for students or new families within a budget.")
+        else if(median > 1030000 && median <= 1530000)
+          return formattedText("Urban Standard House Prices", 
+            "Home prices are within the medium-high standard for this area. The suburb is often expanding with an adequate amount of facilities and transport solutions. Suitable for most settled families, or those looking for a higher standard of living.")
+        else 
+          return formattedText("Expensive House Prices", 
+            "Home prices are considered beyond the state median for this area. This is usually the case for suburban areas near cities with a high socioeconomic status, and plenty of facilities for suburb growth. Suitable for settled families looking for long-term residency, or those who may afford a premium standard of living.")
+
+      case "MedianRent":
+        if(median <= 450)
+          return formattedText("Affordable Rent Prices", 
+            "Rent prices are considered affordable in this area. This may be in expense of socioeconomic status, and/or may be a rural region.")
+        else if(median > 450 && median <= 575)
+          return formattedText("Low-Median Rent Prices", 
+            "Rent prices are within the low-high standard for this area. The suburb is often relatively distant from state cities, but is starting to grow with new transport, education and workplace solutions. Recommended for students or new families within a budget.")
+        else if(median > 575 && median <= 655)
+          return formattedText("Urban Standard Rent Prices", 
+            "Rent prices are within the medium-high standard for this area. The suburb is often expanding with an adequate amount of facilities and transport solutions. Suitable for students or workers who require facilities nearby and prefer an urban setting.")
+        else 
+          return formattedText("Expensive Rent Prices", 
+            "Rent prices are considered beyond the state median for this area. This is usually the case for suburban areas near cities with a high socioeconomic status, and plenty of facilities for suburb growth. Suitable for small families, students or workers who prefer to live in, or considerably close, to cities. Usually a population-dense urban environment.")
+
+      default: return;
+    }
+  }
+
+  formattedText = (heading, text) => {
+    return (
+      <div>
+        <Typography><b>{heading}</b></Typography>
+        <br/>
+        <Typography>{text}</Typography>
+      </div>
+    );
+  }
+
+  //Get the latest median value
+  getMedian(chartData) {
+    for(var i = chartData.length - 1; i >= 0; i--){
+      if(chartData[i].Median != null){
+        return chartData[i].Median;
+      }
+    }
+
+    return 0;
   }
 }
 

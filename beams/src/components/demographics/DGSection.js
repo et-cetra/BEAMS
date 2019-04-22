@@ -198,8 +198,6 @@ class DGSection extends React.Component {
     var processedValue = this.processedValue;
     var formattedText = this.formattedText;
 
-    console.log(chartData);
-
     switch(type){
       //Age
       case "AgeGroupOfPopulation":
@@ -261,6 +259,8 @@ class DGSection extends React.Component {
         else 
           return formattedText("Standard", 
             "This area has sufficient transport methods for the general population. Optimal for most demographics.")
+
+        default: return;
     }
   }
 
@@ -276,11 +276,8 @@ class DGSection extends React.Component {
 
   processedValue(name, chartData, total) {
     var x = chartData.find(item => item.name === name);
-    if(x == undefined) return 0;
-    console.log(x.name);
+    if(x === undefined) return 0;
     x = x.value;
-    console.log(x / total * 100);
-    console.log(total);
     return (x / total * 100);
   }
 }

@@ -27,7 +27,7 @@ class SuburbNews extends React.Component {
         let articles = this.state.articles;
 
         if (!this.state.isLoaded) {
-          return <CircularProgress size={60} color="secondary"/>
+          return <CircularProgress size={25} color="secondary"/>
         } else {
 
           if(articles.count_results === 0)

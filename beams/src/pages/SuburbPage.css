@@ -197,6 +197,14 @@
   z-index: 20;
 }
 
+.ExtraIconStats{
+  margin-top: -15px;
+  padding-left: 15px;
+  position: absolute;
+  float: left;
+  z-index: 20;
+}
+
 .PopperContainer{
   margin-left: 10px;
   opacity: 0.9;

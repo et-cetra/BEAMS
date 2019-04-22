@@ -78,7 +78,7 @@ class HouseSoldPrice extends React.Component {
           return (
           <div>
               <StatsSection loading={0} COLORS={COLORS} chartData={chartData} isCompare={isCompare}
-              suburbs={suburbs}/>
+              suburbs={suburbs} type="HouseSoldPrice"/>
           </div>
           );
       }
