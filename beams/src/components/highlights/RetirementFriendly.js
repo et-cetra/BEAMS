@@ -38,7 +38,8 @@ class RetirementFriendly extends React.Component {
     render() {
         if (this.state.isRetirementFriendly) {
             return (
-                <Chip avatar={<Avatar><PeopleIcon/></Avatar>} label="Retirement Friendly" className="ChipsHighlight"/>
+                <Chip avatar={<Avatar><PeopleIcon/></Avatar>} label="Retirement Friendly" className="ChipsHighlight"
+                color={this.props.compareColor}/>
             );
         } else {
             return (

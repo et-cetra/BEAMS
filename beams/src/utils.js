@@ -156,3 +156,16 @@ export const getCrimeRate = async (suburb, suburb_state) => {
     crimeRate = numCrimes / population;
     return crimeRate;
 }
+
+export const getSurrounding = async (suburb, suburb_state) => {
+    const location = await getLocation(suburb, suburb_state);
+    const coords = location.results[0].locations[0].latLng;
+    const radius = 3000;
+
+    const url = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location='+coords.lat+','+coords.lng+'&radius='+radius+'&type=locality&key=AIzaSyDIMGCB2qSD9qIB0mrZu0uGEmZlc9e8m-Y'
+    const res = await fetch(url);
+    const result = await res.json();
+    console.log("HERE");
+    console.log(result);
+    return result;
+}

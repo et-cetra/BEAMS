@@ -50,7 +50,8 @@ class CommuteFriendly extends React.Component {
     render() {
         if (this.state.isCommuteFriendly) {
             return (
-                <Chip avatar={<Avatar><Train/></Avatar>} label="Commute Friendly" className="ChipsHighlight"/>
+                <Chip avatar={<Avatar><Train/></Avatar>} label="Commute Friendly" className="ChipsHighlight"
+                color={this.props.compareColor}/>
             );
         } else {
             return (

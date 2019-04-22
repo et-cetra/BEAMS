@@ -25,11 +25,11 @@ class DevPage extends React.Component {
 
                   <div class="org">University of New South Wales</div><p></p>
                   <div class="role">
-                  Developer
+                  Lead Front End Developer
                   </div>
                   <a href="https://github.com/atude"><i class="fa fa-github"></i></a>
                   <div class="description">
-                  Responsible for all infographics and theme (with Material UI) and colours on this site.
+                  Responsible for front-end design, including infographics and Material UI implementation throughout BEAMS.
                   </div>
               </Paper>
               </Grid>
@@ -40,7 +40,7 @@ class DevPage extends React.Component {
 
                   <div class="org">University of New South Wales</div><p></p>
                   <div class="role">
-                  Developer
+                  Feature Developer
                   </div>
                   <a href="https://github.com/bei98"><i class="fa fa-github"></i></a>
                   <div class="description">
@@ -56,11 +56,11 @@ class DevPage extends React.Component {
 
                   <div class="org">University of New South Wales</div><p></p>
                   <div class="role">
-                  Developer
+                  Feature Developer
                   </div>
                   <a href="https://github.com/PaulGrace1200"><i class="fa fa-github"></i></a>
                   <div class="description">
-                  Responsible for all news related components on suburb pages.
+                  Responsible for AI sentiment implementation and suburb-related features.
                   </div>
 
               </Paper>
@@ -72,7 +72,7 @@ class DevPage extends React.Component {
 
                   <div class="org">University of New South Wales</div><p></p>
                   <div class="role">
-                  Developer
+                  Feature Developer
                   </div>
                   <a href="https://github.com/z5210234"><i class="fa fa-github"></i></a>
                   <div class="description">
@@ -88,11 +88,11 @@ class DevPage extends React.Component {
 
                   <div class="org">University of New South Wales</div><p></p>
                   <div class="role">
-                  Developer
+                  Team Leader, Lead Back End Developer
                   </div>
                   <a href="https://github.com/et-cetra"><i class="fa fa-github"></i></a>
                   <div class="description">
-                  Responsible for back-end infrastructure (with Node JS) and demographic data on suburb pages.
+                  Responsible for back-end infrastructure, data manipulation and several features on suburb pages.
                   </div>
 
               </Paper>
