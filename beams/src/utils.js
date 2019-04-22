@@ -51,7 +51,7 @@ export const getSentiment = async (newsArticles) => {
     // Positive in scores[0], neutral in scores[1] and negative in scores[2]
     var scores = [0,0,0];
     deepai.setApiKey('2adbe484-819f-45e9-a270-602439ab410e');
-    const limit = 10;
+    var limit = 10;
     if (newsArticles.articles.length < limit) {
         limit = newsArticles.articles.length;
     }
@@ -76,6 +76,7 @@ export const getSentiment = async (newsArticles) => {
 export const getSurrounding = async (suburb, suburb_state) => {
     const location = await getLocation(suburb, suburb_state);
     const coords = location.results[0].locations[0].latLng;
+    console.log(coords);
     const radius = 3000;
 
     const url = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location='+coords.lat+','+coords.lng+'&radius='+radius+'&type=locality&key=AIzaSyDIMGCB2qSD9qIB0mrZu0uGEmZlc9e8m-Y'
