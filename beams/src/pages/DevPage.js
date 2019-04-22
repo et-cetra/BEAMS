@@ -6,6 +6,8 @@ import bei from'../assets/bei.png'
 import moz from'../assets/moz.png'
 import mariya from'../assets/mariya.png'
 import { Grid, Paper, Typography, Slide, Grow } from '@material-ui/core';
+import paul from'../assets/paul.png'
+import sumayyah from'../assets/sumayyah.png'
 
 //card ref
 // https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_templates_website&stacked=h
@@ -51,7 +53,7 @@ class DevPage extends React.Component {
               </Grid></Slide>
               <Slide in direction="up" timeout={1500}><Grid item><p></p>
               <Paper className="card">
-                  <img alt="paul" src={avatar} style={{width:100}}/>
+                  <img alt="paul" src={paul} style={{width:100}}/>
                   <h3>Paul Grace</h3>
 
                   <div class="org">University of New South Wales</div><p></p>
@@ -67,7 +69,7 @@ class DevPage extends React.Component {
               </Grid></Slide>
               <Slide in direction="up" timeout={1750}><Grid item><p></p>
               <Paper className="card">
-                  <img alt="sumo" src={avatar} style={{width:100}}/>
+                  <img alt="sumo" src={sumayyah} style={{width:100}}/>
                   <h3>Sumayyah Ho</h3>
 
                   <div class="org">University of New South Wales</div><p></p>
