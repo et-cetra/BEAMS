@@ -92,14 +92,14 @@
 }
 
 .InfoDef{
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
 }
 
 .InfoPopup{
   position: fixed;
   right: 6px;
-  bottom: 50px;
+  bottom: 6px;
   padding: 4px;
 }
 
@@ -189,11 +189,4 @@
   font-size: 15px;
   font-family: 'Segoe UI';
   background-color: white;
-}
-
-.footer-left{
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  padding: 5px;
 }

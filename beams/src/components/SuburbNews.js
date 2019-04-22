@@ -1,6 +1,6 @@
 import React from 'react';
 import '../components/SuburbNews.css';
-import { getNews, getSentiment, getSurrounding } from '../utils';
+import { getNews } from '../utils';
 import { Paper, Typography } from '@material-ui/core';
 
 // Request for Population Ages in Maroubra: https://api.domain.com.au/v1/demographics?level=Suburb&id=27512&types=AgeGroupOfPopulation&year=2016
@@ -21,8 +21,6 @@ class SuburbNews extends React.Component {
             isLoaded: true,
             articles: allArticles
         })
-
-        const surrouding = await getSurrounding(this.props.suburb, this.props.suburb_state);
     }
 
     render() {

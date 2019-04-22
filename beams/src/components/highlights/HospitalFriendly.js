@@ -7,7 +7,6 @@ import LocalHospitalSharp from '@material-ui/icons/LocalHospital';
 class HospitalFriendly extends React.Component {
 
     isHospitalFriendly() {
-        console.log("inside here");
         var hospitalArray = jsonHospitalResponse.data.hospitals;
         var arrayLength = hospitalArray.length;
         const suburb = this.props.suburb;

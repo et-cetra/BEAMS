@@ -29,7 +29,6 @@ class CommuteFriendly extends React.Component {
                 walkFound = 1;
             }
             if (carFound && walkFound) {
-                console.log("both found", carAndWalk, total);
                 break;
             }
         }

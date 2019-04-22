@@ -2,7 +2,7 @@ const axios = require('axios')
 const querystring = require('querystring')
 const {Cache} = require('./cache.js')
 
-const ttl = 60 * 60 * 1; // cache for 1 Hour
+const ttl = 60 * 60 * 2; // cache for 2 Hours
 const cache = new Cache(ttl); // Create a new cache service instance
 
 async function getAccessToken(clientId, secret) {

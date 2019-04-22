@@ -113,15 +113,6 @@ class SuburbPage extends React.Component {
           {isCompare ? this.getMultiSuburb(suburbs) : this.getSingleSuburb(suburbs, onSuburbCompare)}
           <InfoButton message={'Data sourced from GNews, Domain, Google Maps, Mapquest and ABS'}/>
         </div>
-        <div className="footer-left">
-          <Fab
-          size="small"
-          style={{ backgroundImage: "linear-gradient(to right,#EE6A15 0%,#E62927 100%)"}} >
-            <Link to="/developers">
-              <PeopleIcon style={{color: "whitesmoke"}}/>
-            </Link>
-          </Fab>
-        </div>
         </MuiThemeProvider>
       );
   } else {

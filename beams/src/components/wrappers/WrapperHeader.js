@@ -9,6 +9,7 @@ import mTerrain1 from '../../assets/ic_terrain_1.png'
 import mTerrain2 from '../../assets/ic_terrain_2.png'
 import Highlights from '../Highlights.js'
 import RadarSection from '../highlights/RadarSection';
+import NearbySuburbs from '../NearbySuburbs';
 
 class WrapperHeader extends React.Component {
 
@@ -88,8 +89,17 @@ class WrapperHeader extends React.Component {
                 key={suburbs[1].suburb+suburbs[1].suburb_state+'Highlights'} compareColor="secondary"/>
               </Grid>
             }
-
           </Grid>
+
+          {/* Nearby Suburbs
+          {!isCompare && 
+            <Grid container alignItems="center" justify="center">
+              <Grid item>
+                <NearbySuburbs suburb={suburbs[0].suburb} suburb_state={suburbs[0].suburb_state} 
+                  key={suburbs[0].suburb+suburbs[0].suburb_state+'Nearby'}/>
+              </Grid>
+            </Grid>
+          } */}
 
           <br></br>
           <Divider variant="fullWidth"/>
