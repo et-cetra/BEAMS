@@ -214,3 +214,34 @@
   padding: 16px;
   max-width: 300px;
 }
+
+.SchoolCard{
+  padding: 14px;
+}
+
+.SchoolText{
+  float: left;
+  padding: 5px;
+  max-width: 300px;
+}
+
+.SchoolTags{
+  float: right;
+  margin-right: 7px;
+}
+
+.SchoolFilterButton{
+
+}
+
+.SchoolControls{
+  padding: 7px;
+}
+
+.SchoolControlBlock{
+  padding-top: 6px;
+  padding-left: 4px;
+  padding-right: 40px;
+  margin-right: 15px;
+}
+
