@@ -38,8 +38,6 @@ class AgeGroupOfPop extends React.Component {
     var chartData = [];
     var chartData2 = [];
 
-    console.log("contents here", contents);
-
     if (contents.items != null) {
       contents.items.map((item) => (chartData.push({ name: item.label, value: item.value })));
     }
@@ -53,7 +51,6 @@ class AgeGroupOfPop extends React.Component {
       });
     }
 
-    console.log("chart data", chartData);
     return { chartData };
   }
 

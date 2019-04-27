@@ -62,8 +62,8 @@ class CountryOfBirth extends React.Component {
     var chartDataF = [];
     var chartData2F = [];
 
-    if (contents[0] != null) {
-      contents.map(content => (content.items.slice(0, 5).map((item) => (chartData.push({ name: item.label, value: item.value })))));
+    if (contents.items != null) {
+      contents.items.slice(0, 5).map((item) => (chartData.push({ name: item.label, value: item.value })));
     }
 
     if (isCompare && contents2[0] != null) {
