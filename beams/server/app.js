@@ -59,7 +59,7 @@ app.get('/AllDemos/:suburb/:state', async (req, res) =>
 {
     await getToken()
     const suburbInfo = await domain.getSuburbId(token, req.params.suburb, req.params.state)
-    const result = await domain.getDemographics(token, suburbInfo[0].ids[0].id, "AgeGroupOfPopulation")
+    const result = await domain.getDemographics(token, suburbInfo[0].ids[0].id)
     res.json(result)
 })
 
