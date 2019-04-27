@@ -14,21 +14,21 @@ class NatureOfOccupancy extends React.Component {
     };
   }
 
-  async componentDidMount() {        
+  async componentDidMount() {
     const suburbs = this.props.suburbs;
-    const suburbInfo = await getDemographics(suburbs[0].suburb, suburbs[0].suburb_state, "NatureOfOccupancy");
+    const suburbInfo = await getDemographics(suburbs[0].suburb, suburbs[0].suburb_state);
 
     this.setState({
       isLoaded: true,
-      contents: suburbInfo.demographics,
+      contents: suburbInfo.demographics[2],
     });
 
     if(this.props.isCompare){
-      const suburbInfo2 = await getDemographics(suburbs[1].suburb, suburbs[1].suburb_state, "NatureOfOccupancy");
+      const suburbInfo2 = await getDemographics(suburbs[1].suburb, suburbs[1].suburb_state);
       this.setState({
-        contents2: suburbInfo2.demographics,
+        contents2: suburbInfo2.demographics[2],
       });
-    } 
+    }
   }
 
   render() {
@@ -49,7 +49,7 @@ class NatureOfOccupancy extends React.Component {
     } else {
       return (
       <div>
-          <DGSection isCompare={isCompare} suburbs={this.props.suburbs} 
+          <DGSection isCompare={isCompare} suburbs={this.props.suburbs}
             loading={0} COLORS={COLORS} chartData={chartData} type="NatureOfOccupancy"/>
       </div>
       );
@@ -59,8 +59,10 @@ class NatureOfOccupancy extends React.Component {
   getChartData(isCompare, contents2, contents) {
     var chartData = [];
     var chartData2 = [];
-   
-    contents.map(content => (content.items.slice(0,3).map((item) => (chartData.push({ name: item.label, value: item.value })))));
+
+    if (contents[0] != null) {
+      contents.map(content => (content.items.slice(0,3).map((item) => (chartData.push({ name: item.label, value: item.value })))));
+    }
 
     if (isCompare && contents2[0] != null) {
       contents2.map(content => (content.items.slice(0,3).map((item) => (chartData2.push({ name: item.label, value: item.value })))));

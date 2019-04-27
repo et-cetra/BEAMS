@@ -14,21 +14,21 @@ class Transport extends React.Component {
     };
   }
 
-  async componentDidMount() {        
+  async componentDidMount() {
     const suburbs = this.props.suburbs;
-    const suburbInfo = await getDemographics(suburbs[0].suburb, suburbs[0].suburb_state, "TransportToWork");
+    const suburbInfo = await getDemographics(suburbs[0].suburb, suburbs[0].suburb_state);
 
     this.setState({
       isLoaded: true,
-      contents: suburbInfo.demographics,
+      contents: suburbInfo.demographics[3],
     });
 
     if(this.props.isCompare){
-      const suburbInfo2 = await getDemographics(suburbs[1].suburb, suburbs[1].suburb_state, "TransportToWork");
+      const suburbInfo2 = await getDemographics(suburbs[1].suburb, suburbs[1].suburb_state);
       this.setState({
-        contents2: suburbInfo2.demographics,
+        contents2: suburbInfo2.demographics[3],
       });
-    } 
+    }
   }
 
   render() {
@@ -49,7 +49,7 @@ class Transport extends React.Component {
     } else {
       return (
       <div>
-          <DGSection isCompare={isCompare} suburbs={this.props.suburbs} 
+          <DGSection isCompare={isCompare} suburbs={this.props.suburbs}
             loading={0} COLORS={COLORS} chartData={chartData} type="TransportToWork"/>
       </div>
       );
@@ -63,7 +63,9 @@ class Transport extends React.Component {
     var chartDataF = [];
     var chartData2F = [];
 
-    contents.map(content => (content.items.map((item) => (chartDataF.push({ name: item.label, value: item.value })))));
+    if (contents[0] != null) {
+      contents.map(content => (content.items.map((item) => (chartDataF.push({ name: item.label, value: item.value })))));
+    }
 
     chartDataF = chartDataF.filter(item => item.name !== 'Did not go to work'
       && item.name !== 'Car (Pas.)'
@@ -129,8 +131,8 @@ class Transport extends React.Component {
           item.value2 = chartData2F.find(childItem => childItem.name === item.name).value;
         }
       });
-    } 
-    
+    }
+
     return { chartData };
   }
 }

@@ -13,7 +13,6 @@ export const getSuburbId = async (suburb, suburb_state) => {
 export const getDemographics = async (suburb, suburb_state) => {
     const res = await fetch(`http://localhost:5000/AllDemos/${suburb}/${suburb_state}`);
     const result = await res.json();
-    console.log("results", result);
     return result;
 }
 
