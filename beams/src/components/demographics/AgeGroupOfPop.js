@@ -16,16 +16,18 @@ class AgeGroupOfPop extends React.Component {
 
   async componentDidMount() {
     const suburbs = this.props.suburbs;
-    // const suburbInfo = await getDemographics(suburbs[0].suburb, suburbs[0].suburb_state, "AgeGroupOfPopulation");
     const suburbInfo = await getDemographics(suburbs[0].suburb, suburbs[0].suburb_state);
+
+    console.log("Demographics", suburbInfo.demographics[0].items[0]);
+
     this.setState({
       isLoaded: true,
       contents: suburbInfo.demographics[0],
     });
 
     if(this.props.isCompare){
-      // const suburbInfo2 = await getDemographics(suburbs[1].suburb, suburbs[1].suburb_state, "AgeGroupOfPopulation");
       const suburbInfo2 = await getDemographics(suburbs[1].suburb, suburbs[1].suburb_state);
+
       this.setState({
         contents2: suburbInfo2.demographics[0],
       });
@@ -36,8 +38,11 @@ class AgeGroupOfPop extends React.Component {
     var chartData = [];
     var chartData2 = [];
 
+    console.log("contents here", contents);
+
     if (contents[0] != null) {
       contents.map(content => (content.items.map((item) => (chartData.push({ name: item.label, value: item.value })))));
+      console.log("inside");
     }
 
     if (isCompare && contents2[0] != null) {
@@ -49,6 +54,7 @@ class AgeGroupOfPop extends React.Component {
       });
     }
 
+    console.log("chart data", chartData);
     return { chartData };
   }
 
