@@ -10,15 +10,14 @@ export const getSuburbId = async (suburb, suburb_state) => {
     return result[0].ids[0].id;
 }
 
-export const getDemographics = async (suburb, suburb_state, type) => {
-    // const res = await fetch(`http://b3ams.com.au:5000/${type}/${suburb}/${suburb_state}`);
-    const res = await fetch(`http://localhost:5000/${type}/${suburb}/${suburb_state}`);
+export const getDemographics = async (suburb, suburb_state) => {
+    const res = await fetch(`http://localhost:5000/AllDemos/${suburb}/${suburb_state}`);
     const result = await res.json();
+    console.log("results", result);
     return result;
 }
 
 export const getStats = async (suburb, suburb_state) => {
-    // const res = await fetch(`http://b3ams.com.au:5000/${type}/${suburb}/${suburb_state}`);
     const res = await fetch(`http://localhost:5000/AllStats/${suburb}/${suburb_state}`);
     const result = await res.json();
     return result;
@@ -55,7 +54,7 @@ export const getSentiment = async (newsArticles) => {
     var scoreTotal = 0;
 
     var limit = 5;
-    if (newsArticles.articles.length < limit) 
+    if (newsArticles.articles.length < limit)
         limit = newsArticles.articles.length;
 
     for (let i = 0; i < limit; i++) {
@@ -107,8 +106,8 @@ export const getSEData = async (suburb, suburb_state) => {
 
   try{
     //Shitty ABS json data is inconsistent ffs so need to do this quicky hacky to find right suburb
-    id = seArray.find(item => item.name === suburb 
-      || (item.name.split("(")[0] === `${suburb} ` && 
+    id = seArray.find(item => item.name === suburb
+      || (item.name.split("(")[0] === `${suburb} ` &&
         ((item.name.split(" ").pop().split("(").pop() === `${suburb_state})`)
         || (item.name.split(" ").pop().split("(").pop() === `${suburb_state.charAt(0).toUpperCase() + suburb_state.slice(1).toLowerCase()})`)
         || (item.name.split(" ").pop().split("(").pop() === `${suburb_state.charAt(0).toUpperCase() + suburb_state.slice(1).toLowerCase()}).`)
@@ -150,7 +149,7 @@ export const getCrimeRate = async (suburb, suburb_state) => {
         case "TAS": return 0.0508;
         case "WA": return 0.0457;
         case "QLD": return 0.1073;
-        default: return 0.65/2; 
+        default: return 0.65/2;
       }
     }
 
