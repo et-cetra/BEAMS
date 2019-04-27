@@ -64,8 +64,8 @@ class NatureOfOccupancy extends React.Component {
       contents.items.slice(0,3).map((item) => (chartData.push({ name: item.label, value: item.value })));
     }
 
-    if (isCompare && contents2[0] != null) {
-      contents2.map(content => (content.items.slice(0,3).map((item) => (chartData2.push({ name: item.label, value: item.value })))));
+    if (isCompare && contents2.items != null) {
+      contents2.items.slice(0,3).map((item) => (chartData2.push({ name: item.label, value: item.value })));
 
       chartData.forEach(item => {
         var x = chartData2.filter(childItem => childItem.name === item.name);

@@ -82,8 +82,8 @@ class Transport extends React.Component {
 
     chartData = chartDataF.splice(0, 3);
 
-    if (isCompare && contents2[0] != null) {
-      contents2.map(content => (content.items.map((item) => (chartData2F.push({ name: item.label, value: item.value })))));
+    if (isCompare && contents2.items != null) {
+      contents2.items.map((item) => (chartData2F.push({ name: item.label, value: item.value })));
 
       chartData2F = chartData2F.filter(item => item.name !== 'Did not go to work'
         && item.name !== 'Car (Pas.)'
@@ -118,8 +118,8 @@ class Transport extends React.Component {
       });
 
       //Full arrays; no slice
-      contents.map(content => (content.items.map((item) => (chartDataF.push({ name: item.label, value: item.value })))));
-      contents2.map(content => (content.items.map((item) => (chartData2F.push({ name: item.label, value: item.value })))));
+      contents.items.map((item) => (chartDataF.push({ name: item.label, value: item.value })));
+      contents2.items.map((item) => (chartData2F.push({ name: item.label, value: item.value })));
 
       //Fill missing items
       chartData.forEach(item => {
