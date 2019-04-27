@@ -18,8 +18,6 @@ class AgeGroupOfPop extends React.Component {
     const suburbs = this.props.suburbs;
     const suburbInfo = await getDemographics(suburbs[0].suburb, suburbs[0].suburb_state);
 
-    console.log("Demographics", suburbInfo.demographics[0]);
-
     this.setState({
       isLoaded: true,
       contents: suburbInfo.demographics[0],
