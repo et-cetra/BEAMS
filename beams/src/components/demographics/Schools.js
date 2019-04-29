@@ -49,15 +49,7 @@ class Schools extends React.Component {
 
   getSingleList = (getData) => {
     var schoolData = getData;
-    const { chGender, chType, chEducationLevel } = this.state;
-    console.log(chGender);
-
-    if(chGender == "Girls") schoolData = schoolData.filter(item => item.gender === "Girls");
-    if(chGender == "Boys") schoolData = schoolData.filter(item => item.gender === "Boys");
-    if(chType == "Public") schoolData = schoolData.filter(item => item.type === "Government");
-    if(chType == "Private") schoolData = schoolData.filter(item => item.type === "Private");
-    if(chEducationLevel == "Primary") schoolData = schoolData.filter(item => item.educationLevel === "Primary");
-    if(chEducationLevel == "Secondary") schoolData = schoolData.filter(item => item.educationLevel === "Secondary");
+   
 
     if(schoolData.length == 0) 
       return (
@@ -134,12 +126,23 @@ class Schools extends React.Component {
   }
 
   render() {
-    const { error, isLoaded, schoolData, schoolData2 } = this.state;
+    const { error, isLoaded, schoolData2 } = this.state;
+    var schoolData = this.state.schoolData;
     const isCompare = this.props.isCompare;
     const suburbs = this.props.suburbs;
     const suburb = suburbs[0].suburb;
     var suburb2;
     if(isCompare) suburb2 = suburbs[1].suburb;
+
+    const { chGender, chType, chEducationLevel } = this.state;
+    console.log(chGender);
+
+    if(chGender == "Girls") schoolData = schoolData.filter(item => item.gender === "Girls");
+    if(chGender == "Boys") schoolData = schoolData.filter(item => item.gender === "Boys");
+    if(chType == "Public") schoolData = schoolData.filter(item => item.type === "Government");
+    if(chType == "Private") schoolData = schoolData.filter(item => item.type === "Private");
+    if(chEducationLevel == "Primary") schoolData = schoolData.filter(item => item.educationLevel === "Primary");
+    if(chEducationLevel == "Secondary") schoolData = schoolData.filter(item => item.educationLevel === "Secondary");
 
     if (error) {
         return <div>Error: {error.message}</div>;
@@ -201,7 +204,6 @@ class Schools extends React.Component {
           </FormGroup>
 
           <div className="ScrollMenu">
-          {console.log(schoolData)}
           {!isCompare ? this.getSingleList(schoolData) 
             : this.getMergedList(schoolData, schoolData2, suburb, suburb2)}
           </div>

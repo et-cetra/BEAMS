@@ -72,10 +72,10 @@
 }
 
 .GMapsMain{
-  width: 100%;
-  height: 500px;
-  padding-bottom: 36px;
-  padding-top: 12px;
+  width: 102%;
+  height: 576px;
+  padding-bottom: 30px;
+  padding-top: 18px;
 }
 
 .LineChart{
@@ -115,8 +115,7 @@
 
 .SchoolPanel{
   padding-top: 12px;
-  width: 100%;
-  box-shadow: none;
+  width: 103%;
 }
 
 .SchoolsTextSub{
@@ -236,12 +235,13 @@
 
 .SchoolControls{
   padding: 7px;
+  
 }
 
 .SchoolControlBlock{
   padding-top: 6px;
   padding-left: 4px;
-  padding-right: 40px;
-  margin-right: 15px;
+  padding-right: 20px;
+  margin-right: 14px;
 }
 
