@@ -4,7 +4,6 @@ import {jsonCrimeData} from './data/CrimeData';
 const axios = require('axios')
 
 export const getSuburbId = async (suburb, suburb_state) => {
-    // const res = await fetch(`http://b3ams.com.au:5000/suburb/${suburb}/${suburb_state}`);
     const res = await fetch(`http://localhost:5000/suburb/${suburb}/${suburb_state}`);
     const result = await res.json();
     return result[0].ids[0].id;
@@ -131,7 +130,7 @@ export const getCrimeRate = async (suburb, suburb_state) => {
     let found = false;
 
     // Get total population
-    const suburbInfo = await getDemographics(suburb, suburb_state, "AgeGroupOfPopulation");
+    const suburbInfo = await getDemographics(suburb, suburb_state);
     const population = suburbInfo.demographics[0].total;
 
     for (var i = 0; i < arrayLength; i++) {

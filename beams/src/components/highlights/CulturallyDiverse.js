@@ -12,8 +12,8 @@ class CulturallyDiverse extends React.Component {
     // If top country of birth is < 50% give tag 'Culturally Diverse'
 
     async isCulturallyDiverse() {
-        const suburbInfo = await getDemographics(this.props.suburb, this.props.suburb_state, "CountryOfBirth");
-        var cobArray = suburbInfo.demographics[0].items;
+        const suburbInfo = await getDemographics(this.props.suburb, this.props.suburb_state);
+        var cobArray = suburbInfo.demographics[1].items;
         const total = suburbInfo.demographics[0].total;
         if ((cobArray[0].value / total) <= 0.4) {
             return true;
@@ -32,7 +32,7 @@ class CulturallyDiverse extends React.Component {
     render() {
         if (this.state.isCulturallyDiverse) {
             return (
-                <Chip avatar={<Avatar><FaceIcon/></Avatar>} label="Culturally Diverse" 
+                <Chip avatar={<Avatar><FaceIcon/></Avatar>} label="Culturally Diverse"
                 className="ChipsHighlight" color={this.props.compareColor}/>
             );
         } else {

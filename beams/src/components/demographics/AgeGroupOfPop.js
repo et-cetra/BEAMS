@@ -18,8 +18,6 @@ class AgeGroupOfPop extends React.Component {
     const suburbs = this.props.suburbs;
     const suburbInfo = await getDemographics(suburbs[0].suburb, suburbs[0].suburb_state);
 
-    console.log("Demographics", suburbInfo.demographics[0]);
-
     this.setState({
       isLoaded: true,
       contents: suburbInfo.demographics[0],
@@ -38,8 +36,6 @@ class AgeGroupOfPop extends React.Component {
     var chartData = [];
     var chartData2 = [];
 
-    console.log("contents here", contents);
-
     if (contents.items != null) {
       contents.items.map((item) => (chartData.push({ name: item.label, value: item.value })));
     }
@@ -53,7 +49,6 @@ class AgeGroupOfPop extends React.Component {
       });
     }
 
-    console.log("chart data", chartData);
     return { chartData };
   }
 

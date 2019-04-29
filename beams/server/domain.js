@@ -46,8 +46,8 @@ getSuburbIdRaw = async (token, suburb, state) => {
     }
 }
 
-getDemographics = async (token, hood_id, type) => {
-    const key = hood_id + type;
+getDemographics = async (token, hood_id, state) => {
+    const key = hood_id + state;
     return cache.get(key, () => getDemographicsRaw(token, hood_id));
 }
 
