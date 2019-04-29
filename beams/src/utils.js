@@ -132,7 +132,7 @@ export const getCrimeRate = async (suburb, suburb_state) => {
     let found = false;
 
     // Get total population
-    const suburbInfo = await getDemographics(suburb, suburb_state, "AgeGroupOfPopulation");
+    const suburbInfo = await getDemographics(suburb, suburb_state);
     const population = suburbInfo.demographics[0].total;
 
     for (var i = 0; i < arrayLength; i++) {
