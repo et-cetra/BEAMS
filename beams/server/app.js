@@ -3,6 +3,7 @@ const express = require('express');
 const app = express();
 const port = 5000;
 var token = null;
+const utils = require("../src/utils.js");
 
 const getToken = async () => {
     if (!token) {
@@ -15,6 +16,16 @@ app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     next();
 });
+
+
+//
+app.get('/suburb/:suburb/:state', async (req, res) =>
+{
+    const surrounding = await utils.getSurrounding(req.params.suburb, req.params.state)
+    res.json(surrounding);
+})
+//
+
 
 app.get('/suburb/:suburb/:state', async (req, res) =>
 {

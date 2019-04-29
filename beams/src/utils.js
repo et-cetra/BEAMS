@@ -1,4 +1,7 @@
-import PlaceSearch from 'googleplaces';
+import { AssertionError } from 'assert';
+
+// import axios from 'axios';
+const axios = require('axios');
 
 export const getSuburbId = async (suburb, suburb_state) => {
     // const res = await fetch(`http://b3ams.com.au:5000/suburb/${suburb}/${suburb_state}`);
@@ -77,12 +80,12 @@ export const getSurrounding = async (suburb, suburb_state) => {
     const location = await getLocation(suburb, suburb_state);
     const coords = location.results[0].locations[0].latLng;
     console.log(coords);
-    const radius = 3000;
-
-    const url = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location='+coords.lat+','+coords.lng+'&radius='+radius+'&type=locality&key=AIzaSyDIMGCB2qSD9qIB0mrZu0uGEmZlc9e8m-Y'
-    const res = await fetch(url);
-    const result = await res.json();
-    console.log("HERE");
+    const radius = 5000;
+    
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location='+coords.lat+','+coords.lng+'&radius='+radius+'&type=locality&key=AIzaSyDIMGCB2qSD9qIB0mrZu0uGEmZlc9e8m-Y');
+    xhr.setRequestHeader('Access-Control-Allow-Origin', true);
+    const result = await xhr.send();
     console.log(result);
     return result;
 }
