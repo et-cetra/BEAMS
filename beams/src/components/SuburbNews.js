@@ -3,8 +3,6 @@ import '../components/SuburbNews.css';
 import { getNews } from '../utils';
 import { Paper, Typography, CircularProgress } from '@material-ui/core';
 
-// Request for Population Ages in Maroubra: https://api.domain.com.au/v1/demographics?level=Suburb&id=27512&types=AgeGroupOfPopulation&year=2016
-
 class SuburbNews extends React.Component {
     constructor(props) {
         super(props);

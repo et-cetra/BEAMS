@@ -48,15 +48,15 @@ getSuburbIdRaw = async (token, suburb, state) => {
 
 getDemographics = async (token, hood_id, type) => {
     const key = hood_id + type;
-    return cache.get(key, () => getDemographicsRaw(token, hood_id, type));
+    return cache.get(key, () => getDemographicsRaw(token, hood_id));
 }
 
-getDemographicsRaw = async (token, hood_id, type) => {
+getDemographicsRaw = async (token, hood_id) => {
     const headers = {
         'Authorization': `Bearer ${token}`
     };
     try {
-        const res = await axios.get(`https://api.domain.com.au/v1/demographics?level=Suburb&id=${hood_id}&types=${type}&year=2018`, {
+        const res = await axios.get(`https://api.domain.com.au/v1/demographics?level=Suburb&id=${hood_id}&year=2018`, {
             headers: headers
         });
         await res;

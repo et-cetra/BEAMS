@@ -14,21 +14,47 @@ class AgeGroupOfPop extends React.Component {
       };
   }
 
-  async componentDidMount() {        
+  async componentDidMount() {
     const suburbs = this.props.suburbs;
-    const suburbInfo = await getDemographics(suburbs[0].suburb, suburbs[0].suburb_state, "AgeGroupOfPopulation");
+    const suburbInfo = await getDemographics(suburbs[0].suburb, suburbs[0].suburb_state);
+
+    console.log("Demographics", suburbInfo.demographics[0]);
 
     this.setState({
       isLoaded: true,
-      contents: suburbInfo.demographics,
+      contents: suburbInfo.demographics[0],
     });
 
     if(this.props.isCompare){
-      const suburbInfo2 = await getDemographics(suburbs[1].suburb, suburbs[1].suburb_state, "AgeGroupOfPopulation");
+      const suburbInfo2 = await getDemographics(suburbs[1].suburb, suburbs[1].suburb_state);
+
       this.setState({
-        contents2: suburbInfo2.demographics,
+        contents2: suburbInfo2.demographics[0],
       });
-    } 
+    }
+  }
+
+  getChartData(isCompare, contents2, contents) {
+    var chartData = [];
+    var chartData2 = [];
+
+    console.log("contents here", contents);
+
+    if (contents.items != null) {
+      contents.items.map((item) => (chartData.push({ name: item.label, value: item.value })));
+    }
+
+    if (isCompare && contents2.items != null) {
+      contents2.items.map((item) => (chartData2.push({ name: item.label, value: item.value })));
+
+      chartData.forEach(item => {
+        var x = chartData2.filter(childItem => childItem.name === item.name);
+        item['value2'] = x[0].value;
+      });
+    }
+
+    console.log("chart data", chartData);
+    return { chartData };
   }
 
   render() {
@@ -49,30 +75,13 @@ class AgeGroupOfPop extends React.Component {
     } else {
       return (
       <div>
-          <DGSection isCompare={isCompare} suburbs={this.props.suburbs} 
+          <DGSection isCompare={isCompare} suburbs={this.props.suburbs}
             loading={0} COLORS={COLORS} chartData={chartData} type="AgeGroupOfPopulation"/>
       </div>
       );
     }
   }
 
-  getChartData(isCompare, contents2, contents) {
-    var chartData = [];
-    var chartData2 = [];
-   
-    contents.map(content => (content.items.map((item) => (chartData.push({ name: item.label, value: item.value })))));
-
-    if (isCompare && contents2[0] != null) {
-      contents2.map(content => (content.items.map((item) => (chartData2.push({ name: item.label, value: item.value })))));
-
-      chartData.forEach(item => {
-        var x = chartData2.filter(childItem => childItem.name === item.name);
-        item['value2'] = x[0].value;
-      });
-    }
-
-    return { chartData };
-  }
 }
 
 export default AgeGroupOfPop;
