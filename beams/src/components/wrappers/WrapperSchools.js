@@ -11,7 +11,7 @@ class WrapperSchools extends React.Component {
       const suburb = suburbs[0].suburb;
 
       return (
-        <div>
+        <div style={{width: "100%"}}>
           <Schools isCompare={isCompare} suburbs={suburbs} key={'Schools'+suburb}/>
         </div>
       );

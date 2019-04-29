@@ -38,6 +38,7 @@ class SuburbPage extends React.Component {
       <WrapperHeader isCompare={false} suburbs={suburbs} onSuburbCompare={onSuburbCompare} 
       COLORS={COLORS} onSuburbSelect={this.props.onSuburbSelect}/>
       <Fade in timeout={750}>
+      <Grid container spacing={16} direction="column" justify="flex-start" alignItems="baseline">
       <Grid container spacing={16}
       direction="row"
       justify="flex-start"
@@ -50,9 +51,6 @@ class SuburbPage extends React.Component {
         <Grid className="LeftContainer">
           <WrapperStats suburbs={suburbs} COLORS={COLORS}/>
           <WrapperDG suburbs={suburbs} COLORS={COLORS}/>
-          <Grid item className="SchoolsContainer">
-            <WrapperSchools suburbs={suburbs} isCompare={false}/>
-          </Grid>
         </Grid>
         </Grid>
         </Slide>
@@ -67,8 +65,15 @@ class SuburbPage extends React.Component {
             <WrapperNews suburb={suburbs[0].suburb} suburb_state={suburbs[0].suburb_state}/> 
           </Grid>
         </Grid>
+
+      
         </Grid>
-        </Slide>
+        
+        </Slide> 
+        <Grid item xs={12} className="SchoolsContainer">
+          <WrapperSchools suburbs={suburbs} isCompare={false}/>
+         </Grid>
+      </Grid>
       </Grid>
       </Fade>
       </div>
