@@ -2,9 +2,10 @@ import React from 'react';
 import '../../App.css';
 import '../../pages/SuburbPage.css';
 import { getLocation, getSchools } from '../../utils.js';
-import { ExpansionPanel, ExpansionPanelSummary, ExpansionPanelDetails, Typography, CircularProgress, Paper, Chip, Card, FormControlLabel, FormControl, FormLabel, RadioGroup, Radio, FormGroup } from '@material-ui/core';
+import { ExpansionPanel, ExpansionPanelSummary, ExpansionPanelDetails, Typography, CircularProgress, Chip, Card, FormControlLabel, FormControl, FormLabel, RadioGroup, Radio, FormGroup, MuiThemeProvider, createMuiTheme, Avatar } from '@material-ui/core';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import mSchools from '../../assets/ic_schools.png'
+import { HumanMaleFemale, HumanMale, HumanFemale, Bible, Bank, CalculatorVariant, BookOpenPageVariant, Certificate, StarCircle } from 'mdi-material-ui'
 
 class Schools extends React.Component {
   constructor(props) {
@@ -47,10 +48,40 @@ class Schools extends React.Component {
     this.setState({ [name]: event.target.value });
   };
 
-  getSingleList = (getData) => {
-    var schoolData = getData;
-   
+  getThemeColor(tag) {
+    var theme;
 
+    switch(tag){
+      case "Girls": theme = createMuiTheme({palette: {primary: {main: '#E91E63'}}}); break;
+      case "Boys": theme = createMuiTheme({palette: {primary: {main: '#2196F3'}}}); break;
+      case "Co-ed": theme = createMuiTheme({palette: {primary: {main: '#9C27B0'}}}); break;
+      case "Private": theme = createMuiTheme({palette: {primary: {main: '#673AB7'}}}); break;
+      case "Catholic": theme = createMuiTheme({palette: {primary: {main: '#673AB7'}}}); break;
+      case "Primary": theme = createMuiTheme({palette: {primary: {main: '#FF5722'}}}); break;
+      case "Secondary": theme = createMuiTheme({palette: {primary: {main: '#009688'}}}); break;
+
+      default: theme = createMuiTheme({palette: {primary: {main: '#3F51B5'}}});
+    }
+  
+      return theme;
+  }
+
+  getChipIcon = (tag) => {
+    switch(tag){
+      case "Girls": return (<Avatar><HumanFemale/></Avatar>);
+      case "Boys": return (<Avatar><HumanMale/></Avatar>);
+      case "Co-ed": return (<Avatar><HumanMaleFemale/></Avatar>);
+      case "Private": return (<Avatar><Certificate/></Avatar>);
+      case "Government": return (<Avatar><Bank/></Avatar>);
+      case "Catholic": return (<Avatar><Bible/></Avatar>);
+      case "Primary": return (<Avatar><BookOpenPageVariant/></Avatar>);
+      case "Secondary": return (<Avatar><CalculatorVariant/></Avatar>);
+
+      default: return (<Avatar><StarCircle/></Avatar>);
+    }
+  }
+
+  getSingleList = (schoolData) => {  
     if(schoolData.length == 0) 
       return (
         <div>
@@ -62,87 +93,112 @@ class Schools extends React.Component {
         </div>
       );
     return(
-      schoolData.map(
-      (item) => (
-
-      <div key={item.id} style={{paddingTop: "5px"}}>
-      <Card className="SchoolCard">
-        <a href={item.websiteUrl} target="_blank" rel="noopener noreferrer">
-          <Typography className="SchoolText" inline variant="h5" style={{fontSize: "15px"}}>
-          {item.name}
-          </Typography>
-        </a>
-        <Chip className="SchoolTags" label={item.type}/>
-        <Chip className="SchoolTags" label={item.educationLevel}/>
-        <Chip className="SchoolTags" label={item.gender}/>
-      </Card>
-      </div>
+      <div>
+      {schoolData.map((item) => (
+        <div key={item.id} style={{paddingTop: "5px"}}>
+        <Card className="SchoolCard">
+          <a href={item.websiteUrl} target="_blank" rel="noopener noreferrer">
+            <Typography className="SchoolText" inline variant="h5" style={{fontSize: "15px"}}>
+            {item.name}
+            </Typography>
+          </a>
+          <MuiThemeProvider theme={this.getThemeColor(item.type)}>
+          <Chip avatar={this.getChipIcon(item.type)} color="primary" className="SchoolTags" label={item.type}/>
+          </MuiThemeProvider>
+          <MuiThemeProvider theme={this.getThemeColor(item.educationLevel)}>
+          <Chip avatar={this.getChipIcon(item.educationLevel)} color="primary" className="SchoolTags" label={item.educationLevel}/>
+          </MuiThemeProvider>
+          <MuiThemeProvider theme={this.getThemeColor(item.gender)}>
+          <Chip avatar={this.getChipIcon(item.gender)} color="primary" className="SchoolTags" label={item.gender}/>
+          </MuiThemeProvider>
+        </Card>
+        </div>
       
-      )
-      )
+      ))}
+      </div>
     );
   }
 
   getMergedList = (schoolData, schoolData2, suburb, suburb2) => {
     return(
      <div>
-      <div style={{width: "49%", float: "left"}}>
+      <div className="SchoolCardMergedContainer" style={{float: "left"}}>
       <Chip label={suburb} color="primary" className="SchoolsListChip"/>
-      {schoolData.map(
-        (item) => (
-        <ExpansionPanel key={item.id}>
-        <ExpansionPanelSummary expandIcon={<ExpandMoreIcon/>}>
-          <Typography className="SchoolsListText" inline>{item.name}</Typography>
-        </ExpansionPanelSummary>
-        <ExpansionPanelDetails>
-          <Typography>
-          <b>Type</b> {item.type} <br/>
-          <b>Education Level</b> {item.educationLevel} <br/>
-          <b>Gender</b> {item.gender}
-          </Typography>
-        </ExpansionPanelDetails>                       
-        </ExpansionPanel>))}
+      {schoolData.map((item) => (
+        <div key={item.id} style={{paddingTop: "5px"}}>
+        <Card className="SchoolCard">
+          <a href={item.websiteUrl} target="_blank" rel="noopener noreferrer">
+            <Typography className="SchoolText" inline variant="h5" style={{fontSize: "15px"}}>
+            {item.name}
+            </Typography>
+          </a>
+          <MuiThemeProvider theme={this.getThemeColor(item.type)}>
+          <Chip avatar={this.getChipIcon(item.type)} color="primary" className="SchoolTags" label={item.type}/>
+          </MuiThemeProvider>
+          <MuiThemeProvider theme={this.getThemeColor(item.educationLevel)}>
+          <Chip avatar={this.getChipIcon(item.educationLevel)} color="primary" className="SchoolTags" label={item.educationLevel}/>
+          </MuiThemeProvider>
+          <MuiThemeProvider theme={this.getThemeColor(item.gender)}>
+          <Chip avatar={this.getChipIcon(item.gender)} color="primary" className="SchoolTags" label={item.gender}/>
+          </MuiThemeProvider>
+        </Card>
+        </div>
+      
+      ))}
       </div>
 
-      <div style={{width: "49%", float: "right"}}>
+      <div className="SchoolCardMergedContainer" style={{float: "right"}}>
       <Chip label={suburb2} color="secondary" className="SchoolsListChip"/>
-      {schoolData2.map(
-        (item) => (
-        <ExpansionPanel key={item.id}>
-        <ExpansionPanelSummary expandIcon={<ExpandMoreIcon/>}>
-          <Typography className="SchoolsListText" inline>{item.name}</Typography>
-        </ExpansionPanelSummary>
-        <ExpansionPanelDetails>
-          <Typography>
-          <b>Type</b> {item.type} <br/>
-          <b>Education Level</b> {item.educationLevel} <br/>
-          <b>Gender</b> {item.gender}
-          </Typography>
-        </ExpansionPanelDetails>                       
-        </ExpansionPanel>))}
+      {schoolData2.map((item) => (
+        <div key={item.id} style={{paddingTop: "5px"}}>
+        <Card className="SchoolCard">
+          <a href={item.websiteUrl} target="_blank" rel="noopener noreferrer">
+            <Typography className="SchoolText" inline variant="h5" style={{fontSize: "15px"}}>
+            {item.name}
+            </Typography>
+          </a>
+          <MuiThemeProvider theme={this.getThemeColor(item.type)}>
+          <Chip avatar={this.getChipIcon(item.type)} color="primary" className="SchoolTags" label={item.type}/>
+          </MuiThemeProvider>
+          <MuiThemeProvider theme={this.getThemeColor(item.educationLevel)}>
+          <Chip avatar={this.getChipIcon(item.educationLevel)} color="primary" className="SchoolTags" label={item.educationLevel}/>
+          </MuiThemeProvider>
+          <MuiThemeProvider theme={this.getThemeColor(item.gender)}>
+          <Chip avatar={this.getChipIcon(item.gender)} color="primary" className="SchoolTags" label={item.gender}/>
+          </MuiThemeProvider>
+        </Card>
+        </div>
+      ))}
       </div>
-      </div>
+    </div>
     );
   }
 
   render() {
-    const { error, isLoaded, schoolData2 } = this.state;
-    var schoolData = this.state.schoolData;
+    const { error, isLoaded, chGender, chType, chEducationLevel } = this.state;
+    var { schoolData, schoolData2 } = this.state;
     const isCompare = this.props.isCompare;
     const suburbs = this.props.suburbs;
     const suburb = suburbs[0].suburb;
     var suburb2;
-    if(isCompare) suburb2 = suburbs[1].suburb;
 
-    const { chGender, chType, chEducationLevel } = this.state;
-    console.log(chGender);
+    if(chGender === "Girls") schoolData = schoolData.filter(item => item.gender === "Girls");
+    if(chGender === "Boys") schoolData = schoolData.filter(item => item.gender === "Boys");
+    if(chType === "Public") schoolData = schoolData.filter(item => item.type === "Government");
+    if(chType === "Private") schoolData = schoolData.filter(item => item.type === "Private");
+    if(chEducationLevel === "Primary") schoolData = schoolData.filter(item => item.educationLevel === "Primary");
+    if(chEducationLevel === "Secondary") schoolData = schoolData.filter(item => item.educationLevel === "Secondary");
 
-    if(chGender == "Girls") schoolData = schoolData.filter(item => item.gender === "Girls");
-    if(chGender == "Boys") schoolData = schoolData.filter(item => item.gender === "Boys");
-    if(chType == "Public") schoolData = schoolData.filter(item => item.type === "Government");
-    if(chType == "Private") schoolData = schoolData.filter(item => item.type === "Private");
-    if(chEducationLevel == "Primary") schoolData = schoolData.filter(item => item.educationLevel === "Primary");
-    if(chEducationLevel == "Secondary") schoolData = schoolData.filter(item => item.educationLevel === "Secondary");
+    if(isCompare) {
+      suburb2 = suburbs[1].suburb;
+
+      if(chGender === "Girls") schoolData2 = schoolData2.filter(item => item.gender === "Girls");
+      if(chGender === "Boys") schoolData2 = schoolData2.filter(item => item.gender === "Boys");
+      if(chType === "Public") schoolData2 = schoolData2.filter(item => item.type === "Government");
+      if(chType === "Private") schoolData2 = schoolData2.filter(item => item.type === "Private");
+      if(chEducationLevel === "Primary") schoolData2 = schoolData2.filter(item => item.educationLevel === "Primary");
+      if(chEducationLevel === "Secondary") schoolData2 = schoolData2.filter(item => item.educationLevel === "Secondary");
+    }
 
     if (error) {
         return <div>Error: {error.message}</div>;

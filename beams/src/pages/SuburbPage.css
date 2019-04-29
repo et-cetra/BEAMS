@@ -218,10 +218,15 @@
   padding: 14px;
 }
 
+.SchoolCardMerged{
+  padding: 14px;
+  max-height: 200px;
+}
+
 .SchoolText{
   float: left;
   padding: 5px;
-  max-width: 300px;
+  max-width: 25%;
 }
 
 .SchoolTags{
@@ -243,5 +248,9 @@
   padding-left: 4px;
   padding-right: 20px;
   margin-right: 14px;
+}
+
+.SchoolCardMergedContainer{
+  width: 49%;
 }
 
