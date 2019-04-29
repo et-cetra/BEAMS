@@ -29,7 +29,6 @@ class FamilyFriendly extends React.Component {
                 fiveFound = 1;
             }
             if (zeroFound && fiveFound) {
-                console.log("both found", youngTotal, total);
                 if ((youngTotal / total) > 0.20) {
                     return true;
                 } else {

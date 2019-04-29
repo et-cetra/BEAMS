@@ -157,9 +157,6 @@ class DGSection extends React.Component {
     const isCompare = this.props.isCompare;
     const suburbs = this.props.suburbs;
 
-
-    console.log("Section chart data", chartData);
-
     if(this.props.loading){
       return (
         <div className="DGTab">

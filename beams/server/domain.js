@@ -52,7 +52,6 @@ getDemographics = async (token, hood_id, state) => {
 }
 
 getDemographicsRaw = async (token, hood_id) => {
-    console.log("hood id", hood_id);
     const headers = {
         'Authorization': `Bearer ${token}`
     };
