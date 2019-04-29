@@ -1,7 +1,6 @@
 import React from 'react';
 import './SuburbPage.css'
 import './DevPage.css'
-import avatar from '../assets/avatar2.png'
 import bei from'../assets/bei.png'
 import moz from'../assets/moz.png'
 import mariya from'../assets/mariya.png'
