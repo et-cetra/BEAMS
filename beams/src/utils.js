@@ -163,5 +163,6 @@ export const getSurrounding = async (suburb, suburb_state) => {
     const url = 'https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/nearbysearch/json?location='+coords.lat+','+coords.lng+'&radius='+radius+'&type=locality&key=AIzaSyDIMGCB2qSD9qIB0mrZu0uGEmZlc9e8m-Y'
     const res = await axios.get(url);
     const result = await res.json();
+    console.log(result);
     return result;
 }
