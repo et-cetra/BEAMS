@@ -244,7 +244,6 @@
 }
 
 .SchoolControlBlock{
-  padding-top: 6px;
   padding-left: 4px;
   padding-right: 20px;
   margin-right: 14px;
@@ -252,5 +251,11 @@
 
 .SchoolCardMergedContainer{
   width: 49%;
+}
+
+.ExpansionPanelSchools{
+  width: 99%;
+  padding-top: 2px;
+  padding-bottom: 15px;
 }
 

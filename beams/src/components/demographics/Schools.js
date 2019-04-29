@@ -2,7 +2,7 @@ import React from 'react';
 import '../../App.css';
 import '../../pages/SuburbPage.css';
 import { getLocation, getSchools } from '../../utils.js';
-import { ExpansionPanel, ExpansionPanelSummary, ExpansionPanelDetails, Typography, CircularProgress, Chip, Card, FormControlLabel, FormControl, FormLabel, RadioGroup, Radio, FormGroup, MuiThemeProvider, createMuiTheme, Avatar } from '@material-ui/core';
+import { ExpansionPanel, ExpansionPanelSummary, ExpansionPanelDetails, Typography, CircularProgress, Chip, Card, FormControlLabel, FormControl, FormLabel, RadioGroup, Radio, FormGroup, MuiThemeProvider, createMuiTheme, Avatar, Divider } from '@material-ui/core';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import mSchools from '../../assets/ic_schools.png'
 import { HumanMaleFemale, HumanMale, HumanFemale, Bible, Bank, CalculatorVariant, BookOpenPageVariant, Certificate, StarCircle } from 'mdi-material-ui'
@@ -226,38 +226,45 @@ class Schools extends React.Component {
             </Typography>
           </ExpansionPanelSummary>
           
-          <FormGroup row className="SchoolControls">
-          <FormControl component="fieldset">
-            <div className="SchoolControlBlock">
-            <FormLabel component="legend">Gender</FormLabel>
-            <RadioGroup row aria-label="Gender" name="gender1" value={this.state.chGender} onChange={this.handleChange('chGender')}>
-              <FormControlLabel value="All" control={<Radio/>} label="All"/>
-              <FormControlLabel value="Girls" control={<Radio/>} label="Girls"/>
-              <FormControlLabel value="Boys" control={<Radio/>} label="Boys"/>
-            </RadioGroup>
-            </div>
-          </FormControl>  
-          <FormControl component="fieldset">
-            <div className="SchoolControlBlock">
-            <FormLabel component="legend">Type</FormLabel>
-            <RadioGroup row aria-label="Type" name="type1" value={this.state.chType} onChange={this.handleChange('chType')}>
-              <FormControlLabel value="All" control={<Radio/>} label="All"/>
-              <FormControlLabel value="Public" control={<Radio/>} label="Public"/>
-              <FormControlLabel value="Private" control={<Radio/>} label="Private"/>
-            </RadioGroup>
-            </div>
-          </FormControl>  
-          <FormControl component="fieldset">
-            <div className="SchoolControlBlock">
-            <FormLabel component="legend">Education Level</FormLabel>
-            <RadioGroup row aria-label="Education Level" name="level1" value={this.state.chEducationLevel} onChange={this.handleChange('chEducationLevel')}>
-              <FormControlLabel value="All" control={<Radio/>} label="All"/>
-              <FormControlLabel value="Primary" control={<Radio/>} label="Primary (K-6)"/>
-              <FormControlLabel value="Secondary" control={<Radio/>} label="Secondary (7-12)"/>
-            </RadioGroup>
-            </div>
-          </FormControl>  
-          </FormGroup>
+          <ExpansionPanel className="ExpansionPanelSchools" style={{boxShadow: 'none'}}>
+            <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}><Typography variant="button">Filters</Typography></ExpansionPanelSummary>
+            <ExpansionPanelDetails>
+              <div>
+              <FormGroup row className="SchoolControls">
+              <FormControl component="fieldset">
+                <div className="SchoolControlBlock">
+                <FormLabel component="legend">Gender</FormLabel>
+                <RadioGroup row aria-label="Gender" name="gender1" value={this.state.chGender} onChange={this.handleChange('chGender')}>
+                  <FormControlLabel value="All" control={<Radio/>} label="All"/>
+                  <FormControlLabel value="Girls" control={<Radio/>} label="Girls"/>
+                  <FormControlLabel value="Boys" control={<Radio/>} label="Boys"/>
+                </RadioGroup>
+                </div>
+              </FormControl>  
+              <FormControl component="fieldset">
+                <div className="SchoolControlBlock">
+                <FormLabel component="legend">Type</FormLabel>
+                <RadioGroup row aria-label="Type" name="type1" value={this.state.chType} onChange={this.handleChange('chType')}>
+                  <FormControlLabel value="All" control={<Radio/>} label="All"/>
+                  <FormControlLabel value="Public" control={<Radio/>} label="Public"/>
+                  <FormControlLabel value="Private" control={<Radio/>} label="Private"/>
+                </RadioGroup>
+                </div>
+              </FormControl>  
+              <FormControl component="fieldset">
+                <div className="SchoolControlBlock">
+                <FormLabel component="legend">Education Level</FormLabel>
+                <RadioGroup row aria-label="Education Level" name="level1" value={this.state.chEducationLevel} onChange={this.handleChange('chEducationLevel')}>
+                  <FormControlLabel value="All" control={<Radio/>} label="All"/>
+                  <FormControlLabel value="Primary" control={<Radio/>} label="Primary (K-6)"/>
+                  <FormControlLabel value="Secondary" control={<Radio/>} label="Secondary (7-12)"/>
+                </RadioGroup>
+                </div>
+              </FormControl>  
+              </FormGroup>
+              </div>
+            </ExpansionPanelDetails>
+          </ExpansionPanel>
 
           <div className="ScrollMenu">
           {!isCompare ? this.getSingleList(schoolData) 
