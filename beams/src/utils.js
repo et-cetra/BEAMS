@@ -79,13 +79,24 @@ export const getSentiment = async (newsArticles) => {
 export const getSurrounding = async (suburb, suburb_state) => {
     const location = await getLocation(suburb, suburb_state);
     const coords = location.results[0].locations[0].latLng;
-    console.log(coords);
-    const radius = 5000;
-    
-    var xhr = new XMLHttpRequest();
-    xhr.open('GET', 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location='+coords.lat+','+coords.lng+'&radius='+radius+'&type=locality&key=AIzaSyDIMGCB2qSD9qIB0mrZu0uGEmZlc9e8m-Y');
-    xhr.setRequestHeader('Access-Control-Allow-Origin', true);
-    const result = await xhr.send();
-    console.log(result);
-    return result;
+    const radii = [2000,3000,4000,5000,6000];
+    var results = [];
+    var duplicate = 0;
+
+    for (var i = 0; i < radii.length; i++) {
+        const url = 'https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/nearbysearch/json?location='+coords.lat+','+coords.lng+'&radius='+radii[i]+'&type=locality&key=AIzaSyDIMGCB2qSD9qIB0mrZu0uGEmZlc9e8m-Y'
+        const res = await fetch(url);
+        const result = await res.json();
+        for (var iResult = 0; iResult < result.results.length; iResult++) {
+            duplicate = 0;
+            for (var iReturn = 0; iReturn < results.length; iReturn++) {
+                if (result.results[iResult].name == results[iReturn].name || result.results[iResult].name == suburb)
+                    duplicate = 1;
+            }
+            if (duplicate == 0)
+                results.push(result.results[iResult]);
+        }
+    }
+
+    return results;
 }

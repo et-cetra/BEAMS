@@ -20,6 +20,7 @@ import mNews from '../assets/ic_news.png'
 import mDG from '../assets/ic_demographics.png'
 import mChart from '../assets/ic_chart.png'
 
+import { getSurrounding } from '../utils.js'
 
 class SuburbPage extends React.Component {
   state = {
@@ -34,17 +35,17 @@ class SuburbPage extends React.Component {
   handleChange2 = (event, value2) => {
     this.setState({ value2 });
   };
-
   render() {
     console.log("Suburb page", this.props);
     var { value } = this.state;
     var { value2 } = this.state;
-
+    
     const COLORS = ['#E62927', '#EE6A15', '#213084', '#333F48', '#04091E'];
-
+    
     if (this.props.suburb != null) {
       const suburb = this.props.suburb;
       const suburb_state = this.props.suburb_state;
+      getSurrounding(this.props.suburb, this.props.suburb_state);
       const url = `https://www.google.com/maps/embed/v1/place?key=AIzaSyDIMGCB2qSD9qIB0mrZu0uGEmZlc9e8m-Y&q=${suburb}`;
     return (
       <div className="ParentContainer">

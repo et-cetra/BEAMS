@@ -17,16 +17,6 @@ app.use(function(req, res, next) {
     next();
 });
 
-
-//
-app.get('/suburb/:suburb/:state', async (req, res) =>
-{
-    const surrounding = await utils.getSurrounding(req.params.suburb, req.params.state)
-    res.json(surrounding);
-})
-//
-
-
 app.get('/suburb/:suburb/:state', async (req, res) =>
 {
     await getToken()
