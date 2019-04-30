@@ -8,7 +8,7 @@ import { Grid, Typography, Tabs, Tab, Paper } from '@material-ui/core';
 
 import { HomeCity, HomeGroup } from 'mdi-material-ui'
 import mChart from '../../assets/ic_chart.png'
-
+import DomainLink from '../DomainLink'
 
 class WrapperStats extends React.Component {
     state = {
@@ -27,6 +27,8 @@ class WrapperStats extends React.Component {
       const suburb = suburbs[0].suburb;
 
       return (
+        <DomainLink salerent={this.state.value} />
+
         <Grid item className="StatsContainer" >
         <div className="SubheadingContainer">
           <img src={mChart} className="IconDef" alt="stats"/>
@@ -46,7 +48,6 @@ class WrapperStats extends React.Component {
             <Tab icon={<HomeGroup/>} label="Sold Property Prices" />
           </Tabs>
         </Paper>
-
         </Grid>
       );
     }

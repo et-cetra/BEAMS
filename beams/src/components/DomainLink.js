@@ -1,5 +1,6 @@
 import React from 'react';
 import { getPostcode } from '../utils.js'
+import WrapperStats from './wrappers/WrapperStats'
 
 class DomainLink extends React.Component {
     state = {
@@ -20,10 +21,21 @@ class DomainLink extends React.Component {
 
     render() {
         const postcode = this.state.postcode
-        const suburb = this.props.suburb.toLowerCase()
+        const suburb = (this.props.suburb.toLowerCase()).replace(/ /g,"-");
         const suburb_state = this.props.suburb_state.toLowerCase()
-        //https://www.domain.com.au/sale/merrylands-nsw-2160/inspection-times/?excludeunderoffer=1&ssubs=1
-        var link = "https://www.domain.com.au/sale/"+ suburb + "-" + suburb_state + "-" + postcode + "/inspection-times/?excludeunderoffer=1&ssubs=1"
+        const salerent = this.props.salerent
+        if (WrapperStats.state.value === 1) salerent = "sale";
+
+        {/*
+        const ptype = this.props.property_type.toLowerCase()
+        const bedrooms = this.props.bedrooms
+        */}
+
+        //e.g. https://www.domain.com.au/sale/parramatta-nsw-2150/?ptype=apartment&bedrooms=2
+
+        var link = "https://www.domain.com.au/" + salerent + "/"+ suburb + "-" + suburb_state + "-" + postcode
+        // uncomment below when beds and property type done
+        // var link = "https://www.domain.com.au/"+ buyrent + "/"+ suburb + "-" + suburb_state + "-" + postcode + "/?ptype=" + ptype + "&bedrooms=" + "bedrooms"
 
 
         return (
