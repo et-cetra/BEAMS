@@ -32,8 +32,8 @@ class CulturallyDiverse extends React.Component {
     render() {
         if (this.state.isCulturallyDiverse) {
             return (
-                <Chip avatar={<Avatar><FaceIcon/></Avatar>} label="Culturally Diverse"
-                className="ChipsHighlight" color={this.props.compareColor}/>
+                <Chip avatar={<Avatar><FaceIcon /></Avatar>} label="Culturally Diverse"
+                    className="ChipsHighlight" color={this.props.compareColor} />
             );
         } else {
             return (

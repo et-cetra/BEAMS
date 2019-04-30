@@ -8,7 +8,7 @@ class HomeSearch extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = { city: '', query: '', address: ''};
+        this.state = { city: '', address: ''};
     }
 
     handleChange = address => {
@@ -17,11 +17,15 @@ class HomeSearch extends React.Component {
 
     handleSelect = address => {
         console.log('Address:', address);
+        if (address === '') {
+            this.props.onStartOver();
+        } else {
         this.props.onSelect(address);
         geocodeByAddress(address)
             .then(results => getLatLng(results[0]))
-            //.then(latLng => console.log('Success', latLng))
+            // .then(latLng => console.log('Success', latLng))
             .catch(error => console.error('Error', error));
+        }
     };
 
     render() {

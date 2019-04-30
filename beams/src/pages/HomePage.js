@@ -18,7 +18,7 @@ class HomePage extends React.Component {
           </Typography>
           <br></br>
           </Grid>
-          <Grid item><HomeSearch onSelect={(city) => this.props.onSelect(city, this.props.history)}/></Grid>
+          <Grid item><HomeSearch onStartOver={this.props.onStartOver} onSelect={(city) => this.props.onSelect(city, this.props.history)}/></Grid>
         </Grid>
         </Grow>
         </div>
