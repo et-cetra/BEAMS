@@ -9,6 +9,13 @@ class HomePage extends React.Component {
     render() {
       return (
         <div>
+
+    	<div id="particle-canvas"></div>
+    	<script type="text/javascript" src="particle-network.min.js"></script>
+    	<script type="text/javascript">
+    	var particleCanvas = new ParticleNetwork(canvasDiv, options);
+    	</script>
+
         <div className='HomeContainer'>
         <Grow in timeout={750}>
         <Grid container direction="column" justify="space-evenly" alignItems="center">
@@ -16,7 +23,8 @@ class HomePage extends React.Component {
           <Typography style={{ fontSize: 30 }} variant='overline' align='center'>
             All your suburb data in one place. Made simple.
           </Typography>
-          <br></br>
+
+          <br></br><br></br>
           </Grid>
           <Grid item><HomeSearch onSelect={(city) => this.props.onSelect(city, this.props.history)}/></Grid>
         </Grid>

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Route, Switch } from "react-router-dom";
+import Particles from 'react-particles-js';
 
 import './App.css';
 import './pages/SuburbPage.css'
@@ -73,10 +74,28 @@ class App extends Component {
             </Router>
           </Grid>
         </Grid>
+        <Particles
+          params={{
+              "particles": {
+                  "number": {
+                      "value": 100
+                  },
+                  "size": {
+                      "value": 3
+                  }
+              },
+              "interactivity": {
+                  "events": {
+                      "onhover": {
+                          "enable": true,
+                          "mode": "repulse"
+                      }
+                  }
+              }
+          }} />
       </div>
     );
   }
 }
 
 export default App;
-
