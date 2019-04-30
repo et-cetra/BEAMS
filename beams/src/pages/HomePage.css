@@ -9,4 +9,11 @@
   padding: 5px;
 }
 
+.AdvSearchIcon{
+  padding-right: 16px;
+  margin-left: -6px;
+}
 
+.AdvSearchText{
+  vertical-align: -2px;
+}

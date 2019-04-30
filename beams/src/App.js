@@ -30,12 +30,13 @@ class App extends Component {
     this.history = createBrowserHistory();
   }
 
-  onSuburbSelect = (city) => {
+  onSuburbSelect = (city, priorities) => {
     console.log(`The city is ${city}`);
+    console.log('Priorities set:', priorities);
     var { suburb, suburb_state } = this.parseCity(city);
     let suburbs = [{ suburb: suburb, suburb_state: suburb_state}];
     const route = "/suburb/" + suburb + "/" + suburb_state;
-    this.setState(() => ({ suburbs: suburbs}), () => this.history.push(route));
+    this.setState(() => ({ suburbs: suburbs, priorities: priorities }), () => this.history.push(route));
   };
 
   onSuburbCompare = (city) => {
