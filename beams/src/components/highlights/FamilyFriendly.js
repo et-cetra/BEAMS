@@ -1,5 +1,4 @@
 import React from 'react';
-import { getDemographics } from '../../utils.js'
 import Chip from '@material-ui/core/Chip';
 import Avatar from '@material-ui/core/Avatar';
 import ChildFriendly from '@material-ui/icons/ChildFriendly'
