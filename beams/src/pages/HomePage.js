@@ -1,6 +1,6 @@
 import React from 'react';
 import './HomePage.css'
-import { Grid, Typography, Grow, Fab, Slide, FormGroup, FormControlLabel, Checkbox, ExpansionPanel, ExpansionPanelSummary, ExpansionPanelDetails } from '@material-ui/core';
+import { Grid, Typography, Grow, Fab, Slide, FormGroup, ClickAwayListener, FormControlLabel, Checkbox, ExpansionPanel, ExpansionPanelSummary, ExpansionPanelDetails } from '@material-ui/core';
 import {Link} from "react-router-dom"
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import HomeSearch from '../components/HomeSearch';
@@ -15,18 +15,27 @@ class HomePage extends React.Component {
     prioritiesB: false,
     prioritiesC: false,
     prioritiesD: false,
-    expandColor: 'white'
+    expandColor: 'white',
+    expanded: false,
   }
 
   handleChange = name => event => {
     this.setState({ [name]: event.target.checked });
   };
 
-  handlePanel = (event, expanded) => {
+  handlePanel = panel => (event, expanded) => {
     this.setState({
-      expandColor: expanded ? 'black' : 'white'
+      expandColor: expanded ? 'black' : 'white',
+      expanded: expanded ? panel : false,
     });
   }
+
+  handleClickAway = () => {
+    this.setState({
+      expanded: false,
+      expandColor: 'white',
+    });
+  };
 
   render() {
     var { prioritiesA, prioritiesB, prioritiesC, prioritiesD, expandColor } = this.state;    
@@ -48,7 +57,8 @@ class HomePage extends React.Component {
         </Grid>
         <Grid item>
           <HomeSearch priorities={priorities} onSelect={(city, priorities) => this.props.onSelect(city, priorities)}/>
-          <ExpansionPanel onChange={this.handlePanel} style={{backgroundColor: 'transparent'}} className="AdvPanel">
+          <ClickAwayListener onClickAway={this.handleClickAway}>
+          <ExpansionPanel expanded={this.state.expanded} onChange={this.handlePanel(true)} style={{backgroundColor: 'transparent'}} className="AdvPanel">
             <ExpansionPanelSummary expandIcon={<ExpandMoreIcon style={{color: expandColor}}/>}>
               <MapSearch  style={{color: expandColor}} className="AdvSearchIcon"/>
               <Typography style={{paddingTop: "2px", color: expandColor}} variant="button">Priorities</Typography>
@@ -66,6 +76,7 @@ class HomePage extends React.Component {
             </FormGroup>
             </ExpansionPanelDetails>
           </ExpansionPanel>
+          </ClickAwayListener>
         </Grid>
       </Grid>
       </Grow>
