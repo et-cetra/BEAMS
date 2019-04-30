@@ -14,8 +14,6 @@ import CompareController from './components/CompareController';
 import { Router } from 'react-router';
 import createBrowserHistory from 'history/createBrowserHistory';
 
-// export const BeamsContext = React.createContext({ suburb: null, suburb_state: null });
-
 class App extends Component {
 
   constructor(props) {

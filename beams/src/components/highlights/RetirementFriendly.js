@@ -12,7 +12,7 @@ class RetirementFriendly extends React.Component {
     // If 60+ is above 15% give tag 'Retirement Friendly'
 
     async isRetirementFriendly() {
-        const suburbInfo = await getDemographics(this.props.suburb, this.props.suburb_state);
+        const suburbInfo = this.props.stats;
         var agesArray = suburbInfo.demographics[0].items;
         var arrayLength = agesArray.length;
         const total = suburbInfo.demographics[0].total;

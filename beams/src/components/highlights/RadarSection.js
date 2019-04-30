@@ -19,7 +19,7 @@ class RadarSection extends React.Component {
         wellbeingRating2: 5,
         isLoaded: false,
     };
-  } 
+  }
 
   normalizeData(data, highest, lowest) {
     if(data === undefined || data === null || data === 0) return 5;
@@ -38,7 +38,7 @@ class RadarSection extends React.Component {
     const educationRating = this.normalizeData(educationData, 1300, 100);
     const seRating = await getSEData(suburbs[0].suburb, suburbs[0].suburb_state);
     const wellbeingRating = this.normalizeData(0.65 - crimeData, 0.65, 0);
-    
+
     this.setState({
       priceRating: priceRating,
       educationRating: educationRating,
@@ -108,7 +108,7 @@ class RadarSection extends React.Component {
         <CircularProgress size={60} color="primary"/>
       );
     }
-   
+
   }
 }
 

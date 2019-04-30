@@ -17,12 +17,16 @@ class QuickSearch extends React.Component {
     };
 
     handleSelect = address => {
-        this.props.onSuburbSelect(address, this.props.priorities);
-        this.setState({ address: '' })
-        geocodeByAddress(address)
-            .then(results => getLatLng(results[0]))
-            //.then(latLng => console.log('Success', latLng))
-            .catch(error => console.error('Error', error));
+        if (address === '') {
+          this.props.onStartOver();
+        } else {
+          this.props.onSuburbSelect(address, this.props.priorities);
+          this.setState({ address: '' })
+          geocodeByAddress(address)
+              .then(results => getLatLng(results[0]))
+              //.then(latLng => console.log('Success', latLng))
+              .catch(error => console.error('Error', error));
+        }
     };
 
     searchIcon = (QuickSearchIcon) => {
