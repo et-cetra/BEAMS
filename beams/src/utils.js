@@ -1,6 +1,7 @@
 import { jsonSchoolResponse } from './data/SchoolsData';
 import { jsonSEResponse } from './data/SEData'
 import {jsonCrimeData} from './data/CrimeData';
+import {jsonPostcodes} from './data/PostcodeData';
 const axios = require('axios')
 
 export const getSuburbId = async (suburb, suburb_state) => {
@@ -164,4 +165,21 @@ export const getSurrounding = async (suburb, suburb_state) => {
     const res = await axios.get(url);
     const result = await res.json();
     return result;
+}
+
+export const getPostcode = async (suburb, suburb_state) => {
+    const postcodeArray = jsonPostcodes.data.postcodes;
+    const arrayLength = postcodeArray.length;
+    let postcode = 0;
+    let found = false;
+
+
+    for (var i = 0; i < arrayLength; i++) {
+        if(suburb && (postcodeArray[i].suburb.toLowerCase() === suburb.toLowerCase()) && (postcodeArray[i].suburb_state.toLowerCase() === suburb_state.toLowerCase())) {
+            found = true;
+            postcode = postcodeArray[i].postcode;
+            break;
+        }
+    }
+    return postcode;
 }

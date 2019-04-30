@@ -10,7 +10,8 @@ import WrapperStats from '../components/wrappers/WrapperStats'
 import WrapperMaps from '../components/wrappers/WrapperMaps'
 import WrapperNews from '../components/wrappers/WrapperNews'
 import WrapperSchools from '../components/wrappers/WrapperSchools'
-import InfoButton from '../components/InfoButton';
+import InfoButton from '../components/InfoButton'
+import DomainLink from '../components/DomainLink'
 
 const theme = createMuiTheme({
   typography: {
@@ -49,6 +50,7 @@ class SuburbPage extends React.Component {
 
         {/*LHS grid container*/}
         <Grid className="LeftContainer">
+          <DomainLink suburb={suburbs[0].suburb} suburb_state={suburbs[0].suburb_state}/>
           <WrapperStats suburbs={suburbs} COLORS={COLORS}/>
           <WrapperDG suburbs={suburbs} COLORS={COLORS}/>
         </Grid>
@@ -66,10 +68,10 @@ class SuburbPage extends React.Component {
           </Grid>
         </Grid>
 
-      
+
         </Grid>
-        
-        </Slide> 
+
+        </Slide>
         <Grid item xs={12} className="SchoolsContainer">
           <WrapperSchools suburbs={suburbs} isCompare={false}/>
          </Grid>
