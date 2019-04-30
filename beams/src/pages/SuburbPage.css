@@ -132,6 +132,7 @@
 .ScrollMenu{
   width: 98%;
   max-height: 450px;
+  min-height: 150px;
   overflow-y: auto;
   padding: 3px;
 }

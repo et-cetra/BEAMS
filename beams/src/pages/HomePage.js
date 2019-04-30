@@ -5,7 +5,8 @@ import {Link} from "react-router-dom"
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import HomeSearch from '../components/HomeSearch';
 import PeopleIcon from '@material-ui/icons/People';
-import { MapSearch } from 'mdi-material-ui'
+import { MapSearch, Home } from 'mdi-material-ui'
+import mDomain from '../assets/domain.png'
 
 
 class HomePage extends React.Component {
@@ -36,7 +37,6 @@ class HomePage extends React.Component {
     priorities.push({'Safety':  prioritiesD});
 
     return (
-      <div>
       <div className='HomeContainer'>
       <Grow in timeout={750}>
       <Grid container direction="column" justify="space-evenly" alignItems="center">
@@ -48,7 +48,7 @@ class HomePage extends React.Component {
         </Grid>
         <Grid item>
           <HomeSearch onSelect={(city) => this.props.onSelect(city, this.props.history, priorities)}/>
-          <ExpansionPanel onChange={this.handlePanel} style={{boxShadow: 'none', backgroundColor: 'transparent'}} className="AdvPanel">
+          <ExpansionPanel onChange={this.handlePanel} style={{backgroundColor: 'transparent'}} className="AdvPanel">
             <ExpansionPanelSummary expandIcon={<ExpandMoreIcon style={{color: expandColor}}/>}>
               <MapSearch  style={{color: expandColor}} className="AdvSearchIcon"/>
               <Typography style={{paddingTop: "2px", color: expandColor}} variant="button">Priorities</Typography>
@@ -69,15 +69,27 @@ class HomePage extends React.Component {
         </Grid>
       </Grid>
       </Grow>
-      </div>
       <Slide in timeout={1000} direction="up">
-      <div className="footer">
+      <div className="Footer">
+      <a href="https://www.domain.com.au/" target="_blank" rel="noopener noreferrer">
         <Fab variant="extended"
-        size="medium"
-        style={{ backgroundImage: "linear-gradient(to right,#EE6A15 0%,#E62927 100%)"}} >
-          <PeopleIcon style={{paddingRight: "10px", color: "whitesmoke"}}/>
-          <Link to="/developers"><Typography style={{fontSize: "16px", color: "whitesmoke"}}>Beams &copy; 2019</Typography></Link>
+        size="medium" className="FooterL"
+        style={{ backgroundColor: "transparent", boxShadow: 'none', width: "250px"}}>
+        <Home style={{paddingRight: "10px"}}/>
+          <Typography variant="button" style={{fontSize: "16px"}}>Powered by </Typography>
+          <img src={mDomain} width={2886*0.025} height={652*0.025} alt="domain"
+                style={{paddingLeft: "6px", paddingBottom: "1px"}}/>
         </Fab>
+        </a>
+        <Link to="/developers">
+        <Fab variant="extended"
+        size="medium" className="FooterR"
+        style={{ backgroundColor: "transparent", boxShadow: 'none'}} >
+          <PeopleIcon style={{paddingRight: "10px"}}/>
+          <Typography variant="button" style={{fontSize: "16px"}}>Beams &copy; 2019</Typography>
+        </Fab>
+        </Link>
+        <div style={{clear: "both"}}/>
       </div>
       </Slide>
       </div>

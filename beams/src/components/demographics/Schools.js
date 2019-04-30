@@ -85,11 +85,9 @@ class Schools extends React.Component {
     if(schoolData.length === 0) 
       return (
         <div>
-        <br/><br/><br/><br/>
         <Typography align="center" variant="button" style={{fontSize: "15px"}}>
           No schools found nearby
         </Typography>
-        <br/><br/><br/><br/>
         </div>
       );
     return(
