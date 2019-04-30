@@ -226,7 +226,7 @@ class Schools extends React.Component {
             </Typography>
           </ExpansionPanelSummary>
           
-          <ExpansionPanel className="ExpansionPanelSchools" style={{boxShadow: 'none'}}>
+          <ExpansionPanel defaultExpanded className="ExpansionPanelSchools" style={{boxShadow: 'none'}}>
             <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}><Typography variant="button">Filters</Typography></ExpansionPanelSummary>
             <ExpansionPanelDetails>
               <div>

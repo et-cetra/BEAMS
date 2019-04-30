@@ -14,14 +14,21 @@ class HomePage extends React.Component {
     prioritiesB: false,
     prioritiesC: false,
     prioritiesD: false,
+    expandColor: 'white'
   }
 
   handleChange = name => event => {
     this.setState({ [name]: event.target.checked });
   };
 
+  handlePanel = (event, expanded) => {
+    this.setState({
+      expandColor: expanded ? 'black' : 'white'
+    });
+  }
+
   render() {
-    var { prioritiesA, prioritiesB, prioritiesC, prioritiesD } = this.state;    
+    var { prioritiesA, prioritiesB, prioritiesC, prioritiesD, expandColor } = this.state;    
     var priorities = [];
     priorities.push({'Socioeconomic Status':  prioritiesA});
     priorities.push({'Affordability':  prioritiesB});
@@ -32,7 +39,7 @@ class HomePage extends React.Component {
       <div>
       <div className='HomeContainer'>
       <Grow in timeout={750}>
-      <Grid container spacing={24} direction="column" justify="space-evenly" alignItems="center">
+      <Grid container direction="column" justify="space-evenly" alignItems="center">
         <Grid item>
         <Typography style={{ fontSize: 30 }} variant='overline' align='center'>
           All your suburb data in one place. Made simple.
@@ -41,22 +48,20 @@ class HomePage extends React.Component {
         </Grid>
         <Grid item>
           <HomeSearch onSelect={(city) => this.props.onSelect(city, this.props.history, priorities)}/>
-        </Grid>
-        <Grid item>
-          <ExpansionPanel>
-            <ExpansionPanelSummary expandIcon={<ExpandMoreIcon/>}>
-              <MapSearch className="AdvSearchIcon"/>
-              <Typography style={{paddingTop: "2px"}} variant="button">Idk what to call this tbh?? filters??</Typography>
+          <ExpansionPanel onChange={this.handlePanel} style={{boxShadow: 'none', backgroundColor: 'transparent'}} className="AdvPanel">
+            <ExpansionPanelSummary expandIcon={<ExpandMoreIcon style={{color: expandColor}}/>}>
+              <MapSearch  style={{color: expandColor}} className="AdvSearchIcon"/>
+              <Typography style={{paddingTop: "2px", color: expandColor}} variant="button">Priorities</Typography>
             </ExpansionPanelSummary>
             <ExpansionPanelDetails>
-            <FormGroup row>
-              <FormControlLabel control={<Checkbox checked={prioritiesA} color="primary"
+            <FormGroup>
+              <FormControlLabel control={<Checkbox checked={prioritiesA} style={{color: '#E62927'}}
               onChange={this.handleChange('prioritiesA')} value="prioritiesA"/>} label="Socioeconomic Status"/>
-              <FormControlLabel control={<Checkbox checked={prioritiesB} color="primary" 
+              <FormControlLabel control={<Checkbox checked={prioritiesB} style={{color: '#E62927'}}
               onChange={this.handleChange('prioritiesB')} value="prioritiesB"/>} label="Affordability"/>
-              <FormControlLabel control={<Checkbox checked={prioritiesC} color="primary" 
+              <FormControlLabel control={<Checkbox checked={prioritiesC} style={{color: '#E62927'}}
               onChange={this.handleChange('prioritiesC')} value="prioritiesC"/>} label="Education Quality"/>
-              <FormControlLabel control={<Checkbox checked={prioritiesD} color="primary"
+              <FormControlLabel control={<Checkbox checked={prioritiesD} style={{color: '#E62927'}}
               onChange={this.handleChange('prioritiesD')} value="prioritiesD"/>} label="Safety"/>
             </FormGroup>
             </ExpansionPanelDetails>

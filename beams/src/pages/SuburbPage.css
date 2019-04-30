@@ -11,6 +11,11 @@
 .LeftContainer{
   width: 96%;
   padding-right: 15px;
+  padding-top: 12px;
+}
+
+.RightContainer{
+  padding-top: 12px;
 }
 
 /* These determine width size; disables scaling */

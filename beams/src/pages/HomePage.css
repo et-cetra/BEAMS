@@ -12,8 +12,14 @@
 .AdvSearchIcon{
   padding-right: 16px;
   margin-left: -6px;
+  color: black;
 }
 
-.AdvSearchText{
-  vertical-align: -2px;
+.AdvPanel{
+  opacity: 0.8;
+  width: 180px;
+  float: right;
+  margin-top: -62px;
+  box-shadow: none;
+  padding: 6.8px;
 }
