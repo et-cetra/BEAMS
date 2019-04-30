@@ -13,7 +13,7 @@ class CommuteFriendly extends React.Component {
 
     async isCommuteFriendly() {
         const suburbInfo = this.props.stats;
-        var commuteArray = suburbInfo.demographics[10].items;
+        var commuteArray = suburbInfo.demographics[0].items;
         var arrayLength = 3;
         var carAndWalk = 0;
         var carFound = 0;
