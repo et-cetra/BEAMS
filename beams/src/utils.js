@@ -156,26 +156,40 @@ export const getCrimeRate = async (suburb, suburb_state) => {
 }
 
 export const getSurrounding = async (suburb, suburb_state) => {
+    console.log(suburb + " " + suburb_state);
     const location = await getLocation(suburb, suburb_state);
     const coords = location.results[0].locations[0].latLng;
-    const radii = [2000,3000,4000,5000,6000];
-    var results = [];
+    var radius = 1000; 
+    var returned_results = [];
     var duplicate = 0;
 
-    for (var i = 0; i < radii.length; i++) {
-        const url = 'https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/nearbysearch/json?location='+coords.lat+','+coords.lng+'&radius='+radii[i]+'&type=locality&key=AIzaSyDIMGCB2qSD9qIB0mrZu0uGEmZlc9e8m-Y'
+    
+    while (returned_results.length < 3) {
+        const url = 'https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/nearbysearch/json?location='+coords.lat+','+coords.lng+'&radius='+radius+'&type=locality&fields=&key=AIzaSyDIMGCB2qSD9qIB0mrZu0uGEmZlc9e8m-Y'
         const res = await fetch(url);
-        const result = await res.json();
-        for (var iResult = 0; iResult < result.results.length; iResult++) {
+        const response = await res.json();
+        for (var iResp = 0; iResp < response.results.length; iResp++) {
             duplicate = 0;
-            for (var iReturn = 0; iReturn < results.length; iReturn++) {
-                if (result.results[iResult].name == results[iReturn].name || result.results[iResult].name == suburb)
+            for (var iReturn = 0; iReturn < returned_results.length; iReturn++) {
+                if (returned_results[iReturn].suburb == response.results[iResp].name)
                     duplicate = 1;
             }
-            if (duplicate == 0)
-                results.push(result.results[iResult]);
-        }
-    }
 
-    return results;
+            // If the suburb is not already pushed and it is not the same searched suburb
+            // Call google places PlaceDetails endpoint to get the suburb state
+            // And push into the returned_results array
+            if (duplicate == 0 && suburb != response.results[iResp].name) {
+                const details_url = "https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/details/json?placeid=" + response.results[iResp].place_id + "&fields=address_components&key=AIzaSyDIMGCB2qSD9qIB0mrZu0uGEmZlc9e8m-Y"
+                const details_res = await fetch(details_url);
+                const details_response = await details_res.json();
+                var details_suburb_state = " ";
+                for (var iDetails = 0; iDetails < details_response.result.address_components.length; iDetails++)
+                    if (details_response.result.address_components[iDetails].types[0] == "administrative_area_level_1")
+                        details_suburb_state = details_response.result.address_components[iDetails].short_name;
+                returned_results.push({suburb: response.results[iResp].name, suburb_state: details_suburb_state});
+            }
+        }
+        radius += 500;
+    }
+    return returned_results;
 }
