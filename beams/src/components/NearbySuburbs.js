@@ -1,8 +1,5 @@
 import React from 'react';
-import '../components/SuburbNews.css';
 import { getSurrounding } from '../utils';
-
-// Request for Population Ages in Maroubra: https://api.domain.com.au/v1/demographics?level=Suburb&id=27512&types=AgeGroupOfPopulation&year=2016
 
 class NearbySuburbs extends React.Component {
   constructor(props) {
@@ -14,7 +11,7 @@ class NearbySuburbs extends React.Component {
   }
 
   async componentDidMount() {
-      const surrouding = await getSurrounding(this.props.suburb, this.props.suburb_state);
+      const surrouding = await getSurrounding(this.props.suburbs[0].suburb, this.props.suburbs[0].suburb_state);
 
       this.setState({
         isLoaded: true,
@@ -24,7 +21,6 @@ class NearbySuburbs extends React.Component {
 
   render() {
     const surrounding = this.state.surrounding;
-    
 
     if (!this.state.isLoaded) {
       return <div>Loading...</div>
@@ -32,7 +28,7 @@ class NearbySuburbs extends React.Component {
       console.log(surrounding.results)
       return (
         <div>
-         
+        
         </div>
       );
     }

@@ -56,7 +56,7 @@ class HomePage extends React.Component {
         <br></br>
         </Grid>
         <Grid item>
-          <HomeSearch priorities={priorities} onSelect={(city, priorities) => this.props.onSelect(city, priorities)}/>
+          <HomeSearch onStartOver={this.props.onStartOver} priorities={priorities} onSelect={(city, priorities) => this.props.onSelect(city, priorities)}/>
           <ClickAwayListener onClickAway={this.handleClickAway}>
           <ExpansionPanel expanded={this.state.expanded} onChange={this.handlePanel(true)} style={{backgroundColor: 'transparent'}} className="AdvPanel">
             <ExpansionPanelSummary expandIcon={<ExpandMoreIcon style={{color: expandColor}}/>}>
