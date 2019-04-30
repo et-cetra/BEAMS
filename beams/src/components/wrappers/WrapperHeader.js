@@ -29,7 +29,7 @@ class WrapperHeader extends React.Component {
       case 1:
       pIcon = <CheckboxMarkedCircle className="PriorityIcon"/>;
       pColor = "#009688";
-      pMessage = "This suburb meets your priorities. Click here to see propeties in this area."
+      pMessage = "This suburb meets your priorities. Click here to see properties in this area."
       break;
       
       case -1:
@@ -49,7 +49,7 @@ class WrapperHeader extends React.Component {
       <Paper style={{backgroundColor: pColor, boxShadow: 'none'}} className="PriorityPopup">
         {pIcon}
         <Typography style={{color: "white", fontSize: "16px"}}>{pMessage}</Typography>
-        <NearbySuburbs suburbs={this.props.suburbs}/>
+        {/* <NearbySuburbs suburbs={this.props.suburbs}/> */}
       </Paper>
     )
   }
