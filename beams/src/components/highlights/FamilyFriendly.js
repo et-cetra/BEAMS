@@ -12,7 +12,7 @@ class FamilyFriendly extends React.Component {
     // If 0-19 is above 20% give tag 'Family Friendly'
 
     async isFamilyFriendly() {
-        const suburbInfo = await getDemographics(this.props.suburb, this.props.suburb_state);
+        const suburbInfo = this.props.stats;
         var agesArray = suburbInfo.demographics[0].items;
         var arrayLength = agesArray.length;
         var youngTotal = 0;

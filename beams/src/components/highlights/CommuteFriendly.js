@@ -12,7 +12,7 @@ class CommuteFriendly extends React.Component {
     // If driving and walking is less than 40% of transport commute then Convenient Transport
 
     async isCommuteFriendly() {
-        const suburbInfo = await getDemographics(this.props.suburb, this.props.suburb_state);
+        const suburbInfo = this.props.stats;
         var commuteArray = suburbInfo.demographics[10].items;
         var arrayLength = commuteArray.length;
         var carAndWalk = 0;
