@@ -88,7 +88,7 @@ class HomePage extends React.Component {
         style={{ backgroundColor: "transparent", boxShadow: 'none', width: "250px"}}>
         <Home style={{paddingRight: "10px"}}/>
           <Typography variant="button" style={{fontSize: "16px"}}>Powered by </Typography>
-          <img src={mDomain} width={2886*0.025} height={652*0.025} alt="domain"
+          <img src={mDomain} width={2886*0.02} height={652*0.02} alt="domain"
                 style={{paddingLeft: "6px", paddingBottom: "1px"}}/>
         </Fab>
         </a>
