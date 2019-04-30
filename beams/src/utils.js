@@ -93,10 +93,11 @@ export const getSurrounding = async (suburb, suburb_state) => {
                 if (result.results[iResult].name == results[iReturn].name || result.results[iResult].name == suburb)
                     duplicate = 1;
             }
-            if (duplicate == 0)
+            if (duplicate == 0) 
                 results.push(result.results[iResult]);
         }
     }
+    console.log(results);
 
     return results;
 }
