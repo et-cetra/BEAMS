@@ -2,7 +2,7 @@ import React from 'react';
 import '../../App.css';
 import '../../pages/SuburbPage.css';
 import { getLocation, getSchools } from '../../utils.js';
-import { ExpansionPanel, ExpansionPanelSummary, ExpansionPanelDetails, Typography, CircularProgress, Chip, Card, FormControlLabel, FormControl, FormLabel, RadioGroup, Radio, FormGroup, MuiThemeProvider, createMuiTheme, Avatar, Divider } from '@material-ui/core';
+import { ExpansionPanel, ExpansionPanelSummary, ExpansionPanelDetails, Typography, CircularProgress, Chip, Card, FormControlLabel, FormControl, FormLabel, RadioGroup, Radio, FormGroup, MuiThemeProvider, createMuiTheme, Avatar } from '@material-ui/core';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import mSchools from '../../assets/ic_schools.png'
 import { HumanMaleFemale, HumanMale, HumanFemale, Bible, Bank, CalculatorVariant, BookOpenPageVariant, Certificate, StarCircle } from 'mdi-material-ui'
@@ -52,15 +52,15 @@ class Schools extends React.Component {
     var theme;
 
     switch(tag){
-      case "Girls": theme = createMuiTheme({palette: {primary: {main: '#E91E63'}}}); break;
-      case "Boys": theme = createMuiTheme({palette: {primary: {main: '#2196F3'}}}); break;
-      case "Co-ed": theme = createMuiTheme({palette: {primary: {main: '#9C27B0'}}}); break;
-      case "Private": theme = createMuiTheme({palette: {primary: {main: '#673AB7'}}}); break;
-      case "Catholic": theme = createMuiTheme({palette: {primary: {main: '#673AB7'}}}); break;
-      case "Primary": theme = createMuiTheme({palette: {primary: {main: '#FF5722'}}}); break;
-      case "Secondary": theme = createMuiTheme({palette: {primary: {main: '#009688'}}}); break;
+      case "Girls": theme = createMuiTheme({typography: {useNextVariants: true}, palette: {primary: {main: '#E91E63'}}}); break;
+      case "Boys": theme = createMuiTheme({typography: {useNextVariants: true}, palette: {primary: {main: '#2196F3'}}}); break;
+      case "Co-ed": theme = createMuiTheme({typography: {useNextVariants: true}, palette: {primary: {main: '#9C27B0'}}}); break;
+      case "Private": theme = createMuiTheme({typography: {useNextVariants: true}, palette: {primary: {main: '#673AB7'}}}); break;
+      case "Catholic": theme = createMuiTheme({typography: {useNextVariants: true}, palette: {primary: {main: '#673AB7'}}}); break;
+      case "Primary": theme = createMuiTheme({typography: {useNextVariants: true}, palette: {primary: {main: '#FF5722'}}}); break;
+      case "Secondary": theme = createMuiTheme({typography: {useNextVariants: true}, palette: {primary: {main: '#009688'}}}); break;
 
-      default: theme = createMuiTheme({palette: {primary: {main: '#3F51B5'}}});
+      default: theme = createMuiTheme({typography: {useNextVariants: true}, palette: {primary: {main: '#3F51B5'}}});
     }
   
       return theme;
@@ -82,7 +82,7 @@ class Schools extends React.Component {
   }
 
   getSingleList = (schoolData) => {  
-    if(schoolData.length == 0) 
+    if(schoolData.length === 0) 
       return (
         <div>
         <br/><br/><br/><br/>
