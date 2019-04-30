@@ -67,13 +67,13 @@ class SuburbPage extends React.Component {
           </Grid>
         </Grid>
 
-      
+
         </Grid>
-        
-        </Slide> 
+
+        </Slide>
         <Grid item xs={12} className="SchoolsContainer">
           <WrapperSchools suburbs={suburbs} isCompare={false}/>
-         </Grid>
+        </Grid>
       </Grid>
       </Grid>
       </Fade>

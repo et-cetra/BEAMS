@@ -4,7 +4,7 @@ import 'typeface-roboto';
 import '../../pages/SuburbPage.css'
 import QuickSearch from '../QuickSearch.js'
 import NearbySuburbs from '../NearbySuburbs.js'
-
+import Info from '../RadarInfo.js'
 import { Grid, Typography, Divider, Link, Fade, Paper } from '@material-ui/core'
 import mTerrain from '../../assets/ic_terrain.png'
 import mTerrain1 from '../../assets/ic_terrain_1.png'
@@ -162,7 +162,8 @@ class WrapperHeader extends React.Component {
           </Grid>
         }
       </Grid>
-
+      
+      <Info/>
       <br></br>
       <Divider variant="fullWidth"/>
       <br></br>
