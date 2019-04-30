@@ -71,7 +71,7 @@ class SuburbPage extends React.Component {
 
         </Slide>
         <Grid item xs={12} className="SchoolsContainer">
-          <WrapperSchools suburbs={suburbs} isCompare={false}/>
+          {/*<WrapperSchools suburbs={suburbs} isCompare={false}/>*/}
          </Grid>
       </Grid>
       </Grid>
