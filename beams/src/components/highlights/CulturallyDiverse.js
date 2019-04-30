@@ -1,5 +1,4 @@
 import React from 'react';
-import { getDemographics } from '../../utils.js'
 import Chip from '@material-ui/core/Chip';
 import Avatar from '@material-ui/core/Avatar';
 import FaceIcon from '@material-ui/icons/Face';
@@ -14,8 +13,8 @@ class CulturallyDiverse extends React.Component {
     async isCulturallyDiverse() {
         const suburbInfo = this.props.stats;
         var cobArray = suburbInfo.demographics[1].items;
-        const total = suburbInfo.demographics[0].total;
-        if ((cobArray[0].value / total) <= 0.4) {
+        const total = cobArray[0].value + cobArray[1].value + cobArray[2].value + cobArray[3].value + cobArray[4].value;
+        if ((cobArray[0].value / total) <= 0.5) {
             return true;
         } else {
             return false;

@@ -1,5 +1,4 @@
 import React from 'react';
-import { getDemographics } from '../../utils.js'
 import Chip from '@material-ui/core/Chip';
 import Avatar from '@material-ui/core/Avatar';
 import Train from '@material-ui/icons/Train';
@@ -13,12 +12,11 @@ class CommuteFriendly extends React.Component {
 
     async isCommuteFriendly() {
         const suburbInfo = this.props.stats;
-        var commuteArray = suburbInfo.demographics[0].items;
+        var commuteArray = suburbInfo.demographics[10].items;
         var arrayLength = 3;
         var carAndWalk = 0;
         var carFound = 0;
         var walkFound = 0;
-        // TODO: Fix total
         const total = commuteArray[0].value + commuteArray[1].value + commuteArray[2].value;
 
         for (var i = 0; i < arrayLength; i++) {

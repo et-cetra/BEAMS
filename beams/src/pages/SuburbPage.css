@@ -202,6 +202,11 @@
   z-index: 20;
 }
 
+.ExtraIconRadar{
+  float: right;
+  z-index: 20;
+}
+
 .ExtraIconStats{
   margin-top: -15px;
   padding-left: 15px;
