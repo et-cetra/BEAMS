@@ -27,7 +27,7 @@ class DomainLink extends React.Component {
 
 
         return (
-            <a href="{link}">View property listings on domain.com</a>
+            <a href={link}>View property listings on domain.com</a>
         )
     }
 }
