@@ -67,6 +67,8 @@ class RadarSection extends React.Component {
         isLoaded: true,
       });
     }
+
+    this.props.onCalc(this.state);
   }
 
   renderTicks = (props) => {

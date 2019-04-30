@@ -7,13 +7,13 @@ class CompareController extends React.Component {
       if (this.props.suburbs.length === 1) {
         return (
           <div>
-            <SuburbPage onSuburbCompare={this.props.onSuburbCompare} suburbs={this.props.suburbs} onSuburbSelect={this.props.onSuburbSelect} onStartOver={this.props.onStartOver} isCompare={false}/>
+            <SuburbPage priorities={this.props.priorities} onSuburbCompare={this.props.onSuburbCompare} suburbs={this.props.suburbs} onSuburbSelect={this.props.onSuburbSelect} onStartOver={this.props.onStartOver} isCompare={false}/>
           </div>
         )
       } else {
         return (
           <div>
-            <SuburbPage onSuburbCompare={this.props.onSuburbCompare} suburbs={this.props.suburbs} onSuburbSelect={this.props.onSuburbSelect} onStartOver={this.props.onStartOver} isCompare={true}/>
+            <SuburbPage priorities={this.props.priorities} onSuburbCompare={this.props.onSuburbCompare} suburbs={this.props.suburbs} onSuburbSelect={this.props.onSuburbSelect} onStartOver={this.props.onStartOver} isCompare={true}/>
           </div>
         )
       }

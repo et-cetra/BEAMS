@@ -17,7 +17,7 @@ class HomeSearch extends React.Component {
 
     handleSelect = address => {
         console.log('Address:', address);
-        this.props.onSelect(address);
+        this.props.onSelect(address, this.props.priorities);
         geocodeByAddress(address)
             .then(results => getLatLng(results[0]))
             //.then(latLng => console.log('Success', latLng))

@@ -22,11 +22,11 @@ class App extends Component {
     super(props);
 
     this.state = {
-      suburbs: [{ suburb: null, suburb_state: null }]
+      suburbs: [{ suburb: null, suburb_state: null }],
+      priorities: [],
     };
 
     this.onSuburbSelect = this.onSuburbSelect.bind(this);
-
     this.history = createBrowserHistory();
   }
 
@@ -61,14 +61,14 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Framework onSuburbSelect={this.onSuburbSelect} onStartOver={this.onStartOver}/>
+        <Framework priorities={this.state.priorities} onSuburbSelect={this.onSuburbSelect} onStartOver={this.onStartOver}/>
         <Grid container className="ContentHolderMain" direction="column" justify="center" alignItems="center">
           <Grid item>
             <Router history={this.history}>
               <Switch>
                 <Route exact path="/" render={() => <HomePage onSelect={this.onSuburbSelect} onStartOver={this.onStartOver}/>}/>
-                <Route matches path="/suburb" render={() => <CompareController suburbs={this.state.suburbs} onStartOver={this.onStartOver} onSuburbCompare={this.onSuburbCompare} onSuburbSelect={this.onSuburbSelect} />} />
-                <Route matches path="/compare" render={() => <CompareController suburbs={this.state.suburbs} onStartOver={this.onStartOver} onSuburbCompare={this.onSuburbCompare} onSuburbSelect={this.onSuburbSelect} />} />
+                <Route matches path="/suburb" render={() => <CompareController suburbs={this.state.suburbs} priorities={this.state.priorities} onStartOver={this.onStartOver} onSuburbCompare={this.onSuburbCompare} onSuburbSelect={this.onSuburbSelect} />} />
+                <Route matches path="/compare" render={() => <CompareController suburbs={this.state.suburbs} priorities={this.state.priorities} onStartOver={this.onStartOver} onSuburbCompare={this.onSuburbCompare} onSuburbSelect={this.onSuburbSelect} />} />
                 <Route exact path="/developers" component={DevPage} />
               </Switch>
             </Router>

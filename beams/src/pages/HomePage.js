@@ -31,10 +31,10 @@ class HomePage extends React.Component {
   render() {
     var { prioritiesA, prioritiesB, prioritiesC, prioritiesD, expandColor } = this.state;    
     var priorities = [];
-    priorities.push({'Socioeconomic Status':  prioritiesA});
-    priorities.push({'Affordability':  prioritiesB});
-    priorities.push({'Education Quality':  prioritiesC});
-    priorities.push({'Safety':  prioritiesD});
+    priorities['Socioeconomic Status'] = prioritiesA;
+    priorities['Affordability'] = prioritiesB;
+    priorities['Education Quality'] = prioritiesC;
+    priorities['Safety'] = prioritiesD;
 
     return (
       <div className='HomeContainer'>
@@ -47,7 +47,7 @@ class HomePage extends React.Component {
         <br></br>
         </Grid>
         <Grid item>
-          <HomeSearch onSelect={(city) => this.props.onSelect(city, this.props.history, priorities)}/>
+          <HomeSearch priorities={priorities} onSelect={(city, priorities) => this.props.onSelect(city, priorities)}/>
           <ExpansionPanel onChange={this.handlePanel} style={{backgroundColor: 'transparent'}} className="AdvPanel">
             <ExpansionPanelSummary expandIcon={<ExpandMoreIcon style={{color: expandColor}}/>}>
               <MapSearch  style={{color: expandColor}} className="AdvSearchIcon"/>

@@ -265,3 +265,13 @@
   padding-bottom: 15px;
 }
 
+.PriorityPopup{
+  padding: 20px;
+  background-color: #4CAF50;
+}
+
+.PriorityIcon{
+  color: white;
+  float: left;
+  padding-right: 10px;
+}
