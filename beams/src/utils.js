@@ -159,15 +159,14 @@ export const getSurrounding = async (suburb, suburb_state) => {
     const location = await getLocation(suburb, suburb_state);
     const coords = location.results[0].locations[0].latLng;
 
-    const url = `http://api.geonames.org/findNearbyPostalCodesJSON?formatted=true&lat=${coords.lat}&lng=${coords.lng}&username=beamsunsw&style=full&radius=30&maxRows=5`;
+    const url = `http://api.geonames.org/findNearbyPlaceNameJSON?formatted=true&lat=${coords.lat}&lng=${coords.lng}&username=beamsunsw&style=full&radius=300&maxRows=5&cities1000`;
     const res = await fetch(url);
     const result = await res.json();
     var arr = [];
     console.log(result);
-    result.postalCodes.forEach(item => {
-      if(item.placeName !== suburb) arr.push({"suburb": item.placeName, "suburb_state": item.adminCode1});
+    result.geonames.forEach(item => {
+      if(item.name !== suburb) arr.push({"suburb": item.name, "suburb_state": item.adminCode1});
     });
 
-    console.log(arr);
     return arr.slice(0,3);
 }

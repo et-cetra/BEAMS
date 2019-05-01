@@ -50,8 +50,8 @@ class SuburbPage extends React.Component {
 
         {/*LHS grid container*/}
         <Grid className="LeftContainer">
-          <WrapperStats suburbs={suburbs} COLORS={COLORS}/>
-          <WrapperDG suburbs={suburbs} COLORS={COLORS}/>
+          {/* <WrapperStats suburbs={suburbs} COLORS={COLORS}/>
+          <WrapperDG suburbs={suburbs} COLORS={COLORS}/> */}
         </Grid>
         </Grid>
         </Slide>
@@ -62,8 +62,8 @@ class SuburbPage extends React.Component {
         {/*RHS grid container*/}
         <Grid className="RightContainer">
           <Grid item className="MapsContainer">
-            <WrapperMaps suburb={suburbs[0].suburb}/>
-            <WrapperNews suburb={suburbs[0].suburb} suburb_state={suburbs[0].suburb_state}/>
+            {/* <WrapperMaps suburb={suburbs[0].suburb}/>
+            <WrapperNews suburb={suburbs[0].suburb} suburb_state={suburbs[0].suburb_state}/> */}
           </Grid>
         </Grid>
 
@@ -72,7 +72,7 @@ class SuburbPage extends React.Component {
 
         </Slide>
         <Grid item xs={12} className="SchoolsContainer">
-          <WrapperSchools suburbs={suburbs} isCompare={false}/>
+          {/* <WrapperSchools suburbs={suburbs} isCompare={false}/> */}
         </Grid>
       </Grid>
       </Grid>

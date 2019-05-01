@@ -1,7 +1,7 @@
 import React from 'react';
 import '../pages/SuburbPage.css'
 import { getSurrounding } from '../utils';
-import { Chip, CircularProgress, Avatar } from '@material-ui/core';
+import { Chip, CircularProgress, Avatar, Link } from '@material-ui/core';
 
 class NearbySuburbs extends React.Component {
   constructor(props) {
@@ -23,15 +23,23 @@ class NearbySuburbs extends React.Component {
 
   render() {
     const surrounding = this.state.surrounding;
+    const priorities = this.props.priorities;
+    console.log("surrounding", surrounding);
+    const route = (idx) => "/suburb/" + surrounding[idx].suburb + "/" + surrounding[idx].suburb_state;
+    const city = (idx) => surrounding[idx].suburb + " " + surrounding[idx].suburb_state + ", Australia";
+    console.log("city route", city, route);
 
     if (!this.state.isLoaded) {
       return <div style={{float: "right"}}><CircularProgress size={30} style={{color: "white"}}/></div>;
     } else {
       return (
         <div>
-          {surrounding.map((item) => (
-            <Chip avatar={<Avatar style={{width: 36, height: 36, fontSize: "10px"}}>{item.suburb_state}</Avatar>} className="ChipNearby" 
+          {surrounding.map((item, index) => (
+            <Link style={{cursor: "pointer"}} color="textPrimary" underline="none"
+            to={route} onClick={() => this.props.onSuburbSelect(city(index), priorities)}>
+            <Chip avatar={<Avatar style={{width: 36, height: 36, fontSize: "10px"}}>{item.suburb_state}</Avatar>} className="ChipNearby"
              key={item.id} label={`${item.suburb}`} style={{color: "#333F48"}}/>
+            </Link>
           ))}
         </div>
       );
