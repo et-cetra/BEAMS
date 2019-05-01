@@ -165,7 +165,7 @@ export const getSurrounding = async (suburb, suburb_state) => {
     var arr = [];
     console.log(result);
     result.geonames.forEach(item => {
-      if(item.name !== suburb) arr.push({"suburb": item.name, "suburb_state": item.adminCode1});
+      if(item.name !== suburb) arr.push({"suburb": item.name, "suburb_state": item.adminName1});
     });
 
     return arr.slice(0,3);
