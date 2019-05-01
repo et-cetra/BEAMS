@@ -12,15 +12,16 @@ import mChart from '../../assets/ic_chart.png'
 
 class WrapperStats extends React.Component {
     state = {
-      value: 0
+      value: 0,
+      bedrooms: 0
     };
 
     handleChange = (event, value) => {
-        this.setState({ value });
+        this.setState({ value, bedrooms: 0 });
     };
 
     render() {
-      const { value } = this.state;
+      const { value, bedrooms } = this.state;
       const suburbs = this.props.suburbs;
       const COLORS = this.props.COLORS;
       const isCompare = this.props.isCompare;
@@ -37,8 +38,8 @@ class WrapperStats extends React.Component {
         </div>
 
         <Paper>
-          {value === 0 && <MedianRent COLORS={COLORS} isCompare={isCompare} suburbs={suburbs} key={'MedianRent'+suburb}/>}
-          {value === 1 && <HouseSoldPrice COLORS={COLORS} isCompare={isCompare} suburbs={suburbs} key={'HouseSoldPrice'+suburb}/>}
+          {value === 0 && <MedianRent COLORS={COLORS} isCompare={isCompare} suburbs={suburbs} bedrooms={bedrooms} key={'MedianRent'+suburb}/>}
+          {value === 1 && <HouseSoldPrice COLORS={COLORS} isCompare={isCompare} suburbs={suburbs} bedrooms={bedrooms} key={'HouseSoldPrice'+suburb}/>}
 
           <Tabs value={value} onChange={this.handleChange} centered
           indicatorColor="primary" textColor="primary" variant="fullWidth">

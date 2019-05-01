@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../pages/SuburbPage.css'
-import { getStats } from '../../utils.js'
+import { getStats, getBedroomStats } from '../../utils.js'
 import StatsSection from './StatsSection';
 
 class MedianRent extends React.Component {
@@ -15,7 +15,13 @@ class MedianRent extends React.Component {
     }
 
     async componentDidMount() {
-      const rentStats = await getStats(this.props.suburbs[0].suburb, this.props.suburbs[0].suburb_state);
+      const bedrooms = this.props.bedrooms;
+      var rentStats = await getStats(this.props.suburbs[0].suburb, this.props.suburbs[0].suburb_state);
+
+      if (bedrooms != 0) {
+        console.log("lol");
+        rentStats = await getBedroomStats(this.props.suburbs[0].suburb, this.props.suburbs[0].suburb_state, bedrooms);
+      }
 
       if(this.props.isCompare){
         const rentStats2 = await getStats(this.props.suburbs[1].suburb, this.props.suburbs[1].suburb_state);
@@ -39,7 +45,7 @@ class MedianRent extends React.Component {
       const isCompare = this.props.isCompare;
       const chartData = [];
       var s1Name, s2Name;
-      
+
       if(isCompare)
       {
         s1Name = `Median (${suburbs[0].suburb})`
@@ -54,17 +60,17 @@ class MedianRent extends React.Component {
         if(isCompare)
         {
           var item2 = contents2[i];
-          chartData.push({name: item.year.toString() + " Q" + monthSection, 
-              [s1Name] : item.values["medianRentListingPrice"], 
-              [s2Name] : item2.values["medianRentListingPrice"], 
+          chartData.push({name: item.year.toString() + " Q" + monthSection,
+              [s1Name] : item.values["medianRentListingPrice"],
+              [s2Name] : item2.values["medianRentListingPrice"],
           });
         } else {
-          chartData.push({name: item.year.toString() + " Q" + monthSection, 
-              Median: item.values["medianRentListingPrice"], 
+          chartData.push({name: item.year.toString() + " Q" + monthSection,
+              Median: item.values["medianRentListingPrice"],
               Lowest: item.values["lowestRentListingPrice"],
               Highest: item.values["highestRentListingPrice"],
           });
-        }       
+        }
       }
 
       if (error) {
