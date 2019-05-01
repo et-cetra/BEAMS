@@ -30,7 +30,7 @@ class NearbySuburbs extends React.Component {
       return (
         <div>
           {surrounding.map((item) => (
-            <Chip avatar={<Avatar style={{width: 41, height: 41}}>{item.suburb_state}</Avatar>} className="ChipNearby" 
+            <Chip avatar={<Avatar style={{width: 36, height: 36, fontSize: "10px"}}>{item.suburb_state}</Avatar>} className="ChipNearby" 
              key={item.id} label={`${item.suburb}`} style={{color: "#333F48"}}/>
           ))}
         </div>
