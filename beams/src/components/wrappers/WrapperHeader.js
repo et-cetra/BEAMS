@@ -32,15 +32,15 @@ class WrapperHeader extends React.Component {
       pMessage = "This suburb meets your priorities. Click here to see properties in this area."
       pIsSuggest = false;
       break;
-      
+
       case -1:
       pIcon = <CloseCircle className="PriorityIcon"/>;
       pColor = "#D32F2F";
       pMessage = "This suburb does not meet your priorities. For other areas nearby, try out: "
       pIsSuggest = true;
-      break;  
+      break;
 
-      default: 
+      default:
       pIcon =  <MinusCircle className="PriorityIcon"/>;
       pColor = "#FFA000";
       pMessage = "This suburb meets some of your priorities. For other areas nearby, try out: "
@@ -52,7 +52,7 @@ class WrapperHeader extends React.Component {
       <Paper style={{backgroundColor: pColor, boxShadow: 'none'}} className="PriorityPopup">
         {pIcon}
         <Typography style={{color: "white", fontSize: "16px", float: "left"}}>{pMessage}</Typography>
-        {pIsSuggest && <NearbySuburbs suburbs={this.props.suburbs}/>}
+        {pIsSuggest && <NearbySuburbs suburbs={this.props.suburbs} onSuburbSelect={this.props.onSuburbSelect} priorities={this.props.priorities}/>}
       </Paper>
     )
   }
@@ -80,7 +80,7 @@ class WrapperHeader extends React.Component {
     for (const [key, value] of Object.entries(this.state)) {
       if(value === true && this.props.priorities[key] === true) priorityHits++;
     }
-    
+
     if(priorityHits === priorityTotal) return 1;
     if(priorityHits === 0) return -1;
     return 0;
@@ -93,7 +93,7 @@ class WrapperHeader extends React.Component {
 
     //Only set if available, otherwise set to -2 (i.e unavailable)
     var priorityStatus = this.satisfiesPriorities();
-    
+
     //Routing
     const subOneRoute = "/suburb/" + suburbs[0].suburb + "/" + suburbs[0].suburb_state;
     const city = (idx) => suburbs[idx].suburb + " " + suburbs[idx].suburb_state + " Australia";
@@ -114,9 +114,9 @@ class WrapperHeader extends React.Component {
           {`${suburbs[0].suburb}, ${suburbs[0].suburb_state}`}
         </Typography>
         :
-        <Link style={{cursor: "pointer"}} color="textPrimary" underline="none" 
+        <Link style={{cursor: "pointer"}} color="textPrimary" underline="none"
           to={subOneRoute} onClick={() => this.props.onSuburbSelect(city(0))}>
-          <Typography align="left" inline className="MainText" 
+          <Typography align="left" inline className="MainText"
             style={{ fontSize: 34 }} variant="overline" color="inherit">
             {`${suburbs[0].suburb}, ${suburbs[0].suburb_state}`}
           </Typography>
@@ -129,9 +129,9 @@ class WrapperHeader extends React.Component {
         </div>
         :
         <div className="HeadingR">
-          <Link style={{cursor: "pointer"}} color="textPrimary" underline="none" 
+          <Link style={{cursor: "pointer"}} color="textPrimary" underline="none"
             to={subTwoRoute} onClick={() => this.props.onSuburbSelect(city(1))}>
-            <Typography align="right" inline className="MainTextR" 
+            <Typography align="right" inline className="MainTextR"
               style={{ fontSize: 34 }} variant="overline" color="inherit">
               {`${suburbs[1].suburb}, ${suburbs[1].suburb_state}`}
             </Typography>
@@ -142,13 +142,13 @@ class WrapperHeader extends React.Component {
 
       {/* PriorityBanner */}
       {this.state.isLoaded && this.getPriorityRender(priorityStatus)}
-      
+
       <Grid container spacing={24} direction="row" justify="space-around" alignItems="center">
         <Grid item>
-          <Highlights suburb={suburbs[0].suburb} suburb_state={suburbs[0].suburb_state} 
+          <Highlights suburb={suburbs[0].suburb} suburb_state={suburbs[0].suburb_state}
             key={suburbs[0].suburb+suburbs[0].suburb_state+'Highlights'} compareColor={compareColorSet}/>
         </Grid>
-        
+
         <Grid item>
         {!isCompare ?
           <RadarSection onCalc={this.onCalc} suburbs={suburbs} COLORS={this.props.COLORS} key={suburbs[0].suburb+suburbs[0].suburb_state+'Radar'}/>
@@ -158,14 +158,14 @@ class WrapperHeader extends React.Component {
 
         </Grid>
 
-        {isCompare && 
+        {isCompare &&
           <Grid item>
-            <Highlights suburb={suburbs[1].suburb} suburb_state={suburbs[1].suburb_state} 
+            <Highlights suburb={suburbs[1].suburb} suburb_state={suburbs[1].suburb_state}
             key={suburbs[1].suburb+suburbs[1].suburb_state+'Highlights'} compareColor="secondary"/>
           </Grid>
         }
       </Grid>
-      
+
       <Info/>
       <br></br>
       <Divider variant="fullWidth"/>

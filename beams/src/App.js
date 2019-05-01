@@ -45,7 +45,7 @@ class App extends Component {
   }
 
   onStartOver = () => {
-    this.setState(() => ({ suburbs: [{ suburb: null, suburb_state: null }] }), this.history.push("/"));
+    this.setState(() => ({ suburbs: [{ suburb: null, suburb_state: null }], priorities: [] }), this.history.push("/"));
   };
 
   parseCity(city) {
