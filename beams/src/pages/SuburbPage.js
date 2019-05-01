@@ -62,8 +62,8 @@ class SuburbPage extends React.Component {
         <Grid className="RightContainer">
           <Grid item className="MapsContainer">
             <WrapperMaps suburb={suburbs[0].suburb}/>
-            {/*<WrapperNews suburb={suburbs[0].suburb} suburb_state={suburbs[0].suburb_state}/>
-          */}</Grid>
+            {/*<WrapperNews suburb={suburbs[0].suburb} suburb_state={suburbs[0].suburb_state}/>*/}
+          </Grid>
         </Grid>
 
 

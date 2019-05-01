@@ -3,6 +3,7 @@ import '../../pages/SuburbPage.css'
 import { getStats, getSEData, getSchoolRating, getCrimeRate } from '../../utils.js'
 import { RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Radar } from 'recharts'
 import { CircularProgress } from '@material-ui/core'
+import Info from '../../components/RadarInfo';
 
 class RadarSection extends React.Component {
 
@@ -93,6 +94,8 @@ class RadarSection extends React.Component {
 
     if(isLoaded) {
       return(
+        <div>
+        <Info/>
         <RadarChart outerRadius="75%" width={400} height={400} data={radarData} cy="50%">
           <PolarGrid/>
           <PolarAngleAxis dataKey="category" tick={this.renderTicks}/>
@@ -100,6 +103,7 @@ class RadarSection extends React.Component {
           <Radar dataKey="value" stroke={COLORS[0]} fill={COLORS[0]} fillOpacity={0.5} dot={true}/>
           {isCompare && <Radar dataKey="value2" stroke={COLORS[1]} fill={COLORS[1]} fillOpacity={0.5} dot={true}/>}
         </RadarChart>
+        </div>
       );
     } else {
       return(

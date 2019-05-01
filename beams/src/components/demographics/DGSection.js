@@ -4,6 +4,7 @@ import { PieChart, Pie, Cell, Tooltip, Legend, ResponsiveContainer } from 'recha
 import { Grid, Paper, CircularProgress, Fade, Chip, Button, Popper, Typography } from '@material-ui/core';
 import ExtraIcon from '@material-ui/icons/ChevronRight';
 
+
 class DGSection extends React.Component {
 
   state = {
