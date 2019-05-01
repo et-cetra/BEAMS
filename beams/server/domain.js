@@ -86,6 +86,26 @@ getStatsRaw = async (token, hood_id, state) => {
     }
 }
 
+getBedroomStats = async (token, hood_id, state, type, num_rooms) => {
+    const key = hood_id + state + type + num_rooms;
+    return cache.get(key, () => getBedroomStatsRaw(token, hood_id, state, num_rooms));
+}
+
+getBedroomStatsRaw = async (token, hood_id, state, num_rooms) => {
+    const headers = {
+        'Authorization': `Bearer ${token}`
+    };
+    try {
+        const res = await axios.get(`https://api.domain.com.au/v1/suburbPerformanceStatistics?state=${state}&suburbId=${hood_id}&propertyCategory=house&chronologicalSpan=3&tPlusFrom=1&tPlusTo=8&bedrooms=${num_rooms}`, {
+            headers: headers
+        });
+        await res;
+        return res.data;
+    } catch (err) {
+        console.log("getStats FAILED:", err);
+    }
+}
+
 getSchools = async (token, lat, lng) => {
     const key = lat + lng;
     return cache.get(key, () => getSchoolsRaw(token, lat, lng));

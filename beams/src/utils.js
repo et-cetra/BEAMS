@@ -21,6 +21,12 @@ export const getStats = async (suburb, suburb_state) => {
     return result;
 }
 
+export const getBedroomStats = async (suburb, suburb_state, num_rooms) => {
+    const res = await fetch(`http://localhost:5000/BedroomStats/${suburb}/${suburb_state}/${num_rooms}`);
+    const result = await res.json();
+    return result;
+}
+
 export const getLocation = async (suburb, suburb_state) => {
     const res = await fetch(`http://open.mapquestapi.com/geocoding/v1/address?key=RLok66AiiE73bgmFH5KWI2FvKWqj7AiM&outFormat=json&location=${suburb}+${suburb_state}`);
     const result = await res.json();
@@ -158,16 +164,15 @@ export const getCrimeRate = async (suburb, suburb_state) => {
 export const getSurrounding = async (suburb, suburb_state) => {
     const location = await getLocation(suburb, suburb_state);
     const coords = location.results[0].locations[0].latLng;
-
-    const url = `http://api.geonames.org/findNearbyPostalCodesJSON?formatted=true&lat=${coords.lat}&lng=${coords.lng}&username=beamsunsw&style=full&radius=30&maxRows=5`;
+    console.log("coords", coords);
+    const url = "http://api.geonames.org/findNearbyPlaceNameJSON?formatted=true&lat=${coords.lat}&lng=${coords.lng}&username=beamsunsw&style=full&radius=300&maxRows=5&cities1000";
     const res = await fetch(url);
     const result = await res.json();
     var arr = [];
     console.log(result);
     result.postalCodes.forEach(item => {
-      if(item.placeName !== suburb) arr.push({"suburb": item.placeName, "suburb_state": item.adminCode1});
+      if(item.name !== suburb) arr.push({"suburb": item.name, "suburb_state": item.adminCode1});
     });
 
-    console.log(arr);
     return arr.slice(0,3);
 }
