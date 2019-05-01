@@ -14,10 +14,20 @@ class HouseSoldPrice extends React.Component {
     }
 
     async componentDidMount() {
-      const rentStats = await getStats(this.props.suburbs[0].suburb, this.props.suburbs[0].suburb_state);
+      const bedrooms = this.props.bedrooms;
+      var rentStats = await getStats(this.props.suburbs[0].suburb, this.props.suburbs[0].suburb_state);
+
+      if (bedrooms != 0) {
+        rentStats = await getBedroomStats(this.props.suburbs[0].suburb, this.props.suburbs[0].suburb_state, bedrooms);
+      }
+
 
       if(this.props.isCompare){
-        const rentStats2 = await getStats(this.props.suburbs[1].suburb, this.props.suburbs[1].suburb_state);
+        var rentStats2 = await getStats(this.props.suburbs[1].suburb, this.props.suburbs[1].suburb_state);
+        if (bedrooms != 0) {
+          console.log("lol");
+          rentStats = await getBedroomStats(this.props.suburbs[1].suburb, this.props.suburbs[1].suburb_state, bedrooms);
+        }
         this.setState({
           isLoaded: true,
           contents: rentStats.series.seriesInfo,
@@ -38,7 +48,7 @@ class HouseSoldPrice extends React.Component {
       const isCompare = this.props.isCompare;
       const chartData = [];
       var s1Name, s2Name;
-      
+
       if(isCompare)
       {
         s1Name = `Median (${suburbs[0].suburb})`
@@ -53,17 +63,17 @@ class HouseSoldPrice extends React.Component {
         if(isCompare)
         {
           var item2 = contents2[i];
-          chartData.push({name: item.year.toString() + " Q" + monthSection, 
-              [s1Name] : item.values["medianSoldPrice"], 
-              [s2Name] : item2.values["medianSoldPrice"], 
+          chartData.push({name: item.year.toString() + " Q" + monthSection,
+              [s1Name] : item.values["medianSoldPrice"],
+              [s2Name] : item2.values["medianSoldPrice"],
           });
         } else {
-          chartData.push({name: item.year.toString() + " Q" + monthSection, 
-              Median: item.values["medianSoldPrice"], 
+          chartData.push({name: item.year.toString() + " Q" + monthSection,
+              Median: item.values["medianSoldPrice"],
               Lowest: item.values["lowestSoldPrice"],
               Highest: item.values["highestSoldPrice"],
           });
-        }       
+        }
       }
 
       if (error) {
