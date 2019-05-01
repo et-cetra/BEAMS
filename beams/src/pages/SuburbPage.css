@@ -273,10 +273,18 @@
 .PriorityPopup{
   padding: 20px;
   background-color: #4CAF50;
+  height: 25px;
 }
 
 .PriorityIcon{
   color: white;
   float: left;
   padding-right: 10px;
+}
+
+.ChipNearby{
+  float: right;
+  margin-left: 3px;
+  margin-right: 3px;
+  margin-top: -3px;
 }

@@ -1,5 +1,7 @@
 import React from 'react';
+import '../pages/SuburbPage.css'
 import { getSurrounding } from '../utils';
+import { Chip, CircularProgress, Avatar } from '@material-ui/core';
 
 class NearbySuburbs extends React.Component {
   constructor(props) {
@@ -11,11 +13,11 @@ class NearbySuburbs extends React.Component {
   }
 
   async componentDidMount() {
-      const surrouding = await getSurrounding(this.props.suburbs[0].suburb, this.props.suburbs[0].suburb_state);
+      const surrounding = await getSurrounding(this.props.suburbs[0].suburb, this.props.suburbs[0].suburb_state);
 
       this.setState({
         isLoaded: true,
-        surrouding: surrouding,
+        surrounding: surrounding,
     })
   }
 
@@ -23,12 +25,14 @@ class NearbySuburbs extends React.Component {
     const surrounding = this.state.surrounding;
 
     if (!this.state.isLoaded) {
-      return <div>Loading...</div>
+      return <div style={{float: "right"}}><CircularProgress size={30} style={{color: "white"}}/></div>;
     } else {
-      console.log(surrounding.results)
       return (
         <div>
-        
+          {surrounding.map((item) => (
+            <Chip avatar={<Avatar style={{width: 41, height: 41}}>{item.suburb_state}</Avatar>} className="ChipNearby" 
+             key={item.id} label={`${item.suburb}`} style={{color: "#333F48"}}/>
+          ))}
         </div>
       );
     }

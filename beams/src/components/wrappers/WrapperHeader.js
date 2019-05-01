@@ -5,7 +5,7 @@ import '../../pages/SuburbPage.css'
 import QuickSearch from '../QuickSearch.js'
 import NearbySuburbs from '../NearbySuburbs.js'
 import Info from '../RadarInfo.js'
-import { Grid, Typography, Divider, Link, Fade, Paper } from '@material-ui/core'
+import { Grid, Typography, Divider, Link, Fade, Paper, CircularProgress } from '@material-ui/core'
 import mTerrain from '../../assets/ic_terrain.png'
 import mTerrain1 from '../../assets/ic_terrain_1.png'
 import mTerrain2 from '../../assets/ic_terrain_2.png'
@@ -30,26 +30,29 @@ class WrapperHeader extends React.Component {
       pIcon = <CheckboxMarkedCircle className="PriorityIcon"/>;
       pColor = "#009688";
       pMessage = "This suburb meets your priorities. Click here to see properties in this area."
+      pIsSuggest = false;
       break;
       
       case -1:
       pIcon = <CloseCircle className="PriorityIcon"/>;
       pColor = "#D32F2F";
-      pMessage = "This suburb does not meet your priorities. For suitable areas nearby, consider: "
+      pMessage = "This suburb does not meet your priorities. For other areas nearby, try out: "
+      pIsSuggest = true;
       break;  
 
       default: 
       pIcon =  <MinusCircle className="PriorityIcon"/>;
       pColor = "#FFA000";
-      pMessage = "This suburb meets some of your priorities. For more suitable areas nearby, consider: "
+      pMessage = "This suburb meets some of your priorities. For other areas nearby, try out: "
+      pIsSuggest = true;
       break;
     }
 
     return (
       <Paper style={{backgroundColor: pColor, boxShadow: 'none'}} className="PriorityPopup">
         {pIcon}
-        <Typography style={{color: "white", fontSize: "16px"}}>{pMessage}</Typography>
-        <NearbySuburbs suburbs={this.props.suburbs}/>
+        <Typography style={{color: "white", fontSize: "16px", float: "left"}}>{pMessage}</Typography>
+        {pIsSuggest && <NearbySuburbs suburbs={this.props.suburbs}/>}
       </Paper>
     )
   }

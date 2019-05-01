@@ -156,41 +156,18 @@ export const getCrimeRate = async (suburb, suburb_state) => {
 }
 
 export const getSurrounding = async (suburb, suburb_state) => {
-    console.log(suburb + " " + suburb_state);
     const location = await getLocation(suburb, suburb_state);
     const coords = location.results[0].locations[0].latLng;
-    var radius = 1000; 
-    var returned_results = [];
-    var duplicate = 0;
-    console.log(coords.lat, coords.lng);
 
-    
-    while (returned_results.length < 3) {
-        const url = 'https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/nearbysearch/json?location='+coords.lat+','+coords.lng+'&radius='+radius+'&type=locality&fields=&key=AIzaSyDIMGCB2qSD9qIB0mrZu0uGEmZlc9e8m-Y'
-        const res = await fetch(url);
-        const response = await res.json();
-        for (var iResp = 0; iResp < response.results.length; iResp++) {
-            duplicate = 0;
-            for (var iReturn = 0; iReturn < returned_results.length; iReturn++) {
-                if (returned_results[iReturn].suburb == response.results[iResp].name)
-                    duplicate = 1;
-            }
+    const url = `http://api.geonames.org/findNearbyPostalCodesJSON?formatted=true&lat=${coords.lat}&lng=${coords.lng}&username=beamsunsw&style=full&radius=30&maxRows=5`;
+    const res = await fetch(url);
+    const result = await res.json();
+    var arr = [];
+    console.log(result);
+    result.postalCodes.forEach(item => {
+      if(item.placeName !== suburb) arr.push({"suburb": item.placeName, "suburb_state": item.adminCode1});
+    });
 
-            // If the suburb is not already pushed and it is not the same searched suburb
-            // Call google places PlaceDetails endpoint to get the suburb state
-            // And push into the returned_results array
-            if (duplicate == 0 && suburb != response.results[iResp].name) {
-                const details_url = "https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/details/json?placeid=" + response.results[iResp].place_id + "&fields=address_components&key=AIzaSyDIMGCB2qSD9qIB0mrZu0uGEmZlc9e8m-Y"
-                const details_res = await fetch(details_url);
-                const details_response = await details_res.json();
-                var details_suburb_state = " ";
-                for (var iDetails = 0; iDetails < details_response.result.address_components.length; iDetails++)
-                    if (details_response.result.address_components[iDetails].types[0] == "administrative_area_level_1")
-                        details_suburb_state = details_response.result.address_components[iDetails].short_name;
-                returned_results.push({suburb: response.results[iResp].name, suburb_state: details_suburb_state});
-            }
-        }
-        radius += 500;
-    }
-    return returned_results;
+    console.log(arr);
+    return arr.slice(0,3);
 }
