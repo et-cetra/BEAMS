@@ -49,7 +49,7 @@ class WrapperHeader extends React.Component {
       <Paper style={{backgroundColor: pColor, boxShadow: 'none'}} className="PriorityPopup">
         {pIcon}
         <Typography style={{color: "white", fontSize: "16px"}}>{pMessage}</Typography>
-        {/* <NearbySuburbs suburbs={this.props.suburbs}/> */}
+        <NearbySuburbs suburbs={this.props.suburbs}/>
       </Paper>
     )
   }

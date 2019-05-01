@@ -162,6 +162,7 @@ export const getSurrounding = async (suburb, suburb_state) => {
     var radius = 1000; 
     var returned_results = [];
     var duplicate = 0;
+    console.log(coords.lat, coords.lng);
 
     
     while (returned_results.length < 3) {
