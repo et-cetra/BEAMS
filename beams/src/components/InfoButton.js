@@ -34,12 +34,10 @@ class InfoButton extends React.Component {
         }
     };
 
-    handleClose = (event, reason) => {
-        if (reason === 'clickaway') {
-            return;
-        }
+    handleClose = () => {
         this.setState({ open: false });
     };
+
 
     handleExited = () => {
         this.processQueue();
@@ -64,6 +62,9 @@ class InfoButton extends React.Component {
                       'aria-describedby': 'message-id',
                   }}
                   message={<span id="message-id">{this.state.messageInfo.message}</span>}
+                  action={
+                      <IconButton color="inherit" size="small" onClick={this.handleClose}></IconButton>
+                  }
               />
             </div>
         );
