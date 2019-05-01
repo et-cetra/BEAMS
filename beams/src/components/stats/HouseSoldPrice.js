@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../pages/SuburbPage.css'
-import { getStats } from '../../utils.js'
+import { getStats, getBedroomStats } from '../../utils.js'
 import StatsSection from './StatsSection';
 
 class HouseSoldPrice extends React.Component {
