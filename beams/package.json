@@ -4,17 +4,23 @@
   "private": true,
   "dependencies": {
     "@devexpress/dx-react-grid-material-ui": "^1.10.4",
+    "@ibm-watson/tone-analyzer-nodejs": "^1.1.1",
     "@material-ui/core": "^3.9.2",
     "@material-ui/icons": "^3.0.2",
     "axios": "^0.18.0",
+    "aylien_textapi": "^0.7.0",
     "braces": "^2.3.2",
     "britecharts-react": "^0.5.1",
     "deepai": "^1.0.0",
+    "dotenv": "^7.0.0",
+    "fs": "0.0.1-security",
     "googleplaces": "^0.6.1",
+    "ibm-watson": "^4.1.0",
     "material-ui-search-bar": "^0.4.2",
     "mdi-material-ui": "^5.10.0",
     "node-cache": "^4.2.0",
     "node-fetch": "^2.3.0",
+    "path": "^0.12.7",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "react-grid-system": "^4.4.3",
@@ -25,7 +31,8 @@
     "react-swipeable-views": "^0.13.1",
     "react-transition-group": "^2.7.0",
     "recharts": "^1.5.0",
-    "typeface-roboto": "0.0.54"
+    "typeface-roboto": "0.0.54",
+    "watson-developer-cloud": "^4.0.1"
   },
   "scripts": {
     "start": "react-scripts start",

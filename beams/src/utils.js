@@ -1,7 +1,6 @@
 import { jsonSchoolResponse } from './data/SchoolsData';
 import { jsonSEResponse } from './data/SEData'
 import {jsonCrimeData} from './data/CrimeData';
-const axios = require('axios')
 
 export const getSuburbId = async (suburb, suburb_state) => {
     const res = await fetch(`http://localhost:5000/suburb/${suburb}/${suburb_state}`);
@@ -37,47 +36,8 @@ export const getNews = async (suburb, suburb_state) => {
     const url = `https://gnews.io/api/v2/?q=${suburb}&max=7&country=au&in=title&token=7a7b0d71ed28c75d56b185fc5896f148`;
     const res = await fetch(url);
     const result = await res.json();
+    console.log(result);
     return result;
-}
-
-// Given the news article returned from newsapi.org
-// Returns sentiment analysis scores on the news article
-// Positive in scores[0], neutral in scores[1] and negative in scores[2]
-// From the testing, the api doesnt seem to have any negative scoring, so maybe treat half the neutrals as negative idk.
-// An idea for rating conversion: each positive = +2 stars, each neutral = -0.5 stars. Then divide by 5.
-export const getSentiment = async (newsArticles) => {
-    const deepai = require('deepai'); // OR include deepai.min.js as a script tag in your HTML
-    deepai.setApiKey('2adbe484-819f-45e9-a270-602439ab410e');
-
-    var scoreTotal = 0;
-
-    var limit = 5;
-    if (newsArticles.articles.length < limit)
-        limit = newsArticles.articles.length;
-
-    for (let i = 0; i < limit; i++) {
-        var resp = await deepai.callStandardApi("sentiment-analysis", {
-                text: newsArticles.articles[i].description,
-        });
-
-        for (let iResp = 0; iResp < resp.output.length; iResp++) {
-            if (resp.output[iResp] === "Positive") {
-                scoreTotal++;
-            } else if (resp.output[iResp] === "Neutral") {
-                scoreTotal += 0.5;
-            } else {
-                scoreTotal--;
-            }
-        }
-    }
-
-    //
-    // Scoretotal > 0 = positive
-    // < 0 = negative
-    //
-
-    //Calc and return score
-    return scoreTotal/limit;
 }
 
 export const getSchoolRating = (suburb, suburb_state) => {
@@ -192,4 +152,27 @@ export const getSurrounding = async (suburb, suburb_state) => {
         radius += 500;
     }
     return returned_results;
+}
+
+export const getSentiment = async (newsArticles) => {
+    // var AYLIENTextAPI = require('../node_modules/aylien_textapi')
+    // var textapi = new AYLIENTextAPI({
+    //     application_id: '4c978193',
+    //     application_key: '4cce4f1d95bd03fe90cfa10618617497'
+    // });
+    // console.log(newsArticles);
+    // textapi.sentiment({
+    //     'text': 'John is a very good football player!'
+    // }, function(error, response) {
+    //     if (error === null) {
+    //         console.log(response);
+    //     }
+    // });
+
+    // const text = "I hate everything!";
+    // const url = "https://cors-anywhere.herokuapp.com/https://api.aylien.com/api/v1/sentiment?mode=document&text=" + text;
+    // const res = await fetch(url);
+    // const resp = await res.json();
+    // console.log(resp);
+
 }

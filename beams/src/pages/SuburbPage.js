@@ -11,6 +11,7 @@ import WrapperMaps from '../components/wrappers/WrapperMaps'
 import WrapperNews from '../components/wrappers/WrapperNews'
 import WrapperSchools from '../components/wrappers/WrapperSchools'
 import InfoButton from '../components/InfoButton';
+import { getSurrounding, getNews, getSentiment } from '../utils';
 
 const theme = createMuiTheme({
   typography: {
@@ -32,7 +33,9 @@ class SuburbPage extends React.Component {
 
   getSingleSuburb = (suburbs, onSuburbCompare) => {
     const COLORS = this.COLORS();
-
+    const sentiment_news = getNews(this.props.suburbs[0].suburb, this.props.suburbs[0].suburb_state);
+    console.log(sentiment_news);
+    getSentiment(sentiment_news);
     return (
       <div className="SingleWholeContainer">
       <WrapperHeader isCompare={false} suburbs={suburbs} onSuburbCompare={onSuburbCompare}
