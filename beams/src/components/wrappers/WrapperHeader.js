@@ -115,7 +115,7 @@ class WrapperHeader extends React.Component {
         </Typography>
         :
         <Link style={{cursor: "pointer"}} color="textPrimary" underline="none"
-          to={subOneRoute} onClick={() => this.props.onSuburbSelect(city(0))}>
+          to={subOneRoute} onClick={() => this.props.onSuburbSelect(city(0), this.props.priorities)}>
           <Typography align="left" inline className="MainText"
             style={{ fontSize: 34 }} variant="overline" color="inherit">
             {`${suburbs[0].suburb}, ${suburbs[0].suburb_state}`}
@@ -130,7 +130,7 @@ class WrapperHeader extends React.Component {
         :
         <div className="HeadingR">
           <Link style={{cursor: "pointer"}} color="textPrimary" underline="none"
-            to={subTwoRoute} onClick={() => this.props.onSuburbSelect(city(1))}>
+            to={subTwoRoute} onClick={() => this.props.onSuburbSelect(city(1), this.props.priorities)}>
             <Typography align="right" inline className="MainTextR"
               style={{ fontSize: 34 }} variant="overline" color="inherit">
               {`${suburbs[1].suburb}, ${suburbs[1].suburb_state}`}
