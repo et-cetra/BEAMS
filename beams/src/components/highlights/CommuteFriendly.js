@@ -14,24 +14,14 @@ class CommuteFriendly extends React.Component {
         const suburbInfo = this.props.stats;
         var commuteArray = suburbInfo.demographics[10].items;
         var arrayLength = 3;
-        var carAndWalk = 0;
-        var carFound = 0;
-        var walkFound = 0;
         const total = commuteArray[0].value + commuteArray[1].value + commuteArray[2].value;
 
         for (var i = 0; i < arrayLength; i++) {
             if (commuteArray[i].label === "Car (driver)") {
-                carAndWalk = carAndWalk + commuteArray[i].value;
-                carFound = 1;
-            } else if (commuteArray[i].label === "Walked only") {
-                carAndWalk = carAndWalk + commuteArray[i].value;
-                walkFound = 1;
-            }
-            if (carFound && walkFound) {
                 break;
             }
         }
-        if ((carAndWalk / total) <= 0.55) {
+        if ((commuteArray[i].value / total) <= 0.55) {
             return true;
         } else {
             return false;
