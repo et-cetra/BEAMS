@@ -24,7 +24,11 @@ class MedianRent extends React.Component {
       }
 
       if(this.props.isCompare){
-        const rentStats2 = await getStats(this.props.suburbs[1].suburb, this.props.suburbs[1].suburb_state);
+        var rentStats2 = await getStats(this.props.suburbs[1].suburb, this.props.suburbs[1].suburb_state);
+        if (bedrooms != 0) {
+          console.log("lol");
+          rentStats = await getBedroomStats(this.props.suburbs[1].suburb, this.props.suburbs[1].suburb_state, bedrooms);
+        }
         this.setState({
           isLoaded: true,
           contents: rentStats.series.seriesInfo,
