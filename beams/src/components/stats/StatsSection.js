@@ -200,36 +200,50 @@ class StatsSection extends React.Component {
     const chartData = this.props.chartData;
     var formattedText = this.formattedText;
     var median = this.getMedian(chartData);
+    const r = this.props.bedrooms;
+    console.log("R", r);
 
+    //total average, 1 room, 2 room, 3 room
+    //manually calculated from 12 cities across australia using quartile medians
+    const medianPricesRentL = [450, 320, 430, 605];
+    const medianPricesRentM = [575, 390, 520, 725];
+    const medianPricesRentH = [655, 540, 645, 880];
+
+    //total average, --skip--, 2 room, 3 room, 4 room
+    const medianPricesSoldL = [630000, 0, ];
+    const medianPricesSoldM = [1030000, 0,  ];
+    const medianPricesSoldH = [1530000, 0,  ];
+
+    
     switch(type){
        case "HouseSoldPrice":
-        if(median <= 630000)
+        if(median <= medianPricesSoldL[r])
           return formattedText("Affordable House Prices", 
            "Home prices are considered affordable in this area. This may be in expense of socioeconomic status, and/or may be a rural region.")
-        else if(median > 630000 && median <= 1030000)
+        else if(median > medianPricesSoldL[r] && median <= medianPricesSoldM[r])
           return formattedText("Low-Median House Prices", 
-            "House prices are within the low-high standard for this area. The suburb is often relatively distant from state cities, but is starting to grow with new transport, education and workplace solutions. Recommended for students or new families within a budget.")
-        else if(median > 1030000 && median <= 1530000)
-          return formattedText("Urban Standard House Prices", 
-            "Home prices are within the medium-high standard for this area. The suburb is often expanding with an adequate amount of facilities and transport solutions. Suitable for most settled families, or those looking for a higher standard of living.")
+            "House prices are within the low-medium standard for this area. The suburb is often relatively distant from state cities, but is starting to grow with new transport, education and workplace solutions. Recommended for students or new families within a budget.")
+        else if(median > medianPricesSoldM[r] && median <= medianPricesSoldH[r])
+          return formattedText("Standard House Prices", 
+            "Home prices are within the standard for this area. The suburb is often expanding with an adequate amount of facilities and transport solutions. Suitable for most settled families, or those looking for a higher standard of living.")
         else 
           return formattedText("Expensive House Prices", 
-            "Home prices are considered beyond the state median for this area. This is usually the case for suburban areas near cities with a high socioeconomic status, and plenty of facilities for suburb growth. Suitable for settled families looking for long-term residency, or those who may afford a premium standard of living.")
+            "Home prices are considered beyond the high standard for this area. This is usually the case for suburban areas near cities with a high socioeconomic status, and plenty of facilities for suburb growth. Suitable for settled families looking for long-term residency, or those who may afford a premium standard of living.")
 
       case "MedianRent":
-        if(median <= 450)
+        if(median <= medianPricesRentL[r])
           return formattedText("Affordable Rent Prices", 
             "Rent prices are considered affordable in this area. This may be in expense of socioeconomic status, and/or may be a rural region.")
-        else if(median > 450 && median <= 575)
-          return formattedText("Low-Median Rent Prices", 
-            "Rent prices are within the low-high standard for this area. The suburb is often relatively distant from state cities, but is starting to grow with new transport, education and workplace solutions. Recommended for students or new families within a budget.")
-        else if(median > 575 && median <= 655)
-          return formattedText("Urban Standard Rent Prices", 
-            "Rent prices are within the medium-high standard for this area. The suburb is often expanding with an adequate amount of facilities and transport solutions. Suitable for students or workers who require facilities nearby and prefer an urban setting.")
-        else 
-          return formattedText("Expensive Rent Prices", 
-            "Rent prices are considered beyond the state median for this area. This is usually the case for suburban areas near cities with a high socioeconomic status, and plenty of facilities for suburb growth. Suitable for small families, students or workers who prefer to live in, or considerably close, to cities. Usually a population-dense urban environment.")
-
+        else if(median > medianPricesRentL[r] && median <= medianPricesRentM[r])
+          return formattedText("Standard Rent Prices", 
+            "Rent prices are within the median standard for this area. The suburb is often relatively distant from state cities, but is often expanding with an adequate amount of facilities and transport solutions. Recommended for students or new families within a budget.")
+        else if(median > medianPricesRentM[r] && median <= medianPricesRentH[r])
+        return formattedText("High Standard Rent Prices", 
+          "Rent prices are within the medium-high standard for this area. The suburb is often expanding with an adequate amount of facilities and transport solutions. Suitable for students or workers who require facilities nearby and prefer an urban setting.")
+          else 
+            return formattedText("Expensive Rent Prices", 
+              "Rent prices are considered beyond the high standard for this area. This is usually the case for suburban areas near cities with a high socioeconomic status, and plenty of facilities for suburb growth. Suitable for small families, students or workers who prefer to live in close to cities. Usually a population-dense urban environment.")
+  
       default: return;
     }
   }

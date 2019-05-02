@@ -81,14 +81,14 @@ class MedianRent extends React.Component {
       } else if (!isLoaded) {
           return (
           <div>
-              <StatsSection key={this.props.bedrooms} loading={1} COLORS={COLORS} chartData={[]}/>
+              <StatsSection bedrooms={this.props.bedrooms} key={this.props.bedrooms} loading={1} COLORS={COLORS} chartData={[]}/>
           </div>
           );
       } else {
           return (
           <div>
               <StatsSection loading={0} COLORS={COLORS} chartData={chartData} isCompare={isCompare}
-              suburbs={suburbs} type="MedianRent" key={this.props.bedrooms} />
+              suburbs={suburbs} type="MedianRent" key={this.props.bedrooms} bedrooms={this.props.bedrooms}/>
           </div>
           );
       }
