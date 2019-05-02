@@ -50,41 +50,35 @@ export const getNews = async (suburb, suburb_state) => {
 // Returns sentiment analysis scores on the news article
 // Positive in scores[0], neutral in scores[1] and negative in scores[2]
 // From the testing, the api doesnt seem to have any negative scoring, so maybe treat half the neutrals as negative idk.
-// An idea for rating conversion: each positive = +2 stars, each neutral = -0.5 stars. Then divide by 5.
+
 export const getSentiment = async (newsArticles) => {
     const deepai = require('deepai'); // OR include deepai.min.js as a script tag in your HTML
     deepai.setApiKey('2adbe484-819f-45e9-a270-602439ab410e');
 
-    var scoreTotal = 0;
+    var scoreTotal = {positive: 0, neutral: 0, negative: 0};
 
-    var limit = 5;
-    if (newsArticles.articles.length < limit)
-        limit = newsArticles.articles.length;
-
-    for (let i = 0; i < limit; i++) {
-        var resp = await deepai.callStandardApi("sentiment-analysis", {
-                text: newsArticles.articles[i].description,
-        });
-
-        for (let iResp = 0; iResp < resp.output.length; iResp++) {
-            if (resp.output[iResp] === "Positive") {
-                scoreTotal++;
-            } else if (resp.output[iResp] === "Neutral") {
-                scoreTotal += 0.5;
-            } else {
-                scoreTotal--;
-            }
+    var string = "";
+    for (var iNews = 0; iNews < newsArticles.articles.length; iNews++)
+        string += newsArticles.articles[iNews].title;
+    console.log(string);
+    var resp = await deepai.callStandardApi("sentiment-analysis", {
+            text: string
+    });
+    console.log(resp);
+    for (var iResp = 0; iResp < resp.output.length; iResp++) {
+        if (resp.output[iResp] === "Positive") {
+            scoreTotal.positive++;
+        } else if (resp.output[iResp] === "Neutral") {
+            scoreTotal.neutral++;
+        } else if (resp.output[iResp] === "Negative") {
+            scoreTotal.negative++;
         }
     }
+    console.log(scoreTotal);
+    return scoreTotal;    
 
-    //
-    // Scoretotal > 0 = positive
-    // < 0 = negative
-    //
-
-    //Calc and return score
-    return scoreTotal/limit;
 }
+
 
 export const getSchoolRating = (suburb, suburb_state) => {
     const schoolArray = jsonSchoolResponse.data.schools;
