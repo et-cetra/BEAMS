@@ -272,7 +272,6 @@
 
 .PriorityPopup{
   padding: 20px;
-  background-color: #4CAF50;
   height: 25px;
   max-width: 100%;
   width: 100%;
@@ -290,6 +289,12 @@
   margin-right: 3px;
   margin-top: -3px;
   cursor: pointer;
+}
+
+.PriorityText{
+  float: left;
+  width: 550px;
+  vertical-align: center;
 }
 
 .BedroomSelect{
@@ -330,4 +335,10 @@
   padding-left: 10px;
   width: 28px;
   height: 28px;
+}
+
+.PriorityPopper{
+  position: absolute;
+  padding-top: 50px;
+  left: 145px;
 }
