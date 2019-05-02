@@ -60,7 +60,7 @@ export const getSentiment = async (newsArticles) => {
     var regex = /[.]/g;
     var string = "";
     for (var iNews = 0; iNews < newsArticles.articles.length; iNews++)
-      string += newsArticles.articles[iNews].desc.replace(regex, "") + ". ";
+      string += newsArticles.articles[iNews].title.replace(regex, "") + ". ";
     console.log(string);
     var resp = await deepai.callStandardApi("sentiment-analysis", {
             text: string
@@ -76,7 +76,7 @@ export const getSentiment = async (newsArticles) => {
         }
     }
     console.log(scoreTotal);
-    return scoreTotal;    
+    return scoreTotal;
 }
 
 
