@@ -31,16 +31,20 @@ class WrapperHeader extends React.Component {
     console.log("priorities", priorities);
 
     var prioritiesString = "";
-    var i = 0;
-    for (i in priorities) {
+    var x = 0;
+    for (var i in priorities) {
       if (priorities[i] === true) {
         if (prioritiesString === "") {
           prioritiesString = prioritiesString + i;
         } else {
-          prioritiesString = prioritiesString + ", " + i;
+          if(priorities.length - 1 === x)
+            prioritiesString = prioritiesString + " and " + i;
+          else
+            prioritiesString = prioritiesString + ", " + i;
         }
       }
-      i++;
+
+      x++;
     }
     console.log("string", prioritiesString);
 
@@ -48,21 +52,21 @@ class WrapperHeader extends React.Component {
       case 1:
       pIcon = <CheckboxMarkedCircle className="PriorityIcon"/>;
       pColor = "#009688";
-      pMessage = "This suburb meets your priorities. Click here to see properties in this area."
+      pMessage = `This suburb meets your priorities (${prioritiesString}). Click here to see properties in this area.`
       pIsSuggest = false;
       break;
 
       case -1:
       pIcon = <CloseCircle className="PriorityIcon"/>;
       pColor = "#D32F2F";
-      pMessage = "This suburb does not meet your priorities. For other areas nearby, try out: "
+      pMessage = `This suburb does not meet your priorities (${prioritiesString}). For other areas nearby, try out: `
       pIsSuggest = true;
       break;
 
       default:
       pIcon =  <MinusCircle className="PriorityIcon"/>;
       pColor = "#FFA000";
-      pMessage = "This suburb meets some of your priorities. For other areas nearby, try out: "
+      pMessage = `This suburb meets some of your priorities. For other areas nearby, try out: `
       pIsSuggest = true;
       break;
     }
