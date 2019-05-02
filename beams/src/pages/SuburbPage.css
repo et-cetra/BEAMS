@@ -291,3 +291,32 @@
   margin-top: -3px;
   cursor: pointer;
 }
+
+.BedroomSelect{
+  position: absolute;
+  right: 80px;
+  top: 120px;
+  z-index: 100;
+}
+
+.BedroomSelectCompare{
+  position: absolute;
+  right: 80px;
+  top: 100px;
+  z-index: 100;
+}
+
+.BedroomForm{
+  width: 140px;
+}
+
+.BedroomIcon{
+  float: left;
+  padding-right: 12px;
+  padding-top: 4px;
+}
+
+.BedroomText{
+  position: absolute;
+  top:50px;
+}

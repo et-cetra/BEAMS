@@ -47,6 +47,7 @@ class MedianRent extends React.Component {
       const isCompare = this.props.isCompare;
       const chartData = [];
       var s1Name, s2Name;
+      console.log(this.props.bedrooms);
 
       if(isCompare)
       {
@@ -80,14 +81,14 @@ class MedianRent extends React.Component {
       } else if (!isLoaded) {
           return (
           <div>
-              <StatsSection loading={1} COLORS={COLORS} chartData={[]}/>
+              <StatsSection key={this.props.bedrooms} loading={1} COLORS={COLORS} chartData={[]}/>
           </div>
           );
       } else {
           return (
           <div>
               <StatsSection loading={0} COLORS={COLORS} chartData={chartData} isCompare={isCompare}
-              suburbs={suburbs} type="MedianRent"/>
+              suburbs={suburbs} type="MedianRent" key={this.props.bedrooms} />
           </div>
           );
       }

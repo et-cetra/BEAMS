@@ -21,7 +21,6 @@ class HouseSoldPrice extends React.Component {
         rentStats = await getBedroomStats(this.props.suburbs[0].suburb, this.props.suburbs[0].suburb_state, bedrooms);
       }
 
-
       if(this.props.isCompare){
         var rentStats2 = await getStats(this.props.suburbs[1].suburb, this.props.suburbs[1].suburb_state);
         if (bedrooms != 0) {
@@ -80,13 +79,13 @@ class HouseSoldPrice extends React.Component {
       } else if (!isLoaded) {
           return (
           <div>
-              <StatsSection loading={1} COLORS={COLORS} chartData={[]}/>
+              <StatsSection key={this.props.bedrooms} loading={1} COLORS={COLORS} chartData={[]}/>
           </div>
           );
       } else {
           return (
           <div>
-              <StatsSection loading={0} COLORS={COLORS} chartData={chartData} isCompare={isCompare}
+              <StatsSection key={this.props.bedrooms} loading={0} COLORS={COLORS} chartData={chartData} isCompare={isCompare}
               suburbs={suburbs} type="HouseSoldPrice"/>
           </div>
           );
