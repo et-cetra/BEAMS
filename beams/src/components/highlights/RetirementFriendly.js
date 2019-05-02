@@ -1,5 +1,4 @@
 import React from 'react';
-import { getDemographics } from '../../utils.js'
 import Chip from '@material-ui/core/Chip';
 import Avatar from '@material-ui/core/Avatar';
 import PeopleIcon from '@material-ui/icons/People'
@@ -12,9 +11,12 @@ class RetirementFriendly extends React.Component {
     // If 60+ is above 15% give tag 'Retirement Friendly'
 
     async isRetirementFriendly() {
-        const suburbInfo = await getDemographics(this.props.suburb, this.props.suburb_state);
+        const suburbInfo = this.props.stats;
         var agesArray = suburbInfo.demographics[0].items;
         var arrayLength = agesArray.length;
+        if (arrayLength === 0) {
+            return false;
+        }
         const total = suburbInfo.demographics[0].total;
         for (var i = 0; i < arrayLength; i++) {
             if (agesArray[i].label === "60+") {

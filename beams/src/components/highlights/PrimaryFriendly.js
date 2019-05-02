@@ -17,6 +17,9 @@ class PrimaryFriendly extends React.Component {
         const coords = gLocation.results[0].locations[0].latLng;
         const gSchools = await getSchools(coords.lat, coords.lng);
         var arrayLength = gSchools.length;
+        if (arrayLength === 0) {
+            return false;
+        }
         var primaryCount = 0;
         for (var i = 0; i < arrayLength; i++) {
             if (gSchools[i].educationLevel === "Primary") {
@@ -39,7 +42,7 @@ class PrimaryFriendly extends React.Component {
     render() {
         if (this.state.isPrimaryFriendly) {
             return (
-                <Chip avatar={<Avatar><SchoolIcon/></Avatar>} label="Primary Education Friendly" 
+                <Chip avatar={<Avatar><SchoolIcon/></Avatar>} label="Primary Education Friendly"
                 className="ChipsHighlight" color={this.props.compareColor}/>
             );
         } else {

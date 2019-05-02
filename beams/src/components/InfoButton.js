@@ -34,12 +34,10 @@ class InfoButton extends React.Component {
         }
     };
 
-    handleClose = (event, reason) => {
-        if (reason === 'clickaway') {
-            return;
-        }
+    handleClose = () => {
         this.setState({ open: false });
     };
+
 
     handleExited = () => {
         this.processQueue();
@@ -51,19 +49,23 @@ class InfoButton extends React.Component {
             <div className="InfoPopup">
               <IconButton onClick={this.handleClick(this.props.message)}><img src={mInfo} className="InfoDef" alt="info"/></IconButton>
               <Snackbar
+                  style={{height: "10px"}}
                   key={this.state.messageInfo.key}
                   anchorOrigin={{
                       vertical: 'bottom',
                       horizontal: 'left',
                   }}
                   open={this.state.open}
-                  autoHideDuration={3000}
+                  autoHideDuration={4000}
                   onClose={this.handleClose}
                   onExited={this.handleExited}
                   ContentProps={{
                       'aria-describedby': 'message-id',
                   }}
                   message={<span id="message-id">{this.state.messageInfo.message}</span>}
+                  action={
+                      <IconButton color="inherit" size="small" onClick={this.handleClose}></IconButton>
+                  }
               />
             </div>
         );

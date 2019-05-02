@@ -129,16 +129,16 @@ class StatsSection extends React.Component {
 
       </div>
       <ResponsiveContainer height={430} width="95%">
-      <LineChart className="LineChart"
+      <LineChart className="LineChart" connectNulls
       data={chartData} margin={{top: 50, right: 20, left: 20, bottom: 10}}>
         <CartesianGrid strokeDasharray="3 3"/>
         <XAxis dataKey="name" tick={<AxisTickX/>} tickLine={false}/>
         <YAxis tick={<AxisTickY/>} tickLine={false}/>
         <Tooltip content={this.customTooltip}/>
         <Legend verticalAlign="bottom" align="center" iconSize={0} formatter={this.getLegend}/>
-        <Line type="monotone" dataKey="Highest" stroke={COLORS[1]} strokeDasharray="3 3"/>
-        <Line type="monotone" dataKey="Median" stroke={COLORS[0]}/>
-        <Line type="monotone" dataKey="Lowest" stroke={COLORS[2]} strokeDasharray="3 3"/>
+        <Line connectNulls type="monotone" dataKey="Highest" stroke={COLORS[1]} strokeDasharray="3 3"/>
+        <Line connectNulls type="monotone" dataKey="Median" stroke={COLORS[0]}/>
+        <Line connectNulls type="monotone" dataKey="Lowest" stroke={COLORS[2]} strokeDasharray="3 3"/>
       </LineChart>
       </ResponsiveContainer>
       </div>
@@ -157,8 +157,8 @@ class StatsSection extends React.Component {
         <YAxis tick={<AxisTickY/>} tickLine={false}/>
         <Tooltip content={this.customTooltip}/>
         <Legend verticalAlign="bottom" align="center" iconSize={0} formatter={this.getLegend}/>
-        <Line type="monotone" dataKey={s1Name} stroke={COLORS[0]}/>
-        <Line type="monotone" dataKey={s2Name} stroke={COLORS[1]}/>
+        <Line connectNulls type="monotone" dataKey={s1Name} stroke={COLORS[0]}/>
+        <Line connectNulls type="monotone" dataKey={s2Name} stroke={COLORS[1]}/>
       </LineChart>
       </ResponsiveContainer>
     );

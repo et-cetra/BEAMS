@@ -1,12 +1,33 @@
 .HomeContainer{
   padding-top: 140px;
+  width: 90vw;
 }
 
-.footer{
+.Footer{
   position: fixed;
-  bottom: 20px;
-  right: 20px;
-  padding: 5px;
+  bottom: 6px;
+  padding: 4px;
+  width: 90vw;
 }
 
+.FooterL{
+  float: left;
+}
 
+.FooterR{
+  float: right;
+}
+
+.AdvSearchIcon{
+  padding-right: 16px;
+  margin-left: -6px;
+  color: black;
+}
+
+.AdvPanel{
+  opacity: 0.8;
+  width: 180px;
+  float: right;
+  margin-top: -62px;
+  padding: 6.7px;
+}

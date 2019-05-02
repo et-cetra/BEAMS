@@ -34,10 +34,9 @@ class WrapperStats extends React.Component {
 
     render() {
       const { value } = this.state;
-      const rentbuy = "sale";
-      if (value === 0) {
-          const rentbuy = "rent";
-      }
+      var rentbuy = "sale";
+      if (value === 0)  rentbuy = "rent";
+
       const suburbs = this.props.suburbs;
       const COLORS = this.props.COLORS;
       const isCompare = this.props.isCompare;
@@ -46,10 +45,9 @@ class WrapperStats extends React.Component {
       const linksuburb = (suburb.toLowerCase()).replace(/ /g,"-");
       const postcode = this.state.postcode
 
-      //const bedrooms =
-      //e.g. https://www.domain.com.au/sale/parramatta-nsw-2150/?ptype=apartment&bedrooms=2
-     // var link = "https://www.domain.com.au/" + value + "/"+ linksuburb + "-" + linkstate + "-" + postcode + "/" + "bedrooms=" + bedrooms
-      var link = "https://www.domain.com.au/" + rentbuy + "/"+ linksuburb + "-" + linkstate + "-" + postcode + "/"
+      const bedrooms = 0;
+      //e.g. https://www.domain.com.au/sale/parramatta-nsw-2150/?bedrooms=2
+      var link = "https://www.domain.com.au/" + rentbuy + "/"+ linksuburb + "-" + linkstate + "-" + postcode + "/" + "bedrooms=" + bedrooms +"/"
 
       return (
         <Grid item className="StatsContainer">

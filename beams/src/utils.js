@@ -2,7 +2,6 @@ import { jsonSchoolResponse } from './data/SchoolsData';
 import { jsonSEResponse } from './data/SEData'
 import {jsonCrimeData} from './data/CrimeData';
 import {jsonPostcodes} from './data/PostcodeData';
-const axios = require('axios')
 
 export const getSuburbId = async (suburb, suburb_state) => {
     const res = await fetch(`http://localhost:5000/suburb/${suburb}/${suburb_state}`);
@@ -159,27 +158,30 @@ export const getCrimeRate = async (suburb, suburb_state) => {
 export const getSurrounding = async (suburb, suburb_state) => {
     const location = await getLocation(suburb, suburb_state);
     const coords = location.results[0].locations[0].latLng;
-    const radius = 5000;
 
-    const url = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location='+coords.lat+','+coords.lng+'&radius='+radius+'&type=locality&key=AIzaSyDIMGCB2qSD9qIB0mrZu0uGEmZlc9e8m-Y'
-    const res = await axios.get(url);
+    const url = `http://api.geonames.org/findNearbyPlaceNameJSON?formatted=true&lat=${coords.lat}&lng=${coords.lng}&username=beamsunsw&style=full&radius=300&maxRows=5&cities1500`;
+    const res = await fetch(url);
     const result = await res.json();
-    return result;
+    var arr = [];
+
+    result.geonames.forEach(item => {
+      if(item.name !== suburb) arr.push({"suburb": item.name, "suburb_state": Object.values(item.adminCodes1)[0]});
+    });
+
+    console.log(arr);
+    return arr.slice(0,3);
 }
 
 export const getPostcode = async (suburb, suburb_state) => {
-    const postcodeArray = jsonPostcodes.data.postcodes;
-    const arrayLength = postcodeArray.length;
-    let postcode = 0;
-    let found = false;
+  const postcodeArray = jsonPostcodes.data.postcodes;
+  const arrayLength = postcodeArray.length;
+  let postcode = 0;
 
-
-    for (var i = 0; i < arrayLength; i++) {
-        if(suburb && (postcodeArray[i].suburb.toLowerCase() === suburb.toLowerCase()) && (postcodeArray[i].suburb_state.toLowerCase() === suburb_state.toLowerCase())) {
-            found = true;
-            postcode = postcodeArray[i].postcode;
-            break;
-        }
+  for (var i = 0; i < arrayLength; i++) {
+    if(suburb && (postcodeArray[i].suburb.toLowerCase() === suburb.toLowerCase()) && (postcodeArray[i].suburb_state.toLowerCase() === suburb_state.toLowerCase())) {
+      postcode = postcodeArray[i].postcode;
+      break;
     }
-    return postcode;
+  }
+  return postcode;
 }

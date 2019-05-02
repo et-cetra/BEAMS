@@ -34,7 +34,6 @@ const theme = createMuiTheme({
 
 class Framework extends React.Component {
   render() {
-    
     return (
 
     /*
@@ -53,7 +52,7 @@ class Framework extends React.Component {
 
             <Grid item className="HeadingBox">
               {/* This text is invisible, but is used as a mask to go back to home */}
-              <Link to="/" onClick={this.props.onStartOver}> 
+              <Link to="/" onClick={this.props.onStartOver}>
               <Typography style={{ fontSize: 30, color: 'white'}}
               className="HeadingMain" variant="h1" noWrap> BEAMS </Typography></Link>
 
@@ -69,7 +68,7 @@ class Framework extends React.Component {
 
             <Grid container direction="row" justify="flex-end"
             alignItems="center" className="LogoContainer">
-              <QuickSearch onSuburbSelect={this.props.onSuburbSelect}/>
+              <QuickSearch onStartOver={this.props.onStartOver} priorities={this.props.priorities} onSuburbSelect={this.props.onSuburbSelect}/>
               <Grid item>
                 <img src={mBannerSm} width={160*0.9} height={97*0.9} alt="banner"
                 style={{paddingRight: "4px"}}/>

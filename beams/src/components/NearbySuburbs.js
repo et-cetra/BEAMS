@@ -1,8 +1,7 @@
 import React from 'react';
-import '../components/SuburbNews.css';
+import '../pages/SuburbPage.css'
 import { getSurrounding } from '../utils';
-
-// Request for Population Ages in Maroubra: https://api.domain.com.au/v1/demographics?level=Suburb&id=27512&types=AgeGroupOfPopulation&year=2016
+import { Chip, CircularProgress, Avatar } from '@material-ui/core';
 
 class NearbySuburbs extends React.Component {
   constructor(props) {
@@ -14,25 +13,28 @@ class NearbySuburbs extends React.Component {
   }
 
   async componentDidMount() {
-      const surrouding = await getSurrounding(this.props.suburb, this.props.suburb_state);
+      const surrounding = await getSurrounding(this.props.suburbs[0].suburb, this.props.suburbs[0].suburb_state);
 
       this.setState({
         isLoaded: true,
-        surrouding: surrouding,
+        surrounding: surrounding,
     })
   }
 
   render() {
     const surrounding = this.state.surrounding;
-    
+    const priorities = this.props.priorities;
+    const city = (idx) => surrounding[idx].suburb + " " + surrounding[idx].suburb_state + ", Australia";
 
     if (!this.state.isLoaded) {
-      return <div>Loading...</div>
+      return <div style={{float: "right"}}><CircularProgress size={30} style={{color: "white"}}/></div>;
     } else {
-      console.log(surrounding.results)
       return (
         <div>
-         
+          {surrounding.map((item, index) => (
+            <Chip key={index} avatar={<Avatar style={{width: 36, height: 36, fontSize: "10px"}}>{item.suburb_state}</Avatar>} className="ChipNearby"
+            label={`${item.suburb}`} style={{color: "#333F48"}} onClick={() => this.props.onSuburbSelect(city(index), priorities)}/>
+          ))}
         </div>
       );
     }

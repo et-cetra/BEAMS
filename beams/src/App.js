@@ -14,28 +14,27 @@ import CompareController from './components/CompareController';
 import { Router } from 'react-router';
 import createBrowserHistory from 'history/createBrowserHistory';
 
-// export const BeamsContext = React.createContext({ suburb: null, suburb_state: null });
-
 class App extends Component {
 
   constructor(props) {
     super(props);
 
     this.state = {
-      suburbs: [{ suburb: null, suburb_state: null }]
+      suburbs: [{ suburb: null, suburb_state: null }],
+      priorities: [],
     };
 
     this.onSuburbSelect = this.onSuburbSelect.bind(this);
-
     this.history = createBrowserHistory();
   }
 
-  onSuburbSelect = (city) => {
+  onSuburbSelect = (city, priorities) => {
     console.log(`The city is ${city}`);
+    console.log('Priorities set:', priorities);
     var { suburb, suburb_state } = this.parseCity(city);
     let suburbs = [{ suburb: suburb, suburb_state: suburb_state}];
     const route = "/suburb/" + suburb + "/" + suburb_state;
-    this.setState(() => ({ suburbs: suburbs}), () => this.history.push(route));
+    this.setState(() => ({ suburbs: suburbs, priorities: priorities }), () => this.history.push(route));
   };
 
   onSuburbCompare = (city) => {
@@ -46,7 +45,7 @@ class App extends Component {
   }
 
   onStartOver = () => {
-    this.setState(() => ({ suburbs: [{ suburb: null, suburb_state: null }] }), this.history.push("/"));
+    this.setState(() => ({ suburbs: [{ suburb: null, suburb_state: null }], priorities: [] }), this.history.push("/"));
   };
 
   parseCity(city) {
@@ -60,14 +59,14 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Framework onSuburbSelect={this.onSuburbSelect} onStartOver={this.onStartOver}/>
+        <Framework priorities={this.state.priorities} onSuburbSelect={this.onSuburbSelect} onStartOver={this.onStartOver}/>
         <Grid container className="ContentHolderMain" direction="column" justify="center" alignItems="center">
           <Grid item>
             <Router history={this.history}>
               <Switch>
                 <Route exact path="/" render={() => <HomePage onSelect={this.onSuburbSelect} onStartOver={this.onStartOver}/>}/>
-                <Route matches path="/suburb" render={() => <CompareController suburbs={this.state.suburbs} onStartOver={this.onStartOver} onSuburbCompare={this.onSuburbCompare} onSuburbSelect={this.onSuburbSelect} />} />
-                <Route matches path="/compare" render={() => <CompareController suburbs={this.state.suburbs} onStartOver={this.onStartOver} onSuburbCompare={this.onSuburbCompare} onSuburbSelect={this.onSuburbSelect} />} />
+                <Route matches path="/suburb" render={() => <CompareController suburbs={this.state.suburbs} priorities={this.state.priorities} onStartOver={this.onStartOver} onSuburbCompare={this.onSuburbCompare} onSuburbSelect={this.onSuburbSelect} />} />
+                <Route matches path="/compare" render={() => <CompareController suburbs={this.state.suburbs} priorities={this.state.priorities} onStartOver={this.onStartOver} onSuburbCompare={this.onSuburbCompare} onSuburbSelect={this.onSuburbSelect} />} />
                 <Route exact path="/developers" component={DevPage} />
               </Switch>
             </Router>

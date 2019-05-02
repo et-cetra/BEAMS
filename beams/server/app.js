@@ -22,39 +22,7 @@ app.get('/suburb/:suburb/:state', async (req, res) =>
     const suburbInfo = await domain.getSuburbId(token, req.params.suburb, req.params.state)
     res.json(suburbInfo)
 })
-/*
-app.get('/AgeGroupOfPopulation/:suburb/:state', async (req, res) =>
-{
-    await getToken()
-    const suburbInfo = await domain.getSuburbId(token, req.params.suburb, req.params.state)
-    const result = await domain.getDemographics(token, suburbInfo[0].ids[0].id, "AgeGroupOfPopulation")
-    res.json(result)
-})
 
-app.get('/CountryOfBirth/:suburb/:state', async (req, res) =>
-{
-    await getToken()
-    const suburbInfo = await domain.getSuburbId(token, req.params.suburb, req.params.state)
-    const result = await domain.getDemographics(token, suburbInfo[0].ids[0].id, "CountryOfBirth")
-    res.json(result)
-})
-
-app.get('/NatureOfOccupancy/:suburb/:state', async (req, res) =>
-{
-    await getToken()
-    const suburbInfo = await domain.getSuburbId(token, req.params.suburb, req.params.state)
-    const result = await domain.getDemographics(token, suburbInfo[0].ids[0].id, "NatureOfOccupancy")
-    res.json(result)
-})
-
-app.get('/TransportToWork/:suburb/:state', async (req, res) =>
-{
-    await getToken()
-    const suburbInfo = await domain.getSuburbId(token, req.params.suburb, req.params.state)
-    const result = await domain.getDemographics(token, suburbInfo[0].ids[0].id, "TransportToWork")
-    res.json(result)
-})
-*/
 app.get('/AllDemos/:suburb/:state', async (req, res) =>
 {
     await getToken()
@@ -77,7 +45,6 @@ app.get('/Coords/:lat/:lng', async (req, res) =>
     const result = await domain.getSchools(token, req.params.lat, req.params.lng);
     res.json(result);
 })
-
 
 app.listen(port, () => console.log(`App listening on port ${port}!`))
 

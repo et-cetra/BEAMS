@@ -1,5 +1,4 @@
 import React from 'react';
-import { getDemographics } from '../../utils.js'
 import Chip from '@material-ui/core/Chip';
 import Avatar from '@material-ui/core/Avatar';
 import ChildFriendly from '@material-ui/icons/ChildFriendly'
@@ -12,9 +11,12 @@ class FamilyFriendly extends React.Component {
     // If 0-19 is above 20% give tag 'Family Friendly'
 
     async isFamilyFriendly() {
-        const suburbInfo = await getDemographics(this.props.suburb, this.props.suburb_state);
+        const suburbInfo = this.props.stats;
         var agesArray = suburbInfo.demographics[0].items;
         var arrayLength = agesArray.length;
+        if (arrayLength === 0) {
+            return false;
+        }
         var youngTotal = 0;
         var zeroFound = 0;
         var fiveFound = 0;
