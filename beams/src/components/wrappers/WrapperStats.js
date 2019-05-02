@@ -13,7 +13,7 @@ import mChart from '../../assets/ic_chart.png'
 class WrapperStats extends React.Component {
     state = {
       value: 0,
-      bedrooms: 0
+      bedrooms: 3
     };
 
     handleChange = (event, value) => {

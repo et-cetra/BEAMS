@@ -43,6 +43,7 @@ app.get('/Bedroom/:num/:suburb/:state', async (req, res) =>
 {
     await getToken();
     const suburbInfo = await domain.getSuburbId(token, req.params.suburb, req.params.state);
+    console.log("req params rooms", req.params.num);
     const result = await domain.getBedroomStats(token, suburbInfo[0].ids[0].id, req.params.state, req.params.num);
     res.json(result);
 })

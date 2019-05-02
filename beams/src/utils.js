@@ -22,7 +22,7 @@ export const getStats = async (suburb, suburb_state) => {
 }
 
 export const getBedroomStats = async (suburb, suburb_state, num_rooms) => {
-    const res = await fetch(`http://localhost:5000/BedroomStats/${suburb}/${suburb_state}/${num_rooms}`);
+    const res = await fetch(`http://localhost:5000/Bedroom/${num_rooms}/${suburb}/${suburb_state}`);
     const result = await res.json();
     return result;
 }

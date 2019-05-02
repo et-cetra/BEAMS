@@ -86,8 +86,9 @@ getStatsRaw = async (token, hood_id, state) => {
     }
 }
 
-getBedroomStats = async (token, hood_id, state, type, num_rooms) => {
-    const key = hood_id + state + type + num_rooms;
+getBedroomStats = async (token, hood_id, state, num_rooms) => {
+    const key = hood_id + state + num_rooms;
+    console.log("rooooms", num_rooms);
     return cache.get(key, () => getBedroomStatsRaw(token, hood_id, state, num_rooms));
 }
 
@@ -96,6 +97,7 @@ getBedroomStatsRaw = async (token, hood_id, state, num_rooms) => {
         'Authorization': `Bearer ${token}`
     };
     try {
+        console.log("rooms", num_rooms);
         const res = await axios.get(`https://api.domain.com.au/v1/suburbPerformanceStatistics?state=${state}&suburbId=${hood_id}&propertyCategory=house&chronologicalSpan=3&tPlusFrom=1&tPlusTo=8&bedrooms=${num_rooms}`, {
             headers: headers
         });
@@ -132,4 +134,5 @@ module.exports = {
     getDemographics: getDemographics,
     getStats: getStats,
     getSchools: getSchools,
+    getBedroomStats: getBedroomStats
 };
