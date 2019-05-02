@@ -32,12 +32,13 @@ class Info extends React.Component {
           {({ TransitionProps }) => (
             <Fade {...TransitionProps} timeout={350}>
               <Paper className="PopperInfo">
-                <Typography><p>Information for this chart is sourced from state crime records, ICSEA school ratings and ABS.</p>
-                <p><b>Affordability</b> is found through low, median and highest prices within suburbs.</p>
-                <p><b>Education Quality</b> is caluclated through the ICSEA school rating.
-                The ICSEA scale is an index of community socio-educational advantage for school attendees.</p>
-                <p><b>Safety</b> is the crime rate of the suburb for the most recent 12 month period.</p>
-                <p><b>Socio-Economics</b> rating is given by ABS.</p>
+                <Typography>Information for this chart is derived from state crime records, ICSEA school ratings, ABS.
+                stats and housing data.<br/><br/>
+                <b>Affordability</b> is determined through low, median and highest price ranges within suburbs.<br/><br/>
+                <b>Education Quality</b> is determined with the ICSEA school rating.
+                The ICSEA scale is an index of community socio-educational advantage for school attendees.<br/><br/>
+                <b>Safety</b> is determined by the crime rate of the suburb within the most recent 12 month period.<br/><br/>
+                <b>Socio-Economic Status</b> is provided by the SEIFA rating of each suburb provided by the ABS.
                 </Typography>
               </Paper>
             </Fade>
