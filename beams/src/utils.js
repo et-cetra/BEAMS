@@ -57,10 +57,10 @@ export const getSentiment = async (newsArticles) => {
     deepai.setApiKey('2adbe484-819f-45e9-a270-602439ab410e');
 
     var scoreTotal = {positive: 0, neutral: 0, negative: 0};
-
+    var regex = /[.]/g;
     var string = "";
     for (var iNews = 0; iNews < newsArticles.articles.length; iNews++)
-        string += newsArticles.articles[iNews].title;
+      string += newsArticles.articles[iNews].desc.replace(regex, "") + ". ";
     console.log(string);
     var resp = await deepai.callStandardApi("sentiment-analysis", {
             text: string
@@ -77,7 +77,6 @@ export const getSentiment = async (newsArticles) => {
     }
     console.log(scoreTotal);
     return scoreTotal;    
-
 }
 
 

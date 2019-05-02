@@ -50,8 +50,8 @@ class SuburbPage extends React.Component {
 
         {/*LHS grid container*/}
         <Grid className="LeftContainer">
-          {/* <WrapperStats suburbs={suburbs} COLORS={COLORS}/> */}
-          {/* <WrapperDG suburbs={suburbs} COLORS={COLORS}/> */}
+          <WrapperStats suburbs={suburbs} COLORS={COLORS}/>
+          <WrapperDG suburbs={suburbs} COLORS={COLORS}/>
         </Grid>
         </Grid>
         </Slide>
