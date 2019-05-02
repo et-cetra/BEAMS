@@ -8,28 +8,51 @@ import { Grid, Typography, Tabs, Tab, Paper } from '@material-ui/core';
 
 import { HomeCity, HomeGroup } from 'mdi-material-ui'
 import mChart from '../../assets/ic_chart.png'
-import DomainLink from '../DomainLink'
+import {getPostcode} from '../../utils.js'
 
 class WrapperStats extends React.Component {
     state = {
-      value: 0
+      value: 0,
+      postcode: 0
     };
 
     handleChange = (event, value) => {
         this.setState({ value });
     };
 
+    async resolvePostcode() {
+        const postcode = await getPostcode(this.props.suburbs[0].suburb, this.props.suburbs[0].suburb_state);
+        return postcode;
+    }
+
+    async componentDidMount() {
+        const result = await this.resolvePostcode(this.props.suburbs[0].suburb, this.props.suburbs[0].suburb_state);
+        this.setState({
+            postcode: result
+        });
+    }
+
     render() {
       const { value } = this.state;
+      const rentbuy = "sale";
+      if (value === 0) {
+          const rentbuy = "rent";
+      }
       const suburbs = this.props.suburbs;
       const COLORS = this.props.COLORS;
       const isCompare = this.props.isCompare;
       const suburb = suburbs[0].suburb;
+      const linkstate = suburbs[0].suburb_state.toLowerCase();
+      const linksuburb = (suburb.toLowerCase()).replace(/ /g,"-");
+      const postcode = this.state.postcode
+
+      //const bedrooms =
+      //e.g. https://www.domain.com.au/sale/parramatta-nsw-2150/?ptype=apartment&bedrooms=2
+     // var link = "https://www.domain.com.au/" + value + "/"+ linksuburb + "-" + linkstate + "-" + postcode + "/" + "bedrooms=" + bedrooms
+      var link = "https://www.domain.com.au/" + rentbuy + "/"+ linksuburb + "-" + linkstate + "-" + postcode + "/"
 
       return (
-        <DomainLink salerent={this.state.value} />
-
-        <Grid item className="StatsContainer" >
+        <Grid item className="StatsContainer">
         <div className="SubheadingContainer">
           <img src={mChart} className="IconDef" alt="stats"/>
           <Typography align="inherit" inline className="SideText"
@@ -48,6 +71,9 @@ class WrapperStats extends React.Component {
             <Tab icon={<HomeGroup/>} label="Sold Property Prices" />
           </Tabs>
         </Paper>
+
+        <a href={link}>View property listings on domain.com</a>
+
         </Grid>
       );
     }
