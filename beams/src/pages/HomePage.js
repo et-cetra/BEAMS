@@ -7,7 +7,7 @@ import HomeSearch from '../components/HomeSearch';
 import PeopleIcon from '@material-ui/icons/People';
 import { MapSearch, Home } from 'mdi-material-ui'
 import mDomain from '../assets/domain.png'
-
+import bg from '../assets/bg.png'
 
 class HomePage extends React.Component {
   state = {
@@ -46,7 +46,9 @@ class HomePage extends React.Component {
     priorities['Safety'] = prioritiesD;
 
     return (
+      
       <div className='HomeContainer'>
+      <img src={bg} className="bg" alt="bg"/>
       <Grow in timeout={750}>
       <Grid container direction="column" justify="space-evenly" alignItems="center">
         <Grid item>

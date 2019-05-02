@@ -28,7 +28,7 @@ class DevPage extends React.Component {
                   <div class="role">
                   Lead Front End Developer
                   </div>
-                  <a href="https://github.com/atude"><i class="fa fa-github"></i></a>
+                  <a href="https://github.com/atude" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i></a>
                   <div class="description">
                   Responsible for front-end design, including infographics and Material UI implementation throughout BEAMS.
                   </div>
@@ -43,7 +43,7 @@ class DevPage extends React.Component {
                   <div class="role">
                   Feature Developer
                   </div>
-                  <a href="https://github.com/bei98"><i class="fa fa-github"></i></a>
+                  <a href="https://github.com/bei98" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i></a>
                   <div class="description">
                   Responsible for creation of the developer&#39;s page.
                   </div>
@@ -59,7 +59,7 @@ class DevPage extends React.Component {
                   <div class="role">
                   Feature Developer
                   </div>
-                  <a href="https://github.com/PaulGrace1200"><i class="fa fa-github"></i></a>
+                  <a href="https://github.com/PaulGrace1200" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i></a>
                   <div class="description">
                   Responsible for AI sentiment implementation and suburb-related features.
                   </div>
@@ -75,7 +75,7 @@ class DevPage extends React.Component {
                   <div class="role">
                   Feature Developer
                   </div>
-                  <a href="https://github.com/z5210234"><i class="fa fa-github"></i></a>
+                  <a href="https://github.com/z5210234" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i></a>
                   <div class="description">
                   Responsible for suburb highlights and schools information on suburb pages.
                   </div>
@@ -91,7 +91,7 @@ class DevPage extends React.Component {
                   <div class="role">
                   Team Leader, Lead Back End Developer
                   </div>
-                  <a href="https://github.com/et-cetra"><i class="fa fa-github"></i></a>
+                  <a href="https://github.com/et-cetra" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i></a>
                   <div class="description">
                   Responsible for back-end infrastructure, data manipulation and several features on suburb pages.
                   </div>
@@ -100,6 +100,11 @@ class DevPage extends React.Component {
               </Grid></Slide>
 
             </Grid>
+            <div className="BGCredit">
+              <a href="https://pngtree.com/free-backgrounds" target="_blank" rel="noopener noreferrer">
+              <Typography style={{fontSize: "10px", color: "grey"}} href>Home BG sourced by PNGTree</Typography>
+              </a>
+            </div>
         </div>
       );
     }

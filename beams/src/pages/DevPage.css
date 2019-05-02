@@ -29,3 +29,10 @@ a {
   font-size: 13px;
   padding: 10px;
 }
+
+.BGCredit{
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 12px;
+}

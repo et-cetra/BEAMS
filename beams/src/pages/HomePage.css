@@ -31,3 +31,11 @@
   margin-top: -62px;
   padding: 6.7px;
 }
+
+.bg{
+  position: absolute;
+  z-index: -100;
+  width: 100vw;
+  bottom: 0;
+  left: 0;
+}
