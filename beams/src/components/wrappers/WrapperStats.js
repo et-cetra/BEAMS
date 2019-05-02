@@ -4,7 +4,7 @@ import 'typeface-roboto';
 import '../../pages/SuburbPage.css'
 import MedianRent from '../stats/MedianRent';
 import HouseSoldPrice from '../stats/HouseSoldPrice';
-import { Grid, Typography, Tabs, Tab, Paper, FormControl, InputLabel, Select, MenuItem, OutlinedInput, FormHelperText, Button } from '@material-ui/core';
+import { Grid, Typography, Tabs, Tab, Paper, FormControl, Select, MenuItem, Button } from '@material-ui/core';
 
 import { HomeCity, HomeGroup, Hotel } from 'mdi-material-ui'
 import mChart from '../../assets/ic_chart.png'

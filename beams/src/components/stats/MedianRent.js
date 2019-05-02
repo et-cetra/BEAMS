@@ -18,13 +18,13 @@ class MedianRent extends React.Component {
       const bedrooms = this.props.bedrooms;
       var rentStats = await getStats(this.props.suburbs[0].suburb, this.props.suburbs[0].suburb_state);
 
-      if (bedrooms != 0) {
+      if (bedrooms !== 0) {
         rentStats = await getBedroomStats(this.props.suburbs[0].suburb, this.props.suburbs[0].suburb_state, bedrooms);
       }
 
       if(this.props.isCompare){
         var rentStats2 = await getStats(this.props.suburbs[1].suburb, this.props.suburbs[1].suburb_state);
-        if (bedrooms != 0) {
+        if (bedrooms !== 0) {
           rentStats = await getBedroomStats(this.props.suburbs[1].suburb, this.props.suburbs[1].suburb_state, bedrooms);
         }
         this.setState({

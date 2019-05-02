@@ -1,10 +1,9 @@
 import React from 'react';
 import '../pages/SuburbPage.css'
-import { Paper, Fade,  Button, Popper, Typography, ClickAwayListener } from '@material-ui/core';
+import { Paper, Fade,  Button, Popper, Typography } from '@material-ui/core';
 import Help from '@material-ui/icons/Help';
 
 class Info extends React.Component {
-
   state = {
     anchorEl: null,
     open: false,
@@ -20,8 +19,9 @@ class Info extends React.Component {
   };
 
   render() {
-    const id = open ? 'simple-popper' : null;
     const { anchorEl, open, placement } = this.state;
+    const id = open ? 'simple-popper' : null;
+    
     return (
       <div className="ExtraIconRadar">
       <Button aria-describedby={id} variant="text" onClick={this.handleClick('top-end')}
