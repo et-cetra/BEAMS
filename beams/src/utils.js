@@ -155,24 +155,23 @@ export const getSurrounding = async (suburb, suburb_state) => {
 }
 
 export const getSentiment = async (newsArticles) => {
-    // var AYLIENTextAPI = require('../node_modules/aylien_textapi')
-    // var textapi = new AYLIENTextAPI({
-    //     application_id: '4c978193',
-    //     application_key: '4cce4f1d95bd03fe90cfa10618617497'
-    // });
     // console.log(newsArticles);
-    // textapi.sentiment({
-    //     'text': 'John is a very good football player!'
-    // }, function(error, response) {
-    //     if (error === null) {
-    //         console.log(response);
-    //     }
+    // const text = "I hate chocolate";
+    // const url = "https://cors-anywhere.herokuapp.com/https://api.theysay.io/v1/sentiment?text="+text+"&level=document";
+    // const res = await fetch(url, {
+    //     'Access-Control-Allow-Origin': '*',
+    //     'Origin': 'Vary',
     // });
-
-    // const text = "I hate everything!";
-    // const url = "https://cors-anywhere.herokuapp.com/https://api.aylien.com/api/v1/sentiment?mode=document&text=" + text;
-    // const res = await fetch(url);
-    // const resp = await res.json();
+    // const resp = res.json();
     // console.log(resp);
+    // //https://cors-anywhere.herokuapp.com/
+
+    var x = new XMLHttpRequest();
+    x.open('GET', 'https://cors-anywhere.herokuapp.com/https://api.theysay.io/v1/sentiment?text="+text+"&level=document');
+    x.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+    x.onload = function() {
+        alert(x.responseText);
+    };
+    x.send();
 
 }

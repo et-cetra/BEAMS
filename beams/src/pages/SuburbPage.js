@@ -33,9 +33,9 @@ class SuburbPage extends React.Component {
 
   getSingleSuburb = (suburbs, onSuburbCompare) => {
     const COLORS = this.COLORS();
-    const sentiment_news = getNews(this.props.suburbs[0].suburb, this.props.suburbs[0].suburb_state);
-    console.log(sentiment_news);
-    getSentiment(sentiment_news);
+    // const sentiment_news = getNews(this.props.suburbs[0].suburb, this.props.suburbs[0].suburb_state);
+    // console.log(sentiment_news);
+    getSentiment("We have news :)");
     return (
       <div className="SingleWholeContainer">
       <WrapperHeader isCompare={false} suburbs={suburbs} onSuburbCompare={onSuburbCompare}
