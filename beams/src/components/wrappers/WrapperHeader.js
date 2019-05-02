@@ -5,7 +5,7 @@ import '../../pages/SuburbPage.css'
 import QuickSearch from '../QuickSearch.js'
 import NearbySuburbs from '../NearbySuburbs.js'
 import Info from '../RadarInfo.js'
-import { Grid, Typography, Divider, Link, Fade, Paper, CircularProgress } from '@material-ui/core'
+import { Grid, Typography, Divider, Link, Fade, Paper } from '@material-ui/core'
 import mTerrain from '../../assets/ic_terrain.png'
 import mTerrain1 from '../../assets/ic_terrain_1.png'
 import mTerrain2 from '../../assets/ic_terrain_2.png'
@@ -47,21 +47,21 @@ class WrapperHeader extends React.Component {
       case 1:
       pIcon = <CheckboxMarkedCircle className="PriorityIcon"/>;
       pColor = "#009688";
-      pMessage = "This suburb meets your priorities (" + prioritiesString + "). Click here to see properties in this area."
+      pMessage = "This suburb meets your priorities. Click here to see properties in this area."
       pIsSuggest = false;
       break;
 
       case -1:
       pIcon = <CloseCircle className="PriorityIcon"/>;
       pColor = "#D32F2F";
-      pMessage = "This suburb does not meet your priorities (" + prioritiesString + "). For other areas nearby, try out: "
+      pMessage = "This suburb does not meet your priorities. For other areas nearby, try out: "
       pIsSuggest = true;
       break;
 
       default:
       pIcon =  <MinusCircle className="PriorityIcon"/>;
       pColor = "#FFA000";
-      pMessage = "This suburb meets some of your priorities (" + prioritiesString + "). For other areas nearby, try out: "
+      pMessage = "This suburb meets some of your priorities. For other areas nearby, try out: "
       pIsSuggest = true;
       break;
     }
@@ -69,7 +69,8 @@ class WrapperHeader extends React.Component {
     return (
       <Paper style={{backgroundColor: pColor, boxShadow: 'none'}} className="PriorityPopup">
         {pIcon}
-        <Typography style={{color: "white", fontSize: "16px", float: "left"}}>{pMessage}</Typography>
+        <Typography style={{color: "white", fontSize: "16px", float: "left", width: "50%"}}>{pMessage}</Typography>
+        {/* <Typography style={{color: "white", fontSize: "16px", float: "left"}}>{`You have selected the following priorities: ${prioritiesString}`}</Typography> */}
         {pIsSuggest && <NearbySuburbs suburbs={this.props.suburbs} onSuburbSelect={this.props.onSuburbSelect} priorities={this.props.priorities}/>}
       </Paper>
     )
