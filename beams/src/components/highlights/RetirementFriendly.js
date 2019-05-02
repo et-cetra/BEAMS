@@ -14,6 +14,9 @@ class RetirementFriendly extends React.Component {
         const suburbInfo = this.props.stats;
         var agesArray = suburbInfo.demographics[0].items;
         var arrayLength = agesArray.length;
+        if (arrayLength === 0) {
+            return false;
+        }
         const total = suburbInfo.demographics[0].total;
         for (var i = 0; i < arrayLength; i++) {
             if (agesArray[i].label === "60+") {

@@ -13,6 +13,9 @@ class CulturallyDiverse extends React.Component {
     async isCulturallyDiverse() {
         const suburbInfo = this.props.stats;
         var cobArray = suburbInfo.demographics[1].items;
+        if (cobArray.length < 5) {
+            return false;
+        }
         const total = cobArray[0].value + cobArray[1].value + cobArray[2].value + cobArray[3].value + cobArray[4].value;
         if ((cobArray[0].value / total) <= 0.5) {
             return true;
