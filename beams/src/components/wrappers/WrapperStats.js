@@ -15,7 +15,6 @@ class WrapperStats extends React.Component {
     state = {
       value: 0,
       bedrooms: 0,
-      postcode: 0,
     };
 
     handleChange = (event, value) => {
@@ -27,32 +26,22 @@ class WrapperStats extends React.Component {
       this.setState({ [event.target.name]: event.target.value });
     };
 
-    async resolvePostcode() {
-        const postcode = await getPostcode(this.props.suburbs[0].suburb, this.props.suburbs[0].suburb_state);
-        return postcode;
-    }
+    getListingLink(suburb, suburb_state) {
+      var rentbuy = "sale";
+      if (this.state.value === 0) rentbuy = "rent";
+      const linkstate = suburb_state.toLowerCase();
+      const linksuburb = (suburb.toLowerCase()).replace(/ /g,"-");
+      const postcode = getPostcode(suburb, suburb_state);
 
-    async componentDidMount() {
-        const result = await this.resolvePostcode(this.props.suburbs[0].suburb, this.props.suburbs[0].suburb_state);
-        this.setState({
-            postcode: result
-        });
+      //e.g. https://www.domain.com.au/sale/parramatta-nsw-2150/?bedrooms=2
+      var link = "https://www.domain.com.au/" + rentbuy + "/"+ linksuburb + "-" + linkstate + "-" + postcode + "/";
+      if(this.state.bedrooms !== 0) link += "?bedrooms=" + this.state.bedrooms;
+      return link;
     }
 
     render() {
       const { value, bedrooms } = this.state;
-      var rentbuy = "sale";
-      if (value === 0)  rentbuy = "rent";
-
       const { suburbs, COLORS, isCompare } = this.props;
-      const suburb = suburbs[0].suburb;
-      const linkstate = suburbs[0].suburb_state.toLowerCase();
-      const linksuburb = (suburb.toLowerCase()).replace(/ /g,"-");
-      const postcode = this.state.postcode;
-
-      //e.g. https://www.domain.com.au/sale/parramatta-nsw-2150/?bedrooms=2
-      var link = "https://www.domain.com.au/" + rentbuy + "/"+ linksuburb + "-" + linkstate + "-" + postcode + "/";
-      if(bedrooms !== 0) link += "?bedrooms=" + bedrooms;
 
       return (
         <Grid item className="StatsContainer">
@@ -62,13 +51,13 @@ class WrapperStats extends React.Component {
           style={{ fontSize: 26 }} variant="h1" color="inherit">
               Property Trends
           </Typography>
-          <div className="DomainLink">
-            <Button variant="contained" color="secondary" href={link} target="_blank" rel="noopener noreferrer">
+          {!isCompare && <div className="DomainLink">
+            <Button variant="contained" color="secondary" href={this.getListingLink(suburbs[0].suburb, suburbs[0].suburb_state)} 
+            target="_blank" rel="noopener noreferrer">
               View Listings
-              <img src={mDomainLink} className="DomainLinkImg"/>
+            <img src={mDomainLink} className="DomainLinkImg" alt="domainLink"/>
             </Button>
-            <a href={link} target="_blank" rel="noopener noreferrer"></a>
-          </div>
+          </div>}
         </div>
 
         <Paper>
@@ -87,8 +76,8 @@ class WrapperStats extends React.Component {
           </FormControl>
           </div>
 
-          {value === 0 && <MedianRent COLORS={COLORS} isCompare={isCompare} suburbs={suburbs} bedrooms={bedrooms} key={'MedianRent'+suburb+bedrooms}/>}
-          {value === 1 && <HouseSoldPrice COLORS={COLORS} isCompare={isCompare} suburbs={suburbs} bedrooms={bedrooms} key={'HouseSoldPrice'+suburb+bedrooms}/>}
+          {value === 0 && <MedianRent COLORS={COLORS} isCompare={isCompare} suburbs={suburbs} bedrooms={bedrooms} key={'MedianRent'+suburbs[0].suburb+bedrooms}/>}
+          {value === 1 && <HouseSoldPrice COLORS={COLORS} isCompare={isCompare} suburbs={suburbs} bedrooms={bedrooms} key={'HouseSoldPrice'+suburbs[0].suburb+bedrooms}/>}
 
           <Tabs value={value} onChange={this.handleChange} centered
           indicatorColor="primary" textColor="primary" variant="fullWidth">

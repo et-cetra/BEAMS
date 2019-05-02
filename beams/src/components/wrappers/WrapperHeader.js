@@ -11,6 +11,7 @@ import mTerrain1 from '../../assets/ic_terrain_1.png'
 import mTerrain2 from '../../assets/ic_terrain_2.png'
 import Highlights from '../Highlights.js'
 import RadarSection from '../highlights/RadarSection';
+import { getPostcode } from '../../utils.js';
 import { CheckboxMarkedCircle, CloseCircle, MinusCircle } from 'mdi-material-ui';
 
 class WrapperHeader extends React.Component {
@@ -66,12 +67,21 @@ class WrapperHeader extends React.Component {
       break;
     }
 
+    const postcode = getPostcode(this.props.suburbs[0].suburb, this.props.suburbs[0].suburb_state);
+    const linkstate = this.props.suburbs[0].suburb_state.toLowerCase();
+    const linksuburb = (this.props.suburbs[0].suburb.toLowerCase()).replace(/ /g,"-");
+    const link = `https://www.domain.com.au/sale/${linksuburb}-${linkstate}-${postcode}/`;
+
     return (
       <Paper style={{backgroundColor: pColor, boxShadow: 'none'}} className="PriorityPopup">
         {pIcon}
-        <Typography style={{color: "white", fontSize: "16px", float: "left", width: "50%"}}>{pMessage}</Typography>
+        
         {/* <Typography style={{color: "white", fontSize: "16px", float: "left"}}>{`You have selected the following priorities: ${prioritiesString}`}</Typography> */}
-        {pIsSuggest && <NearbySuburbs suburbs={this.props.suburbs} onSuburbSelect={this.props.onSuburbSelect} priorities={this.props.priorities}/>}
+        {pIsSuggest 
+          ? <div><Typography style={{color: "white", fontSize: "16px", float: "left", width: "50%"}}>{pMessage}</Typography>
+            <NearbySuburbs suburbs={this.props.suburbs} onSuburbSelect={this.props.onSuburbSelect} priorities={this.props.priorities}/></div>
+          : <a href={link} target="_blank" rel="noopener noreferrer"> <Typography style={{color: "white", fontSize: "16px", float: "left", width: "50%"}}>{pMessage}</Typography></a>
+        }
       </Paper>
     )
   }

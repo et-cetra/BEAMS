@@ -201,7 +201,6 @@ class StatsSection extends React.Component {
     var formattedText = this.formattedText;
     var median = this.getMedian(chartData);
     const r = this.props.bedrooms;
-    console.log("R", r);
 
     //total average, 1 room, 2 room, 3 room
     //manually calculated from 12 cities across australia using quartile medians

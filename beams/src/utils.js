@@ -177,7 +177,7 @@ export const getSurrounding = async (suburb, suburb_state) => {
     return arr.slice(0,3);
 }
 
-export const getPostcode = async (suburb, suburb_state) => {
+export const getPostcode = (suburb, suburb_state) => {
   const postcodeArray = jsonPostcodes.data.postcodes;
   const arrayLength = postcodeArray.length;
   let postcode = 0;
@@ -188,5 +188,6 @@ export const getPostcode = async (suburb, suburb_state) => {
       break;
     }
   }
+  
   return postcode;
 }
