@@ -44,6 +44,7 @@ class StatsSection extends React.Component {
       placement,
     }));
   };
+
   //Function used to format numbers concisely
   static nFormatter(num, digits) {
     var si = [
@@ -84,6 +85,7 @@ class StatsSection extends React.Component {
         <Paper className="TooltipWindow">
           <b>{label}</b>
             {newValues.map((item) => (
+              
               <div key={item.name+item.value}>
                 <span style={{color: item.color}} className="TooltipLabel">{`${item.name}`}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
                 <span style={{color: item.color, float: "right"}} className="TooltipLabel">{`${item.value}`}</span>
@@ -99,7 +101,6 @@ class StatsSection extends React.Component {
 
   getLegend = (value, entry, index) => {
     var COLORS = this.props.COLORS;
-    //Swap colours so graph syncs
     
     return <Chip variant="outlined" label={value} color="default"
       style={{color: COLORS[index], marginTop: "3px", marginBottom: "3px"}}/>;
@@ -136,8 +137,8 @@ class StatsSection extends React.Component {
         <YAxis tick={<AxisTickY/>} tickLine={false}/>
         <Tooltip content={this.customTooltip}/>
         <Legend verticalAlign="bottom" align="center" iconSize={0} formatter={this.getLegend}/>
-        <Line connectNulls type="monotone" dataKey="Highest" stroke={COLORS[1]} strokeDasharray="3 3"/>
-        <Line connectNulls type="monotone" dataKey="Median" stroke={COLORS[0]}/>
+        <Line connectNulls type="monotone" dataKey="Highest" stroke={COLORS[0]} strokeDasharray="3 3"/>
+        <Line connectNulls type="monotone" dataKey="Median" stroke={COLORS[1]}/>
         <Line connectNulls type="monotone" dataKey="Lowest" stroke={COLORS[2]} strokeDasharray="3 3"/>
       </LineChart>
       </ResponsiveContainer>

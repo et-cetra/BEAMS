@@ -42,6 +42,7 @@ class WrapperStats extends React.Component {
     render() {
       const { value, bedrooms } = this.state;
       const { suburbs, COLORS, isCompare } = this.props;
+      const COLORS2 = [COLORS[1], COLORS[0], COLORS[2], COLORS[3]];
 
       return (
         <Grid item className="StatsContainer">
@@ -76,8 +77,8 @@ class WrapperStats extends React.Component {
           </FormControl>
           </div>
 
-          {value === 0 && <MedianRent COLORS={COLORS} isCompare={isCompare} suburbs={suburbs} bedrooms={bedrooms} key={'MedianRent'+suburbs[0].suburb+bedrooms}/>}
-          {value === 1 && <HouseSoldPrice COLORS={COLORS} isCompare={isCompare} suburbs={suburbs} bedrooms={bedrooms} key={'HouseSoldPrice'+suburbs[0].suburb+bedrooms}/>}
+          {value === 0 && <MedianRent COLORS={isCompare ? COLORS : COLORS2} isCompare={isCompare} suburbs={suburbs} bedrooms={bedrooms} key={'MedianRent'+suburbs[0].suburb+bedrooms}/>}
+          {value === 1 && <HouseSoldPrice COLORS={isCompare ? COLORS : COLORS2} isCompare={isCompare} suburbs={suburbs} bedrooms={bedrooms} key={'HouseSoldPrice'+suburbs[0].suburb+bedrooms}/>}
 
           <Tabs value={value} onChange={this.handleChange} centered
           indicatorColor="primary" textColor="primary" variant="fullWidth">
