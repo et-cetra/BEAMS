@@ -1,6 +1,6 @@
 import React from 'react';
 import '../pages/SuburbPage.css'
-import { Paper, Fade,  Button, Popper, Typography } from '@material-ui/core';
+import { Paper, Fade,  Button, Popper, Typography, ClickAwayListener } from '@material-ui/core';
 import Help from '@material-ui/icons/Help';
 
 class Info extends React.Component {
@@ -15,8 +15,7 @@ class Info extends React.Component {
     const { currentTarget } = event;
     this.setState(state => ({
       anchorEl: currentTarget,
-      open: state.placement !== placement || !state.open,
-      placement,
+      open: state.placement !== placement || !state.open, placement,
     }));
   };
 

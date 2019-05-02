@@ -49,13 +49,14 @@ class InfoButton extends React.Component {
             <div className="InfoPopup">
               <IconButton onClick={this.handleClick(this.props.message)}><img src={mInfo} className="InfoDef" alt="info"/></IconButton>
               <Snackbar
+                  style={{height: "10px"}}
                   key={this.state.messageInfo.key}
                   anchorOrigin={{
                       vertical: 'bottom',
                       horizontal: 'left',
                   }}
                   open={this.state.open}
-                  autoHideDuration={3000}
+                  autoHideDuration={4000}
                   onClose={this.handleClose}
                   onExited={this.handleExited}
                   ContentProps={{
