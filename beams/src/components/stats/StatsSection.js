@@ -210,9 +210,9 @@ class StatsSection extends React.Component {
     const medianPricesRentH = [655, 540, 645, 880];
 
     //total average, --skip--, 2 room, 3 room, 4 room
-    const medianPricesSoldL = [630000, 0, ];
-    const medianPricesSoldM = [1030000, 0,  ];
-    const medianPricesSoldH = [1530000, 0,  ];
+    const medianPricesSoldL = [630000, 0, 440000, 625000, 865000];
+    const medianPricesSoldM = [1030000, 0, 580000,  730000, 1000000];
+    const medianPricesSoldH = [1530000, 0, 760000,  820000, 1235000];
 
     
     switch(type){
@@ -221,14 +221,14 @@ class StatsSection extends React.Component {
           return formattedText("Affordable House Prices", 
            "Home prices are considered affordable in this area. This may be in expense of socioeconomic status, and/or may be a rural region.")
         else if(median > medianPricesSoldL[r] && median <= medianPricesSoldM[r])
-          return formattedText("Low-Median House Prices", 
-            "House prices are within the low-medium standard for this area. The suburb is often relatively distant from state cities, but is starting to grow with new transport, education and workplace solutions. Recommended for students or new families within a budget.")
+          return formattedText("Median House Prices", 
+            "House prices are within the median standard for this area. The suburb is often suburban with relative distance from state cities, but is developing with new transport, education and workplace solutions. Recommended for students or new families within a budget.")
         else if(median > medianPricesSoldM[r] && median <= medianPricesSoldH[r])
           return formattedText("Standard House Prices", 
             "Home prices are within the standard for this area. The suburb is often expanding with an adequate amount of facilities and transport solutions. Suitable for most settled families, or those looking for a higher standard of living.")
         else 
           return formattedText("Expensive House Prices", 
-            "Home prices are considered beyond the high standard for this area. This is usually the case for suburban areas near cities with a high socioeconomic status, and plenty of facilities for suburb growth. Suitable for settled families looking for long-term residency, or those who may afford a premium standard of living.")
+            "Home prices are considered beyond the high standard for this area. This is usually the case for suburban areas near cities with a high socioeconomic status, and plenty of facilities for suburb growth. Suitable for settled families looking for long-term residency, or those who can afford a premium standard of living.")
 
       case "MedianRent":
         if(median <= medianPricesRentL[r])

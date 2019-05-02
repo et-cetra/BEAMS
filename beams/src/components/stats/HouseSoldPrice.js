@@ -79,14 +79,14 @@ class HouseSoldPrice extends React.Component {
       } else if (!isLoaded) {
           return (
           <div>
-              <StatsSection key={this.props.bedrooms} loading={1} COLORS={COLORS} chartData={[]}/>
+              <StatsSection bedrooms={this.props.bedrooms} key={this.props.bedrooms} loading={1} COLORS={COLORS} chartData={[]}/>
           </div>
           );
       } else {
           return (
           <div>
-              <StatsSection key={this.props.bedrooms} loading={0} COLORS={COLORS} chartData={chartData} isCompare={isCompare}
-              suburbs={suburbs} type="HouseSoldPrice"/>
+              <StatsSection bedrooms={this.props.bedrooms} key={this.props.bedrooms} loading={0} COLORS={COLORS} chartData={chartData} 
+              isCompare={isCompare} suburbs={suburbs} type="HouseSoldPrice"/>
           </div>
           );
       }
