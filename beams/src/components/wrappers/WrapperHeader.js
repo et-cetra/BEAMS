@@ -5,14 +5,14 @@ import '../../pages/SuburbPage.css'
 import QuickSearch from '../QuickSearch.js'
 import NearbySuburbs from '../NearbySuburbs.js'
 import Info from '../RadarInfo.js'
-import { Grid, Typography, Divider, Link, Fade, Paper } from '@material-ui/core'
+import { Grid, Typography, Divider, Link, Fade, Paper, Button, Popper } from '@material-ui/core'
 import mTerrain from '../../assets/ic_terrain.png'
 import mTerrain1 from '../../assets/ic_terrain_1.png'
 import mTerrain2 from '../../assets/ic_terrain_2.png'
 import Highlights from '../Highlights.js'
 import RadarSection from '../highlights/RadarSection';
 import { getPostcode } from '../../utils.js';
-import { CheckboxMarkedCircle, CloseCircle, MinusCircle } from 'mdi-material-ui';
+import { CheckboxMarkedCircle, CloseCircle, MinusCircle, Tooltip, Help } from 'mdi-material-ui';
 
 class WrapperHeader extends React.Component {
   state = {
@@ -21,7 +21,18 @@ class WrapperHeader extends React.Component {
     'Education Quality': false,
     'Safety': false,
     isLoaded: false,
+    anchorEl: null,
+    open: false,
+    placement: null,
   }
+
+  handleClick = placement => event => {
+    const { currentTarget } = event;
+    this.setState(state => ({
+      anchorEl: currentTarget,
+      open: state.placement !== placement || !state.open, placement,
+    }));
+  };
 
   getPriorityRender = (priorityStatus) => {
     if(priorityStatus === -2) return;
@@ -32,19 +43,27 @@ class WrapperHeader extends React.Component {
 
     var prioritiesString = "";
     var x = 0;
+    var listLength = 0;
+
+    for(var m in priorities) {
+      if (priorities[m] === true) {
+        listLength++;
+      }
+    }
+
     for (var i in priorities) {
       if (priorities[i] === true) {
         if (prioritiesString === "") {
           prioritiesString = prioritiesString + i;
         } else {
-          if(priorities.length - 1 === x)
+          if(listLength - 1 === x)
             prioritiesString = prioritiesString + " and " + i;
           else
             prioritiesString = prioritiesString + ", " + i;
         }
-      }
 
-      x++;
+        x++;
+      }
     }
     console.log("string", prioritiesString);
 
@@ -52,14 +71,14 @@ class WrapperHeader extends React.Component {
       case 1:
       pIcon = <CheckboxMarkedCircle className="PriorityIcon"/>;
       pColor = "#009688";
-      pMessage = `This suburb meets your priorities (${prioritiesString}). Click here to see properties in this area.`
+      pMessage = `This suburb meets your priorities. Click here to see properties in this area.`
       pIsSuggest = false;
       break;
 
       case -1:
       pIcon = <CloseCircle className="PriorityIcon"/>;
       pColor = "#D32F2F";
-      pMessage = `This suburb does not meet your priorities (${prioritiesString}). For other areas nearby, try out: `
+      pMessage = `This suburb does not meet your priorities. For other areas nearby, try out: `
       pIsSuggest = true;
       break;
 
@@ -76,16 +95,39 @@ class WrapperHeader extends React.Component {
     const linksuburb = (this.props.suburbs[0].suburb.toLowerCase()).replace(/ /g,"-");
     const link = `https://www.domain.com.au/sale/${linksuburb}-${linkstate}-${postcode}/`;
 
+    const { anchorEl, open, placement } = this.state;
+    const id = open ? 'simple-popper' : null;
+
     return (
       <Paper style={{backgroundColor: pColor, boxShadow: 'none'}} className="PriorityPopup">
         {pIcon}
         
         {/* <Typography style={{color: "white", fontSize: "16px", float: "left"}}>{`You have selected the following priorities: ${prioritiesString}`}</Typography> */}
         {pIsSuggest 
-          ? <div><Typography style={{color: "white", fontSize: "16px", float: "left", width: "50%"}}>{pMessage}</Typography>
-            <NearbySuburbs suburbs={this.props.suburbs} onSuburbSelect={this.props.onSuburbSelect} priorities={this.props.priorities}/></div>
-          : <a href={link} target="_blank" rel="noopener noreferrer"> <Typography style={{color: "white", fontSize: "16px", float: "left", width: "50%"}}>{pMessage}</Typography></a>
+          ? <div>
+            {/* {`You have prioritised ${prioritiesString}.`} */}
+              <Typography className="PriorityText" style={{color: "white", fontSize: "16px"}}>{pMessage}</Typography>
+              <NearbySuburbs suburbs={this.props.suburbs} onSuburbSelect={this.props.onSuburbSelect} priorities={this.props.priorities}/>
+            </div>
+          : <a href={link} target="_blank" rel="noopener noreferrer"> 
+              <Typography className="PriorityText" style={{color: "white", fontSize: "16px"}}>{pMessage}</Typography>
+            </a>
         }
+      <div className="PriorityPopper">
+      <Button aria-describedby={id} variant="text" onClick={this.handleClick('right-start')}
+      size="small" color="primary" aria-label="Guide">
+        My Priorities
+        <Popper id={id} open={open} anchorEl={anchorEl} placement={placement} transition className="PopperContainer">
+          {({ TransitionProps }) => (
+            <Fade {...TransitionProps} timeout={350}>
+              <Paper className="PopperInfo">
+              <Typography style={{fontSize: "14px"}}>You have prioritised {prioritiesString}.</Typography>
+              </Paper>
+            </Fade>
+          )}
+        </Popper>
+      </Button>
+      </div>
       </Paper>
     )
   }

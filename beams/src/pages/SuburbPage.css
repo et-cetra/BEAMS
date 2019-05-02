@@ -291,6 +291,12 @@
   cursor: pointer;
 }
 
+.PriorityText{
+  float: left;
+  width: 550px;
+  vertical-align: center;
+}
+
 .BedroomSelect{
   position: absolute;
   right: 80px;
@@ -329,4 +335,10 @@
   padding-left: 10px;
   width: 28px;
   height: 28px;
+}
+
+.PriorityPopper{
+  position: absolute;
+  padding-top: 50px;
+  left: 145px;
 }
