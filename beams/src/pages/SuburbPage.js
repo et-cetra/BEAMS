@@ -35,7 +35,7 @@ class SuburbPage extends React.Component {
 
     return (
       <div className="SingleWholeContainer">
-      {/* <WrapperHeader isCompare={false} suburbs={suburbs} onSuburbCompare={onSuburbCompare} */}
+      <WrapperHeader isCompare={false} suburbs={suburbs} onSuburbCompare={onSuburbCompare}
       COLORS={COLORS} onSuburbSelect={this.props.onSuburbSelect} priorities={this.props.priorities}
       key={suburbs[0].suburb+suburbs[0].suburb_state+this.props.priorities+'header'}/>
       <Fade in timeout={750}>
@@ -62,8 +62,8 @@ class SuburbPage extends React.Component {
         {/*RHS grid container*/}
         <Grid className="RightContainer">
           <Grid item className="MapsContainer">
-            {/* <WrapperMaps suburb={suburbs[0].suburb}/> */}
-            {/* <WrapperNews suburb={suburbs[0].suburb} suburb_state={suburbs[0].suburb_state}/> */}
+            <WrapperMaps suburb={suburbs[0].suburb}/>
+            <WrapperNews suburb={suburbs[0].suburb} suburb_state={suburbs[0].suburb_state}/>
           </Grid>
         </Grid>
 
@@ -72,7 +72,7 @@ class SuburbPage extends React.Component {
 
         </Slide>
         <Grid item xs={12} className="SchoolsContainer">
-          {/* <WrapperSchools suburbs={suburbs} isCompare={false}/> */}
+          <WrapperSchools suburbs={suburbs} isCompare={false}/>
         </Grid>
       </Grid>
       </Grid>
@@ -86,18 +86,18 @@ class SuburbPage extends React.Component {
 
     return(
       <div className="MultiWholeContainer" >
-      {/* <WrapperHeader isCompare={true} suburbs={suburbs} priorities={this.props.priorities} */}
+      <WrapperHeader isCompare={true} suburbs={suburbs} priorities={this.props.priorities}
       COLORS={COLORS} onSuburbSelect={this.props.onSuburbSelect}/>
       <Grow in timeout={750}>
         <Grid container spacing={16} direction="column" justify="flex-start" alignItems="stretch">
           <Grid item>
-            {/* <WrapperStats isCompare={true} suburbs={suburbs} COLORS={COLORS}/> */}
+            <WrapperStats isCompare={true} suburbs={suburbs} COLORS={COLORS}/>
           </Grid>
           <Grid item>
-            {/* <WrapperDG isCompare={true} suburbs={suburbs} COLORS={COLORS}/> */}
+            <WrapperDG isCompare={true} suburbs={suburbs} COLORS={COLORS}/>
           </Grid>
           <Grid item>
-            {/* <WrapperSchools suburbs={suburbs} isCompare={true}/> */}
+            <WrapperSchools suburbs={suburbs} isCompare={true}/>
           </Grid>
         </Grid>
       </Grow>
@@ -116,7 +116,7 @@ class SuburbPage extends React.Component {
         <div className="ParentContainer">
           {/*Single vs Multi Suburb Display*/}
           {isCompare ? this.getMultiSuburb(suburbs) : this.getSingleSuburb(suburbs, onSuburbCompare)}
-          {/* <InfoButton message={'Data sourced from Domain.com, GNews, Google Maps, Mapquest, Geonames, ABS, and Goverment Data Sources'}/> */}
+          <InfoButton message={'Data sourced from Domain.com, GNews, Google Maps, Mapquest, Geonames, ABS, and Goverment Data Sources'}/>
         </div>
         </MuiThemeProvider>
       );
