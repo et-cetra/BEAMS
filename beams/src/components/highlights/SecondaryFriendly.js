@@ -16,6 +16,9 @@ class SecondaryFriendly extends React.Component {
         const coords = gLocation.results[0].locations[0].latLng;
         const gSchools = await getSchools(coords.lat, coords.lng);
         var arrayLength = gSchools.length;
+        if (arrayLength === 0) {
+            return false;
+        }
         var secondaryCount = 0;
         for (var i = 0; i < arrayLength; i++) {
             if (gSchools[i].educationLevel === "Secondary") {
@@ -38,7 +41,7 @@ class SecondaryFriendly extends React.Component {
     render() {
         if (this.state.isSecondaryFriendly) {
             return (
-                <Chip avatar={<Avatar><SchoolIcon/></Avatar>} label="Secondary Education Friendly" 
+                <Chip avatar={<Avatar><SchoolIcon/></Avatar>} label="Secondary Education Friendly"
                 className="ChipsHighlight" color={this.props.compareColor}/>
             );
         } else {

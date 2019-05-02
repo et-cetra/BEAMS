@@ -14,6 +14,9 @@ class CommuteFriendly extends React.Component {
         const suburbInfo = this.props.stats;
         var commuteArray = suburbInfo.demographics[10].items;
         var arrayLength = 3;
+        if (commuteArray.length < 3) {
+            return false;
+        }
         const total = commuteArray[0].value + commuteArray[1].value + commuteArray[2].value;
 
         for (var i = 0; i < arrayLength; i++) {
