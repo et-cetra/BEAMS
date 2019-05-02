@@ -63,7 +63,7 @@ class SuburbPage extends React.Component {
         <Grid className="RightContainer">
           <Grid item className="MapsContainer">
             <WrapperMaps suburb={suburbs[0].suburb}/>
-            {/* <WrapperNews suburb={suburbs[0].suburb} suburb_state={suburbs[0].suburb_state}/> */}
+            <WrapperNews suburb={suburbs[0].suburb} suburb_state={suburbs[0].suburb_state}/>
           </Grid>
         </Grid>
 
@@ -116,7 +116,7 @@ class SuburbPage extends React.Component {
         <div className="ParentContainer">
           {/*Single vs Multi Suburb Display*/}
           {isCompare ? this.getMultiSuburb(suburbs) : this.getSingleSuburb(suburbs, onSuburbCompare)}
-          <InfoButton message={'Data sourced from GNews, Domain, Google Maps, Mapquest and ABS'}/>
+          <InfoButton message={'Data sourced from Domain.com, GNews, Google Maps, Mapquest, Geonames, ABS, and Goverment Data Sources'}/>
         </div>
         </MuiThemeProvider>
       );

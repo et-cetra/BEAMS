@@ -14,6 +14,9 @@ class FamilyFriendly extends React.Component {
         const suburbInfo = this.props.stats;
         var agesArray = suburbInfo.demographics[0].items;
         var arrayLength = agesArray.length;
+        if (arrayLength === 0) {
+            return false;
+        }
         var youngTotal = 0;
         var zeroFound = 0;
         var fiveFound = 0;
