@@ -10,7 +10,7 @@ import WrapperStats from '../components/wrappers/WrapperStats'
 import WrapperMaps from '../components/wrappers/WrapperMaps'
 import WrapperNews from '../components/wrappers/WrapperNews'
 import WrapperSchools from '../components/wrappers/WrapperSchools'
-import InfoButton from '../components/InfoButton';
+import InfoButton from '../components/InfoButton'
 
 const theme = createMuiTheme({
   typography: {

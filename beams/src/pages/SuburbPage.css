@@ -318,5 +318,16 @@
 
 .BedroomText{
   position: absolute;
-  top:50px;
+  top: 50px;
+}
+
+.DomainLink{
+  float: right;
+  padding: 6px;
+}
+
+.DomainLinkImg{
+  padding-left: 10px;
+  width: 28px;
+  height: 28px;
 }

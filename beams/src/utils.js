@@ -1,6 +1,7 @@
 import { jsonSchoolResponse } from './data/SchoolsData';
 import { jsonSEResponse } from './data/SEData'
 import {jsonCrimeData} from './data/CrimeData';
+import {jsonPostcodes} from './data/PostcodeData';
 
 export const getSuburbId = async (suburb, suburb_state) => {
     const res = await fetch(`http://localhost:5000/suburb/${suburb}/${suburb_state}`);
@@ -174,4 +175,18 @@ export const getSurrounding = async (suburb, suburb_state) => {
     });
 
     return arr.slice(0,3);
+}
+
+export const getPostcode = async (suburb, suburb_state) => {
+  const postcodeArray = jsonPostcodes.data.postcodes;
+  const arrayLength = postcodeArray.length;
+  let postcode = 0;
+
+  for (var i = 0; i < arrayLength; i++) {
+    if(suburb && (postcodeArray[i].suburb.toLowerCase() === suburb.toLowerCase()) && (postcodeArray[i].suburb_state.toLowerCase() === suburb_state.toLowerCase())) {
+      postcode = postcodeArray[i].postcode;
+      break;
+    }
+  }
+  return postcode;
 }

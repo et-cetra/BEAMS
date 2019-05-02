@@ -4,16 +4,18 @@ import 'typeface-roboto';
 import '../../pages/SuburbPage.css'
 import MedianRent from '../stats/MedianRent';
 import HouseSoldPrice from '../stats/HouseSoldPrice';
-import { Grid, Typography, Tabs, Tab, Paper, FormControl, InputLabel, Select, MenuItem, OutlinedInput, FormHelperText } from '@material-ui/core';
+import { Grid, Typography, Tabs, Tab, Paper, FormControl, InputLabel, Select, MenuItem, OutlinedInput, FormHelperText, Button } from '@material-ui/core';
 
 import { HomeCity, HomeGroup, Hotel } from 'mdi-material-ui'
 import mChart from '../../assets/ic_chart.png'
-
+import {getPostcode} from '../../utils.js'
+import mDomainLink from '../../assets/ic_domain_link.png'
 
 class WrapperStats extends React.Component {
     state = {
       value: 0,
-      bedrooms: 0
+      bedrooms: 0,
+      postcode: 0,
     };
 
     handleChange = (event, value) => {
@@ -25,22 +27,48 @@ class WrapperStats extends React.Component {
       this.setState({ [event.target.name]: event.target.value });
     };
 
+    async resolvePostcode() {
+        const postcode = await getPostcode(this.props.suburbs[0].suburb, this.props.suburbs[0].suburb_state);
+        return postcode;
+    }
+
+    async componentDidMount() {
+        const result = await this.resolvePostcode(this.props.suburbs[0].suburb, this.props.suburbs[0].suburb_state);
+        this.setState({
+            postcode: result
+        });
+    }
+
     render() {
       const { value, bedrooms } = this.state;
-      const suburbs = this.props.suburbs;
-      const COLORS = this.props.COLORS;
-      const isCompare = this.props.isCompare;
+      var rentbuy = "sale";
+      if (value === 0)  rentbuy = "rent";
+
+      const { suburbs, COLORS, isCompare } = this.props;
       const suburb = suburbs[0].suburb;
-      console.log("ROOMS: ", bedrooms);
+      const linkstate = suburbs[0].suburb_state.toLowerCase();
+      const linksuburb = (suburb.toLowerCase()).replace(/ /g,"-");
+      const postcode = this.state.postcode;
+
+      //e.g. https://www.domain.com.au/sale/parramatta-nsw-2150/?bedrooms=2
+      var link = "https://www.domain.com.au/" + rentbuy + "/"+ linksuburb + "-" + linkstate + "-" + postcode + "/";
+      if(bedrooms !== 0) link += "?bedrooms=" + bedrooms;
 
       return (
-        <Grid item className="StatsContainer" >
+        <Grid item className="StatsContainer">
         <div className="SubheadingContainer">
           <img src={mChart} className="IconDef" alt="stats"/>
           <Typography align="inherit" inline className="SideText"
           style={{ fontSize: 26 }} variant="h1" color="inherit">
               Property Trends
           </Typography>
+          <div className="DomainLink">
+            <Button variant="contained" color="secondary" href={link} target="_blank" rel="noopener noreferrer">
+              View Listings
+              <img src={mDomainLink} className="DomainLinkImg"/>
+            </Button>
+            <a href={link} target="_blank" rel="noopener noreferrer"></a>
+          </div>
         </div>
 
         <Paper>
@@ -68,6 +96,7 @@ class WrapperStats extends React.Component {
             <Tab icon={<HomeGroup/>} label="Sold Property Prices" />
           </Tabs>
         </Paper>
+
 
         </Grid>
       );

@@ -47,7 +47,6 @@ class MedianRent extends React.Component {
       const isCompare = this.props.isCompare;
       const chartData = [];
       var s1Name, s2Name;
-      console.log(this.props.bedrooms);
 
       if(isCompare)
       {
