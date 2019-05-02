@@ -18,7 +18,6 @@ class HouseSoldPrice extends React.Component {
       var rentStats = await getStats(this.props.suburbs[0].suburb, this.props.suburbs[0].suburb_state);
 
       if (bedrooms != 0) {
-        console.log("lol");
         rentStats = await getBedroomStats(this.props.suburbs[0].suburb, this.props.suburbs[0].suburb_state, bedrooms);
       }
 
@@ -26,7 +25,6 @@ class HouseSoldPrice extends React.Component {
       if(this.props.isCompare){
         var rentStats2 = await getStats(this.props.suburbs[1].suburb, this.props.suburbs[1].suburb_state);
         if (bedrooms != 0) {
-          console.log("lol");
           rentStats = await getBedroomStats(this.props.suburbs[1].suburb, this.props.suburbs[1].suburb_state, bedrooms);
         }
         this.setState({

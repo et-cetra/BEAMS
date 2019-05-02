@@ -17,7 +17,7 @@ class WrapperStats extends React.Component {
     };
 
     handleChange = (event, value) => {
-        this.setState({ value, bedrooms: 0 });
+        this.setState({ value, bedrooms: 3 });
     };
 
     render() {
