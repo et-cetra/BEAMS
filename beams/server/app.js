@@ -6,7 +6,7 @@ var token = null;
 
 const getToken = async () => {
     if (!token) {
-        token = await domain.getAccessToken("client_be2ab801ecb44fce8c876a3e90561be9", "secret_1bc0240f29867097dfd68d770ba92cba");
+        token = await domain.getAccessToken("client_51a1164e0a644172b0b0918d6dc03e50", "secret_3c539f2110416814cfebede050260c18");
     }
 }
 
