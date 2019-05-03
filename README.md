@@ -9,8 +9,12 @@ This was built using a React.js framework and a HTML/CSS/MaterialReact front-end
 
 Developed by:
 
-(Me) Mozamel Anwary: Lead Front End Developer and UX design
-
 Mariya Shmalko: Team Leader, Lead Back End Developer
 
-Paul Grace, Summayah Ho, Bei Chen: Feature Developers
+Mozamel Anwary: Lead Front End Developer and UX design
+
+Paul Grace: Feature Developer
+
+Summayah Ho: Feature Developer
+
+Bei Chen: Feature Developer
